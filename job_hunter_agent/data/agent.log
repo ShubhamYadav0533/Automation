@@ -581,3 +581,178 @@ Please follow the setup guide in README.md to create Gmail API credentials.
 2026-05-07 01:25:27,028 [INFO] 
 ✅ Agent run complete!
 
+2026-05-07 01:33:54,957 [INFO] 
+🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+2026-05-07 01:33:54,957 [INFO] JOB & CLIENT HUNTER AGENT — STARTED
+2026-05-07 01:33:54,957 [INFO] Time: 2026-05-07 01:33:54
+2026-05-07 01:33:54,957 [INFO] 🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+
+2026-05-07 01:33:54,957 [INFO] 👤 Profile: Your Name | Software Engineer | 3y exp
+2026-05-07 01:33:54,957 [INFO] 🛠️  Skills: CRM Development, ERP Development, Android App Development, Performance Optimization, Software Testing
+2026-05-07 01:33:54,957 [INFO] 💰 Rate: $35/hr
+
+2026-05-07 01:33:54,957 [WARNING] Telegram not configured. Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID to .env
+2026-05-07 01:33:54,957 [INFO] 
+============================================================
+2026-05-07 01:33:54,958 [INFO] 🚀 PHASE 1: HUNTING FOR LEADS
+2026-05-07 01:33:54,958 [INFO] ============================================================
+2026-05-07 01:33:54,958 [INFO] ==================================================
+2026-05-07 01:33:54,958 [INFO] 🔍 Starting worldwide job & client hunt...
+2026-05-07 01:33:54,958 [INFO] ==================================================
+2026-05-07 01:33:55,707 [ERROR] Remotive error: can only concatenate str (not "list") to str
+2026-05-07 01:33:55,708 [INFO] Remotive: found 0 leads
+2026-05-07 01:33:56,650 [INFO] WeWorkRemotely: found 0 leads
+2026-05-07 01:34:02,803 [INFO] Upwork: found 0 leads
+2026-05-07 01:34:09,242 [INFO] LinkedIn: found 0 leads
+2026-05-07 01:34:14,177 [INFO] Freelancer.com: found 0 leads
+2026-05-07 01:34:19,496 [INFO] Wellfound: found 0 leads
+2026-05-07 01:34:27,071 [INFO] Google Maps: found 0 leads
+2026-05-07 01:34:27,071 [INFO] 
+✅ Total unique leads found: 0
+2026-05-07 01:34:27,071 [INFO] 📋 New (uncontacted) leads: 0
+2026-05-07 01:34:27,071 [INFO] 
+🤖 AI is scoring 0 leads...
+2026-05-07 01:34:27,071 [INFO] 
+🎯 0 leads passed the quality threshold
+2026-05-07 01:34:27,071 [INFO] 
+🎯 Top 0 leads to contact:
+2026-05-07 01:34:27,071 [INFO] 
+============================================================
+2026-05-07 01:34:27,071 [INFO] 📬 PHASE 2: CHECKING REPLIES
+2026-05-07 01:34:27,071 [INFO] ============================================================
+2026-05-07 01:34:27,071 [ERROR] Agent crashed: Gmail credentials not found at credentials/gmail_credentials.json
+Please follow the setup guide in README.md to create Gmail API credentials.
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/agent.py", line 321, in main
+    hot_count = run_reply_check(profile)
+  File "/home/shubham/automation/job_hunter_agent/agent.py", line 208, in run_reply_check
+    replies = get_new_replies()
+  File "/home/shubham/automation/job_hunter_agent/emailer.py", line 143, in get_new_replies
+    service = _get_gmail_service()
+  File "/home/shubham/automation/job_hunter_agent/emailer.py", line 57, in _get_gmail_service
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Gmail credentials not found at credentials/gmail_credentials.json
+Please follow the setup guide in README.md to create Gmail API credentials.
+2026-05-07 01:34:27,073 [WARNING] Telegram not configured. Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID to .env
+2026-05-07 01:34:27,073 [INFO] 
+✅ Agent run complete!
+
+2026-05-07 01:38:17,835 [INFO] 
+🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+2026-05-07 01:38:17,835 [INFO] JOB & CLIENT HUNTER AGENT — STARTED
+2026-05-07 01:38:17,835 [INFO] Time: 2026-05-07 01:38:17
+2026-05-07 01:38:17,835 [INFO] 🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+
+2026-05-07 01:38:17,836 [INFO] 👤 Profile: Shubham Yadav | Full Stack Developer (React / Node.js / React Native) | 2y exp
+2026-05-07 01:38:17,836 [INFO] 🛠️  Skills: React.js, Next.js, React Native, JavaScript ES6+, TypeScript
+2026-05-07 01:38:17,836 [INFO] 💰 Rate: $35/hr
+
+2026-05-07 01:38:17,836 [WARNING] Telegram not configured. Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID to .env
+2026-05-07 01:38:17,836 [INFO] 
+============================================================
+2026-05-07 01:38:17,836 [INFO] 🚀 PHASE 1: HUNTING FOR LEADS
+2026-05-07 01:38:17,836 [INFO] ============================================================
+2026-05-07 01:38:17,836 [INFO] ==================================================
+2026-05-07 01:38:17,836 [INFO] 🔍 Starting worldwide job & client hunt...
+2026-05-07 01:38:17,836 [INFO] ==================================================
+2026-05-07 01:38:18,653 [INFO] Remotive: found 19 leads
+2026-05-07 01:38:19,913 [INFO] WeWorkRemotely: found 0 leads
+2026-05-07 01:38:26,010 [INFO] Upwork: found 0 leads
+2026-05-07 01:38:31,979 [INFO] LinkedIn: found 0 leads
+2026-05-07 01:38:36,674 [INFO] Freelancer.com: found 0 leads
+2026-05-07 01:38:41,232 [INFO] Wellfound: found 0 leads
+2026-05-07 01:38:48,902 [INFO] Google Maps: found 0 leads
+2026-05-07 01:38:48,903 [INFO] 
+✅ Total unique leads found: 15
+2026-05-07 01:38:48,903 [INFO] 📋 New (uncontacted) leads: 15
+2026-05-07 01:38:48,903 [INFO] 
+🤖 AI is scoring 15 leads...
+2026-05-07 01:38:48,903 [INFO]   Scoring lead 1/15: Copywriter...
+2026-05-07 01:38:48,905 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,905 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,905 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,905 [INFO]   Scoring lead 2/15: Senior DevOps Engineer...
+2026-05-07 01:38:48,906 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,906 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,906 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,906 [INFO]   Scoring lead 3/15: Operations software assistant...
+2026-05-07 01:38:48,906 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,906 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,906 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,907 [INFO]   Scoring lead 4/15: Mid/Senior AI Video Artist...
+2026-05-07 01:38:48,907 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,907 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,907 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,907 [INFO]   Scoring lead 5/15: Content Reviewer - US...
+2026-05-07 01:38:48,907 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,907 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,907 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,907 [INFO]   Scoring lead 6/15: AI Engineer...
+2026-05-07 01:38:48,908 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,908 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,908 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,908 [INFO]   Scoring lead 7/15: Customer Retention Manager...
+2026-05-07 01:38:48,908 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,908 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,908 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,908 [INFO]   Scoring lead 8/15: Senior Independent AI Engineer / Architect...
+2026-05-07 01:38:48,909 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,909 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,909 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,909 [INFO]   Scoring lead 9/15: Senior Independent Software Developer...
+2026-05-07 01:38:48,909 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,909 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,909 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,909 [INFO]   Scoring lead 10/15: Senior Full-stack React Developer...
+2026-05-07 01:38:48,910 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,910 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,910 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,910 [INFO]   Scoring lead 11/15: Tech Lead Full-Stack Rails Engineer...
+2026-05-07 01:38:48,910 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,910 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,910 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,910 [INFO]   Scoring lead 12/15: Online Data Analyst United States...
+2026-05-07 01:38:48,911 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,911 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,911 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,911 [INFO]   Scoring lead 13/15: Inside Sales Contractor...
+2026-05-07 01:38:48,911 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,912 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,912 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,912 [INFO]   Scoring lead 14/15: Office Assistant...
+2026-05-07 01:38:48,912 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,912 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,912 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,912 [INFO]   Scoring lead 15/15: 🇩🇪 Senior/Staff Software Engineer PHP, TS, Rust, K...
+2026-05-07 01:38:48,912 [ERROR] Claude API error: "Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+2026-05-07 01:38:48,913 [ERROR] Could not parse score response: 
+2026-05-07 01:38:48,913 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:38:48,913 [INFO] 
+🎯 0 leads passed the quality threshold
+2026-05-07 01:38:48,913 [INFO] 
+🎯 Top 0 leads to contact:
+2026-05-07 01:38:48,913 [INFO] 
+============================================================
+2026-05-07 01:38:48,913 [INFO] 📬 PHASE 2: CHECKING REPLIES
+2026-05-07 01:38:48,913 [INFO] ============================================================
+2026-05-07 01:38:48,913 [ERROR] Agent crashed: Gmail credentials not found at credentials/gmail_credentials.json
+Please follow the setup guide in README.md to create Gmail API credentials.
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/agent.py", line 321, in main
+    hot_count = run_reply_check(profile)
+  File "/home/shubham/automation/job_hunter_agent/agent.py", line 208, in run_reply_check
+    replies = get_new_replies()
+  File "/home/shubham/automation/job_hunter_agent/emailer.py", line 143, in get_new_replies
+    service = _get_gmail_service()
+  File "/home/shubham/automation/job_hunter_agent/emailer.py", line 57, in _get_gmail_service
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: Gmail credentials not found at credentials/gmail_credentials.json
+Please follow the setup guide in README.md to create Gmail API credentials.
+2026-05-07 01:38:48,916 [WARNING] Telegram not configured. Add TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID to .env
+2026-05-07 01:38:48,916 [INFO] 
+✅ Agent run complete!
+

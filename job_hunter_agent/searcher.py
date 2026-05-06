@@ -129,10 +129,12 @@ def search_remotive(keywords: List[str]) -> List[Dict]:
         all_jobs = resp.json().get("jobs", [])
 
         for job in all_jobs:
+            tags = job.get("tags", [])
+            tags_str = " ".join(tags) if isinstance(tags, list) else str(tags)
             job_text = (
                 job.get("title", "") + " " +
-                job.get("description", "") +
-                job.get("tags", [])
+                job.get("description", "") + " " +
+                tags_str
             )
             job_text_lower = job_text.lower() if isinstance(job_text, str) else ""
             # match any keyword
