@@ -1,0 +1,35 @@
+{
+  "name": "Your Name",
+  "title": "Software Engineer",
+  "experience_years": 3,
+  "skills": [
+    "CRM Development",
+    "ERP Development",
+    "Android App Development",
+    "Performance Optimization",
+    "Software Testing",
+    "CI/CD Deployment",
+    "Python",
+    "Java",
+    "REST APIs",
+    "SQL"
+  ],
+  "hourly_rate_usd": 35,
+  "availability": "Full-time / Part-time",
+  "email": "your.email@gmail.com",
+  "portfolio_url": "https://yourportfolio.com",
+  "linkedin_url": "https://linkedin.com/in/yourprofile",
+  "bio": "I am a software engineer with 3 years of experience building CRM, ERP systems, Android applications, improving performance, writing tests, and deploying software. I help businesses build reliable, scalable software.",
+  "preferred_job_types": ["Remote", "Contract", "Freelance", "Full-time"],
+  "preferred_budget_min_usd": 500,
+  "target_industries": ["Tech", "SaaS", "Startups", "Enterprise"],
+  "search_keywords": [
+    "CRM developer",
+    "ERP developer",
+    "Android developer",
+    "software engineer",
+    "backend developer",
+    "full stack developer"
+  ],
+  "locations_to_target": ["Worldwide", "USA", "UK", "Germany", "Canada", "Australia"]
+}
