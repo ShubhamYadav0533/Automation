@@ -3,21 +3,17 @@ job_hunter_agent/client_hunter.py
 ====================================
 THE MAIN RUNNER — Client Hunter Bot
 =====================================
-Chains everything together:
-
-  Step 1 → biz_scraper.py    — Chrome scrapes Google + Google Maps + JustDial
-  Step 2 → contact_finder.py — Visit each website, extract email
-  Step 3 → ollama_writer.py  — Local AI writes personalized pitch email
-  Step 4 → emailer.py        — Gmail sends the email
-  Step 5 → client_tracker.py — Saves everything to clients.json + clients.xlsx
+Priority order every run:
+  1. Send follow-up to anyone emailed 3+ days ago with no reply yet
+  2. Send to leads that already have email but haven't been emailed
+  3. Scrape new businesses → find email → send immediately
+  Keeps going until daily target (default 100) is reached.
 
 Run:
-  python client_hunter.py
-
-Flags:
-  python client_hunter.py --dry-run     # find leads but DON'T send emails
-  python client_hunter.py --no-scrape   # skip browser scraping, use existing leads
-  python client_hunter.py --limit 10    # only process 10 leads per run
+  python client_hunter.py             # send 100 emails, never stop
+  python client_hunter.py --limit 50  # custom target
+  python client_hunter.py --dry-run   # preview only, don't send
+  python client_hunter.py --no-scrape # use cached data first round
 """
 
 import os
@@ -26,7 +22,7 @@ import time
 import logging
 import argparse
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict
 
@@ -84,24 +80,23 @@ DATA_DIR = Path(__file__).parent / "data"
 # ─────────────────────────────────────────────────────────────
 #  STEP 1: Scrape or load cached businesses
 # ─────────────────────────────────────────────────────────────
-def step1_get_businesses(no_scrape: bool = False) -> List[Dict]:
+def step1_get_businesses(no_scrape: bool = False, round_offset: int = 0) -> List[Dict]:
     cache_file = DATA_DIR / "scraped_businesses.json"
 
     if no_scrape and cache_file.exists():
         logger.info("📂 Loading cached businesses (--no-scrape mode)")
         return json.loads(cache_file.read_text())
 
-    _print_step("🌐 STEP 1", "Scraping Google Search + Google Maps for businesses")
+    _print_step("🌐 SCRAPING", f"Round offset {round_offset} — rotating keyword slice for fresh results")
     print("  Opening Chrome browser...")
-    print("  Searching: hospitals, clinics, hotels, schools, real estate in Amsterdam/Dubai/London/Berlin...")
-    logger.info("🌐 STEP 1: Scraping Google + Maps for businesses...")
+    logger.info(f"🌐 Scraping round {round_offset}...")
     businesses = scrape_businesses(
-        max_google_searches=8,
+        max_google_searches=10,
         max_maps_searches=5,
         include_india=True,
+        round_offset=round_offset,
     )
 
-    # Cache results
     cache_file.write_text(json.dumps(businesses, indent=2, ensure_ascii=False))
     logger.info(f"✅ Found {len(businesses)} businesses. Saved to {cache_file.name}")
     return businesses
@@ -286,13 +281,151 @@ def _print_step(icon: str, message: str):
 
 
 # ─────────────────────────────────────────────────────────────
+#  DAILY STATS DASHBOARD
+# ─────────────────────────────────────────────────────────────
+def print_daily_stats():
+    """Print how many emails sent today vs all-time."""
+    clients_file = DATA_DIR / "clients.json"
+    today = datetime.now().strftime("%Y-%m-%d")
+    sent_today = 0
+    pending_reply = 0
+    replied = 0
+    converted = 0
+    total = 0
+
+    if clients_file.exists():
+        try:
+            clients = json.loads(clients_file.read_text())
+            total = len(clients)
+            for v in clients.values():
+                status = v.get("status", "")
+                date_emailed = v.get("date_emailed", "")
+                if status == "email_sent":
+                    if date_emailed and date_emailed.startswith(today):
+                        sent_today += 1
+                    pending_reply += 1
+                elif status == "replied":
+                    replied += 1
+                elif status == "converted":
+                    converted += 1
+        except Exception:
+            pass
+
+    print(f"""
+  ┌─ TODAY'S STATS ({'─'*44}
+  │  📤 Sent today          : {sent_today}
+  │  ⏳ Awaiting reply      : {pending_reply}
+  │  💬 Replied (all time)  : {replied}
+  │  💰 Converted           : {converted}
+  │  📋 Total in DB         : {total}
+  └{'─'*54}""")
+    return sent_today
+
+
+# ─────────────────────────────────────────────────────────────
+#  FOLLOW-UP EMAILS (priority 1)
+# ─────────────────────────────────────────────────────────────
+def send_followups(dry_run: bool = False, limit: int = 20) -> int:
+    """
+    Send follow-up emails to leads that:
+    - Have status=email_sent
+    - Were emailed 3+ days ago
+    - Have not replied yet
+    Returns number of follow-ups sent.
+    """
+    clients_file = DATA_DIR / "clients.json"
+    if not clients_file.exists():
+        return 0
+
+    try:
+        clients = json.loads(clients_file.read_text())
+    except Exception:
+        return 0
+
+    cutoff = datetime.now() - timedelta(days=3)
+    candidates = []
+    for name, data in clients.items():
+        if data.get("status") != "email_sent":
+            continue
+        date_str = data.get("date_emailed", "")
+        if not date_str:
+            continue
+        try:
+            emailed_at = datetime.fromisoformat(date_str.split("T")[0])
+            if emailed_at <= cutoff:
+                candidates.append((name, data))
+        except Exception:
+            continue
+
+    if not candidates:
+        print("  ✅ No follow-ups needed (no leads older than 3 days without reply)")
+        return 0
+
+    print(f"\n  📬 Found {len(candidates)} leads to follow up on (emailed 3+ days ago, no reply)")
+    sent = 0
+
+    for name, data in candidates[:limit]:
+        if sent >= limit:
+            break
+        email = data.get("email", "")
+        category = data.get("category", "default")
+        website = data.get("website", "")
+        contact_name = data.get("contact_name", "")
+
+        if not email:
+            continue
+
+        print(f"\n  🔁 FOLLOW-UP: {name[:55]}")
+        print(f"     📧 {email}  |  Originally emailed: {data.get('date_emailed','?')[:10]}")
+
+        # Short follow-up email
+        greeting = f"Hi {contact_name}," if contact_name else f"Hi {name} Team,"
+        body = f"""{greeting}
+
+I wanted to follow up on my previous message about building a custom digital system for {name}.
+
+I understand you're busy — I'll keep this brief.
+
+I've already built live systems like this for other businesses. If you have 10 minutes this week, I'd love to show you a quick demo that's directly relevant to your work.
+
+No pressure at all — just thought it might be worth a look.
+
+Best regards,
+Shubham Yadav
+Software Engineer & App Developer
+shubhamyadav0533@gmail.com | https://github.com/ShubhamYadav0533"""
+
+        subject = f"Re: Following up — {name}"
+
+        if dry_run:
+            print(f"     🟡 DRY RUN — follow-up not sent")
+            sent += 1
+            continue
+
+        try:
+            result = send_outreach_email(to_email=email, subject=subject, body=body, lead_id=f"followup_{name}")
+            if result:
+                # Update status to show follow-up sent
+                clients[name]["date_emailed"] = datetime.now().isoformat()
+                clients[name]["notes"] = "Follow-up sent"
+                clients_file.write_text(json.dumps(clients, indent=2, ensure_ascii=False))
+                sent += 1
+                print(f"     ✅ Follow-up sent → {email}")
+                time.sleep(DELAY_BETWEEN)
+        except Exception as e:
+            print(f"     ❌ Error: {e}")
+
+    return sent
+
+
+# ─────────────────────────────────────────────────────────────
 #  MAIN
 # ─────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Client Hunter Bot — find businesses and pitch your services")
     parser.add_argument("--dry-run",   action="store_true", help="Find leads but DON'T send emails")
     parser.add_argument("--no-scrape", action="store_true", help="Skip browser, use cached data (first round only)")
-    parser.add_argument("--limit",     type=int, default=MAX_PER_RUN, help="TARGET: how many emails to send total (keeps scraping until reached)")
+    parser.add_argument("--limit",     type=int, default=100, help="TARGET: emails to send per run (default 100)")
     parser.add_argument("--test-ai",   action="store_true", help="Test Ollama + template writer only")
     args = parser.parse_args()
 
@@ -304,168 +437,158 @@ def main():
         return
 
     start_time = datetime.now()
-    target = args.limit  # e.g. 100 — keep going until this many sent
+    target = args.limit
 
-    banner = f"""
-╔══════════════════════════════════════════════════════╗
-║          CLIENT HUNTER BOT — Shubham Yadav           ║
-║  Find businesses → Extract emails → Send pitches     ║
-║  Mode  : {'DRY RUN (no emails)' if args.dry_run else 'LIVE (sending emails)':^40}  ║
-║  Target: {f'Send {target} emails (scrapes new batches until done)':^40}  ║
-╚══════════════════════════════════════════════════════╝
-"""
-    print(banner)
+    print(f"""
+╔══════════════════════════════════════════════════════════╗
+║          CLIENT HUNTER BOT — Shubham Yadav               ║
+║  Priority 1 → Follow-ups (no reply after 3 days)         ║
+║  Priority 2 → Existing leads with email, not sent yet    ║
+║  Priority 3 → Scrape new leads → find email → send       ║
+║  Mode   : {'DRY RUN (preview only)' if args.dry_run else 'LIVE — real emails':^44}  ║
+║  Target : {f'Send {target} emails today (runs until done)':^44}  ║
+╚══════════════════════════════════════════════════════════╝""")
+
+    # ── Daily stats ───────────────────────────────────────────
+    sent_so_far_today = print_daily_stats()
+    total_sent = sent_so_far_today  # count emails already sent today
+    remaining = max(0, target - total_sent)
+
+    if remaining == 0:
+        print(f"\n  ✅ Already sent {total_sent} emails today — target reached!")
+        return
+
+    print(f"\n  🎯 Need to send {remaining} more emails today to reach target of {target}\n")
 
     # ── Pre-warm Ollama once ──────────────────────────────────
     if _is_ollama_running():
-        print("🔥 Pre-warming Ollama mistral model (first load ~2 min)...")
+        print("🔥 Pre-warming Ollama mistral model...")
         import requests as _req
         try:
             _req.post("http://localhost:11434/api/generate",
                 json={"model": "mistral", "prompt": "hi", "stream": False,
                       "keep_alive": 600, "options": {"num_predict": 1}},
                 timeout=210)
-            print("✅ Ollama model warm and ready!\n")
+            print("✅ Ollama warm!\n")
         except Exception:
-            print("⚠️  Ollama pre-warm timed out — will retry per email\n")
+            print("⚠️  Ollama pre-warm timed out\n")
 
-    # ── MAIN LOOP — keep scraping until target emails sent ────
-    total_sent    = 0
-    total_no_email = 0
-    total_failed  = 0
+    # ─────────────────────────────────────────────────────────
+    #  PRIORITY 1: Send follow-ups to old no-reply leads
+    # ─────────────────────────────────────────────────────────
+    _print_step("🔁 PRIORITY 1", "Follow-ups to leads with no reply after 3 days")
+    followup_sent = send_followups(dry_run=args.dry_run, limit=remaining)
+    total_sent += followup_sent
+    remaining = max(0, target - total_sent)
+    print(f"  📊 Follow-ups sent: {followup_sent}  |  Progress: {total_sent}/{target}")
+
+    if remaining == 0:
+        _print_final_summary(start_time, total_sent, target, 0, 0)
+        return
+
+    # ─────────────────────────────────────────────────────────
+    #  PRIORITY 2 + 3: Find email → Send → Scrape new if needed
+    # ─────────────────────────────────────────────────────────
+    _print_step("🚀 PRIORITY 2+3", f"Email existing leads + scrape new ones — need {remaining} more")
+
     total_scraped = 0
-    round_num     = 0
-    MAX_ROUNDS    = 20   # safety cap — never infinite
-    STALL_LIMIT   = 3    # stop if 3 consecutive rounds find 0 new emails
+    total_no_email = 0
+    total_failed = 0
+    round_num = 0
+    cache_file = DATA_DIR / "scraped_businesses.json"
 
-    stall_count   = 0
-    cache_file    = DATA_DIR / "scraped_businesses.json"
-
-    # ── Load already-processed business names for resume ─────
+    # Load already-processed names for dedup
     clients_file = DATA_DIR / "clients.json"
     already_processed: set = set()
     if clients_file.exists():
         try:
-            existing = json.loads(clients_file.read_text())
-            already_processed = set(existing.keys())
-            if already_processed:
-                print(f"  📂 Resuming: {len(already_processed)} businesses already processed — will skip them\n")
+            already_processed = set(json.loads(clients_file.read_text()).keys())
         except Exception:
             pass
 
-    while total_sent < target and round_num < MAX_ROUNDS:
+    # Never stop — keep looping with new keyword offsets until target hit
+    while total_sent < target:
         round_num += 1
         remaining = target - total_sent
 
         print(f"\n{'━'*62}")
-        print(f"  🔄 ROUND {round_num}  |  Sent so far: {total_sent}/{target}  |  Need {remaining} more")
+        print(f"  🔄 ROUND {round_num}  |  Sent: {total_sent}/{target}  |  Need {remaining} more")
         print(f"{'━'*62}")
 
-        # Round 1 can use --no-scrape cache; after that always scrape fresh
         use_cache = args.no_scrape and round_num == 1
+        businesses = step1_get_businesses(no_scrape=use_cache, round_offset=round_num - 1)
 
-        businesses = step1_get_businesses(no_scrape=use_cache)
         if not businesses:
-            print("  ❌ No businesses found — stopping.")
-            break
-
-        total_scraped += len(businesses)
-
-        # ── Filter out already-processed businesses ───────────
-        fresh = [b for b in businesses if b.get("name", "") not in already_processed]
-        skipped_resume = len(businesses) - len(fresh)
-        if skipped_resume:
-            print(f"  ⏭️  Skipping {skipped_resume} already-processed businesses from this batch")
-        if not fresh:
-            stall_count += 1
-            print(f"  ⚠️  All businesses in this round already processed ({stall_count}/{STALL_LIMIT})")
-            if stall_count >= STALL_LIMIT:
-                print("  🛑 Nothing new to process — stopping.")
-                break
-            if cache_file.exists():
-                cache_file.unlink()
-            time.sleep(30)
+            print("  ⚠️  Scraper returned no results — retrying in 60s with next keyword set...")
+            time.sleep(60)
             continue
 
-        _print_step(
-            "🚀 PIPELINE",
-            f"Round {round_num} | Find email → Send instantly | need {remaining} more"
-        )
+        total_scraped += len(businesses)
+        fresh = [b for b in businesses if b.get("name", "") not in already_processed]
 
-        results = step2_find_and_send_pipeline(
-            fresh,
-            dry_run=args.dry_run,
-            limit=remaining,  # only send what's still needed
-        )
+        print(f"  📋 {len(businesses)} scraped  |  {len(fresh)} new (not yet processed)")
 
-        # Track newly processed names for resume
+        if not fresh:
+            print("  ⚠️  All businesses in this batch already processed — scraping next keyword set...")
+            if cache_file.exists():
+                cache_file.unlink()
+            time.sleep(20)
+            continue
+
+        results = step2_find_and_send_pipeline(fresh, dry_run=args.dry_run, limit=remaining)
         already_processed.update(b.get("name", "") for b in fresh)
 
         total_sent     += results["sent"]
         total_no_email += results["no_email"]
         total_failed   += results["failed"]
 
-        print(f"\n  📊 Round {round_num} result: sent={results['sent']}  no_email={results['no_email']}  failed={results['failed']}")
-        print(f"  📈 Progress: {total_sent}/{target} emails sent")
+        print(f"\n  📊 Round {round_num}: sent={results['sent']} | no_email={results['no_email']} | failed={results['failed']}")
+        print(f"  📈 Progress: {total_sent}/{target} emails sent total today")
 
-        # Stall detection — if a whole round found nothing to send, count it
-        if results["sent"] == 0 and results["no_email"] == len(businesses):
-            stall_count += 1
-            print(f"  ⚠️  No emails found in this round ({stall_count}/{STALL_LIMIT} stall rounds)")
-            if stall_count >= STALL_LIMIT:
-                print(f"  🛑 3 rounds with no results — stopping to avoid wasting resources.")
-                break
-        else:
-            stall_count = 0  # reset on any progress
-
-        # Remove cache after round 1 so next round scrapes fresh
-        if cache_file.exists() and not args.no_scrape:
+        if cache_file.exists():
             cache_file.unlink()
 
         if total_sent < target:
-            print(f"\n  ⏳ Cooling down 30s before next scrape round...")
-            time.sleep(30)
+            print(f"  ⏳ Cooling 20s before next round...")
+            time.sleep(20)
 
-    # ── Final Summary ─────────────────────────────────────────
-    duration = (datetime.now() - start_time).seconds
+    _print_final_summary(start_time, total_sent, target, total_scraped, total_no_email)
+
+
+def _print_final_summary(start_time, total_sent, target, scraped, no_email):
+    duration = int((datetime.now() - start_time).total_seconds())
     mins, secs = divmod(duration, 60)
     stats = get_stats()
-
     reached = total_sent >= target
-    status_icon = "✅ TARGET REACHED" if reached else f"⚠️  Stopped at {total_sent}/{target}"
 
-    summary = f"""
-╔══════════════════════════════════════════════════════╗
-║                    RUN COMPLETE                      ║
-╠══════════════════════════════════════════════════════╣
-║  Status             : {status_icon:<31}║
-║  Rounds run         : {round_num:<31}║
-║  Businesses scraped : {total_scraped:<31}║
-║  Emails sent        : {total_sent:<31}║
-║  No email found     : {total_no_email:<31}║
-║  Failed/Bounced     : {total_failed:<31}║
-║  Duration           : {f'{mins}m {secs}s':<31}║
-╠══════════════════════════════════════════════════════╣
-║  ALL-TIME STATS                                      ║
-║  Total in DB        : {stats.get('total', 0):<31}║
-║  Emails sent (total): {stats.get('email_sent', 0):<31}║
-║  Replied            : {stats.get('replied', 0):<31}║
-║  Converted          : {stats.get('converted', 0):<31}║
-╠══════════════════════════════════════════════════════╣
-║  📊 Excel: data/clients.xlsx                         ║
-║  📋 JSON:  data/clients.json                         ║
-║  📄 Log:   data/client_hunter.log                    ║
-╚══════════════════════════════════════════════════════╝
-"""
-    print(summary)
+    print(f"""
+╔══════════════════════════════════════════════════════════╗
+║                  ✅ RUN COMPLETE                         ║
+╠══════════════════════════════════════════════════════════╣
+║  Status          : {'✅ TARGET REACHED' if reached else f'⚠️  {total_sent}/{target} sent':<41}║
+║  Emails sent     : {total_sent:<41}║
+║  No email found  : {no_email:<41}║
+║  Businesses found: {scraped:<41}║
+║  Duration        : {f'{mins}m {secs}s':<41}║
+╠══════════════════════════════════════════════════════════╣
+║  ALL-TIME                                                ║
+║  Total in DB     : {stats.get('total', 0):<41}║
+║  Ever sent       : {stats.get('email_sent', 0):<41}║
+║  Replied         : {stats.get('replied', 0):<41}║
+║  Converted       : {stats.get('converted', 0):<41}║
+╠══════════════════════════════════════════════════════════╣
+║  📊 data/clients.xlsx  📋 data/clients.json              ║
+╚══════════════════════════════════════════════════════════╝
+""")
 
     if NOTIFIER_OK and total_sent > 0:
         try:
             send_telegram(
-                f"🎯 Client Hunter Done!\n"
-                f"{'✅ TARGET HIT' if reached else '⚠️ Partial'}: {total_sent}/{target} emails sent\n"
-                f"Rounds: {round_num} | Scraped: {total_scraped}\n"
-                f"All-time sent: {stats.get('email_sent', 0)}"
+                f"{'✅' if reached else '⚠️'} Client Hunter Done!\n"
+                f"Sent today: {total_sent}/{target}\n"
+                f"All-time: {stats.get('email_sent', 0)} sent | "
+                f"{stats.get('replied', 0)} replied | "
+                f"{stats.get('converted', 0)} converted"
             )
         except Exception:
             pass

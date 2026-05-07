@@ -1,0 +1,20 @@
+[Unit]
+Description=Client Hunter Bot — daily cold email sender
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=shubham
+WorkingDirectory=/home/shubham/automation/job_hunter_agent
+ExecStart=/usr/bin/python3 /home/shubham/automation/job_hunter_agent/client_hunter.py --limit 100
+StandardOutput=append:/home/shubham/automation/job_hunter_agent/data/autorun.log
+StandardError=append:/home/shubham/automation/job_hunter_agent/data/autorun.log
+Environment=DISPLAY=:0
+Environment=HOME=/home/shubham
+# Restart if it crashes (e.g. network drops mid-run)
+Restart=on-failure
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target

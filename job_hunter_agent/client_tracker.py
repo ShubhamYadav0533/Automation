@@ -18,6 +18,15 @@ from typing import Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
+# Supabase sync (graceful — works even if not configured)
+try:
+    from supabase_sync import upsert_lead as _sb_upsert, is_configured as _sb_ok
+    SUPABASE_ENABLED = True
+except ImportError:
+    SUPABASE_ENABLED = False
+    _sb_ok = lambda: False
+    _sb_upsert = lambda *a, **k: None
+
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -176,16 +185,22 @@ def save_client_lead(lead: Dict) -> bool:
 
 
 def mark_email_sent(name: str, subject: str, used_ai: bool = False):
-    """Update lead status after sending email."""
+    """Update lead status after sending email. Auto-syncs to Supabase."""
     clients = _load_clients()
     key = _key(name)
     if key in clients:
         clients[key]["status"] = "email_sent"
         clients[key]["email_subject"] = subject
-        clients[key]["date_emailed"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+        clients[key]["date_emailed"] = datetime.now().isoformat()
         clients[key]["used_ai"] = str(used_ai)
         _save_clients(clients)
         _rebuild_excel(clients)
+        # Auto-sync to Supabase cloud
+        if SUPABASE_ENABLED and _sb_ok():
+            try:
+                _sb_upsert(key, clients[key])
+            except Exception:
+                pass
 
 
 def update_client_status(name: str, status: str, notes: str = ""):
