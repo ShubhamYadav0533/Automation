@@ -1,0 +1,1213 @@
+2026-05-07 12:55:18,405 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 12:55:18,405 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 12:55:19,160 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 12:55:21,659 [ERROR] Scraper crashed: Message: session not created: cannot connect to chrome at 127.0.0.1:44769
+from session not created: This version of ChromeDriver only supports Chrome version 148
+Current browser version is 143.0.7499.192; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x55d6987838aa <unknown>
+#1 0x55d69817e8a9 <unknown>
+#2 0x55d6981c35ff <unknown>
+#3 0x55d6981c23b0 <unknown>
+#4 0x55d6981b73b1 <unknown>
+#5 0x55d698207316 <unknown>
+#6 0x55d6982069fc <unknown>
+#7 0x55d6981c64cf <unknown>
+#8 0x55d6981c7291 <unknown>
+#9 0x55d69874976b <unknown>
+#10 0x55d69874c67d <unknown>
+#11 0x55d6987366c8 <unknown>
+#12 0x55d69874d210 <unknown>
+#13 0x55d69871d170 <unknown>
+#14 0x55d6987707b8 <unknown>
+#15 0x55d698770955 <unknown>
+#16 0x55d69878230e <unknown>
+#17 0x7fe8b60937db <unknown>
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 369, in scrape_businesses
+    driver = _make_driver()
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 94, in _make_driver
+    driver = uc.Chrome(options=options)
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        service=service,
+        ^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/common/webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 274, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        capabilities
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 370, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 450, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:44769
+from session not created: This version of ChromeDriver only supports Chrome version 148
+Current browser version is 143.0.7499.192; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x55d6987838aa <unknown>
+#1 0x55d69817e8a9 <unknown>
+#2 0x55d6981c35ff <unknown>
+#3 0x55d6981c23b0 <unknown>
+#4 0x55d6981b73b1 <unknown>
+#5 0x55d698207316 <unknown>
+#6 0x55d6982069fc <unknown>
+#7 0x55d6981c64cf <unknown>
+#8 0x55d6981c7291 <unknown>
+#9 0x55d69874976b <unknown>
+#10 0x55d69874c67d <unknown>
+#11 0x55d6987366c8 <unknown>
+#12 0x55d69874d210 <unknown>
+#13 0x55d69871d170 <unknown>
+#14 0x55d6987707b8 <unknown>
+#15 0x55d698770955 <unknown>
+#16 0x55d69878230e <unknown>
+#17 0x7fe8b60937db <unknown>
+
+2026-05-07 12:55:21,753 [INFO] ✅ Scraping done. Total businesses found: 0
+2026-05-07 12:55:21,753 [INFO] ✅ Found 0 businesses. Saved to scraped_businesses.json
+2026-05-07 12:55:21,753 [ERROR] No businesses found. Check your internet connection and Chrome installation.
+2026-05-07 12:55:29,727 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 12:55:29,727 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 12:55:30,506 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 12:55:31,049 [ERROR] Scraper crashed: Message: session not created: cannot connect to chrome at 127.0.0.1:48227
+from session not created: This version of ChromeDriver only supports Chrome version 148
+Current browser version is 143.0.7499.192; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x55a8f06598aa <unknown>
+#1 0x55a8f00548a9 <unknown>
+#2 0x55a8f00995ff <unknown>
+#3 0x55a8f00983b0 <unknown>
+#4 0x55a8f008d3b1 <unknown>
+#5 0x55a8f00dd316 <unknown>
+#6 0x55a8f00dc9fc <unknown>
+#7 0x55a8f009c4cf <unknown>
+#8 0x55a8f009d291 <unknown>
+#9 0x55a8f061f76b <unknown>
+#10 0x55a8f062267d <unknown>
+#11 0x55a8f060c6c8 <unknown>
+#12 0x55a8f0623210 <unknown>
+#13 0x55a8f05f3170 <unknown>
+#14 0x55a8f06467b8 <unknown>
+#15 0x55a8f0646955 <unknown>
+#16 0x55a8f065830e <unknown>
+#17 0x7ff7278937db <unknown>
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 369, in scrape_businesses
+    driver = _make_driver()
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 94, in _make_driver
+    driver = uc.Chrome(options=options)
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        service=service,
+        ^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        browser_name=DesiredCapabilities.CHROME["browserName"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        keep_alive=keep_alive,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/common/webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 274, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        capabilities
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 370, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py", line 450, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:48227
+from session not created: This version of ChromeDriver only supports Chrome version 148
+Current browser version is 143.0.7499.192; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x55a8f06598aa <unknown>
+#1 0x55a8f00548a9 <unknown>
+#2 0x55a8f00995ff <unknown>
+#3 0x55a8f00983b0 <unknown>
+#4 0x55a8f008d3b1 <unknown>
+#5 0x55a8f00dd316 <unknown>
+#6 0x55a8f00dc9fc <unknown>
+#7 0x55a8f009c4cf <unknown>
+#8 0x55a8f009d291 <unknown>
+#9 0x55a8f061f76b <unknown>
+#10 0x55a8f062267d <unknown>
+#11 0x55a8f060c6c8 <unknown>
+#12 0x55a8f0623210 <unknown>
+#13 0x55a8f05f3170 <unknown>
+#14 0x55a8f06467b8 <unknown>
+#15 0x55a8f0646955 <unknown>
+#16 0x55a8f065830e <unknown>
+#17 0x7ff7278937db <unknown>
+
+2026-05-07 12:55:31,054 [INFO] ✅ Scraping done. Total businesses found: 0
+2026-05-07 12:55:31,055 [INFO] ✅ Found 0 businesses. Saved to scraped_businesses.json
+2026-05-07 12:55:31,055 [ERROR] No businesses found. Check your internet connection and Chrome installation.
+2026-05-07 12:55:39,160 [INFO] 📂 Loading cached businesses (--no-scrape mode)
+2026-05-07 12:55:39,161 [ERROR] No businesses found. Check your internet connection and Chrome installation.
+2026-05-07 12:56:52,897 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 12:58:35,843 [INFO] ✅ Ollama wrote email for City Hospital Amsterdam (hospital)
+2026-05-07 13:05:18,454 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 13:05:18,455 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 13:05:18,457 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 13:05:18,492 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 13:05:18,969 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 13:05:27,722 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 6 leads
+2026-05-07 13:05:39,291 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 13:05:50,429 [INFO] 🔍 Google Search 'private hospital London' → 12 leads
+2026-05-07 13:06:02,938 [INFO] 🔍 Google Search 'private clinic Berlin' → 4 leads
+2026-05-07 13:06:14,244 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 13:06:27,217 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 13:06:40,494 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 13:06:52,594 [INFO] 🔍 Google Search 'restaurant chain London' → 10 leads
+2026-05-07 13:07:28,138 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 7 leads
+2026-05-07 13:08:15,406 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 13:08:58,779 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 13:09:44,349 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 13:10:33,328 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 13:10:52,572 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 13:11:08,849 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 13:11:23,467 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 13:11:26,380 [INFO] ✅ Scraping done. Total businesses found: 88
+2026-05-07 13:11:26,381 [INFO] ✅ Found 88 businesses. Saved to scraped_businesses.json
+2026-05-07 13:11:26,381 [INFO] 📧 STEP 2: Finding contact emails for 88 businesses...
+2026-05-07 13:11:26,396 [INFO]   [1/88] Checking: Home - ACIBADEM International Medical Center
+2026-05-07 13:11:35,990 [INFO] 📧 Found email at https://acibademimc.com/en/: zorgadministratie@acibademimc.com
+2026-05-07 13:11:35,990 [INFO]   ✅ Home - ACIBADEM International Medical Center → zorgadministratie@acibademimc.com
+2026-05-07 13:11:37,030 [INFO]   [2/88] Checking: Jan van Goyen Medical Center | Personal care Amsterdam
+2026-05-07 13:11:58,572 [INFO]   [3/88] Checking: About Amsterdam UMC: about us, our mission and strategy
+2026-05-07 13:12:22,488 [INFO]   [4/88] Checking: American Hospital Dubai - Best Private Hospital in Dubai
+2026-05-07 13:12:44,625 [INFO]   [5/88] Checking: PRIME Hospitals: Best Multispeciality Hospitals, Medical ...
+2026-05-07 13:12:55,882 [INFO]   [6/88] Checking: Zulekha Hospital, Dubai
+2026-05-07 13:12:58,723 [INFO] 📧 Found email at https://www.zulekhahospitals.com/: jciquality@jcrinc.com
+2026-05-07 13:12:58,724 [INFO]   ✅ Zulekha Hospital, Dubai → jciquality@jcrinc.com
+2026-05-07 13:12:59,737 [INFO]   [7/88] Checking: Dubai Health: Our Network - Hospitals, Health & Medical ...
+2026-05-07 13:13:03,806 [INFO] 📧 Found email at https://dubaihealth.ae/contact: name@domain.com
+2026-05-07 13:13:03,808 [INFO]   ✅ Dubai Health: Our Network - Hospitals, Health & Medical ... → name@domain.com
+2026-05-07 13:13:04,825 [INFO]   [8/88] Checking: Al Zahra Hospital Dubai: Home
+2026-05-07 13:13:13,879 [INFO] 📧 Found email at https://azhd.ae/: healthjobs.dubai@azhd.ae
+2026-05-07 13:13:13,879 [INFO]   ✅ Al Zahra Hospital Dubai: Home → healthjobs.dubai@azhd.ae
+2026-05-07 13:13:14,946 [INFO]   [9/88] Checking: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ...
+2026-05-07 13:13:18,861 [INFO] 📧 Found email at https://www.asterhospitals.ae/: info@asterhospital.com
+2026-05-07 13:13:18,861 [INFO]   ✅ Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... → info@asterhospital.com
+2026-05-07 13:13:19,880 [INFO]   [10/88] Checking: HCA Healthcare UK | Private Hospitals in the UK
+2026-05-07 13:13:36,839 [INFO]   [11/88] Checking: Private hospitals | Ramsay Health Care UK
+2026-05-07 13:13:38,458 [INFO] 📧 Found email at https://www.ramsayhealth.co.uk/contact: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:13:38,459 [INFO]   ✅ Private hospitals | Ramsay Health Care UK → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:13:39,495 [INFO]   [12/88] Checking: Cromwell Hospital, London - Private Hospital in London
+2026-05-07 13:14:05,909 [INFO]   [13/88] Checking: Spire Healthcare | Private Hospitals UK | Quality Care
+2026-05-07 13:14:43,567 [INFO]   [14/88] Checking: Private Hospital treatment
+2026-05-07 13:14:59,809 [INFO]   [15/88] Checking: Home | King's College Hospital NHS Foundation Trust
+2026-05-07 13:15:36,374 [INFO]   [16/88] Checking: Your Private Practice in Berlin.
+2026-05-07 13:15:37,920 [INFO] 📧 Found email at https://www.meoclinic.de/en/: info@meoclinic.de
+2026-05-07 13:15:37,920 [INFO]   ✅ Your Private Practice in Berlin. → info@meoclinic.de
+2026-05-07 13:15:38,947 [INFO]   [17/88] Checking: PRIVATE CLINIC HOURS
+2026-05-07 13:15:44,970 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 13:15:44,971 [INFO]   ✅ PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de
+2026-05-07 13:15:45,997 [INFO]   [18/88] Checking: Dental Clinics
+2026-05-07 13:16:09,261 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 13:16:09,261 [INFO]   ✅ Dental Clinics → supplychain@toronto.ca
+2026-05-07 13:16:10,291 [INFO]   [19/88] Checking: Dental Clinic: Trusted Dentist in Toronto ON
+2026-05-07 13:16:31,487 [INFO]   [20/88] Checking: University of Toronto's Faculty of Dentistry Clinics
+2026-05-07 13:16:43,771 [INFO]   [21/88] Checking: Downtown Dental Clinic: Downtown Dentist, Family Dentist In ...
+2026-05-07 13:17:11,140 [INFO]   [22/88] Checking: Downtown Toronto Dental - 700 University Ave
+2026-05-07 13:18:08,151 [INFO]   [23/88] Checking: Dental Clinic Toronto Rehab
+2026-05-07 13:18:32,204 [INFO]   [24/88] Checking: De Pijp Boutique Hotel Amsterdam | Official website
+2026-05-07 13:18:33,412 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 13:18:33,413 [INFO]   ✅ De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl
+2026-05-07 13:18:34,448 [INFO]   [25/88] Checking: The Hendrick's | Boutique Hotel Amsterdam | Official Website
+2026-05-07 13:18:35,728 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 13:18:35,729 [INFO]   ✅ The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com
+2026-05-07 13:18:36,765 [INFO]   [26/88] Checking: Boutique Hotel View Amsterdam - Amsterdam, Netherlands
+2026-05-07 13:18:58,089 [INFO]   [27/88] Checking: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ...
+2026-05-07 13:18:59,656 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 13:18:59,657 [INFO]   ✅ Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl
+2026-05-07 13:19:00,690 [INFO]   [28/88] Checking: Boutique Hotel | Boutique Hotel View | Amsterdam
+2026-05-07 13:19:02,199 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 13:19:02,200 [INFO]   ✅ Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl
+2026-05-07 13:19:03,234 [INFO]   [29/88] Checking: The Albus Boutique Hotel Amsterdam Centre
+2026-05-07 13:19:04,093 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 13:19:04,093 [INFO]   ✅ The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com
+2026-05-07 13:19:05,124 [INFO]   [30/88] Checking: Park Regis Business Bay (Dubai)
+2026-05-07 13:19:11,182 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 13:19:11,182 [INFO]   ✅ Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com
+2026-05-07 13:19:12,217 [INFO]   [31/88] Checking: Renaissance Business Bay Hotel, Dubai
+2026-05-07 13:19:29,815 [INFO]   [32/88] Checking: Renaissance Business Bay Hotel, Dubai | WEBSITE | Dubai
+2026-05-07 13:20:10,234 [INFO]   [33/88] Checking: Radisson Blu Dubai Waterfront
+2026-05-07 13:20:19,944 [INFO]   [34/88] Checking: Hotel in Dubai Business Bay
+2026-05-07 13:20:20,542 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: sales.hospitality@tfghospitality.com
+2026-05-07 13:20:20,543 [INFO]   ✅ Hotel in Dubai Business Bay → sales.hospitality@tfghospitality.com
+2026-05-07 13:20:21,580 [INFO]   [35/88] Checking: Citymax Hotel Business Bay | 4 star Hotel Dubai
+2026-05-07 13:20:24,403 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 13:20:24,404 [INFO]   ✅ Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com
+2026-05-07 13:20:25,449 [INFO]   [36/88] Checking: Côte Brasserie: Modern French Restaurant
+2026-05-07 13:20:47,597 [INFO]   [37/88] Checking: St. JOHN Restaurant
+2026-05-07 13:20:48,391 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 13:20:48,392 [INFO]   ✅ St. JOHN Restaurant → reservations@stjohnrestaurant.com
+2026-05-07 13:20:49,440 [INFO]   [38/88] Checking: The Evolv Collection | Luxury Restaurants & Bars in London ...
+2026-05-07 13:20:54,908 [INFO] 📧 Found email at https://evolvcollection.com/contact: rewards@evolvcollection.com
+2026-05-07 13:20:54,909 [INFO]   ✅ The Evolv Collection | Luxury Restaurants & Bars in London ... → rewards@evolvcollection.com
+2026-05-07 13:20:55,952 [INFO]   [39/88] Checking: Fallow - Restaurant London - Creative Cooking Sustainable ...
+2026-05-07 13:20:58,443 [INFO] 📧 Found email at https://fallowrestaurant.com/: info@fallowrestaurant.com
+2026-05-07 13:20:58,444 [INFO]   ✅ Fallow - Restaurant London - Creative Cooking Sustainable ... → info@fallowrestaurant.com
+2026-05-07 13:20:59,514 [INFO]   [40/88] Checking: Gymkhana
+2026-05-07 13:21:07,562 [INFO]   [41/88] Checking: VU University Medical Center
+2026-05-07 13:21:27,374 [INFO]   [42/88] Checking: BovenIJ
+2026-05-07 13:21:49,563 [INFO]   [43/88] Checking: OLVG, location Spuistraat
+2026-05-07 13:22:07,994 [INFO]   [44/88] Checking: OLVG Location West
+2026-05-07 13:22:27,459 [INFO]   [45/88] Checking: OLVG, location East
+2026-05-07 13:22:45,921 [INFO]   [46/88] Checking: Tourist Medical Center
+2026-05-07 13:23:04,317 [INFO]   [47/88] Checking: Medical Center Ganzenhoef
+2026-05-07 13:23:47,621 [INFO]   [59/88] Checking: voco London - Marylebone by IHG
+2026-05-07 13:23:53,760 [INFO]   [60/88] Checking: The Londoner Hotel
+2026-05-07 13:23:54,793 [INFO] 📧 Found email at https://www.thelondoner.com/?utm_source=Yext&utm_medium=Organic&utm_campaign=Londoner: reservations@thelondoner.com
+2026-05-07 13:23:54,794 [INFO]   ✅ The Londoner Hotel → reservations@thelondoner.com
+2026-05-07 13:23:55,860 [INFO]   [61/88] Checking: Premier Inn London Tolworth hotel
+2026-05-07 13:24:08,442 [INFO]   [62/88] Checking: Hilton London Kensington
+2026-05-07 13:24:18,975 [INFO]   [63/88] Checking: Zedwell Piccadilly Circus
+2026-05-07 13:24:39,030 [INFO]   [64/88] Checking: hub by Premier Inn London Westminster Abbey hotel
+2026-05-07 13:24:55,728 [INFO]   [65/88] Checking: The Rose & Crown, London Bridge (PUBLOVE)
+2026-05-07 13:25:11,664 [INFO]   [66/88] Checking: The Steam Engine, Waterloo (PUBLOVE)
+2026-05-07 13:25:28,203 [INFO]   [67/88] Checking: The British School of Amsterdam
+2026-05-07 13:25:30,912 [INFO] 📧 Found email at https://www.britams.nl/contact: principal@britams.nl
+2026-05-07 13:25:30,913 [INFO]   ✅ The British School of Amsterdam → principal@britams.nl
+2026-05-07 13:25:31,983 [INFO]   [68/88] Checking: Amsterdam International Community School (AICS South campus)
+2026-05-07 13:25:33,256 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:33,258 [INFO]   ✅ Amsterdam International Community School (AICS South campus) → principal@britams.nl
+2026-05-07 13:25:34,368 [INFO]   [69/88] Checking: Amity International School, Amsterdam
+2026-05-07 13:25:35,708 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:35,709 [INFO]   ✅ Amity International School, Amsterdam → principal@britams.nl
+2026-05-07 13:25:36,786 [INFO]   [70/88] Checking: Public Elementary School De Burght
+2026-05-07 13:25:38,054 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:38,055 [INFO]   ✅ Public Elementary School De Burght → principal@britams.nl
+2026-05-07 13:25:39,126 [INFO]   [71/88] Checking: International French School d'Amsterdam
+2026-05-07 13:25:40,663 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:40,665 [INFO]   ✅ International French School d'Amsterdam → principal@britams.nl
+2026-05-07 13:25:41,759 [INFO]   [72/88] Checking: Onze Amsterdamse School
+2026-05-07 13:25:42,913 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:42,914 [INFO]   ✅ Onze Amsterdamse School → principal@britams.nl
+2026-05-07 13:25:44,014 [INFO]   [73/88] Checking: New International School Esprit (DENISE)
+2026-05-07 13:25:45,288 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:45,289 [INFO]   ✅ New International School Esprit (DENISE) → principal@britams.nl
+2026-05-07 13:25:46,397 [INFO]   [74/88] Checking: Foundation The Japanese School of Amsterdam
+2026-05-07 13:25:47,715 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:47,776 [INFO]   ✅ Foundation The Japanese School of Amsterdam → principal@britams.nl
+2026-05-07 13:25:48,881 [INFO]   [75/88] Checking: Private Education, Winford Amsterdam
+2026-05-07 13:25:50,079 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:50,080 [INFO]   ✅ Private Education, Winford Amsterdam → principal@britams.nl
+2026-05-07 13:25:51,162 [INFO]   [76/88] Checking: Winford Bilingual Primary School
+2026-05-07 13:25:52,403 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:52,404 [INFO]   ✅ Winford Bilingual Primary School → principal@britams.nl
+2026-05-07 13:25:53,549 [INFO]   [77/88] Checking: Public Elementary School De Witte Olifant
+2026-05-07 13:25:54,797 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:54,798 [INFO]   ✅ Public Elementary School De Witte Olifant → principal@britams.nl
+2026-05-07 13:26:18,871 [INFO] 📬 32 businesses have contact emails
+2026-05-07 13:26:18,906 [INFO] 
+📝 Writing email for: Home - ACIBADEM International Medical Center (hospital) → zorgadministratie@acibademimc.com
+2026-05-07 13:28:19,157 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:29:31,459 [INFO] ✅ Ollama wrote email for Home - ACIBADEM International Medical Center (hospital)
+2026-05-07 13:29:31,461 [INFO]   Subject: Elevate Patient Care with Customized Hospital Solution
+2026-05-07 13:29:31,463 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:29:31,463 [INFO]   [DRY RUN] Would send to: zorgadministratie@acibademimc.com
+2026-05-07 13:29:31,463 [INFO]   Preview:
+Here is the cold email:
+
+Hi Dr. Bas Pijnenburg,
+
+As a developer with experience in building custom CRM/ERP systems for hospitals, I understand that managing patient records, appointments, and billing ...
+2026-05-07 13:29:32,286 [INFO] 
+📝 Writing email for: Zulekha Hospital, Dubai (hospital) → jciquality@jcrinc.com
+2026-05-07 13:31:33,225 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:32:50,924 [INFO] ✅ Ollama wrote email for Zulekha Hospital, Dubai (hospital)
+2026-05-07 13:32:50,926 [INFO]   Subject: Transforming Patient Care with Customized Hospital Solutions
+2026-05-07 13:32:50,926 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:32:50,926 [INFO]   [DRY RUN] Would send to: jciquality@jcrinc.com
+2026-05-07 13:32:50,926 [INFO]   Preview:
+Hi Dr. Zulekha Daud,
+
+As a hospital management professional, I'm sure you understand the challenges of managing patient records, appointments, and billing with outdated spreadsheets or paper. It's tim...
+2026-05-07 13:32:51,318 [INFO] 
+📝 Writing email for: Dubai Health: Our Network - Hospitals, Health & Medical ... (hospital) → name@domain.com
+2026-05-07 13:34:51,065 [INFO] ✅ Ollama wrote email for Dubai Health: Our Network - Hospitals, Health & Medical ... (hospital)
+2026-05-07 13:34:51,065 [INFO]   Subject: Streamline Your Operations with Custom Healthcare Solutions
+2026-05-07 13:34:51,065 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:34:51,065 [INFO]   [DRY RUN] Would send to: name@domain.com
+2026-05-07 13:34:51,065 [INFO]   Preview:
+Hi Dr. Raja Easa,
+
+As a hospital administrator, I'm sure you're all too familiar with the challenges of managing patient records, appointments, and billing using outdated spreadsheets or paper. It's a...
+2026-05-07 13:34:51,175 [INFO] 
+📝 Writing email for: Al Zahra Hospital Dubai: Home (hospital) → healthjobs.dubai@azhd.ae
+2026-05-07 13:36:43,979 [INFO] ✅ Ollama wrote email for Al Zahra Hospital Dubai: Home (hospital)
+2026-05-07 13:36:43,979 [INFO]   Subject: Streamline Your Hospital Operations with Customized Solution
+2026-05-07 13:36:43,979 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:36:43,979 [INFO]   [DRY RUN] Would send to: healthjobs.dubai@azhd.ae
+2026-05-07 13:36:43,979 [INFO]   Preview:
+Here is the cold email:
+
+Hi Prof. Dr,
+
+As I explored Al Zahra Hospital Dubai's website (https://azhd.ae/), I noticed that managing patient records, appointments, and billing with outdated spreadsheets...
+2026-05-07 13:36:44,150 [INFO] 
+📝 Writing email for: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital) → info@asterhospital.com
+2026-05-07 13:38:44,304 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:48:46,624 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 13:48:55,471 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 13:49:12,107 [INFO] ✅ Ollama model is warm and ready
+2026-05-07 13:49:12,109 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 13:49:12,110 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 13:49:12,145 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 13:49:12,507 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 13:49:13,104 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 13:49:22,846 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 13:49:32,973 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 13:49:42,923 [INFO] 🔍 Google Search 'private hospital London' → 10 leads
+2026-05-07 13:49:55,027 [INFO] 🔍 Google Search 'private clinic Berlin' → 4 leads
+2026-05-07 13:50:06,386 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 13:50:18,953 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 13:50:28,734 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 13:50:38,046 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 13:51:14,794 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 13:52:01,629 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 13:52:38,627 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 13:53:21,043 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 10 leads
+2026-05-07 13:54:05,323 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 13:54:23,172 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 13:54:38,875 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 13:54:52,179 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 13:54:55,947 [INFO] ✅ Scraping done. Total businesses found: 84
+2026-05-07 13:54:55,965 [INFO] ✅ Found 84 businesses. Saved to scraped_businesses.json
+2026-05-07 13:54:55,968 [INFO] 📧 STEP 2: Finding contact emails for 84 businesses...
+2026-05-07 13:54:55,985 [INFO]   ⏭️  Skipping (already contacted): Home - ACIBADEM International Medical Center
+2026-05-07 13:54:55,986 [INFO]   [2/84] Checking: Jan van Goyen Medical Center | Personal care Amsterdam
+2026-05-07 13:55:08,250 [INFO]   [3/84] Checking: American Hospital Dubai - Best Private Hospital in Dubai
+2026-05-07 13:55:31,884 [INFO]   [4/84] Checking: PRIME Hospitals: Best Multispeciality Hospitals, Medical ...
+2026-05-07 13:55:47,249 [INFO]   ⏭️  Skipping (already contacted): Zulekha Hospital, Dubai
+2026-05-07 13:55:47,254 [INFO]   ⏭️  Skipping (already contacted): Dubai Health: Our Network - Hospitals, Health & Medical ...
+2026-05-07 13:55:47,260 [INFO]   ⏭️  Skipping (already contacted): Al Zahra Hospital Dubai: Home
+2026-05-07 13:55:47,266 [INFO]   [8/84] Checking: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ...
+2026-05-07 13:55:51,375 [INFO] 📧 Found email at https://www.asterhospitals.ae/: info@asterhospital.com
+2026-05-07 13:55:51,377 [INFO]   ✅ Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... → info@asterhospital.com
+2026-05-07 13:55:52,379 [INFO]   [9/84] Checking: HCA Healthcare UK | Private Hospitals in the UK
+2026-05-07 13:56:06,089 [INFO]   [10/84] Checking: Spire Healthcare | Private Hospitals UK | Quality Care
+2026-05-07 13:56:32,638 [INFO]   [11/84] Checking: Cromwell Hospital, London - Private Hospital in London
+2026-05-07 13:57:01,264 [INFO]   [12/84] Checking: Private hospitals | Ramsay Health Care UK
+2026-05-07 13:57:03,360 [INFO] 📧 Found email at https://www.ramsayhealth.co.uk/contact: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:57:03,361 [INFO]   ✅ Private hospitals | Ramsay Health Care UK → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:57:04,363 [INFO]   [13/84] Checking: Private Hospital treatment
+2026-05-07 13:57:21,139 [INFO]   [14/84] Checking: Your Private Practice in Berlin.
+2026-05-07 13:57:22,732 [INFO] 📧 Found email at https://www.meoclinic.de/en/: info@meoclinic.de
+2026-05-07 13:57:22,735 [INFO]   ✅ Your Private Practice in Berlin. → info@meoclinic.de
+2026-05-07 13:57:23,738 [INFO]   [15/84] Checking: PRIVATE CLINIC HOURS
+2026-05-07 13:57:26,350 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 13:57:26,353 [INFO]   ✅ PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de
+2026-05-07 13:57:27,359 [INFO]   [16/84] Checking: Dental Clinics
+2026-05-07 13:57:42,516 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 13:57:42,517 [INFO]   ✅ Dental Clinics → supplychain@toronto.ca
+2026-05-07 13:57:43,519 [INFO]   [17/84] Checking: Dental Clinic: Trusted Dentist in Toronto ON
+2026-05-07 13:58:06,589 [INFO]   [18/84] Checking: University of Toronto's Faculty of Dentistry Clinics
+2026-05-07 13:58:19,505 [INFO]   [19/84] Checking: Downtown Dental Clinic: Downtown Dentist, Family Dentist In ...
+2026-05-07 13:58:33,766 [INFO]   [20/84] Checking: Downtown Toronto Dental - 700 University Ave
+2026-05-07 13:58:53,226 [INFO]   [21/84] Checking: Dental Clinic Toronto Rehab
+2026-05-07 13:59:09,114 [INFO]   [22/84] Checking: De Pijp Boutique Hotel Amsterdam | Official website
+2026-05-07 13:59:09,621 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 13:59:09,629 [INFO]   ✅ De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl
+2026-05-07 13:59:10,636 [INFO]   [23/84] Checking: The Hendrick's | Boutique Hotel Amsterdam | Official Website
+2026-05-07 13:59:12,023 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 13:59:12,027 [INFO]   ✅ The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com
+2026-05-07 13:59:13,034 [INFO]   [24/84] Checking: Boutique Hotel View Amsterdam - Amsterdam, Netherlands
+2026-05-07 13:59:32,262 [INFO]   [25/84] Checking: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ...
+2026-05-07 13:59:33,953 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 13:59:33,955 [INFO]   ✅ Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl
+2026-05-07 13:59:34,960 [INFO]   [26/84] Checking: Boutique Hotel | Boutique Hotel View | Amsterdam
+2026-05-07 13:59:36,933 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 13:59:36,934 [INFO]   ✅ Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl
+2026-05-07 13:59:37,936 [INFO]   [27/84] Checking: The Albus Boutique Hotel Amsterdam Centre
+2026-05-07 13:59:39,321 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 13:59:39,323 [INFO]   ✅ The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com
+2026-05-07 13:59:40,325 [INFO]   [28/84] Checking: Park Regis Business Bay (Dubai)
+2026-05-07 13:59:41,646 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 13:59:41,648 [INFO]   ✅ Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com
+2026-05-07 13:59:42,650 [INFO]   [29/84] Checking: Renaissance Business Bay Hotel, Dubai
+2026-05-07 14:00:02,525 [INFO]   [30/84] Checking: Renaissance Business Bay Hotel, Dubai | WEBSITE | Dubai
+2026-05-07 14:00:34,654 [INFO]   [31/84] Checking: Radisson Blu Dubai Waterfront
+2026-05-07 14:00:46,810 [INFO]   [32/84] Checking: Hotel in Dubai Business Bay
+2026-05-07 14:00:47,425 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: reservations.businessbay@thefirstcollection.ae
+2026-05-07 14:00:47,426 [INFO]   ✅ Hotel in Dubai Business Bay → reservations.businessbay@thefirstcollection.ae
+2026-05-07 14:00:48,428 [INFO]   [33/84] Checking: Citymax Hotel Business Bay | 4 star Hotel Dubai
+2026-05-07 14:00:48,864 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 14:00:48,867 [INFO]   ✅ Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com
+2026-05-07 14:00:49,870 [INFO]   [34/84] Checking: Côte Brasserie: Modern French Restaurant
+2026-05-07 14:01:04,282 [INFO]   [35/84] Checking: St. JOHN Restaurant
+2026-05-07 14:01:05,211 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 14:01:05,213 [INFO]   ✅ St. JOHN Restaurant → reservations@stjohnrestaurant.com
+2026-05-07 14:01:06,214 [INFO]   [36/84] Checking: The Evolv Collection | Luxury Restaurants & Bars in London ...
+2026-05-07 14:01:09,429 [INFO] 📧 Found email at https://evolvcollection.com/contact: rewards@evolvcollection.com
+2026-05-07 14:01:09,431 [INFO]   ✅ The Evolv Collection | Luxury Restaurants & Bars in London ... → rewards@evolvcollection.com
+2026-05-07 14:01:10,433 [INFO]   [37/84] Checking: VU University Medical Center
+2026-05-07 14:01:25,106 [INFO]   [38/84] Checking: BovenIJ
+2026-05-07 14:01:40,670 [INFO]   [39/84] Checking: OLVG, location Spuistraat
+2026-05-07 14:01:54,554 [INFO]   [40/84] Checking: OLVG Location West
+2026-05-07 14:02:08,322 [INFO]   [41/84] Checking: OLVG, location East
+2026-05-07 14:02:23,705 [INFO]   [42/84] Checking: Acibadem International Medical Center
+2026-05-07 14:02:37,018 [INFO]   [43/84] Checking: Tourist Medical Center
+2026-05-07 14:02:52,161 [INFO]   [44/84] Checking: Medical Center Ganzenhoef
+2026-05-07 14:04:30,068 [INFO] 📬 15 businesses have contact emails
+2026-05-07 14:04:30,099 [INFO] 
+📝 Writing email for: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital) → info@asterhospital.com
+2026-05-07 14:06:36,280 [INFO] ✅ Ollama wrote email for Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital)
+2026-05-07 14:06:36,283 [INFO]   Subject: Proposal: Custom Hospital CRM/ERP for Aster Hospital
+2026-05-07 14:06:36,283 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:06:36,283 [INFO]   [DRY RUN] Would send to: info@asterhospital.com
+2026-05-07 14:06:36,284 [INFO]   Preview:
+Hi Dr. Azad Moopen,
+
+I noticed that managing patient records, appointments, and billing at Aster Hospital might still be a challenge due to the use of outdated spreadsheets or paper. I have previously...
+2026-05-07 14:06:36,504 [INFO] 
+📝 Writing email for: Private hospitals | Ramsay Health Care UK (hospital) → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 14:08:47,348 [INFO] ✅ Ollama wrote email for Private hospitals | Ramsay Health Care UK (hospital)
+2026-05-07 14:08:47,348 [INFO]   Subject: Custom Hospital CRM/ERP Proposal for Ramsay Health Care UK
+2026-05-07 14:08:47,348 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:08:47,348 [INFO]   [DRY RUN] Would send to: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 14:08:47,349 [INFO]   Preview:
+Hi Mr Amir Sriemevan,
+
+I noticed that managing patient records, appointments, and billing at Ramsay Health Care UK might still be a challenge due to the use of outdated spreadsheets or paper. I specia...
+2026-05-07 14:08:47,496 [INFO] 
+📝 Writing email for: Your Private Practice in Berlin. (clinic) → info@meoclinic.de
+2026-05-07 14:10:55,945 [INFO] ✅ Ollama wrote email for Your Private Practice in Berlin. (clinic)
+2026-05-07 14:10:55,945 [INFO]   Subject: Custom Clinic Management Web App Proposal
+2026-05-07 14:10:55,945 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:10:55,945 [INFO]   [DRY RUN] Would send to: info@meoclinic.de
+2026-05-07 14:10:55,945 [INFO]   Preview:
+Hi Your Private Practice in Berlin. Team,
+
+I came across your clinic's website and appreciated the services you offer. I noticed that managing patient appointments and records manually might consume v...
+2026-05-07 14:10:56,999 [INFO] 📱 Telegram notification sent
+2026-05-07 15:11:04,942 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 15:11:21,445 [INFO] ✅ Ollama model is warm and ready
+2026-05-07 15:11:21,448 [INFO] 📂 Loading cached businesses (--no-scrape mode)
+2026-05-07 15:11:21,450 [INFO] 📧 STEP 2: Finding contact emails for 84 businesses...
+2026-05-07 15:11:21,452 [INFO]   ⏭️  Skipping (already contacted): Home - ACIBADEM International Medical Center
+2026-05-07 15:11:21,454 [INFO]   [2/84] Checking: Jan van Goyen Medical Center | Personal care Amsterdam
+2026-05-07 15:11:35,061 [INFO]   [3/84] Checking: American Hospital Dubai - Best Private Hospital in Dubai
+2026-05-07 15:12:00,221 [INFO]   [4/84] Checking: PRIME Hospitals: Best Multispeciality Hospitals, Medical ...
+2026-05-07 15:12:16,755 [INFO]   ⏭️  Skipping (already contacted): Zulekha Hospital, Dubai
+2026-05-07 15:12:16,757 [INFO]   ⏭️  Skipping (already contacted): Dubai Health: Our Network - Hospitals, Health & Medical ...
+2026-05-07 15:12:16,759 [INFO]   ⏭️  Skipping (already contacted): Al Zahra Hospital Dubai: Home
+2026-05-07 15:12:16,766 [INFO]   ⏭️  Skipping (already contacted): Aster Hospital: Best Multispeciality Hospital - Top Hospital in ...
+2026-05-07 15:12:16,770 [INFO]   [9/84] Checking: HCA Healthcare UK | Private Hospitals in the UK
+2026-05-07 15:12:32,641 [INFO]   [10/84] Checking: Spire Healthcare | Private Hospitals UK | Quality Care
+2026-05-07 15:12:56,277 [INFO]   [11/84] Checking: Cromwell Hospital, London - Private Hospital in London
+2026-05-07 15:13:25,696 [INFO]   ⏭️  Skipping (already contacted): Private hospitals | Ramsay Health Care UK
+2026-05-07 15:13:25,702 [INFO]   [13/84] Checking: Private Hospital treatment
+2026-05-07 15:13:42,456 [INFO]   ⏭️  Skipping (already contacted): Your Private Practice in Berlin.
+2026-05-07 15:13:42,462 [INFO]   [15/84] Checking: PRIVATE CLINIC HOURS
+2026-05-07 15:13:45,366 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 15:13:45,369 [INFO]   ✅ PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de
+2026-05-07 15:13:46,372 [INFO]   [16/84] Checking: Dental Clinics
+2026-05-07 15:14:02,578 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 15:14:02,579 [INFO]   ✅ Dental Clinics → supplychain@toronto.ca
+2026-05-07 15:14:03,581 [INFO]   [17/84] Checking: Dental Clinic: Trusted Dentist in Toronto ON
+2026-05-07 15:14:26,123 [INFO]   [18/84] Checking: University of Toronto's Faculty of Dentistry Clinics
+2026-05-07 15:14:40,138 [INFO]   [19/84] Checking: Downtown Dental Clinic: Downtown Dentist, Family Dentist In ...
+2026-05-07 15:14:54,289 [INFO]   [20/84] Checking: Downtown Toronto Dental - 700 University Ave
+2026-05-07 15:15:38,085 [INFO]   [21/84] Checking: Dental Clinic Toronto Rehab
+2026-05-07 15:15:54,256 [INFO]   [22/84] Checking: De Pijp Boutique Hotel Amsterdam | Official website
+2026-05-07 15:15:54,749 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 15:15:54,751 [INFO]   ✅ De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl
+2026-05-07 15:15:55,753 [INFO]   [23/84] Checking: The Hendrick's | Boutique Hotel Amsterdam | Official Website
+2026-05-07 15:15:57,577 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 15:15:57,579 [INFO]   ✅ The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com
+2026-05-07 15:15:58,587 [INFO]   [24/84] Checking: Boutique Hotel View Amsterdam - Amsterdam, Netherlands
+2026-05-07 15:16:19,153 [INFO]   [25/84] Checking: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ...
+2026-05-07 15:16:20,764 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 15:16:20,767 [INFO]   ✅ Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl
+2026-05-07 15:16:21,772 [INFO]   [26/84] Checking: Boutique Hotel | Boutique Hotel View | Amsterdam
+2026-05-07 15:16:24,332 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 15:16:24,334 [INFO]   ✅ Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl
+2026-05-07 15:16:25,341 [INFO]   [27/84] Checking: The Albus Boutique Hotel Amsterdam Centre
+2026-05-07 15:16:26,760 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 15:16:26,761 [INFO]   ✅ The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com
+2026-05-07 15:16:27,763 [INFO]   [28/84] Checking: Park Regis Business Bay (Dubai)
+2026-05-07 15:16:29,128 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 15:16:29,129 [INFO]   ✅ Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com
+2026-05-07 15:16:30,131 [INFO]   [29/84] Checking: Renaissance Business Bay Hotel, Dubai
+2026-05-07 15:16:50,664 [INFO]   [30/84] Checking: Renaissance Business Bay Hotel, Dubai | WEBSITE | Dubai
+2026-05-07 15:17:24,262 [INFO]   [31/84] Checking: Radisson Blu Dubai Waterfront
+2026-05-07 15:17:36,953 [INFO]   [32/84] Checking: Hotel in Dubai Business Bay
+2026-05-07 15:17:37,734 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: reservations.businessbay@thefirstcollection.ae
+2026-05-07 15:17:37,735 [INFO]   ✅ Hotel in Dubai Business Bay → reservations.businessbay@thefirstcollection.ae
+2026-05-07 15:17:38,751 [INFO]   [33/84] Checking: Citymax Hotel Business Bay | 4 star Hotel Dubai
+2026-05-07 15:17:41,963 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 15:17:41,964 [INFO]   ✅ Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com
+2026-05-07 15:17:42,975 [INFO]   [34/84] Checking: Côte Brasserie: Modern French Restaurant
+2026-05-07 15:17:57,765 [INFO]   [35/84] Checking: St. JOHN Restaurant
+2026-05-07 15:17:58,672 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 15:17:58,675 [INFO]   ✅ St. JOHN Restaurant → reservations@stjohnrestaurant.com
+2026-05-07 15:17:59,680 [INFO]   [36/84] Checking: The Evolv Collection | Luxury Restaurants & Bars in London ...
+2026-05-07 15:18:03,195 [INFO] 📧 Found email at https://evolvcollection.com/contact: rewards@evolvcollection.com
+2026-05-07 15:18:03,196 [INFO]   ✅ The Evolv Collection | Luxury Restaurants & Bars in London ... → rewards@evolvcollection.com
+2026-05-07 15:18:04,202 [INFO]   [37/84] Checking: VU University Medical Center
+2026-05-07 15:18:18,817 [INFO]   [38/84] Checking: BovenIJ
+2026-05-07 15:18:33,844 [INFO]   [39/84] Checking: OLVG, location Spuistraat
+2026-05-07 15:18:50,896 [INFO]   [40/84] Checking: OLVG Location West
+2026-05-07 15:19:07,605 [INFO]   [41/84] Checking: OLVG, location East
+2026-05-07 15:19:23,262 [INFO]   [42/84] Checking: Acibadem International Medical Center
+2026-05-07 15:19:37,321 [INFO]   [43/84] Checking: Tourist Medical Center
+2026-05-07 15:19:52,486 [INFO]   [44/84] Checking: Medical Center Ganzenhoef
+2026-05-07 15:21:26,758 [INFO] 📬 12 businesses have contact emails
+2026-05-07 15:21:26,792 [INFO] 
+📝 Writing email for: PRIVATE CLINIC HOURS (clinic) → allgemeinmedizin@familycareberlin.de
+2026-05-07 15:23:39,739 [INFO] ✅ Ollama wrote email for PRIVATE CLINIC HOURS (clinic)
+2026-05-07 15:23:39,751 [INFO]   Subject: Custom Clinic Management App Proposal
+2026-05-07 15:23:39,753 [INFO]   AI used: ✅ Ollama
+2026-05-07 15:23:39,755 [ERROR]   ❌ Error sending to PRIVATE CLINIC HOURS: send_outreach_email() got an unexpected keyword argument 'lead'
+2026-05-07 15:23:39,772 [INFO] 
+📝 Writing email for: Dental Clinics (clinic) → supplychain@toronto.ca
+2026-05-07 15:26:02,915 [INFO] ✅ Ollama wrote email for Dental Clinics (clinic)
+2026-05-07 15:26:02,935 [INFO]   Subject: Revolutionize Dental Management: Custom Web App Proposal
+2026-05-07 15:26:02,937 [INFO]   AI used: ✅ Ollama
+2026-05-07 15:26:02,938 [ERROR]   ❌ Error sending to Dental Clinics: send_outreach_email() got an unexpected keyword argument 'lead'
+2026-05-07 15:26:02,972 [INFO] 
+📝 Writing email for: De Pijp Boutique Hotel Amsterdam | Official website (hotel) → info@depijpboutiquehotel.nl
+2026-05-07 15:28:25,720 [INFO] ✅ Ollama wrote email for De Pijp Boutique Hotel Amsterdam | Official website (hotel)
+2026-05-07 15:28:25,721 [INFO]   Subject: Propose Custom Hotel Management System for De Pijp Boutique Hotel
+2026-05-07 15:28:25,721 [INFO]   AI used: ✅ Ollama
+2026-05-07 15:28:25,721 [ERROR]   ❌ Error sending to De Pijp Boutique Hotel Amsterdam | Official website: send_outreach_email() got an unexpected keyword argument 'lead'
+2026-05-07 15:28:25,723 [INFO] 
+📝 Writing email for: The Hendrick's | Boutique Hotel Amsterdam | Official Website (hotel) → info@thehendrickshotel.com
+2026-05-07 15:31:23,181 [INFO] ✅ Ollama wrote email for The Hendrick's | Boutique Hotel Amsterdam | Official Website (hotel)
+2026-05-07 15:31:23,196 [INFO]   Subject: Proposal: Custom Hotel Management System for The Hendrick's Amsterdam
+2026-05-07 15:31:23,197 [INFO]   AI used: ✅ Ollama
+2026-05-07 15:31:23,199 [ERROR]   ❌ Error sending to The Hendrick's | Boutique Hotel Amsterdam | Official Website: send_outreach_email() got an unexpected keyword argument 'lead'
+2026-05-07 15:31:23,226 [INFO] 
+📝 Writing email for: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... (hotel) → reservation@hotelnottinghill.nl
+2026-05-07 17:06:16,813 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 17:06:42,951 [INFO] ✅ Ollama model is warm and ready
+2026-05-07 17:06:42,984 [INFO] 📂 Loading cached businesses (--no-scrape mode)
+2026-05-07 17:06:42,997 [INFO] 📧 STEP 2: Finding contact emails for 84 businesses...
+2026-05-07 17:06:51,082 [INFO] 📧 Found email at https://acibademimc.com/en/: zorgadministratie@acibademimc.com
+2026-05-07 17:06:51,089 [INFO]   ✅ Home - ACIBADEM International Medical Center → zorgadministratie@acibademimc.com
+2026-05-07 17:07:47,603 [INFO] 📧 Found email at https://www.zulekhahospitals.com/: hr@zulekhahospitals.com
+2026-05-07 17:07:47,604 [INFO]   ✅ Zulekha Hospital, Dubai → hr@zulekhahospitals.com
+2026-05-07 17:07:56,875 [INFO] 📧 Found email at https://dubaihealth.ae/contact: name@domain.com
+2026-05-07 17:07:56,877 [INFO]   ✅ Dubai Health: Our Network - Hospitals, Health & Medical ... → name@domain.com
+2026-05-07 17:08:02,462 [INFO] 📧 Found email at https://azhd.ae/: healthjobs.dubai@azhd.ae
+2026-05-07 17:08:02,463 [INFO]   ✅ Al Zahra Hospital Dubai: Home → healthjobs.dubai@azhd.ae
+2026-05-07 17:08:08,756 [INFO] 📧 Found email at https://www.asterhospitals.ae/: info@asterhospital.com
+2026-05-07 17:08:08,757 [INFO]   ✅ Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... → info@asterhospital.com
+2026-05-07 17:09:26,840 [INFO] 📧 Found email at https://www.ramsayhealth.co.uk/contact: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 17:09:26,842 [INFO]   ✅ Private hospitals | Ramsay Health Care UK → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 17:09:46,822 [INFO] 📧 Found email at https://www.meoclinic.de/en/: info@meoclinic.de
+2026-05-07 17:09:46,824 [INFO]   ✅ Your Private Practice in Berlin. → info@meoclinic.de
+2026-05-07 17:09:50,846 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 17:09:50,848 [INFO]   ✅ PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de
+2026-05-07 17:10:04,982 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 17:10:04,984 [INFO]   ✅ Dental Clinics → supplychain@toronto.ca
+2026-05-07 17:12:08,774 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 17:12:08,775 [INFO]   ✅ De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl
+2026-05-07 17:12:11,049 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 17:12:11,050 [INFO]   ✅ The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com
+2026-05-07 17:12:33,606 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 17:12:33,607 [INFO]   ✅ Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl
+2026-05-07 17:12:36,354 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 17:12:36,356 [INFO]   ✅ Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl
+2026-05-07 17:12:38,609 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 17:12:38,611 [INFO]   ✅ The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com
+2026-05-07 17:12:41,061 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 17:12:41,064 [INFO]   ✅ Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com
+2026-05-07 17:13:51,785 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: reservations.businessbay@thefirstcollection.ae
+2026-05-07 17:13:51,788 [INFO]   ✅ Hotel in Dubai Business Bay → reservations.businessbay@thefirstcollection.ae
+2026-05-07 17:13:53,143 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 17:13:53,147 [INFO]   ✅ Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com
+2026-05-07 17:14:09,638 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 17:14:09,640 [INFO]   ✅ St. JOHN Restaurant → reservations@stjohnrestaurant.com
+2026-05-07 17:14:15,309 [INFO] 📧 Found email at https://evolvcollection.com/contact: rewards@evolvcollection.com
+2026-05-07 17:14:15,312 [INFO]   ✅ The Evolv Collection | Luxury Restaurants & Bars in London ... → rewards@evolvcollection.com
+2026-05-07 17:17:29,836 [INFO] 📬 19 businesses have contact emails
+2026-05-07 17:20:32,026 [INFO] ✅ Ollama wrote email for Home - ACIBADEM International Medical Center (hospital)
+2026-05-07 17:20:32,268 [INFO] Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=280537875806-noomcj7qn10lof37gdb8et47v68e2ss2.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A48467%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.modify&state=SWEggdIdcCdayJzxv7kzoNi0IsvJO8&code_challenge=YykjVoNR3kBM7buhx09XxfCl76KFZ3aTvGLcTo9OORE&code_challenge_method=S256&access_type=offline
+2026-05-07 17:25:51,075 [INFO] 📂 Loading cached businesses (--no-scrape mode)
+2026-05-07 17:26:01,066 [INFO] 📧 Found email at https://acibademimc.com/en/: zorgadministratie@acibademimc.com
+2026-05-07 17:27:55,329 [INFO] ✅ Ollama wrote email for Home - ACIBADEM International Medical Center (hospital)
+2026-05-07 17:27:58,435 [INFO] ✉️  Email sent via SMTP to zorgadministratie@acibademimc.com
+2026-05-07 17:27:58,947 [INFO] Sent: Home - ACIBADEM International Medical Center → zorgadministratie@acibademimc.com | Propose Custom Hospital CRM/ERP Solution
+2026-05-07 17:27:59,647 [INFO] 📱 Telegram notification sent
+2026-05-07 17:29:39,511 [INFO] 📧 Found email at https://www.zulekhahospitals.com/: hr@zulekhahospitals.com
+2026-05-07 17:32:35,330 [INFO] ✅ Ollama wrote email for Zulekha Hospital, Dubai (hospital)
+2026-05-07 17:32:39,113 [INFO] ✉️  Email sent via SMTP to hr@zulekhahospitals.com
+2026-05-07 17:32:39,330 [INFO] Sent: Zulekha Hospital, Dubai → hr@zulekhahospitals.com | Propose Custom CRM/ERP Solution for Zulekha Hospital
+2026-05-07 17:32:40,084 [INFO] 📱 Telegram notification sent
+2026-05-07 17:33:28,670 [INFO] 📧 Found email at https://dubaihealth.ae/contact: name@domain.com
+2026-05-07 17:35:30,098 [INFO] ✅ Ollama wrote email for Dubai Health: Our Network - Hospitals, Health & Medical ... (hospital)
+2026-05-07 17:35:33,194 [INFO] ✉️  Email sent via SMTP to name@domain.com
+2026-05-07 17:35:33,298 [INFO] Sent: Dubai Health: Our Network - Hospitals, Health & Medical ... → name@domain.com | Custom Hospital CRM/ERP Proposal for Dubai Health Network
+2026-05-07 17:35:34,130 [INFO] 📱 Telegram notification sent
+2026-05-07 17:35:35,142 [INFO] 📱 Telegram notification sent
+2026-05-07 18:00:57,433 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 18:00:57,434 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 18:00:57,437 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 18:00:57,576 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 18:00:58,406 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 18:01:07,922 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 6 leads
+2026-05-07 18:01:19,024 [INFO] 🔍 Google Search 'private hospital Dubai' → 10 leads
+2026-05-07 18:01:28,182 [INFO] 🔍 Google Search 'private hospital London' → 6 leads
+2026-05-07 18:01:39,109 [INFO] 🔍 Google Search 'private clinic Berlin' → 6 leads
+2026-05-07 18:01:51,571 [INFO] 🔍 Google Search 'dental clinic Toronto' → 10 leads
+2026-05-07 18:02:07,571 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 18:02:18,976 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 18:02:30,623 [INFO] 🔍 Google Search 'restaurant chain London' → 8 leads
+2026-05-07 18:03:04,453 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 7 leads
+2026-05-07 18:03:49,689 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 18:04:33,771 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 18:05:18,647 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 10 leads
+2026-05-07 18:06:08,410 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 18:06:28,367 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 18:06:45,984 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 18:07:05,503 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 18:07:08,110 [INFO] ✅ Scraping done. Total businesses found: 82
+2026-05-07 18:07:08,143 [INFO] ✅ Found 82 businesses. Saved to scraped_businesses.json
+2026-05-07 18:08:24,859 [INFO] 📧 Found email at https://www.asterhospitals.ae/: info@asterhospital.com
+2026-05-07 18:11:00,566 [INFO] ✅ Ollama wrote email for Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital)
+2026-05-07 18:11:03,959 [INFO] ✉️  Email sent via SMTP to info@asterhospital.com
+2026-05-07 18:11:04,117 [INFO] Sent: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... → info@asterhospital.com | Propose Custom Hospital CRM/ERP Solution for Aster Hospital
+2026-05-07 18:11:05,086 [INFO] 📱 Telegram notification sent
+2026-05-07 18:12:32,904 [INFO] 📧 Found email at https://www.ramsayhealth.co.uk/contact: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 18:15:22,478 [INFO] ✅ Ollama wrote email for Private hospitals | Ramsay Health Care UK (hospital)
+2026-05-07 18:15:25,538 [INFO] ✉️  Email sent via SMTP to Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 18:15:27,166 [INFO] Sent: Private hospitals | Ramsay Health Care UK → Media.Enquiries@ramsayhealth.co.uk | Custom Hospital CRM/ERP Proposal for Ramsay Health Care UK
+2026-05-07 18:15:27,865 [INFO] 📱 Telegram notification sent
+2026-05-07 18:16:14,568 [INFO] 📧 Found email at https://www.meoclinic.de/en/: info@meoclinic.de
+2026-05-07 18:19:41,724 [INFO] ✅ Ollama wrote email for Your Private Practice in Berlin. (clinic)
+2026-05-07 18:19:45,075 [INFO] ✉️  Email sent via SMTP to info@meoclinic.de
+2026-05-07 18:19:45,429 [INFO] Sent: Your Private Practice in Berlin. → info@meoclinic.de | Custom Clinic Management Web App Proposal
+2026-05-07 18:19:46,226 [INFO] 📱 Telegram notification sent
+2026-05-07 18:20:35,066 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 18:23:40,668 [INFO] ✅ Ollama wrote email for PRIVATE CLINIC HOURS (clinic)
+2026-05-07 18:23:43,708 [INFO] ✉️  Email sent via SMTP to allgemeinmedizin@familycareberlin.de
+2026-05-07 18:23:44,199 [INFO] Sent: PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de | Custom Clinic Management App Proposal
+2026-05-07 18:23:45,009 [INFO] 📱 Telegram notification sent
+2026-05-07 18:24:34,474 [INFO] 📧 Found email at https://www.berlin-health-excellence.com/medical-facilities-berlin/meoclinic: health@visitBerlin.de
+2026-05-07 18:27:55,002 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-07 18:29:12,241 [INFO] ✅ Ollama wrote email for MEOCLINIC Berlin | Private Hospital & Specialist Care (hospital)
+2026-05-07 18:29:15,792 [INFO] ✉️  Email sent via SMTP to health@visitBerlin.de
+2026-05-07 18:29:16,254 [INFO] Sent: MEOCLINIC Berlin | Private Hospital & Specialist Care → health@visitBerlin.de | Propose Custom Hospital CRM/ERP Solution for MEOCLINIC Berlin
+2026-05-07 18:29:17,023 [INFO] 📱 Telegram notification sent
+2026-05-07 18:30:20,613 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 18:32:11,903 [INFO] ✅ Ollama wrote email for Dental Clinics (clinic)
+2026-05-07 18:32:15,365 [INFO] ✉️  Email sent via SMTP to supplychain@toronto.ca
+2026-05-07 18:32:15,490 [INFO] Sent: Dental Clinics → supplychain@toronto.ca | Revolutionize Your Practice: Custom Clinic Management App
+2026-05-07 18:32:16,438 [INFO] 📱 Telegram notification sent
+2026-05-07 18:34:08,592 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 18:36:47,680 [INFO] ✅ Ollama wrote email for De Pijp Boutique Hotel Amsterdam | Official website (hotel)
+2026-05-07 18:36:50,619 [INFO] ✉️  Email sent via SMTP to info@depijpboutiquehotel.nl
+2026-05-07 18:36:50,884 [INFO] Sent: De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl | Proposal: Custom Hotel Management System for De Pijp Boutique Hotel
+2026-05-07 18:36:51,747 [INFO] 📱 Telegram notification sent
+2026-05-07 18:37:38,098 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 18:39:22,275 [INFO] ✅ Ollama wrote email for The Hendrick's | Boutique Hotel Amsterdam | Official Website (hotel)
+2026-05-07 18:39:25,264 [INFO] ✉️  Email sent via SMTP to info@thehendrickshotel.com
+2026-05-07 18:39:25,379 [INFO] Sent: The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com | Proposal: Custom Hotel Management System
+2026-05-07 18:39:26,269 [INFO] 📱 Telegram notification sent
+2026-05-07 18:40:12,201 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 18:42:35,999 [INFO] ✅ Ollama wrote email for The Albus Boutique Hotel Amsterdam Centre (hotel)
+2026-05-07 18:42:43,900 [INFO] ✉️  Email sent via SMTP to welcome@albushotel.com
+2026-05-07 18:42:44,103 [INFO] Sent: The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com | Propose Custom Hotel Management System
+2026-05-07 18:42:45,131 [INFO] 📱 Telegram notification sent
+2026-05-07 18:43:31,339 [INFO] 📧 Found email at https://www.grandcanalhotelamsterdam.com/: info@amsterdamcanalhotels.com
+2026-05-07 18:45:45,571 [INFO] ✅ Ollama wrote email for Grand Canal Boutique Hotel | 4-Star Amsterdam Canal Stay (hotel)
+2026-05-07 18:45:48,938 [INFO] ✉️  Email sent via SMTP to info@amsterdamcanalhotels.com
+2026-05-07 18:45:49,193 [INFO] Sent: Grand Canal Boutique Hotel | 4-Star Amsterdam Canal Stay → info@amsterdamcanalhotels.com | Proposal: Custom Hotel Management System for Grand Canal Boutique Hotel
+2026-05-07 18:45:50,065 [INFO] 📱 Telegram notification sent
+2026-05-07 18:46:37,406 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 18:49:55,067 [INFO] ✅ Ollama wrote email for Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... (hotel)
+2026-05-07 18:49:58,699 [INFO] ✉️  Email sent via SMTP to reservation@hotelnottinghill.nl
+2026-05-07 18:49:59,381 [INFO] Sent: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl | Propose Custom Hotel Management System Solution
+2026-05-07 18:50:00,157 [INFO] 📱 Telegram notification sent
+2026-05-07 18:50:59,125 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 18:53:18,202 [INFO] ✅ Ollama wrote email for Park Regis Business Bay (Dubai) (hotel)
+2026-05-07 18:53:21,700 [INFO] ✉️  Email sent via SMTP to info@parkregisbusinessbay.com
+2026-05-07 18:53:21,972 [INFO] Sent: Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com | Proposal: Custom Hotel Management System
+2026-05-07 18:53:22,744 [INFO] 📱 Telegram notification sent
+2026-05-07 18:55:19,012 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: reservations.businessbay@thefirstcollection.ae
+2026-05-07 18:57:14,869 [INFO] ✅ Ollama wrote email for Hotel in Dubai Business Bay (hotel)
+2026-05-07 18:57:18,491 [INFO] ✉️  Email sent via SMTP to reservations.businessbay@thefirstcollection.ae
+2026-05-07 18:57:18,651 [INFO] Sent: Hotel in Dubai Business Bay → reservations.businessbay@thefirstcollection.ae | Propose Custom Hotel Management System
+2026-05-07 18:57:19,412 [INFO] 📱 Telegram notification sent
+2026-05-07 18:58:28,451 [INFO] 📧 Found email at https://www.gordonramsayrestaurants.com/: guestrelations@gordonramsay.com
+2026-05-07 19:01:17,851 [INFO] ✅ Ollama wrote email for Gordon Ramsay Restaurants (restaurant)
+2026-05-07 19:01:21,204 [INFO] ✉️  Email sent via SMTP to guestrelations@gordonramsay.com
+2026-05-07 19:01:21,329 [INFO] Sent: Gordon Ramsay Restaurants → guestrelations@gordonramsay.com | Custom Mobile App Solution for Enhancing Your Dining Experience
+2026-05-07 19:01:22,201 [INFO] 📱 Telegram notification sent
+2026-05-07 19:02:34,531 [INFO] 📧 Found email at https://www.zizzi.co.uk/contact: recruitment@zizzi.co.uk
+2026-05-07 19:05:20,929 [INFO] ✅ Ollama wrote email for Zizzi | Italian Restaurants in the UK and Ireland (restaurant)
+2026-05-07 19:05:24,376 [INFO] ✉️  Email sent via SMTP to recruitment@zizzi.co.uk
+2026-05-07 19:05:24,500 [INFO] Sent: Zizzi | Italian Restaurants in the UK and Ireland → recruitment@zizzi.co.uk | Building Custom Mobile App for Zizzi Italian Restaurants
+2026-05-07 19:05:25,400 [INFO] 📱 Telegram notification sent
+2026-05-07 19:06:13,943 [INFO] 📧 Found email at https://www.carluccios.com/contact: orders@carluccios.com
+2026-05-07 19:09:11,931 [INFO] ✅ Ollama wrote email for Carluccio's (restaurant)
+2026-05-07 19:09:15,316 [INFO] ✉️  Email sent via SMTP to orders@carluccios.com
+2026-05-07 19:09:15,613 [INFO] Sent: Carluccio's → orders@carluccios.com | Build Custom Mobile-Friendly App for Carluccio's
+2026-05-07 19:09:16,502 [INFO] 📱 Telegram notification sent
+2026-05-07 19:11:54,254 [INFO] 📧 Found email at https://thezetter.com/contact-us: press@thezetter.com
+2026-05-07 19:13:14,609 [INFO] ✅ Ollama wrote email for Crown & Sceptre (hotel)
+2026-05-07 19:13:17,878 [INFO] ✉️  Email sent via SMTP to press@thezetter.com
+2026-05-07 19:13:18,001 [INFO] Sent: Crown & Sceptre → press@thezetter.com | Proposal: Custom Hotel Management System
+2026-05-07 19:13:18,882 [INFO] 📱 Telegram notification sent
+2026-05-07 19:26:20,421 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:28:15,147 [INFO] ✅ Ollama wrote email for The British School of Amsterdam (school)
+2026-05-07 19:28:18,769 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:28:19,136 [INFO] Sent: The British School of Amsterdam → principal@britams.nl | Proposal: Custom College CRM Solution for The British School of Amsterdam
+2026-05-07 19:28:19,997 [INFO] 📱 Telegram notification sent
+2026-05-07 19:29:06,469 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:31:58,934 [INFO] ✅ Ollama wrote email for Amsterdam International Community School (AICS South campus) (school)
+2026-05-07 19:32:02,677 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:32:02,820 [INFO] Sent: Amsterdam International Community School (AICS South campus) → principal@britams.nl | Proposal: Custom CRM Solution for AICS South Campus
+2026-05-07 19:32:03,519 [INFO] 📱 Telegram notification sent
+2026-05-07 19:32:49,986 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:34:23,962 [INFO] ✅ Ollama wrote email for Amity International School, Amsterdam (school)
+2026-05-07 19:34:27,760 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:34:27,944 [INFO] Sent: Amity International School, Amsterdam → principal@britams.nl | Propose Custom College CRM Solution for Amity International School
+2026-05-07 19:34:29,094 [INFO] 📱 Telegram notification sent
+2026-05-07 19:35:17,187 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:36:41,819 [INFO] ✅ Ollama wrote email for International French School d'Amsterdam (school)
+2026-05-07 19:36:45,489 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:36:45,606 [INFO] Sent: International French School d'Amsterdam → principal@britams.nl | Proposal: Customized College/School CRM Solution
+2026-05-07 19:36:47,035 [INFO] 📱 Telegram notification sent
+2026-05-07 19:37:33,962 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:39:13,541 [INFO] ✅ Ollama wrote email for Public Elementary School De Burght (school)
+2026-05-07 19:39:17,965 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:39:18,160 [INFO] Sent: Public Elementary School De Burght → principal@britams.nl | Custom College/School CRM Proposal: Public Elementary School de Burght
+2026-05-07 19:39:19,205 [INFO] 📱 Telegram notification sent
+2026-05-07 19:40:05,999 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:41:46,648 [INFO] ✅ Ollama wrote email for New International School Esprit (DENISE) (school)
+2026-05-07 19:41:50,438 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:41:50,599 [INFO] Sent: New International School Esprit (DENISE) → principal@britams.nl | Custom College CRM Proposal for New International School Esprit - DENISE
+2026-05-07 19:41:51,770 [INFO] 📱 Telegram notification sent
+2026-05-07 19:42:38,494 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:44:28,628 [INFO] ✅ Ollama wrote email for Private Education, Winford Amsterdam (school)
+2026-05-07 19:44:33,824 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:44:34,014 [INFO] Sent: Private Education, Winford Amsterdam → principal@britams.nl | Custom College CRM Proposal for Winford Amsterdam
+2026-05-07 19:44:35,407 [INFO] 📱 Telegram notification sent
+2026-05-07 19:45:22,120 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:47:12,517 [INFO] ✅ Ollama wrote email for Foundation The Japanese School of Amsterdam (school)
+2026-05-07 19:47:16,686 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:47:16,797 [INFO] Sent: Foundation The Japanese School of Amsterdam → principal@britams.nl | Proposal: Custom CRM Solution for TJSA College Management
+2026-05-07 19:47:18,120 [INFO] 📱 Telegram notification sent
+2026-05-07 19:48:04,831 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:49:50,747 [INFO] ✅ Ollama wrote email for Winford Bilingual Primary School (school)
+2026-05-07 19:49:54,894 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:49:55,004 [INFO] Sent: Winford Bilingual Primary School → principal@britams.nl | Propose Custom CRM Solution for Winford Bilingual Primary School
+2026-05-07 19:49:56,005 [INFO] 📱 Telegram notification sent
+2026-05-07 19:50:42,732 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 19:53:03,996 [INFO] ✅ Ollama wrote email for International School of Amsterdam (school)
+2026-05-07 19:53:08,021 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 19:53:08,168 [INFO] Sent: International School of Amsterdam → principal@britams.nl | Proposal: Custom CRM Solution for ISA College Management
+2026-05-07 19:53:09,250 [INFO] 📱 Telegram notification sent
+2026-05-07 19:54:41,757 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 19:54:41,759 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 19:54:41,766 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 19:54:41,911 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 19:54:48,376 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 19:54:58,590 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 19:55:09,264 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 19:55:19,892 [INFO] 🔍 Google Search 'private hospital London' → 6 leads
+2026-05-07 19:55:29,370 [INFO] 🔍 Google Search 'private clinic Berlin' → 4 leads
+2026-05-07 19:55:39,091 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 19:55:51,196 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 19:56:01,455 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 19:56:13,264 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 19:56:48,945 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 7 leads
+2026-05-07 19:57:31,864 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 19:58:08,184 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 19:58:53,242 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 19:59:35,937 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 19:59:52,967 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 20:00:06,820 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 20:00:21,961 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 20:00:25,846 [INFO] ✅ Scraping done. Total businesses found: 82
+2026-05-07 20:00:25,847 [INFO] ✅ Found 82 businesses. Saved to scraped_businesses.json
+2026-05-07 20:01:30,264 [INFO] 📧 Found email at https://azhd.ae/: healthjobs.dubai@azhd.ae
+2026-05-07 20:03:25,293 [INFO] ✅ Ollama wrote email for Al Zahra Hospital Dubai: Home (hospital)
+2026-05-07 20:03:29,592 [INFO] ✉️  Email sent via SMTP to healthjobs.dubai@azhd.ae
+2026-05-07 20:03:29,689 [INFO] Sent: Al Zahra Hospital Dubai: Home → healthjobs.dubai@azhd.ae | Custom Hospital CRM/ERP Proposal - Al Zahra Hospital
+2026-05-07 20:03:30,721 [INFO] 📱 Telegram notification sent
+2026-05-07 20:08:00,571 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 20:10:07,666 [INFO] ✅ Ollama wrote email for Boutique Hotel | Boutique Hotel View | Amsterdam (hotel)
+2026-05-07 20:10:11,517 [INFO] ✉️  Email sent via SMTP to info@boutiquehotelview.nl
+2026-05-07 20:10:11,619 [INFO] Sent: Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl | Propose Custom Hotel Management System
+2026-05-07 20:10:12,643 [INFO] 📱 Telegram notification sent
+2026-05-07 20:13:36,058 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 20:15:04,759 [INFO] ✅ Ollama wrote email for St. JOHN Restaurant (restaurant)
+2026-05-07 20:15:09,217 [INFO] ✉️  Email sent via SMTP to reservations@stjohnrestaurant.com
+2026-05-07 20:15:09,316 [INFO] Sent: St. JOHN Restaurant → reservations@stjohnrestaurant.com | Custom Mobile-Friendly App for St. John's Restaurant
+2026-05-07 20:15:10,528 [INFO] 📱 Telegram notification sent
+2026-05-07 20:16:00,221 [INFO] 📧 Found email at https://fallowrestaurant.com/: info@fallowrestaurant.com
+2026-05-07 20:17:42,258 [INFO] ✅ Ollama wrote email for Fallow - Restaurant London - Creative Cooking Sustainable ... (restaurant)
+2026-05-07 20:17:46,891 [INFO] ✉️  Email sent via SMTP to info@fallowrestaurant.com
+2026-05-07 20:17:46,990 [INFO] Sent: Fallow - Restaurant London - Creative Cooking Sustainable ... → info@fallowrestaurant.com | Build Your Sustainable Restaurant App: Mobile Solution Proposal
+2026-05-07 20:17:48,467 [INFO] 📱 Telegram notification sent
+2026-05-07 20:28:52,946 [INFO] 📧 Found email at http://www.publove.co.uk/: reservations@publove.co.uk
+2026-05-07 20:30:25,974 [INFO] ✅ Ollama wrote email for The Rose & Crown, London Bridge (PUBLOVE) (hotel)
+2026-05-07 20:30:29,877 [INFO] ✉️  Email sent via SMTP to reservations@publove.co.uk
+2026-05-07 20:30:29,982 [INFO] Sent: The Rose & Crown, London Bridge (PUBLOVE) → reservations@publove.co.uk | Proposal: Custom Hotel Management System
+2026-05-07 20:30:31,106 [INFO] 📱 Telegram notification sent
+2026-05-07 20:31:16,639 [INFO] 📧 Found email at http://www.publove.co.uk/: reservations@publove.co.uk
+2026-05-07 20:32:28,414 [INFO] ✅ Ollama wrote email for The Steam Engine, Waterloo (PUBLOVE) (hotel)
+2026-05-07 20:32:34,805 [INFO] ✉️  Email sent via SMTP to reservations@publove.co.uk
+2026-05-07 20:32:34,905 [INFO] Sent: The Steam Engine, Waterloo (PUBLOVE) → reservations@publove.co.uk | Proposal: Custom Hotel Management System
+2026-05-07 20:32:35,933 [INFO] 📱 Telegram notification sent
+2026-05-07 20:33:23,473 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 20:34:45,690 [INFO] ✅ Ollama wrote email for Montessori Lyceum Amsterdam (school)
+2026-05-07 20:34:49,775 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 20:34:49,889 [INFO] Sent: Montessori Lyceum Amsterdam → principal@britams.nl | Custom CRM Proposal for Montessori Lyceum Amsterdam
+2026-05-07 20:34:51,097 [INFO] 📱 Telegram notification sent
+2026-05-07 20:35:38,746 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 20:36:53,649 [INFO] ✅ Ollama wrote email for Onze Amsterdamse School (school)
+2026-05-07 20:36:57,772 [INFO] ✉️  Email sent via SMTP to principal@britams.nl
+2026-05-07 20:36:57,875 [INFO] Sent: Onze Amsterdamse School → principal@britams.nl | Propose: Custom College CRM Solution for Onze Amsterdamse School
+2026-05-07 20:36:58,791 [INFO] 📱 Telegram notification sent
+2026-05-07 20:41:13,519 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 20:41:13,519 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 20:41:13,588 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 20:41:13,649 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 20:41:23,636 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 20:41:33,855 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 20:41:47,445 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 20:41:58,619 [INFO] 🔍 Google Search 'private hospital London' → 6 leads
+2026-05-07 20:42:10,405 [INFO] 🔍 Google Search 'private clinic Berlin' → 4 leads
+2026-05-07 20:42:22,558 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 20:42:33,528 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 20:42:44,913 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 20:42:53,247 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 20:43:31,411 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 7 leads
+2026-05-07 20:44:16,704 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 20:44:51,638 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 20:45:39,528 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 20:46:21,381 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 20:46:48,554 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 20:47:13,267 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 20:47:29,017 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 20:47:33,068 [INFO] ✅ Scraping done. Total businesses found: 82
+2026-05-07 20:47:33,069 [INFO] ✅ Found 82 businesses. Saved to scraped_businesses.json
+2026-05-07 20:51:28,031 [INFO] 📧 Found email at https://hotelthenoblemen.com/: info@hotelthenoblemen.com
+2026-05-07 20:52:34,995 [INFO] ✅ Ollama wrote email for Boutique Hotel The Noblemen Amsterdam (hotel)
+2026-05-07 20:52:38,836 [INFO] ✉️  Email sent via SMTP to info@hotelthenoblemen.com
+2026-05-07 20:52:38,946 [INFO] Sent: Boutique Hotel The Noblemen Amsterdam → info@hotelthenoblemen.com | Proposal: Custom Hotel Management System for The Noblemen Amsterdam
+2026-05-07 20:52:40,392 [INFO] 📱 Telegram notification sent
+2026-05-07 20:55:29,045 [INFO] 📧 Found email at https://trggroupltd.com/contact: supplierinfo@trggroupltd.com
+2026-05-07 20:56:42,134 [INFO] ✅ Ollama wrote email for Welcome to The Restaurant Group - The Restaurant Group ltd (restaurant)
+2026-05-07 20:56:46,031 [INFO] ✉️  Email sent via SMTP to supplierinfo@trggroupltd.com
+2026-05-07 20:56:46,142 [INFO] Sent: Welcome to The Restaurant Group - The Restaurant Group ltd → supplierinfo@trggroupltd.com | Build Your Custom Mobile Restaurant App
+2026-05-07 20:56:47,261 [INFO] 📱 Telegram notification sent
+2026-05-07 21:02:38,289 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:02:38,290 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:02:38,298 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:02:38,332 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:02:54,692 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 21:03:04,888 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 21:03:16,947 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 21:03:28,116 [INFO] 🔍 Google Search 'private hospital London' → 8 leads
+2026-05-07 21:03:38,856 [INFO] 🔍 Google Search 'private clinic Berlin' → 6 leads
+2026-05-07 21:03:51,043 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 21:04:01,912 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 21:04:11,675 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 21:04:23,423 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 21:04:58,750 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 21:05:41,821 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 21:06:19,554 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 21:07:01,123 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 21:07:42,980 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 21:08:17,382 [WARNING] JustDial scrape skipped: Message: timeout: Timed out receiving message from renderer: 29.350
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x55a2d7fe740a <unknown>
+#1 0x55a2d7a1b76b <unknown>
+#2 0x55a2d7a0380a <unknown>
+#3 0x55a2d7a034ed <unknown>
+#4 0x55a2d7a013a7 <unknown>
+#5 0x55a2d7a01cbf <unknown>
+#6 0x55a2d7a10480 <unknown>
+#7 0x55a2d7a29b47 <unknown>
+#8 0x55a2d7a301fb <unknown>
+#9 0x55a2d7a023e8 <unknown>
+#10 0x55a2d7a298f8 <unknown>
+#11 0x55a2d7ab8ad8 <unknown>
+#12 0x55a2d7a5f7b2 <unknown>
+#13 0x55a2d7a60461 <unknown>
+#14 0x55a2d7fafdf9 <unknown>
+#15 0x55a2d7fb2d5d <unknown>
+#16 0x55a2d7f98b41 <unknown>
+#17 0x55a2d7fb393b <unknown>
+#18 0x55a2d7f7f870 <unknown>
+#19 0x55a2d7fd4828 <unknown>
+#20 0x55a2d7fd49fc <unknown>
+#21 0x55a2d7fe6763 <unknown>
+#22 0x7f7c346937db <unknown>
+
+2026-05-07 21:08:35,509 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 21:08:51,036 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 21:08:53,282 [INFO] ✅ Scraping done. Total businesses found: 85
+2026-05-07 21:08:53,282 [INFO] ✅ Found 85 businesses. Saved to scraped_businesses.json
+2026-05-07 21:11:33,779 [INFO] 📧 Found email at https://www.helios-international.com/: info@helios-international.com
+2026-05-07 21:12:48,362 [INFO] ✅ Ollama wrote email for Helios International — Official Helios Website for International ... (clinic)
+2026-05-07 21:12:52,083 [INFO] ✉️  Email sent via SMTP to info@helios-international.com
+2026-05-07 21:12:52,199 [INFO] Sent: Helios International — Official Helios Website for International ... → info@helios-international.com | Propose Custom Clinic Management Web App Solution
+2026-05-07 21:12:53,416 [INFO] 📱 Telegram notification sent
+2026-05-07 21:21:51,893 [INFO] 📧 Found email at https://www.chesterfieldmayfair.com/contact: alake@chesterfieldmayfair.com
+2026-05-07 21:23:04,571 [INFO] ✅ Ollama wrote email for The Chesterfield Mayfair (hotel)
+2026-05-07 21:23:08,843 [INFO] ✉️  Email sent via SMTP to alake@chesterfieldmayfair.com
+2026-05-07 21:23:08,957 [INFO] Sent: The Chesterfield Mayfair → alake@chesterfieldmayfair.com | Propose Custom Hotel Management System
+2026-05-07 21:23:09,969 [INFO] 📱 Telegram notification sent
+2026-05-07 21:27:10,981 [INFO] 📧 Found email at http://www.publove.co.uk/: reservations@publove.co.uk
+2026-05-07 21:28:19,527 [INFO] ✅ Ollama wrote email for The Tower Hotel, by Thistle (hotel)
+2026-05-07 21:28:23,538 [INFO] ✉️  Email sent via SMTP to reservations@publove.co.uk
+2026-05-07 21:28:23,649 [INFO] Sent: The Tower Hotel, by Thistle → reservations@publove.co.uk | Proposal: Custom Hotel Management System
+2026-05-07 21:28:25,263 [INFO] 📱 Telegram notification sent
+2026-05-07 21:29:12,621 [INFO] 📧 Found email at http://www.amityschool.nl/: ENQUIRIES@AMITYAMSTERDAM.NL
+2026-05-07 21:30:26,883 [INFO] ✅ Ollama wrote email for Public Elementary School De Witte Olifant (school)
+2026-05-07 21:30:31,216 [INFO] ✉️  Email sent via SMTP to ENQUIRIES@AMITYAMSTERDAM.NL
+2026-05-07 21:30:31,333 [INFO] Sent: Public Elementary School De Witte Olifant → ENQUIRIES@AMITYAMSTERDAM.NL | Custom College CRM Proposal: De Witte Olifant
+2026-05-07 21:30:32,282 [INFO] 📱 Telegram notification sent
+2026-05-07 21:34:33,451 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:34:33,452 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:34:33,458 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:34:33,607 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:34:42,275 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 21:34:51,726 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 21:35:06,711 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 21:35:16,606 [INFO] 🔍 Google Search 'private hospital London' → 10 leads
+2026-05-07 21:35:30,388 [INFO] 🔍 Google Search 'private clinic Berlin' → 6 leads
+2026-05-07 21:35:42,654 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 21:35:55,237 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 21:36:04,675 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 21:36:14,014 [INFO] 🔍 Google Search 'restaurant chain London' → 8 leads
+2026-05-07 21:36:57,951 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 21:37:42,730 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 10 leads
+2026-05-07 21:37:53,392 [INFO] 🗺️  Google Maps 'hotels London' → 0 leads
+2026-05-07 21:38:32,334 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 10 leads
+2026-05-07 21:39:16,763 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 21:39:35,244 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 21:39:50,958 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 21:40:05,979 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 21:40:08,672 [INFO] ✅ Scraping done. Total businesses found: 77
+2026-05-07 21:40:08,673 [INFO] ✅ Found 77 businesses. Saved to scraped_businesses.json
+2026-05-07 21:42:49,396 [INFO] 📧 Found email at https://www.kingedwardvii.co.uk/: enquiries@kingedwardvii.co.uk
+2026-05-07 21:44:07,970 [INFO] ✅ Ollama wrote email for King Edward VII's Hospital | Premier Private Hospital (hospital)
+2026-05-07 21:44:11,553 [INFO] ✉️  Email sent via SMTP to enquiries@kingedwardvii.co.uk
+2026-05-07 21:44:11,670 [INFO] Sent: King Edward VII's Hospital | Premier Private Hospital → enquiries@kingedwardvii.co.uk | Custom CRM/ERP Proposal for King Edward VII's Hospital
+2026-05-07 21:44:12,981 [INFO] 📱 Telegram notification sent
+2026-05-07 21:48:38,476 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 21:49:43,070 [INFO] ✅ Ollama wrote email for Citymax Hotel Business Bay | 4 star Hotel Dubai (hotel)
+2026-05-07 21:49:46,808 [INFO] ✉️  Email sent via SMTP to reservations@citymaxhotels.com
+2026-05-07 21:49:46,930 [INFO] Sent: Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com | Proposal: Custom Hotel Management System for Citymax Business Bay
+2026-05-07 21:49:48,364 [INFO] 📱 Telegram notification sent
+2026-05-07 21:54:36,770 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:54:36,771 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:54:36,777 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:54:36,817 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:54:36,817 [ERROR] Scraper crashed: <urlopen error [Errno -3] Temporary failure in name resolution>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/urllib/request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              encode_chunked=req.has_header('Transfer-encoding'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1338, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1384, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/client.py", line 1472, in connect
+    super().connect()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/client.py", line 1003, in connect
+    self.sock = self._create_connection(
+                ~~~~~~~~~~~~~~~~~~~~~~~^
+        (self.host,self.port), self.timeout, self.source_address)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 840, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 396, in scrape_businesses
+    driver = _make_driver()
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 121, in _make_driver
+    driver = uc.Chrome(options=options, version_main=chrome_ver)
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 258, in __init__
+    self.patcher.auto()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/patcher.py", line 175, in auto
+    release = self.fetch_release_number()
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/patcher.py", line 259, in fetch_release_number
+    with urlopen(self.url_repo + path) as conn:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 489, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.13/urllib/request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "/usr/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.13/urllib/request.py", line 1367, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-05-07 21:54:36,840 [INFO] ✅ Scraping done. Total businesses found: 0
+2026-05-07 21:54:36,840 [INFO] ✅ Found 0 businesses. Saved to scraped_businesses.json
+2026-05-07 21:54:36,842 [ERROR] Telegram error: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8798208156:AAGn_KZJE5SPl4H-YHxcutDd-jlqPami7w4/sendMessage (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-05-07 21:57:12,186 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:57:12,187 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:57:12,225 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 22:35:53,050 [INFO] 🌐 Scraping round 0...
+2026-05-07 22:35:53,052 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 22:35:53,110 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 22:36:13,767 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 22:36:38,684 [INFO] 🔍 Google p1 'private hospital Amsterdam' → 1 leads
+2026-05-07 22:36:48,419 [INFO] 🔍 Google p2 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:36:57,840 [INFO] 🔍 Google p3 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:37:07,767 [INFO] 🔍 Google p4 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:37:20,734 [INFO] 🔍 Google p1 'private hospital Dubai' → 5 leads
+2026-05-07 22:37:30,621 [INFO] 🔍 Google p2 'private hospital Dubai' → 5 leads
+2026-05-07 22:37:40,798 [INFO] 🔍 Google p3 'private hospital Dubai' → 3 leads
+2026-05-07 22:37:51,093 [INFO] 🔍 Google p4 'private hospital Dubai' → 5 leads
+2026-05-07 22:38:05,277 [INFO] 🔍 Google p1 'private hospital London' → 5 leads
+2026-05-07 22:38:15,160 [INFO] 🔍 Google p2 'private hospital London' → 5 leads
+2026-05-07 22:38:24,831 [INFO] 🔍 Google p3 'private hospital London' → 5 leads
+2026-05-07 22:38:35,666 [INFO] 🔍 Google p4 'private hospital London' → 5 leads
+2026-05-07 22:38:49,602 [INFO] 🔍 Google p1 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:02,480 [INFO] 🔍 Google p2 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:11,526 [INFO] 🔍 Google p3 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:21,568 [INFO] 🔍 Google p4 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:45,895 [INFO] 🔍 Google p1 'multispecialty hospital Delhi' → 5 leads
+2026-05-07 22:40:00,425 [WARNING] ⚠️  Google CAPTCHA on page 2 — stopping early
+2026-05-07 22:40:09,490 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:20,025 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:28,549 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:37,576 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:50,100 [INFO] 🔍 Google p1 'private hospital Paris' → 1 leads
+2026-05-07 22:41:00,062 [INFO] 🔍 Google p2 'private hospital Paris' → 5 leads
+2026-05-07 22:41:10,269 [INFO] 🔍 Google p3 'private hospital Paris' → 5 leads
+2026-05-07 22:41:20,303 [INFO] 🔍 Google p4 'private hospital Paris' → 5 leads
+2026-05-07 22:42:22,677 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 10 leads
+2026-05-07 22:43:06,321 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 22:43:22,211 [INFO] 🗺️  Google Maps 'hotels London' → 0 leads
+2026-05-07 22:44:05,610 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 22:44:50,692 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 22:45:09,937 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 22:45:24,932 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 22:45:39,633 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 22:45:42,528 [INFO] ✅ Scraping done. Total businesses found: 138
+2026-05-07 22:45:42,530 [INFO] ✅ Found 138 businesses. Saved to scraped_businesses.json
+2026-05-07 22:45:45,307 [INFO] 📧 Found email at https://devahastanesi.com/en/new/private-deva-hospital-at-amsterdam-health-tourism-fair-4.html: deva@devahastanesi.com
+2026-05-07 22:47:29,974 [INFO] ✅ Ollama wrote email for Private Deva Hospital at Amsterdam Health Tourism Fair (hospital)
+2026-05-07 22:47:35,224 [INFO] ✉️  Email sent via SMTP to deva@devahastanesi.com
+2026-05-07 22:47:35,366 [INFO] Sent: Private Deva Hospital at Amsterdam Health Tourism Fair → deva@devahastanesi.com | Propose Custom Digital Solution for Streamlined Operations
+2026-05-07 22:47:37,481 [INFO] 📱 Telegram notification sent
+2026-05-07 22:48:25,844 [INFO] 📧 Found email at https://www.internationalmentalhealth.nl/contact: info@internationalmentalhealth.nl
+2026-05-07 22:50:01,762 [INFO] ✅ Ollama wrote email for Kühler & Partners International Mental Health (hospital)
+2026-05-07 22:50:06,266 [INFO] ✉️  Email sent via SMTP to info@internationalmentalhealth.nl
+2026-05-07 22:50:06,391 [INFO] Sent: Kühler & Partners International Mental Health → info@internationalmentalhealth.nl | Custom Digital Solution for Enhancing Hospital Operations
+2026-05-07 22:50:07,596 [INFO] 📱 Telegram notification sent
+2026-05-07 22:50:54,826 [INFO] 📧 Found email at https://curitt.health/: hello@curitt.health
+2026-05-07 22:52:43,336 [INFO] ✅ Ollama wrote email for Curitt: Preventive healthcare - Medical Clinic (hospital)
+2026-05-07 22:52:46,520 [INFO] ✉️  Email sent via SMTP to hello@curitt.health
+2026-05-07 22:52:46,646 [INFO] Sent: Curitt: Preventive healthcare - Medical Clinic → hello@curitt.health | Transform Operational Efficiency: Custom Digital Solution for Curitt's Preventive Healthcare
+2026-05-07 22:52:47,824 [INFO] 📱 Telegram notification sent
+2026-05-07 22:53:34,960 [INFO] 📧 Found email at https://www.gov.uk/government/publications/the-netherlands-list-of-medical-facilitiespractitioners/netherlands-list-of-medical-facilities: ukinnl@fcdo.gov.uk
+2026-05-07 22:55:41,663 [INFO] ✅ Ollama wrote email for Netherlands: list of medical facilities (hospital)
+2026-05-07 22:55:44,802 [INFO] ✉️  Email sent via SMTP to ukinnl@fcdo.gov.uk
+2026-05-07 22:55:44,947 [INFO] Sent: Netherlands: list of medical facilities → ukinnl@fcdo.gov.uk | Revolutionize Your Medical Facility Operations
+2026-05-07 22:55:46,032 [INFO] 📱 Telegram notification sent
+2026-05-07 22:57:27,077 [INFO] 📧 Found email at https://medcaremultiverse.com/provider/olvg-hospital/: info@olvg.nl
+2026-05-07 22:59:23,735 [INFO] ✅ Ollama wrote email for OLVG Hospital | Healthcare Provider | Amsterdam, Netherlands (hospital)
+2026-05-07 22:59:28,241 [INFO] ✉️  Email sent via SMTP to info@olvg.nl
+2026-05-07 22:59:28,399 [INFO] Sent: OLVG Hospital | Healthcare Provider | Amsterdam, Netherlands → info@olvg.nl | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 22:59:29,367 [INFO] 📱 Telegram notification sent
+2026-05-07 23:00:29,768 [INFO] 📧 Found email at https://amsterdamtouristdoctors.nl/: info@atdoctors.nl
+2026-05-07 23:02:30,491 [INFO] ✅ Ollama wrote email for Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... (hospital)
+2026-05-07 23:02:34,303 [INFO] ✉️  Email sent via SMTP to info@atdoctors.nl
+2026-05-07 23:02:34,437 [INFO] Sent: Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... → info@atdoctors.nl | Propose Custom Digital Solution for Streamlined Tourist Care
+2026-05-07 23:02:35,667 [INFO] 📱 Telegram notification sent
+2026-05-07 23:04:03,542 [INFO] 📧 Found email at https://www.dentons.com/en/about-dentons/news-events-and-awards/news/2026/april/dentons-advises-on-us-300-million-ppp-hospital-project-in-uzbekistan: amanda.lowe@dentons.com

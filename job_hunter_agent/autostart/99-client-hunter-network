@@ -1,0 +1,38 @@
+#!/bin/bash
+# /etc/NetworkManager/dispatcher.d/99-client-hunter
+# Auto-starts client-hunter bot when internet connects
+# Install: sudo cp this /etc/NetworkManager/dispatcher.d/99-client-hunter
+#          sudo chmod +x /etc/NetworkManager/dispatcher.d/99-client-hunter
+
+INTERFACE="$1"
+STATUS="$2"
+BOT_DIR="/home/shubham/automation/job_hunter_agent"
+LOG="$BOT_DIR/data/autorun.log"
+LOCK="/tmp/client_hunter.lock"
+USER="shubham"
+
+if [ "$STATUS" = "up" ]; then
+    # Avoid running twice if already running
+    if [ -f "$LOCK" ]; then
+        echo "$(date): Already running — skipping" >> "$LOG"
+        exit 0
+    fi
+
+    # Only run once per day — check last run date
+    LAST_RUN_FILE="$BOT_DIR/data/last_autorun.txt"
+    TODAY=$(date +%Y-%m-%d)
+    if [ -f "$LAST_RUN_FILE" ] && grep -q "$TODAY" "$LAST_RUN_FILE"; then
+        echo "$(date): Already ran today — skipping" >> "$LOG"
+        exit 0
+    fi
+
+    echo "$(date): Internet connected on $INTERFACE — starting Client Hunter Bot" >> "$LOG"
+    touch "$LOCK"
+    echo "$TODAY" > "$LAST_RUN_FILE"
+
+    # Run bot as the user (not root)
+    su - "$USER" -c "cd '$BOT_DIR' && python3 client_hunter.py --limit 100 >> '$LOG' 2>&1" &
+
+    # Remove lock when done
+    wait && rm -f "$LOCK"
+fi

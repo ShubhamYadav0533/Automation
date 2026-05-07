@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Client Hunter Bot daily at 9:00 AM
+After=network-online.target
+Wants=network-online.target
+
+[Timer]
+# Run every day at 09:00 AM
+OnCalendar=*-*-* 09:00:00
+# If system was off at 9am, run immediately when it comes online
+Persistent=true
+# Also run 5 minutes after internet is available (boot catch-up)
+OnBootSec=5min
+
+[Install]
+WantedBy=timers.target
