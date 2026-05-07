@@ -14,8 +14,9 @@ import logging
 from typing import Dict, List, Tuple
 import anthropic
 from dotenv import load_dotenv
+from pathlib import Path
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).parent / ".env", override=True)
 logger = logging.getLogger(__name__)
 
 # Initialize Claude client

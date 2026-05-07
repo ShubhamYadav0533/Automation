@@ -318,7 +318,13 @@ def main():
         emails_sent = run_hunt(profile)
 
         # Phase 2: Check and reply to inbox
-        hot_count = run_reply_check(profile)
+        gmail_creds = Path(os.getenv("GMAIL_CREDENTIALS_FILE", "credentials/gmail_credentials.json"))
+        if not gmail_creds.exists():
+            logger.warning("⚠️  Gmail credentials not found — skipping Phase 2 (reply check). "
+                           "Download credentials JSON from Google Cloud Console to enable.")
+            hot_count = 0
+        else:
+            hot_count = run_reply_check(profile)
 
         # Final stats
         stats = get_stats()

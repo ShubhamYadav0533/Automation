@@ -756,3 +756,565 @@ Please follow the setup guide in README.md to create Gmail API credentials.
 2026-05-07 01:38:48,916 [INFO] 
 ✅ Agent run complete!
 
+2026-05-07 01:47:50,858 [INFO] 
+🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+2026-05-07 01:47:50,858 [INFO] JOB & CLIENT HUNTER AGENT — STARTED
+2026-05-07 01:47:50,858 [INFO] Time: 2026-05-07 01:47:50
+2026-05-07 01:47:50,859 [INFO] 🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+
+2026-05-07 01:47:50,859 [INFO] 👤 Profile: Shubham Yadav | Full Stack Developer (React / Node.js / React Native) | 2y exp
+2026-05-07 01:47:50,859 [INFO] 🛠️  Skills: React.js, Next.js, React Native, JavaScript ES6+, TypeScript
+2026-05-07 01:47:50,859 [INFO] 💰 Rate: $35/hr
+
+2026-05-07 01:47:51,968 [INFO] 📱 Telegram notification sent
+2026-05-07 01:47:51,968 [INFO] 
+============================================================
+2026-05-07 01:47:51,968 [INFO] 🚀 PHASE 1: HUNTING FOR LEADS
+2026-05-07 01:47:51,969 [INFO] ============================================================
+2026-05-07 01:47:51,969 [INFO] ==================================================
+2026-05-07 01:47:51,969 [INFO] 🔍 Starting worldwide job & client hunt...
+2026-05-07 01:47:51,969 [INFO] ==================================================
+2026-05-07 01:47:52,683 [INFO] Remotive: found 19 leads
+2026-05-07 01:47:56,680 [INFO] WeWorkRemotely: found 60 leads
+2026-05-07 01:47:59,427 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:48:12,141 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:48:14,701 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:48:15,702 [INFO] Upwork: found 1 leads
+2026-05-07 01:48:16,218 [ERROR] SerpAPI LinkedIn error: Unsupported `linkedin_jobs` search engine.
+2026-05-07 01:48:16,218 [INFO] LinkedIn: found 0 leads
+2026-05-07 01:48:27,581 [INFO] Freelancer.com: found 30 leads
+2026-05-07 01:48:38,232 [INFO] Wellfound: found 20 leads
+2026-05-07 01:49:03,552 [INFO] Google Maps: found 16 leads
+2026-05-07 01:49:03,552 [INFO] 
+✅ Total unique leads found: 97
+2026-05-07 01:49:03,553 [INFO] 📋 New (uncontacted) leads: 97
+2026-05-07 01:49:03,553 [INFO] 
+🤖 AI is scoring 97 leads...
+2026-05-07 01:49:03,553 [INFO]   Scoring lead 1/97: Copywriter...
+2026-05-07 01:49:04,588 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:04,589 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8MRk5QcF1jUKcL5k4'}
+2026-05-07 01:49:04,589 [ERROR] Could not parse score response: 
+2026-05-07 01:49:04,589 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:04,589 [INFO]   Scoring lead 2/97: Senior DevOps Engineer...
+2026-05-07 01:49:04,982 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:04,983 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8RKuERa1o6ET78Z9V'}
+2026-05-07 01:49:04,984 [ERROR] Could not parse score response: 
+2026-05-07 01:49:04,984 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:04,984 [INFO]   Scoring lead 3/97: Operations software assistant...
+2026-05-07 01:49:05,357 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:05,357 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8Sz7V9LatiDBoc642'}
+2026-05-07 01:49:05,357 [ERROR] Could not parse score response: 
+2026-05-07 01:49:05,357 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:05,357 [INFO]   Scoring lead 4/97: Mid/Senior AI Video Artist...
+2026-05-07 01:49:05,802 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:05,804 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8UbMSHiTM9U9JnvnU'}
+2026-05-07 01:49:05,804 [ERROR] Could not parse score response: 
+2026-05-07 01:49:05,805 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:05,805 [INFO]   Scoring lead 5/97: Content Reviewer - US...
+2026-05-07 01:49:06,619 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:06,619 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8WWwRBjvSbxxG6hZT'}
+2026-05-07 01:49:06,620 [ERROR] Could not parse score response: 
+2026-05-07 01:49:06,620 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:06,620 [INFO]   Scoring lead 6/97: AI Engineer...
+2026-05-07 01:49:07,162 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:07,162 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8Zzo2DWZKpxmt2tPG'}
+2026-05-07 01:49:07,163 [ERROR] Could not parse score response: 
+2026-05-07 01:49:07,163 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:07,163 [INFO]   Scoring lead 7/97: Customer Retention Manager...
+2026-05-07 01:49:07,617 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:07,618 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8cfHLYSwaU6Z8EvHR'}
+2026-05-07 01:49:07,619 [ERROR] Could not parse score response: 
+2026-05-07 01:49:07,619 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:07,619 [INFO]   Scoring lead 8/97: Senior Independent AI Engineer / Architect...
+2026-05-07 01:49:07,997 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:07,998 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8eKFAB2JsWFcG9ikb'}
+2026-05-07 01:49:07,998 [ERROR] Could not parse score response: 
+2026-05-07 01:49:07,998 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:07,998 [INFO]   Scoring lead 9/97: Senior Independent Software Developer...
+2026-05-07 01:49:08,447 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:08,448 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8fuzUx4MmfArqDn31'}
+2026-05-07 01:49:08,448 [ERROR] Could not parse score response: 
+2026-05-07 01:49:08,448 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:08,448 [INFO]   Scoring lead 10/97: Senior Full-stack React Developer...
+2026-05-07 01:49:08,871 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:08,871 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8hpqABkSPKYy6YftG'}
+2026-05-07 01:49:08,872 [ERROR] Could not parse score response: 
+2026-05-07 01:49:08,872 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:08,872 [INFO]   Scoring lead 11/97: Tech Lead Full-Stack Rails Engineer...
+2026-05-07 01:49:09,690 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:09,691 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8k6G4dNVdNTdcWVe7'}
+2026-05-07 01:49:09,691 [ERROR] Could not parse score response: 
+2026-05-07 01:49:09,691 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:09,691 [INFO]   Scoring lead 12/97: Online Data Analyst United States...
+2026-05-07 01:49:10,100 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:10,101 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8o8KoV7Ducs1LWNxH'}
+2026-05-07 01:49:10,101 [ERROR] Could not parse score response: 
+2026-05-07 01:49:10,101 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:10,101 [INFO]   Scoring lead 13/97: Inside Sales Contractor...
+2026-05-07 01:49:10,612 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:10,613 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8q1BcYrVubp7pHqDe'}
+2026-05-07 01:49:10,613 [ERROR] Could not parse score response: 
+2026-05-07 01:49:10,613 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:10,613 [INFO]   Scoring lead 14/97: Office Assistant...
+2026-05-07 01:49:11,371 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:11,372 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8tCfYA7PkkwFEGFcX'}
+2026-05-07 01:49:11,372 [ERROR] Could not parse score response: 
+2026-05-07 01:49:11,372 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:11,372 [INFO]   Scoring lead 15/97: 🇩🇪 Senior/Staff Software Engineer PHP, TS, Rust, K...
+2026-05-07 01:49:12,149 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:12,150 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8vkxaV343z2DdUFVq'}
+2026-05-07 01:49:12,150 [ERROR] Could not parse score response: 
+2026-05-07 01:49:12,150 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:12,150 [INFO]   Scoring lead 16/97: Feedzai: Senior Frontend Engineer - Product...
+2026-05-07 01:49:12,557 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:12,558 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw8yfabNQKDSaa8qeSU'}
+2026-05-07 01:49:12,558 [ERROR] Could not parse score response: 
+2026-05-07 01:49:12,558 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:12,558 [INFO]   Scoring lead 17/97: Instacart: Senior Product Manager, Marketing Exper...
+2026-05-07 01:49:13,173 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:13,173 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw91RkF1AqULmkdw9dD'}
+2026-05-07 01:49:13,173 [ERROR] Could not parse score response: 
+2026-05-07 01:49:13,173 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:13,173 [INFO]   Scoring lead 18/97: Instacart: Staff Content Designer - Model Design...
+2026-05-07 01:49:13,604 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:13,605 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw943WBm1douDZ5VRg6'}
+2026-05-07 01:49:13,605 [ERROR] Could not parse score response: 
+2026-05-07 01:49:13,605 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:13,605 [INFO]   Scoring lead 19/97: Dragos: Staff Product Manager - Asset Management...
+2026-05-07 01:49:14,478 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:14,478 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw95z6CXoj7rGiH5KCX'}
+2026-05-07 01:49:14,478 [ERROR] Could not parse score response: 
+2026-05-07 01:49:14,478 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:14,479 [INFO]   Scoring lead 20/97: Dragos: Senior Product Manager - Delivery Manageme...
+2026-05-07 01:49:14,869 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:14,870 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw99e6xpUqHGBxeXHU9'}
+2026-05-07 01:49:14,870 [ERROR] Could not parse score response: 
+2026-05-07 01:49:14,870 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:14,870 [INFO]   Scoring lead 21/97: Descript: Product Manager, API & Platform...
+2026-05-07 01:49:15,257 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:15,259 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9BM3m11qv8CYhaaBf'}
+2026-05-07 01:49:15,260 [ERROR] Could not parse score response: 
+2026-05-07 01:49:15,260 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:15,261 [INFO]   Scoring lead 22/97: Contentsquare: Staff Product Designer (UI-Led)...
+2026-05-07 01:49:15,635 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:15,636 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9Cwnf24uWKmUePPPZ'}
+2026-05-07 01:49:15,636 [ERROR] Could not parse score response: 
+2026-05-07 01:49:15,636 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:15,636 [INFO]   Scoring lead 23/97: Glückliche Gäste: Backend Engineer (TypeScript/Nod...
+2026-05-07 01:49:16,449 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:16,450 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9Eczz7GQsNa5ySJV2'}
+2026-05-07 01:49:16,451 [ERROR] Could not parse score response: 
+2026-05-07 01:49:16,451 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:16,451 [INFO]   Scoring lead 24/97: Mmdsmart Ltd: Senior Full Stack Developer (Go/Reac...
+2026-05-07 01:49:17,008 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:17,008 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9JSwFPhUkS6YwMvTi'}
+2026-05-07 01:49:17,008 [ERROR] Could not parse score response: 
+2026-05-07 01:49:17,008 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:17,008 [INFO]   Scoring lead 25/97: Hiflylabs: Senior AI consultant/GenAI Product Owne...
+2026-05-07 01:49:17,403 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:17,403 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9LVDowjcaRSBYvYeb'}
+2026-05-07 01:49:17,403 [ERROR] Could not parse score response: 
+2026-05-07 01:49:17,403 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:17,403 [INFO]   Scoring lead 26/97: Brightwheel: Staff AI Product Builder...
+2026-05-07 01:49:17,811 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:17,811 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9N8gtPDMnym7WHzJv'}
+2026-05-07 01:49:17,811 [ERROR] Could not parse score response: 
+2026-05-07 01:49:17,811 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:17,811 [INFO]   Scoring lead 27/97: Titan Ai: Full-Stack Developer, AI Applications...
+2026-05-07 01:49:18,292 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:18,292 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9Pubnt2WSLo6orCU3'}
+2026-05-07 01:49:18,293 [ERROR] Could not parse score response: 
+2026-05-07 01:49:18,293 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:18,293 [INFO]   Scoring lead 28/97: Samsara: Senior Sales Strategy Manager, New Produc...
+2026-05-07 01:49:19,111 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:19,112 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9S3LayGnn7MLRiLtw'}
+2026-05-07 01:49:19,112 [ERROR] Could not parse score response: 
+2026-05-07 01:49:19,112 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:19,112 [INFO]   Scoring lead 29/97: Philo: Lead Backend Software Engineer (Product API...
+2026-05-07 01:49:19,623 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:19,623 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9VvkQAm51Z6EYba1m'}
+2026-05-07 01:49:19,623 [ERROR] Could not parse score response: 
+2026-05-07 01:49:19,624 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:19,624 [INFO]   Scoring lead 30/97: Chooose: Engagement Manager (US - ET)...
+2026-05-07 01:49:20,095 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:20,096 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9XjPffXewjYgSDkvG'}
+2026-05-07 01:49:20,096 [ERROR] Could not parse score response: 
+2026-05-07 01:49:20,096 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:20,096 [INFO]   Scoring lead 31/97: https://www.upwork.com/jobs/~022035161805627522245...
+2026-05-07 01:49:20,505 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:20,506 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9ZgUBiTbhqm4eWwdo'}
+2026-05-07 01:49:20,506 [ERROR] Could not parse score response: 
+2026-05-07 01:49:20,506 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:20,506 [INFO]   Scoring lead 32/97: React Developer for Existing App Enhancement & ......
+2026-05-07 01:49:20,954 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:20,954 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9bPfMD7GnmZ5hc1pa'}
+2026-05-07 01:49:20,955 [ERROR] Could not parse score response: 
+2026-05-07 01:49:20,955 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:20,955 [INFO]   Scoring lead 33/97: React Developer for Web App Performance Diagnosis...
+2026-05-07 01:49:21,475 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:21,476 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9dLV26iSrip4rUFQ4'}
+2026-05-07 01:49:21,476 [ERROR] Could not parse score response: 
+2026-05-07 01:49:21,476 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:21,476 [INFO]   Scoring lead 34/97: React Developer for APP using ASP.NET Core API...
+2026-05-07 01:49:21,876 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:21,876 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9fWTZ1aQ3rc3ZwCW3'}
+2026-05-07 01:49:21,876 [ERROR] Could not parse score response: 
+2026-05-07 01:49:21,876 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:21,876 [INFO]   Scoring lead 35/97: React Developer...
+2026-05-07 01:49:22,249 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:22,249 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9hEPqetp87dwXaZfL'}
+2026-05-07 01:49:22,250 [ERROR] Could not parse score response: 
+2026-05-07 01:49:22,250 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:22,250 [INFO]   Scoring lead 36/97: Java Spring Boot and React Developer Needed for Co...
+2026-05-07 01:49:22,695 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:22,696 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9ioeU8roWL7YddZxc'}
+2026-05-07 01:49:22,696 [ERROR] Could not parse score response: 
+2026-05-07 01:49:22,696 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:22,696 [INFO]   Scoring lead 37/97: Modern & Minimalist React Website Build -- 2...
+2026-05-07 01:49:23,083 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:23,084 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9knDRn7gDXyJNt6Ct'}
+2026-05-07 01:49:23,084 [ERROR] Could not parse score response: 
+2026-05-07 01:49:23,084 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:23,084 [INFO]   Scoring lead 38/97: Need React Developer to fix my error (gulp && ......
+2026-05-07 01:49:23,617 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:23,618 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9nNhxHKx9mdKaRwzq'}
+2026-05-07 01:49:23,618 [ERROR] Could not parse score response: 
+2026-05-07 01:49:23,618 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:23,618 [INFO]   Scoring lead 39/97: Junior React developer...
+2026-05-07 01:49:24,027 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:24,028 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9pfdBWzF6CeQS74DY'}
+2026-05-07 01:49:24,029 [ERROR] Could not parse score response: 
+2026-05-07 01:49:24,029 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:24,029 [INFO]   Scoring lead 40/97: Experienced Django-React Developer for Scraping Pr...
+2026-05-07 01:49:24,846 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:24,846 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9rRYDP3Wj2MHPS6tn'}
+2026-05-07 01:49:24,846 [ERROR] Could not parse score response: 
+2026-05-07 01:49:24,846 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:24,846 [INFO]   Scoring lead 41/97: Full-Time Senior React Developer...
+2026-05-07 01:49:25,460 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:25,460 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9uvdi8BS3Tub6dFu8'}
+2026-05-07 01:49:25,461 [ERROR] Could not parse score response: 
+2026-05-07 01:49:25,461 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:25,461 [INFO]   Scoring lead 42/97: Next.js Developer (Must Use AI – Claude Code / Cur...
+2026-05-07 01:49:26,074 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:26,075 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Camw9xbcgBjURfvxnd48r'}
+2026-05-07 01:49:26,075 [ERROR] Could not parse score response: 
+2026-05-07 01:49:26,075 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:26,075 [INFO]   Scoring lead 43/97: Full-Time Next.js Developer Needed (Long-Term)...
+2026-05-07 01:49:27,303 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:27,304 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwA3McMvF5v8Aqv9DCt'}
+2026-05-07 01:49:27,304 [ERROR] Could not parse score response: 
+2026-05-07 01:49:27,304 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:27,304 [INFO]   Scoring lead 44/97: Hiring: Next.js Developer (Web Development & SEO f...
+2026-05-07 01:49:27,688 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:27,688 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwA6U8v2iQpZc6ctzRN'}
+2026-05-07 01:49:27,688 [ERROR] Could not parse score response: 
+2026-05-07 01:49:27,688 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:27,688 [INFO]   Scoring lead 45/97: Strapi + Next.js Developer for Custom Dynamic Webs...
+2026-05-07 01:49:28,532 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:28,533 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwA8bP9TJjDKPQZB3Jy'}
+2026-05-07 01:49:28,533 [ERROR] Could not parse score response: 
+2026-05-07 01:49:28,534 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:28,534 [INFO]   Scoring lead 46/97: Next.js Developer for MERN Stack Website Refactori...
+2026-05-07 01:49:28,916 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:28,917 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwABj9WP6YxRwGUs19n'}
+2026-05-07 01:49:28,917 [ERROR] Could not parse score response: 
+2026-05-07 01:49:28,917 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:28,917 [INFO]   Scoring lead 47/97: Next.js Developer Needed for Landing Page...
+2026-05-07 01:49:29,351 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:29,352 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwADN7xik1LdmAH1A1a'}
+2026-05-07 01:49:29,352 [ERROR] Could not parse score response: 
+2026-05-07 01:49:29,352 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:29,352 [INFO]   Scoring lead 48/97: Next.js Developer - Product Comparison Platform…...
+2026-05-07 01:49:29,863 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:29,864 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAFEje4xG8v1RBSFBd'}
+2026-05-07 01:49:29,864 [ERROR] Could not parse score response: 
+2026-05-07 01:49:29,864 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:29,864 [INFO]   Scoring lead 49/97: Next.js Developer for Sitemap Submission -- 2...
+2026-05-07 01:49:30,487 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:30,488 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAHRCggzCfeTkBVbg5'}
+2026-05-07 01:49:30,488 [ERROR] Could not parse score response: 
+2026-05-07 01:49:30,488 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:30,488 [INFO]   Scoring lead 50/97: Next.js Developer for Feature Enhancement...
+2026-05-07 01:49:30,870 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:30,871 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAL5ShyQvByM7DuSE9'}
+2026-05-07 01:49:30,871 [ERROR] Could not parse score response: 
+2026-05-07 01:49:30,871 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:30,871 [INFO]   Scoring lead 51/97: Senior React/Next.js Developer for Quran Platform...
+2026-05-07 01:49:31,297 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:31,297 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAMiR2MVzpdK7EJ1Kk'}
+2026-05-07 01:49:31,297 [ERROR] Could not parse score response: 
+2026-05-07 01:49:31,297 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:31,297 [INFO]   Scoring lead 52/97: React Native Developer for Real-Time App...
+2026-05-07 01:49:31,707 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:31,708 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAPXJooS2zFaKASHss'}
+2026-05-07 01:49:31,708 [ERROR] Could not parse score response: 
+2026-05-07 01:49:31,708 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:31,708 [INFO]   Scoring lead 53/97: React Native Grocery App Developer...
+2026-05-07 01:49:32,423 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:32,424 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwARMSZCkXiVPEsRXVJ'}
+2026-05-07 01:49:32,424 [ERROR] Could not parse score response: 
+2026-05-07 01:49:32,424 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:32,424 [INFO]   Scoring lead 54/97: Flutter/React Native Expert for App Completion...
+2026-05-07 01:49:33,038 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:33,038 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAUNG52L2VJdoVftTD'}
+2026-05-07 01:49:33,039 [ERROR] Could not parse score response: 
+2026-05-07 01:49:33,039 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:33,039 [INFO]   Scoring lead 55/97: React Native Developer for Driver App...
+2026-05-07 01:49:33,447 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:33,448 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAWyXQEhbeDkDFp6pe'}
+2026-05-07 01:49:33,448 [ERROR] Could not parse score response: 
+2026-05-07 01:49:33,448 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:33,448 [INFO]   Scoring lead 56/97: React Native Developer and Mentor Needed to Build ...
+2026-05-07 01:49:33,837 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:33,838 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAYiTGpjZoUspAfH2s'}
+2026-05-07 01:49:33,838 [ERROR] Could not parse score response: 
+2026-05-07 01:49:33,838 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:33,838 [INFO]   Scoring lead 57/97: I need a Front END UI React Native developer...
+2026-05-07 01:49:34,212 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:34,212 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAaNvCy8jQjPUPmin7'}
+2026-05-07 01:49:34,212 [ERROR] Could not parse score response: 
+2026-05-07 01:49:34,212 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:34,212 [INFO]   Scoring lead 58/97: Cross-platform App Development in React Native...
+2026-05-07 01:49:34,676 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:34,677 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAbyARbiSQx8BrL7GJ'}
+2026-05-07 01:49:34,677 [ERROR] Could not parse score response: 
+2026-05-07 01:49:34,677 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:34,677 [INFO]   Scoring lead 59/97: Create React Native mobile app screens -- 2 | Free...
+2026-05-07 01:49:35,495 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:35,496 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAePWpk24q3BngX35L'}
+2026-05-07 01:49:35,496 [ERROR] Could not parse score response: 
+2026-05-07 01:49:35,496 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:35,496 [INFO]   Scoring lead 60/97: React native developer for UI development for andr...
+2026-05-07 01:49:35,905 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:35,906 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAhV46FF75pS6j2bTx'}
+2026-05-07 01:49:35,906 [ERROR] Could not parse score response: 
+2026-05-07 01:49:35,906 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:35,906 [INFO]   Scoring lead 61/97: Looking for an expert React Native developer -- 2...
+2026-05-07 01:49:36,315 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:36,316 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAjDjNRewvWqUUC36B'}
+2026-05-07 01:49:36,316 [ERROR] Could not parse score response: 
+2026-05-07 01:49:36,316 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:36,316 [INFO]   Scoring lead 62/97: Frontend Engineering Intern — React / Next.js (Rem...
+2026-05-07 01:49:36,930 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:36,930 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAm2Nj1hKrom2dsSV5'}
+2026-05-07 01:49:36,930 [ERROR] Could not parse score response: 
+2026-05-07 01:49:36,931 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:36,931 [INFO]   Scoring lead 63/97: Senior Full Stack Developer (RN/NextJS) at Topflig...
+2026-05-07 01:49:37,304 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:37,304 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAoc9dtGimkazYfxTU'}
+2026-05-07 01:49:37,304 [ERROR] Could not parse score response: 
+2026-05-07 01:49:37,304 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:37,304 [INFO]   Scoring lead 64/97: Senior Frontend Developer (Next.js, TypeScript) — ...
+2026-05-07 01:49:37,953 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:37,954 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAqBuFbfyviQiP4QCN'}
+2026-05-07 01:49:37,954 [ERROR] Could not parse score response: 
+2026-05-07 01:49:37,954 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:37,954 [INFO]   Scoring lead 65/97: Senior Front-End Developer (only for Next.JS) at C...
+2026-05-07 01:49:38,326 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:38,327 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAsyq1upoBQZHbJDgN'}
+2026-05-07 01:49:38,327 [ERROR] Could not parse score response: 
+2026-05-07 01:49:38,327 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:38,327 [INFO]   Scoring lead 66/97: Full Stack Developer Intern (Next.js, Node.js, Rea...
+2026-05-07 01:49:38,703 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:38,704 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAuZajdoukhUFDYFq7'}
+2026-05-07 01:49:38,704 [ERROR] Could not parse score response: 
+2026-05-07 01:49:38,704 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:38,704 [INFO]   Scoring lead 67/97: Founding Full Stack Engineer (Equity Only) (Next.j...
+2026-05-07 01:49:39,088 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:39,089 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAwD3rSh9WfdCbc7iP'}
+2026-05-07 01:49:39,089 [ERROR] Could not parse score response: 
+2026-05-07 01:49:39,089 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:39,089 [INFO]   Scoring lead 68/97: Frontend Engineer (Next.js / High Ownership / Syst...
+2026-05-07 01:49:39,485 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:39,486 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAxs1w1FFHtNBoKEYY'}
+2026-05-07 01:49:39,486 [ERROR] Could not parse score response: 
+2026-05-07 01:49:39,486 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:39,486 [INFO]   Scoring lead 69/97: Mid-level Software Engineer (TypeScript, AWS, Next...
+2026-05-07 01:49:39,899 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:39,899 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwAzVVcmJHuYwH6GyEj'}
+2026-05-07 01:49:39,899 [ERROR] Could not parse score response: 
+2026-05-07 01:49:39,899 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:39,900 [INFO]   Scoring lead 70/97: Full Stack Developer (DevOps/RN/NextJS Experience)...
+2026-05-07 01:49:40,274 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:40,275 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwB2HtkbSz8NdnpTQYq'}
+2026-05-07 01:49:40,275 [ERROR] Could not parse score response: 
+2026-05-07 01:49:40,275 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:40,275 [INFO]   Scoring lead 71/97: Full Stack Developer (Next.js + AI Integrations)...
+2026-05-07 01:49:40,669 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:40,670 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwB3yqi735Rx5umLVpR'}
+2026-05-07 01:49:40,670 [ERROR] Could not parse score response: 
+2026-05-07 01:49:40,670 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:40,670 [INFO]   Scoring lead 72/97: Founding React/React Native Engineer with Full-Cyc...
+2026-05-07 01:49:41,039 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:41,039 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwB5ZbLX5PMDAsQafzG'}
+2026-05-07 01:49:41,039 [ERROR] Could not parse score response: 
+2026-05-07 01:49:41,039 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:41,039 [INFO]   Scoring lead 73/97: Mobile React Native Developer (mid-level) - remote...
+2026-05-07 01:49:41,419 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:41,420 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwB7Ba8wUVK1YwjVFXG'}
+2026-05-07 01:49:41,420 [ERROR] Could not parse score response: 
+2026-05-07 01:49:41,420 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:41,420 [INFO]   Scoring lead 74/97: Remote Front-End Developer Intern (React Native)...
+2026-05-07 01:49:41,946 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:41,947 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwB9CsGmChSf2HtHgL1'}
+2026-05-07 01:49:41,947 [ERROR] Could not parse score response: 
+2026-05-07 01:49:41,947 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:41,947 [INFO]   Scoring lead 75/97: Freelance React Native Developer at pubGENIUS.inc...
+2026-05-07 01:49:42,663 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:42,664 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBB6E65H4XmwYRQvFa'}
+2026-05-07 01:49:42,664 [ERROR] Could not parse score response: 
+2026-05-07 01:49:42,664 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:42,664 [INFO]   Scoring lead 76/97: Part-Time React Native Developer (Ownership Role) ...
+2026-05-07 01:49:43,278 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:43,279 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBEAmM3MVBBjfkktzp'}
+2026-05-07 01:49:43,279 [ERROR] Could not parse score response: 
+2026-05-07 01:49:43,279 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:43,279 [INFO]   Scoring lead 77/97: React Native Developer (Remote Internship - Unpaid...
+2026-05-07 01:49:43,811 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:43,812 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBGkYMQk5qW59fcXcH'}
+2026-05-07 01:49:43,812 [ERROR] Could not parse score response: 
+2026-05-07 01:49:43,812 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:43,812 [INFO]   Scoring lead 78/97: React Native Developer at Unreal Focus • Bengaluru...
+2026-05-07 01:49:44,199 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:44,200 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBK1UYYV1hgV5FrK1Y'}
+2026-05-07 01:49:44,201 [ERROR] Could not parse score response: 
+2026-05-07 01:49:44,201 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:44,202 [INFO]   Scoring lead 79/97: Mobile App Developer at Xipper • India Gate...
+2026-05-07 01:49:44,670 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:44,671 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBLggJCJ7gVoEZBCc8'}
+2026-05-07 01:49:44,730 [ERROR] Could not parse score response: 
+2026-05-07 01:49:44,731 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:44,731 [INFO]   Scoring lead 80/97: React Native Developer at BrainStation • San Jose...
+2026-05-07 01:49:45,531 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:45,531 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBP1q6VF6H621aQvzc'}
+2026-05-07 01:49:45,531 [ERROR] Could not parse score response: 
+2026-05-07 01:49:45,531 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:45,531 [INFO]   Scoring lead 81/97: React Native Developer Intern at Creative Upaay • ...
+2026-05-07 01:49:46,098 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:46,099 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBSNjiRmEzNqEsfQap'}
+2026-05-07 01:49:46,099 [ERROR] Could not parse score response: 
+2026-05-07 01:49:46,099 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:46,099 [INFO]   Scoring lead 82/97: Potential client: Geeks Worldwide Solutions...
+2026-05-07 01:49:46,554 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:46,555 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBUoqJHTseDvzKdyJG'}
+2026-05-07 01:49:46,555 [ERROR] Could not parse score response: 
+2026-05-07 01:49:46,555 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:46,555 [INFO]   Scoring lead 83/97: Potential client: Phoenix Software International...
+2026-05-07 01:49:46,945 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:46,945 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBWkutnxST7N2N4f1c'}
+2026-05-07 01:49:46,945 [ERROR] Could not parse score response: 
+2026-05-07 01:49:46,945 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:46,945 [INFO]   Scoring lead 84/97: Potential client: World Wide Technology...
+2026-05-07 01:49:47,579 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:47,579 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBYU6prfd7GFC15L3T'}
+2026-05-07 01:49:47,579 [ERROR] Could not parse score response: 
+2026-05-07 01:49:47,579 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:47,579 [INFO]   Scoring lead 85/97: Potential client: SOFTWORLD IT, LLC....
+2026-05-07 01:49:48,193 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:48,194 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBbBKUh84QLemVXs84'}
+2026-05-07 01:49:48,195 [ERROR] Could not parse score response: 
+2026-05-07 01:49:48,195 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:48,195 [INFO]   Scoring lead 86/97: Potential client: Vaulnox USA, LLC...
+2026-05-07 01:49:48,808 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:48,808 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBdo5D5VDuCSnav8Pt'}
+2026-05-07 01:49:48,809 [ERROR] Could not parse score response: 
+2026-05-07 01:49:48,809 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:48,809 [INFO]   Scoring lead 87/97: Potential client: Numpy Labs | Your Technical Part...
+2026-05-07 01:49:49,217 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:49,217 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBgP6dnYcvn9cdQLVF'}
+2026-05-07 01:49:49,218 [ERROR] Could not parse score response: 
+2026-05-07 01:49:49,218 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:49,218 [INFO]   Scoring lead 88/97: Potential client: MOST Programming...
+2026-05-07 01:49:49,627 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:49,628 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBiCF5DT1B719bLsJX'}
+2026-05-07 01:49:49,628 [ERROR] Could not parse score response: 
+2026-05-07 01:49:49,628 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:49,628 [INFO]   Scoring lead 89/97: Potential client: cloudEQ...
+2026-05-07 01:49:50,216 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:50,217 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBjvRbBsA5oeGYpoKd'}
+2026-05-07 01:49:50,218 [ERROR] Could not parse score response: 
+2026-05-07 01:49:50,218 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:50,218 [INFO]   Scoring lead 90/97: Potential client: digiRyte UK...
+2026-05-07 01:49:50,754 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:50,755 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBnRVMCnjGSGcfzkkg'}
+2026-05-07 01:49:50,756 [ERROR] Could not parse score response: 
+2026-05-07 01:49:50,756 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:50,756 [INFO]   Scoring lead 91/97: Potential client: Theodo UK...
+2026-05-07 01:49:51,163 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:51,163 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBpj9fJ79jFnEu2XYH'}
+2026-05-07 01:49:51,163 [ERROR] Could not parse score response: 
+2026-05-07 01:49:51,163 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:51,163 [INFO]   Scoring lead 92/97: Potential client: 300Brains UK...
+2026-05-07 01:49:51,880 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:51,880 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBrVosVWkySDwTL4Qb'}
+2026-05-07 01:49:51,880 [ERROR] Could not parse score response: 
+2026-05-07 01:49:51,881 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:51,881 [INFO]   Scoring lead 93/97: Potential client: Intellectsoft UK...
+2026-05-07 01:49:52,327 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:52,327 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBuVtKVmXNZaFTCxbM'}
+2026-05-07 01:49:52,328 [ERROR] Could not parse score response: 
+2026-05-07 01:49:52,328 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:52,328 [INFO]   Scoring lead 94/97: Potential client: Startup Business Bureau...
+2026-05-07 01:49:52,801 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:52,802 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwBwYfVvNcm7p5jeqqt'}
+2026-05-07 01:49:52,802 [ERROR] Could not parse score response: 
+2026-05-07 01:49:52,802 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:52,802 [INFO]   Scoring lead 95/97: Potential client: StartUP FIU...
+2026-05-07 01:49:53,434 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:53,435 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwByRH5wzk4khjZHASQ'}
+2026-05-07 01:49:53,435 [ERROR] Could not parse score response: 
+2026-05-07 01:49:53,436 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:53,436 [INFO]   Scoring lead 96/97: Potential client: Startup Street...
+2026-05-07 01:49:53,812 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:53,812 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwC2AjFDYaCdEAkDnuX'}
+2026-05-07 01:49:53,812 [ERROR] Could not parse score response: 
+2026-05-07 01:49:53,813 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:53,813 [INFO]   Scoring lead 97/97: Potential client: Startuped...
+2026-05-07 01:49:54,235 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-05-07 01:49:54,237 [ERROR] Claude API error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CamwC3nTtzdmJsJeEJALJ'}
+2026-05-07 01:49:54,237 [ERROR] Could not parse score response: 
+2026-05-07 01:49:54,237 [INFO]   ❌ Score: 0 — skipped (below threshold 65)
+2026-05-07 01:49:54,237 [INFO] 
+🎯 0 leads passed the quality threshold
+2026-05-07 01:49:54,238 [INFO] 
+🎯 Top 0 leads to contact:
+2026-05-07 01:49:54,238 [WARNING] ⚠️  Gmail credentials not found — skipping Phase 2 (reply check). Download credentials JSON from Google Cloud Console to enable.
+2026-05-07 01:49:54,238 [INFO] 
+============================================================
+2026-05-07 01:49:54,238 [INFO] 📊 SESSION STATS
+2026-05-07 01:49:54,238 [INFO] ============================================================
+2026-05-07 01:49:54,238 [INFO]   total_leads_found: 0
+2026-05-07 01:49:54,238 [INFO]   emails_sent: 0
+2026-05-07 01:49:54,238 [INFO]   replies_received: 0
+2026-05-07 01:49:54,238 [INFO]   hot_leads_confirmed: 0
+2026-05-07 01:49:54,238 [INFO]   conversion_rate: 0%
+2026-05-07 01:49:55,234 [INFO] 📱 Telegram notification sent
+2026-05-07 01:49:55,235 [INFO] 
+✅ Agent run complete!
+
+2026-05-07 01:50:35,518 [INFO] 
+🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+2026-05-07 01:50:35,518 [INFO] JOB & CLIENT HUNTER AGENT — STARTED
+2026-05-07 01:50:35,518 [INFO] Time: 2026-05-07 01:50:35
+2026-05-07 01:50:35,518 [INFO] 🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖
+
+2026-05-07 01:50:35,518 [INFO] 👤 Profile: Shubham Yadav | Full Stack Developer (React / Node.js / React Native) | 2y exp
+2026-05-07 01:50:35,518 [INFO] 🛠️  Skills: React.js, Next.js, React Native, JavaScript ES6+, TypeScript
+2026-05-07 01:50:35,518 [INFO] 💰 Rate: $35/hr
+
+2026-05-07 01:50:36,407 [INFO] 📱 Telegram notification sent
+2026-05-07 01:50:36,407 [INFO] 
+============================================================
+2026-05-07 01:50:36,408 [INFO] 🚀 PHASE 1: HUNTING FOR LEADS
+2026-05-07 01:50:36,408 [INFO] ============================================================
+2026-05-07 01:50:36,408 [INFO] ==================================================
+2026-05-07 01:50:36,408 [INFO] 🔍 Starting worldwide job & client hunt...
+2026-05-07 01:50:36,408 [INFO] ==================================================
+2026-05-07 01:50:37,129 [INFO] Remotive: found 19 leads
+2026-05-07 01:50:41,534 [INFO] WeWorkRemotely: found 60 leads
+2026-05-07 01:51:02,673 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:51:06,065 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:51:08,477 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:51:12,572 [ERROR] SerpAPI error: Google hasn't returned any results for this query.
+2026-05-07 01:51:13,572 [INFO] Upwork: found 0 leads

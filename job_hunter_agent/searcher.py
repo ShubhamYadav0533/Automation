@@ -15,13 +15,16 @@ import os
 import json
 import time
 import logging
+import warnings
 import requests
+from pathlib import Path
 from typing import List, Dict
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 from serpapi import GoogleSearch
 from dotenv import load_dotenv
 
-load_dotenv()
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
+load_dotenv(dotenv_path=Path(__file__).parent / ".env", override=True)
 logger = logging.getLogger(__name__)
 
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
@@ -46,7 +49,12 @@ def _google_search(query: str, num: int = 10) -> List[Dict]:
             "api_key": SERPAPI_KEY,
         }
         results = GoogleSearch(params).get_dict()
+        # Surface API-level errors (quota exceeded, invalid key, etc.)
+        if "error" in results:
+            logger.error(f"SerpAPI error: {results['error']}")
+            return []
         organic = results.get("organic_results", [])
+        logger.debug(f"Google search '{query[:60]}' → {len(organic)} results")
         return [
             {
                 "title": r.get("title", ""),
@@ -67,9 +75,11 @@ def _google_search(query: str, num: int = 10) -> List[Dict]:
 def search_upwork(keywords: List[str]) -> List[Dict]:
     """Search Upwork jobs using Google (bypasses bot detection)."""
     leads = []
-    for keyword in keywords[:4]:  # limit to save API calls
-        query = f'site:upwork.com/jobs "{keyword}" -"already filled"'
-        results = _google_search(query, num=5)
+    # Use broader queries without strict quotes to avoid empty results
+    priority_kws = [keywords[0], keywords[2], keywords[5], keywords[9]] if len(keywords) >= 10 else keywords[:4]
+    for keyword in priority_kws:
+        query = f'site:upwork.com/jobs {keyword} remote'
+        results = _google_search(query, num=8)
         for r in results:
             if "upwork.com/jobs" in r.get("link", ""):
                 leads.append({
@@ -88,31 +98,25 @@ def search_upwork(keywords: List[str]) -> List[Dict]:
 #  SOURCE 2: LinkedIn Jobs via SerpAPI
 # ─────────────────────────────────────────────
 def search_linkedin(keywords: List[str], locations: List[str]) -> List[Dict]:
-    """Search LinkedIn jobs via SerpAPI LinkedIn engine."""
+    """Search LinkedIn jobs via Google site search (linkedin_jobs engine not on free plan)."""
     leads = []
-    for keyword in keywords[:3]:
-        try:
-            params = {
-                "engine": "linkedin_jobs",
-                "keywords": keyword,
-                "location": "Worldwide",
-                "api_key": SERPAPI_KEY,
-            }
-            results = GoogleSearch(params).get_dict()
-            jobs = results.get("jobs", [])
-            for job in jobs[:5]:
+    priority_kws = keywords[:4]
+    for keyword in priority_kws:
+        query = f'site:linkedin.com/jobs/view {keyword} remote'
+        results = _google_search(query, num=8)
+        for r in results:
+            link = r.get("link", "")
+            if "linkedin.com/jobs" in link:
                 leads.append({
                     "platform": "LinkedIn",
-                    "title": job.get("title", ""),
-                    "company": job.get("company_name", ""),
-                    "location": job.get("location", ""),
-                    "url": job.get("job_link", ""),
-                    "description": job.get("description", ""),
+                    "title": r["title"],
+                    "company": "",
+                    "location": "Remote",
+                    "url": link,
+                    "description": r["snippet"],
                     "type": "job_post",
                 })
-            time.sleep(1.5)
-        except Exception as e:
-            logger.error(f"LinkedIn search error for '{keyword}': {e}")
+        time.sleep(1)
     logger.info(f"LinkedIn: found {len(leads)} leads")
     return leads
 
@@ -164,35 +168,47 @@ def search_remotive(keywords: List[str]) -> List[Dict]:
 #  SOURCE 4: We Work Remotely (scrape)
 # ─────────────────────────────────────────────
 def search_weworkremotely(keywords: List[str]) -> List[Dict]:
-    """Scrape We Work Remotely for programming jobs."""
+    """Fetch We Work Remotely jobs via RSS feed (more reliable than scraping)."""
     leads = []
-    url = "https://weworkremotely.com/categories/remote-programming-jobs"
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(resp.text, "html.parser")
-        jobs = soup.select("ul.jobs li")
-        for job in jobs[:20]:
-            title_el = job.select_one(".title")
-            company_el = job.select_one(".company")
-            link_el = job.select_one("a")
-            if not title_el:
-                continue
-            title = title_el.get_text(strip=True)
-            # keyword filter
-            matched = any(kw.lower().split()[0] in title.lower() for kw in keywords)
-            if matched or True:  # take all remote programming jobs
+    rss_feeds = [
+        "https://weworkremotely.com/categories/remote-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss",
+        "https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss",
+    ]
+    seen = set()
+    for feed_url in rss_feeds:
+        try:
+            resp = requests.get(feed_url, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(resp.text, "xml")
+            items = soup.find_all("item")
+            for item in items[:25]:
+                title = item.find("title")
+                link = item.find("link")
+                desc = item.find("description")
+                region = item.find("region")
+                if not title:
+                    continue
+                title_text = title.get_text(strip=True)
+                link_text = link.get_text(strip=True) if link else ""
+                desc_text = BeautifulSoup(
+                    desc.get_text(strip=True) if desc else "", "html.parser"
+                ).get_text()[:400]
+                if link_text in seen:
+                    continue
+                seen.add(link_text)
                 leads.append({
                     "platform": "WeWorkRemotely",
-                    "title": title,
-                    "company": company_el.get_text(strip=True) if company_el else "",
-                    "url": "https://weworkremotely.com" + (link_el["href"] if link_el else ""),
-                    "description": "",
+                    "title": title_text,
+                    "company": "",
+                    "url": link_text,
+                    "description": desc_text,
+                    "location": region.get_text(strip=True) if region else "Remote",
                     "type": "job_post",
                 })
-    except Exception as e:
-        logger.error(f"WeWorkRemotely error: {e}")
+        except Exception as e:
+            logger.error(f"WeWorkRemotely RSS error ({feed_url}): {e}")
     logger.info(f"WeWorkRemotely: found {len(leads)} leads")
-    return leads[:10]
+    return leads[:15]
 
 
 # ─────────────────────────────────────────────
@@ -251,9 +267,10 @@ def search_google_maps(skills: List[str], locations: List[str]) -> List[Dict]:
 def search_freelancer(keywords: List[str]) -> List[Dict]:
     """Search Freelancer.com projects via Google."""
     leads = []
-    for keyword in keywords[:3]:
-        query = f'site:freelancer.com/projects "{keyword}"'
-        results = _google_search(query, num=5)
+    priority_kws = [keywords[0], keywords[2], keywords[6]] if len(keywords) >= 7 else keywords[:3]
+    for keyword in priority_kws:
+        query = f'site:freelancer.com/projects {keyword}'
+        results = _google_search(query, num=8)
         for r in results:
             if "freelancer.com/projects" in r.get("link", ""):
                 leads.append({
@@ -275,7 +292,7 @@ def search_wellfound(keywords: List[str]) -> List[Dict]:
     """Search Wellfound (formerly AngelList) startup jobs via Google."""
     leads = []
     for keyword in keywords[:3]:
-        query = f'site:wellfound.com/jobs "{keyword}" remote'
+        query = f'site:wellfound.com/jobs {keyword} remote'
         results = _google_search(query, num=5)
         for r in results:
             if "wellfound.com" in r.get("link", ""):
