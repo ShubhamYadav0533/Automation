@@ -10,3 +10,9 @@ beautifulsoup4>=4.12.0
 python-dotenv>=1.0.0
 schedule>=1.2.1
 lxml>=4.9.0
+
+# ── Client Hunter Bot (new) ──────────────────────────────────
+selenium>=4.18.0
+undetected-chromedriver>=3.5.5
+openpyxl>=3.1.2
+webdriver-manager>=4.0.1
