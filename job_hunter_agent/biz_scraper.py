@@ -45,41 +45,132 @@ except ImportError:
 # ─────────────────────────────────────────────────────────────
 SEARCH_TARGETS = [
     # (category_label, search_keyword, city)
-    ("hospital",     "private hospital",           "Amsterdam"),
-    ("hospital",     "private hospital",           "Dubai"),
-    ("hospital",     "private hospital",           "London"),
-    ("clinic",       "private clinic",             "Berlin"),
-    ("clinic",       "dental clinic",              "Toronto"),
-    ("hotel",        "boutique hotel",             "Amsterdam"),
-    ("hotel",        "business hotel",             "Dubai"),
-    ("restaurant",   "restaurant chain",           "London"),
-    ("school",       "private school",             "Amsterdam"),
-    ("college",      "private college",            "Mumbai"),
-    ("college",      "engineering college",        "Noida"),
-    ("shop",         "retail chain store",         "Delhi"),
-    ("real_estate",  "real estate agency",         "Dubai"),
-    ("real_estate",  "property management",        "London"),
-    ("gym",          "gym fitness center",         "Amsterdam"),
-    ("factory",      "manufacturing company",      "Germany"),
-    ("hospital",     "multispecialty hospital",    "Noida"),
-    ("hospital",     "multispecialty hospital",    "Delhi"),
-    ("college",      "management college",         "Delhi"),
-    ("shop",         "supermarket chain",          "UK"),
+    # ── Hospitals / Clinics ──────────────────────────────────
+    ("hospital",    "private hospital",           "Amsterdam"),
+    ("hospital",    "private hospital",           "Dubai"),
+    ("hospital",    "private hospital",           "London"),
+    ("hospital",    "multispecialty hospital",    "Noida"),
+    ("hospital",    "multispecialty hospital",    "Delhi"),
+    ("hospital",    "private hospital",           "Toronto"),
+    ("hospital",    "private hospital",           "Singapore"),
+    ("hospital",    "private hospital",           "Sydney"),
+    ("hospital",    "private hospital",           "Frankfurt"),
+    ("hospital",    "private hospital",           "Paris"),
+    ("hospital",    "private hospital",           "New York"),
+    ("hospital",    "private hospital",           "Chicago"),
+    ("hospital",    "private hospital",           "Mumbai"),
+    ("hospital",    "private hospital",           "Bangalore"),
+    ("hospital",    "private hospital",           "Hyderabad"),
+    ("clinic",      "private clinic",             "Berlin"),
+    ("clinic",      "dental clinic",              "Toronto"),
+    ("clinic",      "dental clinic",              "London"),
+    ("clinic",      "dental clinic",              "Dubai"),
+    ("clinic",      "medical clinic",             "Amsterdam"),
+    ("clinic",      "eye clinic",                 "Singapore"),
+    ("clinic",      "skin clinic",                "Mumbai"),
+    ("clinic",      "physiotherapy clinic",       "London"),
+    # ── Hotels ──────────────────────────────────────────────
+    ("hotel",       "boutique hotel",             "Amsterdam"),
+    ("hotel",       "business hotel",             "Dubai"),
+    ("hotel",       "boutique hotel",             "London"),
+    ("hotel",       "boutique hotel",             "Paris"),
+    ("hotel",       "boutique hotel",             "Berlin"),
+    ("hotel",       "luxury hotel",               "Singapore"),
+    ("hotel",       "boutique hotel",             "Toronto"),
+    ("hotel",       "resort hotel",               "Bali"),
+    ("hotel",       "budget hotel",               "Delhi"),
+    ("hotel",       "boutique hotel",             "Barcelona"),
+    ("hotel",       "boutique hotel",             "Prague"),
+    ("hotel",       "boutique hotel",             "Vienna"),
+    # ── Restaurants ─────────────────────────────────────────
+    ("restaurant",  "restaurant chain",           "London"),
+    ("restaurant",  "fine dining restaurant",     "Dubai"),
+    ("restaurant",  "restaurant",                 "Amsterdam"),
+    ("restaurant",  "restaurant group",           "New York"),
+    ("restaurant",  "restaurant chain",           "Toronto"),
+    ("restaurant",  "restaurant",                 "Sydney"),
+    ("restaurant",  "fine dining restaurant",     "Paris"),
+    ("restaurant",  "restaurant",                 "Singapore"),
+    # ── Schools / Colleges ───────────────────────────────────
+    ("school",      "private school",             "Amsterdam"),
+    ("school",      "private school",             "Dubai"),
+    ("school",      "international school",       "Singapore"),
+    ("school",      "international school",       "London"),
+    ("school",      "private school",             "Toronto"),
+    ("school",      "private school",             "Noida"),
+    ("school",      "private school",             "Delhi"),
+    ("college",     "private college",            "Mumbai"),
+    ("college",     "engineering college",        "Noida"),
+    ("college",     "management college",         "Delhi"),
+    ("college",     "private college",            "Bangalore"),
+    ("college",     "private college",            "London"),
+    ("college",     "business school",            "Dubai"),
+    # ── Retail / Shops ──────────────────────────────────────
+    ("shop",        "retail chain store",         "Delhi"),
+    ("shop",        "supermarket chain",          "UK"),
+    ("shop",        "fashion retail store",       "London"),
+    ("shop",        "electronics retailer",       "Dubai"),
+    ("shop",        "pharmacy chain",             "Amsterdam"),
+    ("shop",        "clothing store chain",       "Toronto"),
+    ("shop",        "furniture store",            "Berlin"),
+    ("shop",        "supermarket",                "Singapore"),
+    # ── Real Estate ──────────────────────────────────────────
+    ("real_estate", "real estate agency",         "Dubai"),
+    ("real_estate", "property management",        "London"),
+    ("real_estate", "real estate agency",         "Amsterdam"),
+    ("real_estate", "property management",        "Toronto"),
+    ("real_estate", "real estate agency",         "Noida"),
+    ("real_estate", "real estate agency",         "Mumbai"),
+    ("real_estate", "real estate agency",         "Singapore"),
+    ("real_estate", "real estate agency",         "Sydney"),
+    ("real_estate", "property developer",         "Dubai"),
+    ("real_estate", "property developer",         "London"),
+    # ── Gyms / Fitness ──────────────────────────────────────
+    ("gym",         "gym fitness center",         "Amsterdam"),
+    ("gym",         "gym fitness center",         "Dubai"),
+    ("gym",         "gym fitness center",         "London"),
+    ("gym",         "fitness club",               "Toronto"),
+    ("gym",         "fitness center",             "Singapore"),
+    ("gym",         "gym",                        "Noida"),
+    # ── Manufacturing / Factories ────────────────────────────
+    ("factory",     "manufacturing company",      "Germany"),
+    ("factory",     "manufacturing company",      "UK"),
+    ("factory",     "manufacturing company",      "Noida"),
+    ("factory",     "industrial company",         "Delhi"),
+    ("factory",     "manufacturing company",      "Singapore"),
+    # ── Extra niches ────────────────────────────────────────
+    ("hospital",    "diagnostic center",          "Delhi"),
+    ("clinic",      "veterinary clinic",          "London"),
+    ("clinic",      "aesthetic clinic",           "Dubai"),
+    ("hotel",       "service apartment",          "Singapore"),
+    ("real_estate", "commercial property",        "Dubai"),
+    ("school",      "coaching institute",         "Noida"),
+    ("college",     "law college",                "Mumbai"),
+    ("gym",         "yoga studio",                "Amsterdam"),
+    ("restaurant",  "cafe chain",                 "London"),
+    ("shop",        "jewelry store",              "Dubai"),
 ]
 
-# Google Maps searches — great for local businesses
-MAPS_SEARCHES = [
-    "hospitals near Amsterdam",
-    "private clinics Dubai",
-    "hotels London",
-    "schools Amsterdam",
-    "real estate agencies Dubai",
-    "gyms Amsterdam",
-    "restaurants Berlin",
-    "colleges Noida India",
-    "hospitals Noida India",
-    "IT companies Noida India",
+# Google Maps searches — rotated each round for variety
+MAPS_SEARCHES_POOL = [
+    "hospitals near Amsterdam", "private clinics Dubai", "hotels London",
+    "schools Amsterdam", "real estate agencies Dubai", "gyms Amsterdam",
+    "restaurants Berlin", "colleges Noida India", "hospitals Noida India",
+    "private clinics London", "boutique hotels Paris", "restaurants Dubai",
+    "dental clinics Toronto", "fitness centers Singapore", "hospitals Mumbai",
+    "real estate agencies London", "private schools Singapore", "hotels Berlin",
+    "hospitals Delhi India", "manufacturing companies Noida India",
+    "restaurants Amsterdam", "gyms London", "hospitals Toronto",
+    "private colleges Bangalore India", "real estate agencies Amsterdam",
+    "boutique hotels Barcelona", "restaurants Singapore", "clinics Sydney",
+    "hotels Prague", "hospitals Frankfurt Germany",
 ]
+
+# biz_scraper tracks which offset it is at across rounds
+_search_offset: int = 0
+_maps_offset: int = 0
+
+MAPS_SEARCHES = MAPS_SEARCHES_POOL[:10]  # backward compat for any direct import
 
 
 def _get_chrome_major_version() -> int:
@@ -136,79 +227,96 @@ def _scroll_page(driver, times: int = 3):
 
 
 # ─────────────────────────────────────────────────────────────
-#  SOURCE 1: Google Search
+#  SOURCE 1: Google Search (multi-page)
 # ─────────────────────────────────────────────────────────────
-def _scrape_google_search(driver, keyword: str, city: str, category: str) -> List[Dict]:
-    """Search Google for businesses and extract website URLs."""
+def _scrape_google_search(driver, keyword: str, city: str, category: str, max_pages: int = 4) -> List[Dict]:
+    """Search Google for businesses across multiple pages."""
     query = f"{keyword} {city} official website"
-    url = f"https://www.google.com/search?q={query.replace(' ', '+')}&num=15"
-
     leads = []
-    try:
-        driver.get(url)
-        _human_pause(2, 4)
+    seen_urls: set = set()
 
-        # Accept cookies if prompted
+    for page in range(max_pages):
+        start = page * 10
+        url = f"https://www.google.com/search?q={query.replace(' ', '+')}&num=10&start={start}"
         try:
-            btn = driver.find_element(By.XPATH, "//button[contains(., 'Accept') or contains(., 'Agree')]")
-            btn.click()
-            _human_pause(1, 2)
-        except NoSuchElementException:
-            pass
+            driver.get(url)
+            _human_pause(2, 4)
 
-        _scroll_page(driver, 2)
-
-        # Grab organic result cards
-        results = driver.find_elements(By.CSS_SELECTOR, "div.g, div[data-sokoban-container]")
-        if not results:
-            results = driver.find_elements(By.CSS_SELECTOR, "div.tF2Cxc, div.yuRUbf")
-
-        for result in results[:12]:
-            try:
-                # Title
-                title_el = result.find_element(By.CSS_SELECTOR, "h3")
-                title = title_el.text.strip()
-                if not title:
-                    continue
-
-                # URL
-                link_el = result.find_element(By.CSS_SELECTOR, "a")
-                href = link_el.get_attribute("href") or ""
-                if not href.startswith("http"):
-                    continue
-                # Skip Google internal pages
-                if "google.com" in href or "youtube.com" in href:
-                    continue
-
-                # Snippet
-                snippet = ""
+            # Accept cookies if prompted (only first page)
+            if page == 0:
                 try:
-                    snippet_el = result.find_element(By.CSS_SELECTOR, "div.VwiC3b, span.aCOpRe")
-                    snippet = snippet_el.text.strip()
+                    btn = driver.find_element(By.XPATH, "//button[contains(., 'Accept') or contains(., 'Agree')]")
+                    btn.click()
+                    _human_pause(1, 2)
                 except NoSuchElementException:
                     pass
 
-                leads.append({
-                    "name": title,
-                    "website": href,
-                    "category": category,
-                    "city": city,
-                    "source": "google_search",
-                    "snippet": snippet[:200],
-                    "email": None,
-                    "phone": None,
-                    "contact_name": None,
-                    "status": "found",
-                })
-                logger.debug(f"  Found: {title} → {href[:60]}")
+            _scroll_page(driver, 2)
 
-            except Exception:
-                continue
+            # Detect CAPTCHA — stop if Google blocked us
+            if "captcha" in driver.current_url.lower() or "sorry/index" in driver.current_url:
+                logger.warning(f"⚠️  Google CAPTCHA on page {page+1} — stopping early")
+                break
 
-        logger.info(f"🔍 Google Search '{keyword} {city}' → {len(leads)} leads")
+            # Grab organic result cards
+            results = driver.find_elements(By.CSS_SELECTOR, "div.g, div[data-sokoban-container]")
+            if not results:
+                results = driver.find_elements(By.CSS_SELECTOR, "div.tF2Cxc, div.yuRUbf")
 
-    except WebDriverException as e:
-        logger.error(f"Google search failed: {e}")
+            page_count = 0
+            for result in results[:10]:
+                try:
+                    title_el = result.find_element(By.CSS_SELECTOR, "h3")
+                    title = title_el.text.strip()
+                    if not title:
+                        continue
+
+                    link_el = result.find_element(By.CSS_SELECTOR, "a")
+                    href = link_el.get_attribute("href") or ""
+                    if not href.startswith("http"):
+                        continue
+                    if "google.com" in href or "youtube.com" in href:
+                        continue
+                    if href in seen_urls:
+                        continue
+                    seen_urls.add(href)
+
+                    snippet = ""
+                    try:
+                        snippet_el = result.find_element(By.CSS_SELECTOR, "div.VwiC3b, span.aCOpRe")
+                        snippet = snippet_el.text.strip()
+                    except NoSuchElementException:
+                        pass
+
+                    leads.append({
+                        "name": title,
+                        "website": href,
+                        "category": category,
+                        "city": city,
+                        "source": f"google_p{page+1}",
+                        "snippet": snippet[:200],
+                        "email": None,
+                        "phone": None,
+                        "contact_name": None,
+                        "status": "found",
+                    })
+                    page_count += 1
+                    logger.debug(f"  p{page+1}: {title} → {href[:55]}")
+
+                except Exception:
+                    continue
+
+            logger.info(f"🔍 Google p{page+1} '{keyword} {city}' → {page_count} leads")
+
+            # No results on this page — no point going deeper
+            if page_count == 0:
+                break
+
+            _human_pause(2, 4)  # pause between pages
+
+        except WebDriverException as e:
+            logger.error(f"Google search page {page+1} failed: {e}")
+            break
 
     return leads
 
@@ -375,13 +483,14 @@ def _scrape_justdial(driver, keyword: str, city: str, category: str) -> List[Dic
 #  MAIN: Run all scrapers
 # ─────────────────────────────────────────────────────────────
 def scrape_businesses(
-    max_google_searches: int = 8,
+    max_google_searches: int = 10,
     max_maps_searches: int = 5,
     include_india: bool = True,
+    round_offset: int = 0,          # rotate keyword slice each round
 ) -> List[Dict]:
     """
     Launch Chrome, scrape Google + Google Maps + JustDial.
-    Returns list of business dicts (email/phone not yet filled — that's contact_finder's job).
+    round_offset rotates through SEARCH_TARGETS so each round finds new businesses.
     """
     if not SELENIUM_OK:
         logger.error("Selenium not installed. Run: pip install undetected-chromedriver selenium")
@@ -390,15 +499,25 @@ def scrape_businesses(
     all_leads: List[Dict] = []
     seen_names: set = set()
 
+    # ── Rotate which slice of targets to use ─────────────────
+    n = len(SEARCH_TARGETS)
+    start_idx = (round_offset * max_google_searches) % n
+    rotated = SEARCH_TARGETS[start_idx:] + SEARCH_TARGETS[:start_idx]
+    targets_this_round = rotated[:max_google_searches]
+
+    maps_n = len(MAPS_SEARCHES_POOL)
+    maps_start = (round_offset * max_maps_searches) % maps_n
+    maps_rotated = MAPS_SEARCHES_POOL[maps_start:] + MAPS_SEARCHES_POOL[:maps_start]
+    maps_this_round = maps_rotated[:max_maps_searches]
+
     driver = None
     try:
         logger.info("🚀 Launching Chrome browser...")
         driver = _make_driver()
 
         # ── 1. Google Search ──────────────────────────────────
-        targets = SEARCH_TARGETS[:max_google_searches]
-        for category, keyword, city in targets:
-            leads = _scrape_google_search(driver, keyword, city, category)
+        for category, keyword, city in targets_this_round:
+            leads = _scrape_google_search(driver, keyword, city, category, max_pages=4)
             for lead in leads:
                 key = lead["name"].lower()
                 if key not in seen_names:
@@ -407,7 +526,7 @@ def scrape_businesses(
             _human_pause(2, 4)
 
         # ── 2. Google Maps ────────────────────────────────────
-        for maps_query in MAPS_SEARCHES[:max_maps_searches]:
+        for maps_query in maps_this_round:
             leads = _scrape_google_maps(driver, maps_query)
             for lead in leads:
                 key = lead["name"].lower()
@@ -416,7 +535,7 @@ def scrape_businesses(
                     all_leads.append(lead)
             _human_pause(3, 5)
 
-        # ── 3. JustDial (India only) ──────────────────────────
+        # ── 3. JustDial (India) ───────────────────────────────
         if include_india:
             india_targets = [
                 ("hospital", "multispecialty hospital", "Noida"),

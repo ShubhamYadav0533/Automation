@@ -953,3 +953,190 @@ I came across your clinic's website and appreciated the services you offer. I no
 2026-05-07 20:52:38,946 [INFO] Sent: Boutique Hotel The Noblemen Amsterdam → info@hotelthenoblemen.com | Proposal: Custom Hotel Management System for The Noblemen Amsterdam
 2026-05-07 20:52:40,392 [INFO] 📱 Telegram notification sent
 2026-05-07 20:55:29,045 [INFO] 📧 Found email at https://trggroupltd.com/contact: supplierinfo@trggroupltd.com
+2026-05-07 20:56:42,134 [INFO] ✅ Ollama wrote email for Welcome to The Restaurant Group - The Restaurant Group ltd (restaurant)
+2026-05-07 20:56:46,031 [INFO] ✉️  Email sent via SMTP to supplierinfo@trggroupltd.com
+2026-05-07 20:56:46,142 [INFO] Sent: Welcome to The Restaurant Group - The Restaurant Group ltd → supplierinfo@trggroupltd.com | Build Your Custom Mobile Restaurant App
+2026-05-07 20:56:47,261 [INFO] 📱 Telegram notification sent
+2026-05-07 21:02:38,289 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:02:38,290 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:02:38,298 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:02:38,332 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:02:54,692 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 21:03:04,888 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 21:03:16,947 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 21:03:28,116 [INFO] 🔍 Google Search 'private hospital London' → 8 leads
+2026-05-07 21:03:38,856 [INFO] 🔍 Google Search 'private clinic Berlin' → 6 leads
+2026-05-07 21:03:51,043 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 21:04:01,912 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 21:04:11,675 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 21:04:23,423 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 21:04:58,750 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 21:05:41,821 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 21:06:19,554 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 21:07:01,123 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 21:07:42,980 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 21:08:17,382 [WARNING] JustDial scrape skipped: Message: timeout: Timed out receiving message from renderer: 29.350
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x55a2d7fe740a <unknown>
+#1 0x55a2d7a1b76b <unknown>
+#2 0x55a2d7a0380a <unknown>
+#3 0x55a2d7a034ed <unknown>
+#4 0x55a2d7a013a7 <unknown>
+#5 0x55a2d7a01cbf <unknown>
+#6 0x55a2d7a10480 <unknown>
+#7 0x55a2d7a29b47 <unknown>
+#8 0x55a2d7a301fb <unknown>
+#9 0x55a2d7a023e8 <unknown>
+#10 0x55a2d7a298f8 <unknown>
+#11 0x55a2d7ab8ad8 <unknown>
+#12 0x55a2d7a5f7b2 <unknown>
+#13 0x55a2d7a60461 <unknown>
+#14 0x55a2d7fafdf9 <unknown>
+#15 0x55a2d7fb2d5d <unknown>
+#16 0x55a2d7f98b41 <unknown>
+#17 0x55a2d7fb393b <unknown>
+#18 0x55a2d7f7f870 <unknown>
+#19 0x55a2d7fd4828 <unknown>
+#20 0x55a2d7fd49fc <unknown>
+#21 0x55a2d7fe6763 <unknown>
+#22 0x7f7c346937db <unknown>
+
+2026-05-07 21:08:35,509 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 21:08:51,036 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 21:08:53,282 [INFO] ✅ Scraping done. Total businesses found: 85
+2026-05-07 21:08:53,282 [INFO] ✅ Found 85 businesses. Saved to scraped_businesses.json
+2026-05-07 21:11:33,779 [INFO] 📧 Found email at https://www.helios-international.com/: info@helios-international.com
+2026-05-07 21:12:48,362 [INFO] ✅ Ollama wrote email for Helios International — Official Helios Website for International ... (clinic)
+2026-05-07 21:12:52,083 [INFO] ✉️  Email sent via SMTP to info@helios-international.com
+2026-05-07 21:12:52,199 [INFO] Sent: Helios International — Official Helios Website for International ... → info@helios-international.com | Propose Custom Clinic Management Web App Solution
+2026-05-07 21:12:53,416 [INFO] 📱 Telegram notification sent
+2026-05-07 21:21:51,893 [INFO] 📧 Found email at https://www.chesterfieldmayfair.com/contact: alake@chesterfieldmayfair.com
+2026-05-07 21:23:04,571 [INFO] ✅ Ollama wrote email for The Chesterfield Mayfair (hotel)
+2026-05-07 21:23:08,843 [INFO] ✉️  Email sent via SMTP to alake@chesterfieldmayfair.com
+2026-05-07 21:23:08,957 [INFO] Sent: The Chesterfield Mayfair → alake@chesterfieldmayfair.com | Propose Custom Hotel Management System
+2026-05-07 21:23:09,969 [INFO] 📱 Telegram notification sent
+2026-05-07 21:27:10,981 [INFO] 📧 Found email at http://www.publove.co.uk/: reservations@publove.co.uk
+2026-05-07 21:28:19,527 [INFO] ✅ Ollama wrote email for The Tower Hotel, by Thistle (hotel)
+2026-05-07 21:28:23,538 [INFO] ✉️  Email sent via SMTP to reservations@publove.co.uk
+2026-05-07 21:28:23,649 [INFO] Sent: The Tower Hotel, by Thistle → reservations@publove.co.uk | Proposal: Custom Hotel Management System
+2026-05-07 21:28:25,263 [INFO] 📱 Telegram notification sent
+2026-05-07 21:29:12,621 [INFO] 📧 Found email at http://www.amityschool.nl/: ENQUIRIES@AMITYAMSTERDAM.NL
+2026-05-07 21:30:26,883 [INFO] ✅ Ollama wrote email for Public Elementary School De Witte Olifant (school)
+2026-05-07 21:30:31,216 [INFO] ✉️  Email sent via SMTP to ENQUIRIES@AMITYAMSTERDAM.NL
+2026-05-07 21:30:31,333 [INFO] Sent: Public Elementary School De Witte Olifant → ENQUIRIES@AMITYAMSTERDAM.NL | Custom College CRM Proposal: De Witte Olifant
+2026-05-07 21:30:32,282 [INFO] 📱 Telegram notification sent
+2026-05-07 21:34:33,451 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:34:33,452 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:34:33,458 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:34:33,607 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:34:42,275 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 21:34:51,726 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 21:35:06,711 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 21:35:16,606 [INFO] 🔍 Google Search 'private hospital London' → 10 leads
+2026-05-07 21:35:30,388 [INFO] 🔍 Google Search 'private clinic Berlin' → 6 leads
+2026-05-07 21:35:42,654 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 21:35:55,237 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 21:36:04,675 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 21:36:14,014 [INFO] 🔍 Google Search 'restaurant chain London' → 8 leads
+2026-05-07 21:36:57,951 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 21:37:42,730 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 10 leads
+2026-05-07 21:37:53,392 [INFO] 🗺️  Google Maps 'hotels London' → 0 leads
+2026-05-07 21:38:32,334 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 10 leads
+2026-05-07 21:39:16,763 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 21:39:35,244 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 21:39:50,958 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 21:40:05,979 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 21:40:08,672 [INFO] ✅ Scraping done. Total businesses found: 77
+2026-05-07 21:40:08,673 [INFO] ✅ Found 77 businesses. Saved to scraped_businesses.json
+2026-05-07 21:42:49,396 [INFO] 📧 Found email at https://www.kingedwardvii.co.uk/: enquiries@kingedwardvii.co.uk
+2026-05-07 21:44:07,970 [INFO] ✅ Ollama wrote email for King Edward VII's Hospital | Premier Private Hospital (hospital)
+2026-05-07 21:44:11,553 [INFO] ✉️  Email sent via SMTP to enquiries@kingedwardvii.co.uk
+2026-05-07 21:44:11,670 [INFO] Sent: King Edward VII's Hospital | Premier Private Hospital → enquiries@kingedwardvii.co.uk | Custom CRM/ERP Proposal for King Edward VII's Hospital
+2026-05-07 21:44:12,981 [INFO] 📱 Telegram notification sent
+2026-05-07 21:48:38,476 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 21:49:43,070 [INFO] ✅ Ollama wrote email for Citymax Hotel Business Bay | 4 star Hotel Dubai (hotel)
+2026-05-07 21:49:46,808 [INFO] ✉️  Email sent via SMTP to reservations@citymaxhotels.com
+2026-05-07 21:49:46,930 [INFO] Sent: Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com | Proposal: Custom Hotel Management System for Citymax Business Bay
+2026-05-07 21:49:48,364 [INFO] 📱 Telegram notification sent
+2026-05-07 21:54:36,770 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:54:36,771 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:54:36,777 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 21:54:36,817 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 21:54:36,817 [ERROR] Scraper crashed: <urlopen error [Errno -3] Temporary failure in name resolution>
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/urllib/request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              encode_chunked=req.has_header('Transfer-encoding'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1338, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1384, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/usr/lib/python3.13/http/client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/client.py", line 1472, in connect
+    super().connect()
+    ~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/client.py", line 1003, in connect
+    self.sock = self._create_connection(
+                ~~~~~~~~~~~~~~~~~~~~~~~^
+        (self.host,self.port), self.timeout, self.source_address)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 840, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 396, in scrape_businesses
+    driver = _make_driver()
+  File "/home/shubham/automation/job_hunter_agent/biz_scraper.py", line 121, in _make_driver
+    driver = uc.Chrome(options=options, version_main=chrome_ver)
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/__init__.py", line 258, in __init__
+    self.patcher.auto()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/patcher.py", line 175, in auto
+    release = self.fetch_release_number()
+  File "/home/shubham/.local/lib/python3.13/site-packages/undetected_chromedriver/patcher.py", line 259, in fetch_release_number
+    with urlopen(self.url_repo + path) as conn:
+         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 489, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.13/urllib/request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "/usr/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.13/urllib/request.py", line 1367, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/urllib/request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+2026-05-07 21:54:36,840 [INFO] ✅ Scraping done. Total businesses found: 0
+2026-05-07 21:54:36,840 [INFO] ✅ Found 0 businesses. Saved to scraped_businesses.json
+2026-05-07 21:54:36,842 [ERROR] Telegram error: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot8798208156:AAGn_KZJE5SPl4H-YHxcutDd-jlqPami7w4/sendMessage (Caused by NameResolutionError("HTTPSConnection(host='api.telegram.org', port=443): Failed to resolve 'api.telegram.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-05-07 21:57:12,186 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 21:57:12,187 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 21:57:12,225 [INFO] 🌐 Chrome version detected: 143

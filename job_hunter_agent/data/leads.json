@@ -23,7 +23,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:48.756162",
+    "saved_at": "2026-05-07T22:14:01.725053",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Senior Software Engineer(React/Next.js) Developer - Remote \u2014 2yr React/Node.js Developer",
@@ -55,7 +55,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:48.349233",
+    "saved_at": "2026-05-07T22:14:00.871983",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Senior Frontend Developer (Next.Js and React) \u2014 2yr React/Node.js Developer",
@@ -86,7 +86,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:49.152203",
+    "saved_at": "2026-05-07T22:14:02.450781",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React.js Node.js Fullstack Developer - Remote \u2014 2yr React/Node.js Developer",
@@ -117,7 +117,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T15:43:15.735133",
+    "saved_at": "2026-05-07T22:14:05.607519",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Senior Full Stack React & Next.JS Developer - (Remote \u2014 2yr React/Node.js Developer",
@@ -148,7 +148,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:49.575979",
+    "saved_at": "2026-05-07T22:14:07.663750",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: FullStack hiring Senior React Native Developer - Remote \u2014 2yr React/Node.js Developer",
@@ -206,7 +206,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:51.318824",
+    "saved_at": "2026-05-07T22:14:17.496312",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Full-Stack App Developer (React Native & Node.js) \u2014 2yr React/Node.js Developer",
@@ -219,25 +219,23 @@
     "platform": "Wellfound (AngelList)",
     "title": "Senior Frontend Developer (Next.js, TypeScript) \u2014 Remote",
     "url": "https://wellfound.com/jobs/3888598-senior-frontend-developer-next-js-typescript-remote",
-    "description": "We are looking for a Senior Frontend Developer to build and maintain modern, high-performance web applications using Next.js (App Router) and React.",
+    "description": "Senior Frontend Developer (Next.js, TypeScript) \u2014 Remote \u00b7 $70k \u2013 $95k \u2022 No equity \u00b7 |Remote (. Europe. ) \u00b7 |4 years of exp \u00b7 |Full Time.",
     "type": "job_post",
-    "ai_score": 78,
+    "ai_score": 68,
     "ai_score_data": {
-      "score": 78,
-      "match_level": "HOT",
-      "reason": "Keyword match: react, next.js, typescript, frontend",
+      "score": 68,
+      "match_level": "WARM",
+      "reason": "Keyword match: next.js, typescript, frontend",
       "key_skills_matched": [
-        "react",
         "next.js",
         "typescript",
-        "frontend",
-        "web app"
+        "frontend"
       ],
       "estimated_budget": "Not specified",
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:47.830436",
+    "saved_at": "2026-05-07T22:14:12.168666",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Senior Frontend Developer (Next.js, TypeScript) \u2014 Remote \u2014 2yr React/Node.js Developer",
@@ -296,7 +294,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:51.696220",
+    "saved_at": "2026-05-07T22:14:18.518767",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Full Stack Developer Intern (Next.js, Node.js, ReactNative.js) \u2014 2yr React/Node.js Developer",
@@ -327,7 +325,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T02:10:48.549741",
+    "saved_at": "2026-05-07T22:14:26.812455",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Bluelight hiring Typescript/NextJS Frontend Developer \u2014 2yr React/Node.js Developer",
@@ -356,7 +354,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:52.080381",
+    "saved_at": "2026-05-07T22:14:28.450424",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Create React Native mobile app screens -- 2 | Freelancer \u2014 2yr React/Node.js Developer",
@@ -416,7 +414,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:54.036025",
+    "saved_at": "2026-05-07T22:14:36.926030",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React Native Developer, 100% Remote \u2014 2yr React/Node.js Developer",
@@ -478,7 +476,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T02:10:52.615438",
+    "saved_at": "2026-05-07T22:14:31.702147",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: YO IT Consulting hiring Python/React Full Stack Developer \u2014 2yr React/Node.js Developer",
@@ -508,7 +506,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:59.437737",
+    "saved_at": "2026-05-07T22:14:41.498009",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React Native Grocery App Developer \u2014 2yr React/Node.js Developer",
@@ -598,7 +596,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:59.923150",
+    "saved_at": "2026-05-07T22:14:45.958790",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React Native Developer and Mentor Needed to Build Real-Time ... \u2014 2yr React/Node.js Developer",
@@ -690,7 +688,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:50.387667",
+    "saved_at": "2026-05-07T22:14:13.989441",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React Native Mobile App Developer / Engineer at MathGPT \u2014 2yr React/Node.js Developer",
@@ -719,7 +717,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:50.907785",
+    "saved_at": "2026-05-07T22:14:14.996328",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Full Stack Product Engineer (React Native, React) \u2014 2yr React/Node.js Developer",
@@ -781,7 +779,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T16:49:53.474361",
+    "saved_at": "2026-05-07T22:14:40.533624",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: React Native Developer - Remote Work \u2014 2yr React/Node.js Developer",
@@ -843,7 +841,7 @@
       "recommended_action": "APPLY",
       "scored_by": "fallback"
     },
-    "saved_at": "2026-05-07T15:43:19.561598",
+    "saved_at": "2026-05-07T22:14:34.382591",
     "status": "found",
     "drafted_proposal": {
       "subject": "Application: Senior React Native Developer - Remote Work \u2014 2yr React/Node.js Developer",
@@ -936,6 +934,64 @@
     "drafted_proposal": {
       "subject": "Application: Mobile React Native Developer (mid-level) - remote from ... \u2014 2yr React/Node.js Developer",
       "body": "Hi,\n\nI'm very interested in the Mobile React Native Developer (mid-level) - remote from ... role. I'm Shubham Yadav, a Full Stack Developer (React / Node.js / React Native) with 2 years of hands-on experience in React.js, Next.js, React Native, JavaScript ES6+, TypeScript.\n\nMost recently, I built Hospital CRM (crm.anquestplus.com) \u2014 Full-featured Hospital CRM built with React.js, Node.js, MongoDB \u2014 patient manag.\n\nI'm available immediately for remote work at $35/hr and would love to discuss how I can contribute to your team.\n\nPortfolio & GitHub: https://github.com/ShubhamYadav0533\n\nLooking forward to hearing from you!\n\nBest regards,\nShubham Yadav",
+      "tone": "professional",
+      "written_by": "fallback"
+    }
+  },
+  "https://wellfound.com/jobs/3833423-frontend-developer-react-next-js": {
+    "platform": "Wellfound (AngelList)",
+    "title": "Frontend Developer (React / Next.js) at Stackera \u2022 Pune",
+    "url": "https://wellfound.com/jobs/3833423-frontend-developer-react-next-js",
+    "description": "Stackera is hiring a Frontend Developer (React / Next.js) in Pune - Apply now on Wellfound ... Frontend Developer (React / Next.js). \u20b95L \u2013 \u20b910L; |Remote (. India. ) ...",
+    "type": "job_post",
+    "ai_score": 68,
+    "ai_score_data": {
+      "score": 68,
+      "match_level": "WARM",
+      "reason": "Keyword match: react, next.js, frontend",
+      "key_skills_matched": [
+        "react",
+        "next.js",
+        "frontend"
+      ],
+      "estimated_budget": "Not specified",
+      "recommended_action": "APPLY",
+      "scored_by": "fallback"
+    },
+    "saved_at": "2026-05-07T22:14:10.154429",
+    "status": "found",
+    "drafted_proposal": {
+      "subject": "Application: Frontend Developer (React / Next.js) at Stackera \u2022 Pune \u2014 2yr React/Node.js Developer",
+      "body": "Hi,\n\nI'm very interested in the Frontend Developer (React / Next.js) at Stackera \u2022 Pune role. I'm Shubham Yadav, a Full Stack Developer (React / Node.js / React Native) with 2 years of hands-on experience in React.js, Next.js, React Native, JavaScript ES6+, TypeScript.\n\nMost recently, I built Hospital CRM (crm.anquestplus.com) \u2014 Full-featured Hospital CRM built with React.js, Node.js, MongoDB \u2014 patient manag.\n\nI'm available immediately for remote work at $35/hr and would love to discuss how I can contribute to your team.\n\nPortfolio & GitHub: https://github.com/ShubhamYadav0533\n\nLooking forward to hearing from you!\n\nBest regards,\nShubham Yadav",
+      "tone": "professional",
+      "written_by": "fallback"
+    }
+  },
+  "https://wellfound.com/jobs/3895512-founding-full-stack-engineer-equity-only-next-js-typescript": {
+    "platform": "Wellfound (AngelList)",
+    "title": "Founding Full Stack Engineer (Equity Only) (Next.js & ...",
+    "url": "https://wellfound.com/jobs/3895512-founding-full-stack-engineer-equity-only-next-js-typescript",
+    "description": "VENTRIUM AI is hiring a Founding Full Stack Engineer (Equity Only) (Next.js & TypeScript) in Remote - Apply now on Wellfound!",
+    "type": "job_post",
+    "ai_score": 61,
+    "ai_score_data": {
+      "score": 61,
+      "match_level": "WARM",
+      "reason": "Keyword match: next.js, typescript, full stack",
+      "key_skills_matched": [
+        "next.js",
+        "typescript",
+        "full stack"
+      ],
+      "estimated_budget": "Not specified",
+      "recommended_action": "APPLY",
+      "scored_by": "fallback"
+    },
+    "saved_at": "2026-05-07T22:14:46.902615",
+    "status": "found",
+    "drafted_proposal": {
+      "subject": "Application: Founding Full Stack Engineer (Equity Only) (Next.js & ... \u2014 2yr React/Node.js Developer",
+      "body": "Hi,\n\nI'm very interested in the Founding Full Stack Engineer (Equity Only) (Next.js & ... role. I'm Shubham Yadav, a Full Stack Developer (React / Node.js / React Native) with 2 years of hands-on experience in React.js, Next.js, React Native, JavaScript ES6+, TypeScript.\n\nMost recently, I built Hospital CRM (crm.anquestplus.com) \u2014 Full-featured Hospital CRM built with React.js, Node.js, MongoDB \u2014 patient manag.\n\nI'm available immediately for remote work at $35/hr and would love to discuss how I can contribute to your team.\n\nPortfolio & GitHub: https://github.com/ShubhamYadav0533\n\nLooking forward to hearing from you!\n\nBest regards,\nShubham Yadav",
       "tone": "professional",
       "written_by": "fallback"
     }

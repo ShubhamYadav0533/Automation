@@ -1,6 +1,6 @@
 PLATFORM: Wellfound (AngelList)
 URL: https://wellfound.com/jobs/3888598-senior-frontend-developer-next-js-typescript-remote
-SCORE: 78/100
+SCORE: 68/100
 SUBJECT: Application: Senior Frontend Developer (Next.js, TypeScript) — Remote — 2yr React/Node.js Developer
 
 --- EMAIL/PROPOSAL BODY ---

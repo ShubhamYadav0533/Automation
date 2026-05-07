@@ -341,6 +341,18 @@ def main():
     stall_count   = 0
     cache_file    = DATA_DIR / "scraped_businesses.json"
 
+    # ── Load already-processed business names for resume ─────
+    clients_file = DATA_DIR / "clients.json"
+    already_processed: set = set()
+    if clients_file.exists():
+        try:
+            existing = json.loads(clients_file.read_text())
+            already_processed = set(existing.keys())
+            if already_processed:
+                print(f"  📂 Resuming: {len(already_processed)} businesses already processed — will skip them\n")
+        except Exception:
+            pass
+
     while total_sent < target and round_num < MAX_ROUNDS:
         round_num += 1
         remaining = target - total_sent
@@ -359,16 +371,35 @@ def main():
 
         total_scraped += len(businesses)
 
+        # ── Filter out already-processed businesses ───────────
+        fresh = [b for b in businesses if b.get("name", "") not in already_processed]
+        skipped_resume = len(businesses) - len(fresh)
+        if skipped_resume:
+            print(f"  ⏭️  Skipping {skipped_resume} already-processed businesses from this batch")
+        if not fresh:
+            stall_count += 1
+            print(f"  ⚠️  All businesses in this round already processed ({stall_count}/{STALL_LIMIT})")
+            if stall_count >= STALL_LIMIT:
+                print("  🛑 Nothing new to process — stopping.")
+                break
+            if cache_file.exists():
+                cache_file.unlink()
+            time.sleep(30)
+            continue
+
         _print_step(
             "🚀 PIPELINE",
             f"Round {round_num} | Find email → Send instantly | need {remaining} more"
         )
 
         results = step2_find_and_send_pipeline(
-            businesses,
+            fresh,
             dry_run=args.dry_run,
             limit=remaining,  # only send what's still needed
         )
+
+        # Track newly processed names for resume
+        already_processed.update(b.get("name", "") for b in fresh)
 
         total_sent     += results["sent"]
         total_no_email += results["no_email"]

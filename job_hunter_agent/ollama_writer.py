@@ -25,14 +25,14 @@ OLLAMA_MODEL = "mistral"  # mistral is faster than llama3; change to "llama3" if
 # ── Shubham's profile snapshot used in every prompt ──────────
 PROFILE = {
     "name": "Shubham Yadav",
-    "title": "Full Stack Developer (React / Node.js / React Native)",
+    "title": "Software Engineer & App Developer",
     "experience": "2 years",
-    "skills": "React.js, Next.js, React Native, Node.js, Express.js, MongoDB, MySQL, CRM, ERP, Web & Mobile Apps",
+    "skills": "custom web apps, mobile apps, CRM systems, ERP systems, booking platforms, management dashboards",
     "portfolio": "https://github.com/ShubhamYadav0533",
     "email": "shubhamyadav0533@gmail.com",
     "projects": [
-        "Hospital CRM — crm.anquestplus.com (React + Node + MongoDB)",
-        "Real Estate CRM — crm.anquest.in (MERN stack)",
+        "Hospital CRM — crm.anquestplus.com (live, used by real hospital staff)",
+        "Real Estate CRM — crm.anquest.in (live, manages properties and client leads)",
     ],
 }
 
@@ -81,59 +81,70 @@ def _ask_ollama(prompt: str, max_retries: int = 2) -> str:
 # ─────────────────────────────────────────────────────────────
 INDUSTRY_PITCH = {
     "hospital": {
-        "pain": "managing patient records, appointments, and billing with outdated spreadsheets or paper",
-        "solution": "a custom Hospital CRM/ERP with patient management, appointment scheduling, staff management, and billing — similar to one I already built at crm.anquestplus.com",
-        "cta": "Would you be open to a 15-minute call to see how this could save your team hours every week?",
+        "pain": "hospitals that still rely on paper files or disconnected software lose 2–3 hours per staff member every day on admin work — and that directly costs revenue and patient satisfaction",
+        "profit": "a unified digital system that manages patient records, appointment scheduling, billing, and staff — staff work faster, fewer errors, and management gets real-time reports instead of chasing data",
+        "proof": "I built a live system like this for a hospital — you can see it at crm.anquestplus.com",
+        "cta": "If this sounds familiar, I'd love a 15-minute call to show you exactly what I built and how it could work for your hospital.",
     },
     "clinic": {
-        "pain": "tracking patient appointments and medical records manually",
-        "solution": "a clean clinic management web app with patient records, appointment calendar, prescription tracking, and billing dashboard",
-        "cta": "I'd love to show you a quick demo of similar work I've done. Would that be useful?",
+        "pain": "most clinics lose appointments and patients because there is no reminder system, no proper records, and no way to track which patients need follow-up — this means lost income every week",
+        "profit": "a digital clinic management system with appointment booking, automated reminders, patient history, and billing can recover that lost income and run the clinic with half the admin effort",
+        "proof": "I specialize in building these systems for medical practices — simple to use, works on any device",
+        "cta": "Would you be open to a quick 15-minute call to see a demo?",
     },
     "hotel": {
-        "pain": "managing bookings, room availability, and guest communication across multiple tools",
-        "solution": "a custom Hotel Management System with booking engine, room dashboard, guest CRM, and reporting",
-        "cta": "I can show you a prototype in 48 hours. Would you like to see it?",
+        "pain": "hotels using manual booking logs or generic tools miss direct bookings, double-book rooms, and lose guests to OTAs that charge 15–25% commission per booking",
+        "profit": "a custom booking and property management system gives guests a direct booking option, cuts OTA fees, and gives staff a live dashboard — more revenue, less dependence on third-party platforms",
+        "proof": "I build these systems specifically for independent and boutique hotels",
+        "cta": "I can show you a working prototype in 48 hours. Would that be worth a look?",
     },
     "restaurant": {
-        "pain": "taking orders and managing tables without a clean digital system",
-        "solution": "a mobile-friendly Restaurant App with online ordering, table management, and kitchen dashboard — works on any device",
+        "pain": "restaurants without a proper ordering and table management system lose 20–30% of potential orders during busy hours due to confusion, missed orders, and slow service",
+        "profit": "a digital ordering and table management app means faster service, fewer mistakes, and more covers per night — directly increasing revenue without adding staff",
+        "proof": "I build mobile-friendly restaurant apps that work on any tablet or phone — no expensive hardware needed",
         "cta": "Could I show you a quick mockup of what this would look like for your restaurant?",
     },
     "school": {
-        "pain": "managing student admissions, fee tracking, attendance, and communication with parents manually",
-        "solution": "a complete College/School CRM with student management, fee tracking, timetable, attendance, and parent portal",
-        "cta": "I've built similar systems for educational institutions. Can I show you a quick demo?",
+        "pain": "schools handling admissions, fee collection, attendance, and parent communication manually waste enormous staff time and often lose track of fees — which hits cash flow",
+        "profit": "a school management platform automates fee reminders, attendance tracking, and parent updates — staff spend less time on paperwork and the school collects fees faster",
+        "proof": "I have built management systems for educational institutions — simple enough for any staff member to use from day one",
+        "cta": "I'd love to show you a working demo. Would a short call this week work for you?",
     },
     "college": {
-        "pain": "handling admissions, fee management, exam scheduling, and student records with spreadsheets",
-        "solution": "a full College Management ERP — student portal, fee management, exam module, staff management, and admin dashboard",
-        "cta": "Would a 20-minute demo call this week work for you?",
+        "pain": "colleges managing admissions, exams, and student records with spreadsheets risk data loss, make errors that affect students, and spend weeks on work that should take hours",
+        "profit": "a complete management platform covers admissions, fee management, exam scheduling, attendance, and student portals — administration becomes measurably faster and more accurate",
+        "proof": "I have built systems like this for educational institutions — I can show you one that is already live",
+        "cta": "Would a 20-minute demo call this week be useful?",
     },
     "shop": {
-        "pain": "tracking inventory, sales, and customers without a proper system",
-        "solution": "a custom Inventory + POS system with barcode scanning, stock alerts, sales reports, and customer management",
-        "cta": "I can build a prototype specifically for your shop type. Interested in seeing it?",
+        "pain": "retail businesses without proper inventory tracking regularly lose money through overstocking, stockouts, and untracked shrinkage — and without customer data, repeat business is hard to grow",
+        "profit": "a custom inventory and sales management system gives real-time stock visibility, sale reports by product, and customer purchase history — turning data into decisions that grow profit",
+        "proof": "I build inventory and point-of-sale systems tailored to each business type",
+        "cta": "Interested in seeing what this would look like for your store?",
     },
     "real_estate": {
-        "pain": "tracking leads, properties, and client communications across WhatsApp and spreadsheets",
-        "solution": "a Real Estate CRM with lead pipeline, property listings, client communication, and automated follow-ups — like crm.anquest.in which I already built",
-        "cta": "I'd love to show you the live demo of a Real Estate CRM I've already built. When's a good time?",
+        "pain": "property agencies that track leads on WhatsApp and spreadsheets lose deals because follow-ups fall through the cracks — a missed follow-up is a missed commission",
+        "profit": "a property CRM with automated follow-up reminders, lead pipeline, and client communication history means agents close more deals with the same effort — more commission, less lost leads",
+        "proof": "I built a live Real Estate CRM — you can see it right now at crm.anquest.in",
+        "cta": "I'd love to show you the live demo and discuss what a version for your agency would look like. When's a good time?",
     },
     "factory": {
-        "pain": "managing production orders, inventory, and workforce tracking manually",
-        "solution": "a lightweight Manufacturing ERP with production tracking, inventory management, and staff dashboard",
-        "cta": "Would you like to see what this could look like for your operations?",
+        "pain": "manufacturing businesses tracking production orders and inventory manually risk costly errors, production delays, and stock shortages that halt the entire line",
+        "profit": "a production and inventory management system gives floor managers and leadership real-time visibility — fewer delays, fewer errors, and clear accountability at every stage",
+        "proof": "I build management dashboards specifically for operational businesses where accuracy is critical",
+        "cta": "Would you like to see what this could look like for your facility?",
     },
     "gym": {
-        "pain": "managing memberships, class bookings, and payments without automation",
-        "solution": "a Gym Management App with membership tracking, class scheduling, payment management, and mobile check-in",
-        "cta": "I can demo a similar app I built — would that be worth 15 minutes of your time?",
+        "pain": "gyms managing memberships and payments manually lose income through expired memberships that are never renewed and miss opportunities to sell additional classes or services",
+        "profit": "a gym management app with automatic renewal reminders, membership tracking, and class bookings increases retention and revenue without the owner having to chase anyone manually",
+        "proof": "I build gym and fitness management apps that work on phone, tablet, and desktop",
+        "cta": "Worth a 15-minute call to see a demo?",
     },
     "default": {
-        "pain": "managing your business operations without a proper digital system",
-        "solution": "a custom web or mobile app tailored to your exact workflow — whether it's a CRM, ERP, booking system, or internal tool",
-        "cta": "I'd love to understand your current process and show you what I could build. Would a quick call work?",
+        "pain": "businesses that rely on manual processes and disconnected tools spend more time managing operations than growing them — and that inefficiency has a direct cost",
+        "profit": "a custom digital system built around your exact workflow reduces admin time, improves accuracy, and gives management clear visibility — freeing up time and resources to focus on growth",
+        "proof": "I build custom web and mobile applications for businesses — live examples at crm.anquestplus.com and crm.anquest.in",
+        "cta": "I'd love to understand how your business currently works and show you what I could build. Would a short call work?",
     },
 }
 
@@ -184,37 +195,42 @@ def write_client_email(
 
     # ── Try Ollama first ──────────────────────────────────────
     if _is_ollama_running():
-        prompt = f"""You are Shubham Yadav, a Full Stack Developer with 2 years of experience.
+        prompt = f"""You are Shubham Yadav, a Software Engineer and App Developer with 2 years of experience building custom digital systems for businesses.
 Write a SHORT, professional cold email to a potential client.
+
+IMPORTANT RULES — READ CAREFULLY:
+- DO NOT mention any technology names (no React, Node.js, MongoDB, JavaScript, Python, etc.)
+- DO NOT say "Full Stack Developer" — say "Software Engineer" or "App Developer"
+- Focus on the CLIENT'S business problem and profit, not on your skills
+- Maximum 130 words
+- Sound like a genuine human, not a developer CV
 
 YOUR DETAILS:
 - Name: {PROFILE["name"]}
-- Skills: {PROFILE["skills"]}
+- Role: Software Engineer & App Developer
 - Portfolio: {PROFILE["portfolio"]}
-- Past work: {", ".join(PROFILE["projects"])}
+- Past work: {PROFILE["projects"][0]}, {PROFILE["projects"][1]}
 
 BUSINESS INFO:
 - Business name: {business_name}
-- Industry/type: {category}
+- Industry: {category}
 - Website: {website or "not known"}
 
-EMAIL RULES:
-1. Start with: {greeting}
-2. Maximum 120 words — short and punchy
-3. Mention ONE specific problem they likely face: {pitch["pain"]}
-4. Mention ONE solution you can build: {pitch["solution"]}
-5. End with this exact call to action: {pitch["cta"]}
-6. Sign off: Best regards, Shubham Yadav | {PROFILE["email"]} | {PROFILE["portfolio"]}
-7. NO fluff, NO "I hope this email finds you well", NO buzzwords
-8. Sound human and genuine, not salesy
+EMAIL STRUCTURE (follow exactly):
+1. Greeting: {greeting}
+2. ONE sentence about a specific business problem they likely have: {pitch["pain"]}
+3. ONE sentence about how much this costs them / where they lose profit: {pitch["profit"]}
+4. ONE sentence about what you can build to fix it (NO tech names): {pitch["proof"]}
+5. Call to action: {pitch["cta"]}
+6. Sign off exactly: Best regards, / Shubham Yadav | {PROFILE["email"]} | {PROFILE["portfolio"]}
 
-Write only the email body, no subject line."""
+Write ONLY the email body. No subject line. No extra commentary."""
 
         body = _ask_ollama(prompt)
 
         if body and len(body) > 50:
             # Generate subject line
-            subject_prompt = f"""Write a short email subject line (max 8 words) for a cold email to {business_name} (a {category} business) about building them a custom {pitch["solution"].split("—")[0].split("with")[0].strip()}. Only output the subject line text, nothing else, no quotes."""
+            subject_prompt = f"""Write a short email subject line (max 8 words) for a cold outreach email to {business_name}, a {category} business. The email is about building them a custom digital system that solves their operations problem. Do NOT mention any technology names. Only output the subject line text, nothing else, no quotes."""
             subject = _ask_ollama(subject_prompt)
             if not subject or len(subject) > 100:
                 subject = _fallback_subject(business_name, industry)
@@ -241,17 +257,17 @@ Write only the email body, no subject line."""
 
 def _fallback_subject(business_name: str, industry: str) -> str:
     subjects = {
-        "hospital": f"Custom Hospital CRM for {business_name}",
-        "clinic": f"Clinic Management System for {business_name}",
-        "hotel": f"Hotel Management App — {business_name}",
-        "restaurant": f"Restaurant App for {business_name}",
-        "school": f"School Management System — {business_name}",
-        "college": f"College ERP for {business_name}",
-        "shop": f"Inventory & POS System for {business_name}",
-        "real_estate": f"Real Estate CRM for {business_name}",
-        "factory": f"Manufacturing ERP — {business_name}",
-        "gym": f"Gym Management App for {business_name}",
-        "default": f"Custom Web/App Solution for {business_name}",
+        "hospital":    f"A digital system that could save {business_name} hours every week",
+        "clinic":      f"How {business_name} could recover lost appointments automatically",
+        "hotel":       f"Cut OTA commission fees — direct booking system for {business_name}",
+        "restaurant":  f"More covers, fewer missed orders — a quick idea for {business_name}",
+        "school":      f"Automate fee collection and admin for {business_name}",
+        "college":     f"A management platform built around {business_name}'s workflow",
+        "shop":        f"Real-time inventory visibility for {business_name}",
+        "real_estate": f"Never lose a lead again — a CRM idea for {business_name}",
+        "factory":     f"Production visibility that prevents costly delays — {business_name}",
+        "gym":         f"Automatic renewals and more member revenue for {business_name}",
+        "default":     f"A digital system built around how {business_name} works",
     }
     return subjects.get(industry, subjects["default"])
 
@@ -264,22 +280,22 @@ def _template_email(
     pitch: dict,
     website: str,
 ) -> dict:
-    """Always-works template email — no AI needed."""
+    """Always-works template email — no AI needed, no tech names."""
     body = f"""{greeting}
 
-I came across {business_name} and noticed that many {category} businesses struggle with {pitch["pain"]}.
+I came across {business_name} and wanted to share something directly relevant to your business.
 
-I'm Shubham Yadav, a Full Stack Developer with 2 years of experience building production web and mobile applications. I specialize in {pitch["solution"]}.
+{pitch["pain"].capitalize()}.
 
-Some of my relevant work:
-• Hospital CRM → crm.anquestplus.com (React + Node.js + MongoDB)
-• Real Estate CRM → crm.anquest.in (full MERN stack)
+{pitch["profit"].capitalize()}.
+
+{pitch["proof"].capitalize()}.
 
 {pitch["cta"]}
 
 Best regards,
 Shubham Yadav
-Full Stack Developer | React · Node.js · React Native
+Software Engineer & App Developer
 {PROFILE["email"]} | {PROFILE["portfolio"]}"""
 
     return {
