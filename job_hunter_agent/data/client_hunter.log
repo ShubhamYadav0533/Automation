@@ -1210,3 +1210,4 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 2026-05-07 23:02:34,303 [INFO] ✉️  Email sent via SMTP to info@atdoctors.nl
 2026-05-07 23:02:34,437 [INFO] Sent: Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... → info@atdoctors.nl | Propose Custom Digital Solution for Streamlined Tourist Care
 2026-05-07 23:02:35,667 [INFO] 📱 Telegram notification sent
+2026-05-07 23:04:03,542 [INFO] 📧 Found email at https://www.dentons.com/en/about-dentons/news-events-and-awards/news/2026/april/dentons-advises-on-us-300-million-ppp-hospital-project-in-uzbekistan: amanda.lowe@dentons.com
