@@ -272,31 +272,7 @@ def find_contact_email(lead: Dict) -> Optional[str]:
     return None
 
 
-import os
-import base64
-import pickle
-import logging
-import json
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from typing import Dict, List, Optional
-from pathlib import Path
 
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from dotenv import load_dotenv
-
-load_dotenv()
-logger = logging.getLogger(__name__)
-
-SCOPES = [
-    "https://www.googleapis.com/auth/gmail.send",
-    "https://www.googleapis.com/auth/gmail.readonly",
-    "https://www.googleapis.com/auth/gmail.modify",
-]
 
 CREDENTIALS_FILE = os.getenv("GMAIL_CREDENTIALS_FILE", "credentials/gmail_credentials.json")
 TOKEN_FILE = os.getenv("GMAIL_TOKEN_FILE", "credentials/gmail_token.pickle")

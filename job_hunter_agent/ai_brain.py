@@ -38,6 +38,7 @@ except Exception as e:
 # ── Try Claude (paid, fallback) ───────────────────────────────
 _claude_client = None
 _claude_disabled = False
+_gemini_disabled = False
 try:
     import anthropic
     _claude_key = os.getenv("ANTHROPIC_API_KEY", "")
@@ -51,16 +52,21 @@ MODEL = "gemini-2.0-flash"
 
 def _ask_ai(system_prompt: str, user_message: str, max_tokens: int = 1024) -> str:
     """Send prompt to best available AI: Gemini → Claude → fallback."""
-    global _claude_disabled
+    global _claude_disabled, _gemini_disabled
 
     # 1. Try Gemini first (free)
-    if _gemini_client:
+    if _gemini_client and not _gemini_disabled:
         try:
             full_prompt = f"{system_prompt}\n\n{user_message}"
             response = _gemini_client.generate_content(full_prompt)
             return response.text
         except Exception as e:
-            logger.warning(f"Gemini error: {e} — trying Claude...")
+            err = str(e)
+            if "429" in err and "PerDay" in err:
+                logger.warning("⚠️  Gemini daily quota exhausted — using keyword fallback for this run.")
+                _gemini_disabled = True
+            else:
+                logger.warning(f"Gemini error: {e} — trying Claude...")
 
     # 2. Try Claude (if credits available)
     if _claude_client and not _claude_disabled:
