@@ -1,42 +1,212 @@
 """
 job_hunter_agent/ai_brain.py
 =============================
-The Claude AI brain of the agent. Handles:
+The AI brain of the agent. Handles:
   1. Scoring & ranking leads against your profile
   2. Writing personalized outreach emails
   3. Reading & replying to client responses
   4. Deciding if a lead is "confirmed hot" to notify you
+
+AI Backend priority:
+  1. Google Gemini (free - 1500 req/day)
+  2. Anthropic Claude (if credits available)
+  3. Keyword fallback (always works, no API needed)
 """
 
 import os
 import json
 import logging
 from typing import Dict, List, Tuple
-import anthropic
 from dotenv import load_dotenv
 from pathlib import Path
 
 load_dotenv(dotenv_path=Path(__file__).parent / ".env", override=True)
 logger = logging.getLogger(__name__)
 
-# Initialize Claude client
-client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-MODEL = "claude-opus-4-5"  # Using most capable model as the "brain"
+# ── Try Gemini (free tier, primary) ──────────────────────────
+_gemini_client = None
+try:
+    import google.generativeai as genai
+    _gemini_key = os.getenv("GEMINI_API_KEY", "")
+    if _gemini_key:
+        genai.configure(api_key=_gemini_key)
+        _gemini_client = genai.GenerativeModel("gemini-2.0-flash")
+        logger.info("✅ Gemini AI ready (free tier)")
+except Exception as e:
+    logger.debug(f"Gemini not available: {e}")
+
+# ── Try Claude (paid, fallback) ───────────────────────────────
+_claude_client = None
+_claude_disabled = False
+try:
+    import anthropic
+    _claude_key = os.getenv("ANTHROPIC_API_KEY", "")
+    if _claude_key and not _claude_key.startswith("your_"):
+        _claude_client = anthropic.Anthropic(api_key=_claude_key)
+except Exception:
+    pass
+
+MODEL = "gemini-2.0-flash"
 
 
+def _ask_ai(system_prompt: str, user_message: str, max_tokens: int = 1024) -> str:
+    """Send prompt to best available AI: Gemini → Claude → fallback."""
+    global _claude_disabled
+
+    # 1. Try Gemini first (free)
+    if _gemini_client:
+        try:
+            full_prompt = f"{system_prompt}\n\n{user_message}"
+            response = _gemini_client.generate_content(full_prompt)
+            return response.text
+        except Exception as e:
+            logger.warning(f"Gemini error: {e} — trying Claude...")
+
+    # 2. Try Claude (if credits available)
+    if _claude_client and not _claude_disabled:
+        try:
+            msg = _claude_client.messages.create(
+                model="claude-opus-4-5",
+                max_tokens=max_tokens,
+                system=system_prompt,
+                messages=[{"role": "user", "content": user_message}],
+            )
+            return msg.content[0].text
+        except Exception as e:
+            err = str(e)
+            if "credit balance" in err or "billing" in err.lower():
+                logger.warning("⚠️  Claude credits exhausted — using keyword fallback.")
+                _claude_disabled = True
+            else:
+                logger.error(f"Claude error: {e}")
+
+    return ""
+
+
+# Keep old name as alias for compatibility
 def _ask_claude(system_prompt: str, user_message: str, max_tokens: int = 1024) -> str:
-    """Core helper: send a message to Claude and get response text."""
-    try:
-        message = client.messages.create(
-            model=MODEL,
-            max_tokens=max_tokens,
-            system=system_prompt,
-            messages=[{"role": "user", "content": user_message}],
+    return _ask_ai(system_prompt, user_message, max_tokens)
+
+
+
+# ─────────────────────────────────────────────
+#  FALLBACK: keyword-based scorer (no API needed)
+# ─────────────────────────────────────────────
+_HIGH_VALUE_KEYWORDS = [
+    "react", "next.js", "nextjs", "react native", "node.js", "nodejs",
+    "mern", "typescript", "javascript", "full stack", "fullstack",
+    "crm", "erp", "cms", "redux", "express", "mongodb", "frontend",
+    "mobile app", "web app", "college management", "legacy", "modernization",
+]
+_NEGATIVE_KEYWORDS = [
+    "python developer", "django", "ruby", "php", "wordpress",
+    "data scientist", "machine learning", "devops", "aws engineer",
+    "blockchain", "solidity", "copywriter", "content writer",
+    "sales", "marketing", "hr ", "accountant", "designer",
+    "video", "animator", "seo ", "data entry",
+]
+
+def _fallback_score_lead(lead: Dict, profile: Dict) -> tuple:
+    """Rule-based scorer used when Claude API has no credits."""
+    title = lead.get("title", "").lower()
+    desc = lead.get("description", "").lower()
+    company = lead.get("company", "").lower()
+    text = title + " " + desc + " " + company
+
+    score = 20  # base
+    matched_skills = []
+
+    # Title match scores double (title is the strongest signal)
+    for kw in _HIGH_VALUE_KEYWORDS:
+        in_title = kw in title
+        in_text = kw in text
+        if in_title:
+            score += 12
+            matched_skills.append(kw)
+        elif in_text:
+            score += 5
+            matched_skills.append(kw)
+
+    # Penalise irrelevant roles
+    for kw in _NEGATIVE_KEYWORDS:
+        if kw in text:
+            score -= 20
+
+    # Platform bonus
+    platform = lead.get("platform", "").lower()
+    if platform in ["remotive", "weworkremotely"]:
+        score += 10
+    elif platform in ["linkedin", "wellfound (angellist)", "freelancer.com"]:
+        score += 7
+    elif platform == "google maps":  # outbound lead
+        score += 12
+
+    # Remote bonus
+    if "remote" in text:
+        score += 5
+
+    # Internship/unpaid penalty
+    if "intern" in title or "unpaid" in title:
+        score -= 15
+
+    score = max(0, min(100, score))
+    level = "HOT" if score >= 75 else ("WARM" if score >= 55 else "COLD")
+    action = "APPLY" if score >= 50 else "SKIP"
+    return score, {
+        "score": score,
+        "match_level": level,
+        "reason": f"Keyword match: {', '.join(matched_skills[:4]) or 'no strong match'}",
+        "key_skills_matched": matched_skills[:5],
+        "estimated_budget": lead.get("salary", "Not specified"),
+        "recommended_action": action,
+        "scored_by": "fallback",
+    }
+
+
+def _fallback_write_email(lead: Dict, profile: Dict) -> Dict:
+    """Template-based email writer used when Claude has no credits."""
+    name = profile.get("name", "Shubham")
+    title = profile.get("title", "Full Stack Developer")
+    exp = profile.get("experience_years", 2)
+    rate = profile.get("hourly_rate_usd", 35)
+    skills = ", ".join(profile.get("skills", [])[:5])
+    portfolio = profile.get("portfolio_url", "https://github.com/ShubhamYadav0533")
+    job_title = lead.get("title", "your opportunity")
+    company = lead.get("company", "your team")
+    platform = lead.get("platform", "")
+    projects = profile.get("notable_projects", [])
+    project_line = ""
+    if projects:
+        p = projects[0]
+        project_line = f"Most recently, I built {p['name']} ({p['url']}) — {p['description'][:80]}."
+
+    if lead.get("type") == "outbound_lead":
+        subject = f"React/Node.js Developer Available — Let's Build Something Great"
+        body = (
+            f"Hi {company},\n\n"
+            f"I came across your business and wanted to reach out. I'm {name}, a {title} "
+            f"with {exp} years of experience building web and mobile applications.\n\n"
+            f"{project_line}\n\n"
+            f"I specialize in {skills} and help businesses build clean, scalable software. "
+            f"My rate is ${rate}/hr and I'm available for remote work immediately.\n\n"
+            f"Would you be open to a quick 15-minute call to see if there's a fit?\n\n"
+            f"Portfolio: {portfolio}\n\n"
+            f"Best regards,\n{name}"
         )
-        return message.content[0].text
-    except Exception as e:
-        logger.error(f"Claude API error: {e}")
-        return ""
+    else:
+        subject = f"Application: {job_title} — {exp}yr React/Node.js Developer"
+        body = (
+            f"Hi,\n\n"
+            f"I'm very interested in the {job_title} role. I'm {name}, a {title} "
+            f"with {exp} years of hands-on experience in {skills}.\n\n"
+            f"{project_line}\n\n"
+            f"I'm available immediately for remote work at ${rate}/hr and would love "
+            f"to discuss how I can contribute to your team.\n\n"
+            f"Portfolio & GitHub: {portfolio}\n\n"
+            f"Looking forward to hearing from you!\n\n"
+            f"Best regards,\n{name}"
+        )
+    return {"subject": subject, "body": body.strip(), "tone": "professional", "written_by": "fallback"}
 
 
 # ─────────────────────────────────────────────
@@ -80,12 +250,15 @@ Respond with this exact JSON:
 }}
 """
     response = _ask_claude(system, user, max_tokens=512)
+    if not response:
+        logger.debug("Claude unavailable — using fallback keyword scorer")
+        return _fallback_score_lead(lead, profile)
     try:
         data = json.loads(response)
         return data.get("score", 0), data
     except json.JSONDecodeError:
         logger.error(f"Could not parse score response: {response}")
-        return 0, {"score": 0, "match_level": "COLD", "reason": "Parse error", "recommended_action": "SKIP"}
+        return _fallback_score_lead(lead, profile)
 
 
 # ─────────────────────────────────────────────
@@ -141,15 +314,14 @@ Respond with:
 }}
 """
     response = _ask_claude(system, user, max_tokens=1024)
+    if not response:
+        logger.debug("Claude unavailable — using fallback email template")
+        return _fallback_write_email(lead, profile)
     try:
         return json.loads(response)
     except json.JSONDecodeError:
         logger.error(f"Could not parse email response")
-        return {
-            "subject": f"Interested in {lead.get('title', 'your opportunity')}",
-            "body": f"Hi,\n\nI'm interested in this opportunity. I have {profile.get('experience_years', 3)} years of experience in {', '.join(profile.get('skills', [])[:3])}.\n\nBest regards,\n{profile.get('name', 'Developer')}",
-            "tone": "professional",
-        }
+        return _fallback_write_email(lead, profile)
 
 
 # ─────────────────────────────────────────────

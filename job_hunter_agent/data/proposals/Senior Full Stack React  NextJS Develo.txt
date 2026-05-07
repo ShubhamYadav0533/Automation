@@ -1,0 +1,21 @@
+PLATFORM: LinkedIn
+URL: https://www.linkedin.com/jobs/view/senior-full-stack-react-next-js-developer-remote-latam-at-jobgether-4102764109
+SCORE: 68/100
+SUBJECT: Application: Senior Full Stack React & Next.JS Developer - (Remote — 2yr React/Node.js Developer
+
+--- EMAIL/PROPOSAL BODY ---
+
+Hi,
+
+I'm very interested in the Senior Full Stack React & Next.JS Developer - (Remote role. I'm Shubham Yadav, a Full Stack Developer (React / Node.js / React Native) with 2 years of hands-on experience in React.js, Next.js, React Native, JavaScript ES6+, TypeScript.
+
+Most recently, I built Hospital CRM (crm.anquestplus.com) — Full-featured Hospital CRM built with React.js, Node.js, MongoDB — patient manag.
+
+I'm available immediately for remote work at $35/hr and would love to discuss how I can contribute to your team.
+
+Portfolio & GitHub: https://github.com/ShubhamYadav0533
+
+Looking forward to hearing from you!
+
+Best regards,
+Shubham Yadav

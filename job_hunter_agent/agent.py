@@ -319,9 +319,16 @@ def main():
 
         # Phase 2: Check and reply to inbox
         gmail_creds = Path(os.getenv("GMAIL_CREDENTIALS_FILE", "credentials/gmail_credentials.json"))
-        if not gmail_creds.exists():
-            logger.warning("⚠️  Gmail credentials not found — skipping Phase 2 (reply check). "
-                           "Download credentials JSON from Google Cloud Console to enable.")
+        gmail_token = Path(os.getenv("GMAIL_TOKEN_FILE", "credentials/gmail_token.pickle"))
+        gmail_app_pw = os.getenv("GMAIL_APP_PASSWORD", "")
+        gmail_ready = (
+            gmail_token.exists() or
+            gmail_creds.exists() or
+            (gmail_app_pw and not gmail_app_pw.startswith("your_"))
+        )
+        if not gmail_ready:
+            logger.warning("⚠️  Gmail not configured — skipping Phase 2. "
+                           "Add GMAIL_APP_PASSWORD to .env")
             hot_count = 0
         else:
             hot_count = run_reply_check(profile)
