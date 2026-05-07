@@ -27,6 +27,22 @@ from typing import Dict, List, Optional
 from pathlib import Path
 from dotenv import load_dotenv
 
+# ── Google API imports (graceful fallback if not installed) ──
+try:
+    from google.auth.transport.requests import Request
+    from google_auth_oauthlib.flow import InstalledAppFlow
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
+    GOOGLE_API_OK = True
+except ImportError:
+    GOOGLE_API_OK = False
+    # Create dummy so references below don't crash at import time
+    class HttpError(Exception):
+        pass
+    InstalledAppFlow = None
+    Request = None
+    build = None
+
 load_dotenv(dotenv_path=Path(__file__).parent / ".env", override=True)
 logger = logging.getLogger(__name__)
 
@@ -44,35 +60,6 @@ SCOPES = [
 
 def _smtp_available() -> bool:
     return bool(SENDER_EMAIL and GMAIL_APP_PASSWORD and not GMAIL_APP_PASSWORD.startswith("your_"))
-
-
-def _get_gmail_service():
-    """Authenticate and return Gmail API service (OAuth token)."""
-    import pickle
-    from google.auth.transport.requests import Request
-    from google_auth_oauthlib.flow import InstalledAppFlow
-    from googleapiclient.discovery import build
-
-    creds = None
-    if Path(TOKEN_FILE).exists():
-        with open(TOKEN_FILE, "rb") as token:
-            creds = pickle.load(token)
-
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            if not Path(CREDENTIALS_FILE).exists():
-                raise FileNotFoundError(
-                    f"Gmail credentials not found at {CREDENTIALS_FILE}"
-                )
-            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
-        Path(TOKEN_FILE).parent.mkdir(parents=True, exist_ok=True)
-        with open(TOKEN_FILE, "wb") as token:
-            pickle.dump(creds, token)
-
-    return build("gmail", "v1", credentials=creds)
 
 
 # ─────────────────────────────────────────────
@@ -281,6 +268,12 @@ SENDER_EMAIL = os.getenv("GMAIL_SENDER_EMAIL", "")
 
 def _get_gmail_service():
     """Authenticate and return Gmail API service."""
+    if not GOOGLE_API_OK:
+        raise RuntimeError(
+            "Google API libraries not installed. Run: "
+            "pip install google-auth google-auth-oauthlib google-api-python-client"
+        )
+
     creds = None
 
     # Load existing token
@@ -343,96 +336,143 @@ def _create_email_message(
 
 
 # ─────────────────────────────────────────────
-#  SEND outreach email to a lead
-# ─────────────────────────────────────────────
-def send_outreach_email(
-    to_email: str,
-    subject: str,
-    body: str,
-    lead_id: str,
-) -> Optional[str]:
-    """
-    Send an outreach email and return the message ID (for tracking replies).
-    Returns message_id on success, None on failure.
-    """
-    try:
-        service = _get_gmail_service()
-        message = _create_email_message(to_email, subject, body)
-        sent = service.users().messages().send(userId="me", body=message).execute()
-
-        message_id = sent.get("id")
-        thread_id = sent.get("threadId")
-
-        logger.info(f"✉️  Email sent to {to_email} | Message ID: {message_id}")
-        return {"message_id": message_id, "thread_id": thread_id}
-
-    except HttpError as e:
-        logger.error(f"Gmail send error: {e}")
-        return None
-
-
-# ─────────────────────────────────────────────
 #  READ replies from inbox
 # ─────────────────────────────────────────────
 def get_new_replies(after_timestamp: Optional[str] = None) -> List[Dict]:
     """
-    Fetch new email replies from Gmail inbox.
-    Returns list of reply dicts with: from, subject, body, thread_id, message_id
+    Fetch unread replies from Gmail inbox via IMAP (uses App Password — no OAuth popup).
+    Falls back to Gmail API only if IMAP fails and OAuth token already exists.
+    Returns list of reply dicts with: from_email, subject, body, thread_id, message_id
     """
-    try:
-        service = _get_gmail_service()
+    # ── Primary: IMAP with App Password (no browser, no OAuth) ──
+    if _smtp_available():
+        try:
+            return _imap_get_replies()
+        except Exception as e:
+            logger.warning(f"IMAP reply check failed: {e} — trying Gmail API...")
 
-        # Build search query
-        query = "in:inbox is:unread"
-        if after_timestamp:
-            query += f" after:{after_timestamp}"
-
-        results = service.users().messages().list(
-            userId="me",
-            q=query,
-            maxResults=50
-        ).execute()
-
-        messages = results.get("messages", [])
-        replies = []
-
-        for msg_ref in messages:
-            msg = service.users().messages().get(
-                userId="me",
-                id=msg_ref["id"],
-                format="full"
+    # ── Fallback: Gmail API only if token pickle already exists ──
+    token_path = Path(TOKEN_FILE)
+    if GOOGLE_API_OK and token_path.exists():
+        try:
+            service = _get_gmail_service()
+            query = "in:inbox is:unread"
+            if after_timestamp:
+                query += f" after:{after_timestamp}"
+            results = service.users().messages().list(
+                userId="me", q=query, maxResults=50
             ).execute()
+            messages = results.get("messages", [])
+            replies = []
+            for msg_ref in messages:
+                msg = service.users().messages().get(
+                    userId="me", id=msg_ref["id"], format="full"
+                ).execute()
+                headers = msg.get("payload", {}).get("headers", [])
+                header_dict = {h["name"].lower(): h["value"] for h in headers}
+                body_text = _extract_email_body(msg.get("payload", {}))
+                replies.append({
+                    "message_id": msg["id"],
+                    "thread_id": msg.get("threadId"),
+                    "from_email": header_dict.get("from", ""),
+                    "subject": header_dict.get("subject", ""),
+                    "date": header_dict.get("date", ""),
+                    "body": body_text,
+                    "snippet": msg.get("snippet", ""),
+                })
+                service.users().messages().modify(
+                    userId="me", id=msg_ref["id"],
+                    body={"removeLabelIds": ["UNREAD"]}
+                ).execute()
+            logger.info(f"📬 Found {len(replies)} new replies (Gmail API)")
+            return replies
+        except HttpError as e:
+            logger.error(f"Gmail API read error: {e}")
 
-            headers = msg.get("payload", {}).get("headers", [])
-            header_dict = {h["name"].lower(): h["value"] for h in headers}
+    logger.info("📬 Reply check skipped — no IMAP credentials or Gmail API token")
+    return []
 
-            # Extract email body
-            body = _extract_email_body(msg.get("payload", {}))
 
-            reply = {
-                "message_id": msg["id"],
-                "thread_id": msg.get("threadId"),
-                "from_email": header_dict.get("from", ""),
-                "subject": header_dict.get("subject", ""),
-                "date": header_dict.get("date", ""),
-                "body": body,
-                "snippet": msg.get("snippet", ""),
-            }
-            replies.append(reply)
+def _imap_get_replies() -> List[Dict]:
+    """Read unread emails from Gmail inbox using IMAP + App Password.
+    Only fetches emails received TODAY and from real humans (not noreply/automated).
+    """
+    from datetime import date
+    SKIP_SENDERS = [
+        "noreply", "no-reply", "donotreply", "do-not-reply",
+        "notifications@", "notify@", "mailer-daemon",
+        "google.com", "youtube.com", "googleplay", "accounts.google",
+        "linkedin.com", "facebook.com", "twitter.com", "instagram.com",
+        "github.com", "gitlab.com", "amazon.com", "amazonaws.com",
+        "upwork.com", "freelancer.com",  # platform notifications (not human replies)
+    ]
 
-            # Mark as read
-            service.users().messages().modify(
-                userId="me",
-                id=msg_ref["id"],
-                body={"removeLabelIds": ["UNREAD"]}
-            ).execute()
+    replies = []
+    mail = imaplib.IMAP4_SSL("imap.gmail.com", 993)
+    mail.login(SENDER_EMAIL, GMAIL_APP_PASSWORD.replace(" ", ""))
+    mail.select("INBOX")
 
-        logger.info(f"📬 Found {len(replies)} new replies")
-        return replies
-
-    except HttpError as e:
-        logger.error(f"Gmail read error: {e}")
+    # Search only TODAY's unread messages (avoids scanning 1000s of old emails)
+    today = date.today().strftime("%d-%b-%Y")  # e.g. "07-May-2026"
+    status, data = mail.search(None, f'(UNSEEN SINCE "{today}")')
+    if status != "OK" or not data[0]:
+        mail.logout()
+        logger.info("📬 No new unread replies today (IMAP)")
         return []
+
+    msg_ids = data[0].split()
+    logger.info(f"📬 Checking {len(msg_ids)} emails received today (IMAP)")
+
+    for msg_id in msg_ids[:30]:  # max 30 per run
+        try:
+            status, msg_data = mail.fetch(msg_id, "(RFC822)")
+            if status != "OK":
+                continue
+            raw = msg_data[0][1]
+            msg = email_lib.message_from_bytes(raw)
+
+            from_addr = msg.get("From", "")
+            subject   = msg.get("Subject", "")
+            date_str  = msg.get("Date", "")
+
+            # ── Skip automated/noreply senders ────────────────
+            from_lower = from_addr.lower()
+            if any(skip in from_lower for skip in SKIP_SENDERS):
+                logger.debug(f"  ⏭️  Auto-skipping notification: {from_addr[:60]}")
+                continue
+
+            # Extract plain text body
+            body_text = ""
+            if msg.is_multipart():
+                for part in msg.walk():
+                    ct = part.get_content_type()
+                    if ct == "text/plain":
+                        payload = part.get_payload(decode=True)
+                        if payload:
+                            body_text = payload.decode("utf-8", errors="ignore")
+                        break
+            else:
+                payload = msg.get_payload(decode=True)
+                if payload:
+                    body_text = payload.decode("utf-8", errors="ignore")
+
+            replies.append({
+                "message_id": msg_id.decode(),
+                "thread_id": msg.get("Message-ID", ""),
+                "from_email": from_addr,
+                "subject": subject,
+                "date": date_str,
+                "body": body_text[:2000],
+                "snippet": body_text[:150],
+            })
+
+            logger.info(f"  📩 NEW REPLY from: {from_addr} | Subject: {subject[:60]}")
+
+        except Exception as e:
+            logger.debug(f"IMAP parse error on msg {msg_id}: {e}")
+
+    mail.logout()
+    return replies
 
 
 def _extract_email_body(payload: Dict) -> str:

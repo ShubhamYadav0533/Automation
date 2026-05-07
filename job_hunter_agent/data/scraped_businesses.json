@@ -65,19 +65,7 @@
     "category": "hospital",
     "city": "Dubai",
     "source": "google_search",
-    "snippet": "Find a doctor, clinical leadership facilities, explore our 50+ locations across Dubai and find the service you need.Read more",
-    "email": null,
-    "phone": null,
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Al Zahra Hospital Dubai: Home",
-    "website": "https://azhd.ae/",
-    "category": "hospital",
-    "city": "Dubai",
-    "source": "google_search",
-    "snippet": "Al Zahra Hospital Dubai – a leading private hospital in Dubai, offering a premium medical care. Rated among the best hospitals in Dubai. Visit us today!",
+    "snippet": "We integrate clinical care, medical education, research and community service to advance health for humanity.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -96,24 +84,24 @@
     "status": "found"
   },
   {
-    "name": "HCA Healthcare UK | Private Hospitals in the UK",
-    "website": "https://www.hcahealthcare.co.uk/",
+    "name": "Al Zahra Hospital Dubai: Home",
+    "website": "https://azhd.ae/",
     "category": "hospital",
-    "city": "London",
+    "city": "Dubai",
     "source": "google_search",
-    "snippet": "Private healthcare across hospitals, outpatients and medical centres, with expert consultants supporting you from consultation to treatment. Book today.",
+    "snippet": "Al Zahra Hospital Dubai – a leading private hospital in Dubai, offering a premium medical care. Rated among the best hospitals in Dubai. Visit us today!",
     "email": null,
     "phone": null,
     "contact_name": null,
     "status": "found"
   },
   {
-    "name": "Spire Healthcare | Private Hospitals UK | Quality Care",
-    "website": "https://www.spirehealthcare.com/",
+    "name": "HCA Healthcare UK | Private Hospitals in the UK",
+    "website": "https://www.hcahealthcare.co.uk/",
     "category": "hospital",
     "city": "London",
     "source": "google_search",
-    "snippet": "Experts In Private Healthcare. Over 3700 Consultants and 38 Award Winning Private Hospitals · Long Visiting Hours · Wide Range of Treatments.",
+    "snippet": "Private healthcare across hospitals, outpatients and medical centres, with expert consultants supporting you from consultation to treatment. Book today.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -138,18 +126,6 @@
     "city": "London",
     "source": "google_search",
     "snippet": "Ramsay Health Care UK offers weight loss surgery, hip & knee replacements, cosmetic surgery & other treatments through a network of private hospitals.",
-    "email": null,
-    "phone": null,
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Private Hospital treatment",
-    "website": "https://www.nuffieldhealth.com/hospitals",
-    "category": "hospital",
-    "city": "London",
-    "source": "google_search",
-    "snippet": "Get an appointment within 48 hours and be treated in as little as two weeks. Our patients are at the centre of everything we do.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -216,6 +192,18 @@
     "status": "found"
   },
   {
+    "name": "Dental Clinic Toronto Rehab",
+    "website": "https://www.uhn.ca/TorontoRehab/Clinics/Dental_Service",
+    "category": "clinic",
+    "city": "Toronto",
+    "source": "google_search",
+    "snippet": "Dental Clinic at Toronto Rehab provides a wide range of dental services. Learn how to make appointments, access emergency care, or schedule a virtual visit.",
+    "email": null,
+    "phone": null,
+    "contact_name": null,
+    "status": "found"
+  },
+  {
     "name": "Downtown Dental Clinic: Downtown Dentist, Family Dentist In ...",
     "website": "https://www.downtowndentalclinic.com/",
     "category": "clinic",
@@ -234,18 +222,6 @@
     "city": "Toronto",
     "source": "google_search",
     "snippet": "Here to provide you with the very best dental healthcare, including dental implants, Invisalign, cosmetic dentistry & family dentistry.",
-    "email": null,
-    "phone": null,
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Dental Clinic Toronto Rehab",
-    "website": "https://www.uhn.ca/TorontoRehab/Clinics/Dental_Service",
-    "category": "clinic",
-    "city": "Toronto",
-    "source": "google_search",
-    "snippet": "Dental Clinic at Toronto Rehab provides a wide range of dental services. Learn how to make appointments, access emergency care, or schedule a virtual visit.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -276,12 +252,12 @@
     "status": "found"
   },
   {
-    "name": "Boutique Hotel View Amsterdam - Amsterdam, Netherlands",
-    "website": "https://boutiquhotel.com/view/",
+    "name": "The Albus Boutique Hotel Amsterdam Centre",
+    "website": "https://www.albushotel.com/",
     "category": "hotel",
     "city": "Amsterdam",
     "source": "google_search",
-    "snippet": "Located within 5 minutes' walk of Holland Casino Amsterdam, the stylish 3-star Boutique Hotel View Amsterdam has a terrace. This Amsterdam hotel also offers ...Read more",
+    "snippet": "A stylish and sustainable 4-star boutique hotel with 72 rooms run by a Dutch family with an eye for detail and a passion for hospitality. Here, it's about more ...Read more",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -312,12 +288,12 @@
     "status": "found"
   },
   {
-    "name": "The Albus Boutique Hotel Amsterdam Centre",
-    "website": "https://www.albushotel.com/",
+    "name": "Boutique Hotel The Noblemen Amsterdam",
+    "website": "https://hotelthenoblemen.com/",
     "category": "hotel",
     "city": "Amsterdam",
     "source": "google_search",
-    "snippet": "A stylish and sustainable 4-star boutique hotel with 72 rooms run by a Dutch family with an eye for detail and a passion for hospitality. Here, it's about more ...Read more",
+    "snippet": "Luxury Boutique Hotel featuring thirteen uniquely crafted rooms, each inspired by historically significant figures of the 17th Century.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -360,18 +336,6 @@
     "status": "found"
   },
   {
-    "name": "Radisson Blu Dubai Waterfront",
-    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dubai-waterfront",
-    "category": "hotel",
-    "city": "Dubai",
-    "source": "google_search",
-    "snippet": "Welcome to our incredible 5-star Radisson Blu Hotel, Dubai Waterfront. With outstanding facilities and friendly, professional service, we aim to make your stay ...Read more",
-    "email": null,
-    "phone": null,
-    "contact_name": null,
-    "status": "found"
-  },
-  {
     "name": "Hotel in Dubai Business Bay",
     "website": "https://www.thefirstcollection.ae/business-bay/",
     "category": "hotel",
@@ -384,12 +348,24 @@
     "status": "found"
   },
   {
-    "name": "Citymax Hotel Business Bay | 4 star Hotel Dubai",
-    "website": "https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/",
+    "name": "Radisson Blu Dubai Waterfront",
+    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-dubai-waterfront",
     "category": "hotel",
     "city": "Dubai",
     "source": "google_search",
-    "snippet": "",
+    "snippet": "Welcome to our incredible 5-star Radisson Blu Hotel, Dubai Waterfront. With outstanding facilities and friendly, professional service, we aim to make your stay ...Read more",
+    "email": null,
+    "phone": null,
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Grand Millennium Business Bay - Dubai Hotels",
+    "website": "https://www.millenniumhotels.com/en/dubai/grand-millennium-business-bay/",
+    "category": "hotel",
+    "city": "Dubai",
+    "source": "google_search",
+    "snippet": "Located in the heart of Dubai's thriving Business Bay. Enjoy stylish spaces, exceptional dining, and premium facilities designed to make you feel at home.",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -420,12 +396,12 @@
     "status": "found"
   },
   {
-    "name": "The Evolv Collection | Luxury Restaurants & Bars in London ...",
-    "website": "https://evolvcollection.com/",
+    "name": "Welcome to The Restaurant Group - The Restaurant Group ltd",
+    "website": "https://trggroupltd.com/",
     "category": "restaurant",
     "city": "London",
     "source": "google_search",
-    "snippet": "The Evolv Collection is a pioneering luxury hospitality group. Discover our iconic restaurants and bars in London, Manchester, Birmingham, and New York.",
+    "snippet": "Its principal trading brands are Wagamama and Barburrito. The Group also operates Pub restaurants and a Concessions business which trades principally at UK ...Read more",
     "email": null,
     "phone": null,
     "contact_name": null,
@@ -445,18 +421,6 @@
   },
   {
     "name": "BovenIJ",
-    "website": "https://www.amsterdamumc.nl/nl/locatie-vumc/adres.htm",
-    "category": "hospital",
-    "city": "Amsterdam",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "OLVG, location Spuistraat",
     "website": "https://www.amsterdamumc.nl/nl/locatie-vumc/adres.htm",
     "category": "hospital",
     "city": "Amsterdam",
@@ -492,7 +456,7 @@
     "status": "found"
   },
   {
-    "name": "Acibadem International Medical Center",
+    "name": "OLVG, location Spuistraat",
     "website": "https://www.amsterdamumc.nl/nl/locatie-vumc/adres.htm",
     "category": "hospital",
     "city": "Amsterdam",
@@ -528,7 +492,7 @@
     "status": "found"
   },
   {
-    "name": "ZenDXB: Polyclinic focussed on Health, Wellness, and Home-care",
+    "name": "فقيه مركز الخصوبة والتوليد - دبي",
     "website": "",
     "category": "clinic",
     "city": "private clinics Dubai",
@@ -540,7 +504,7 @@
     "status": "found"
   },
   {
-    "name": "The LAB Physiotherapy & Chiropractic Center",
+    "name": "Queens Medical Center Al Satwa",
     "website": "",
     "category": "clinic",
     "city": "private clinics Dubai",
@@ -576,18 +540,6 @@
     "status": "found"
   },
   {
-    "name": "MEDPALM Clinic Dubai",
-    "website": "",
-    "category": "clinic",
-    "city": "private clinics Dubai",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
     "name": "Doctors For You - Doctor on Call & Doctor at Home and Hotel | Polyclinic in Dubai",
     "website": "",
     "category": "clinic",
@@ -600,7 +552,7 @@
     "status": "found"
   },
   {
-    "name": "SIGMA CLINIC",
+    "name": "MEDPALM Clinic Dubai",
     "website": "",
     "category": "clinic",
     "city": "private clinics Dubai",
@@ -613,6 +565,30 @@
   },
   {
     "name": "Refresh biohacking clinic",
+    "website": "",
+    "category": "clinic",
+    "city": "private clinics Dubai",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Algebra Healthcare ( Polyclinic & Home Health care center )",
+    "website": "",
+    "category": "clinic",
+    "city": "private clinics Dubai",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "SIGMA CLINIC",
     "website": "",
     "category": "clinic",
     "city": "private clinics Dubai",
@@ -648,44 +624,8 @@
     "status": "found"
   },
   {
-    "name": "Liverpool Medical Clinic | Bur Dubai | Gynaecology| Paediatrics | General Medicine | Dental | Physiotherapy | Pathology",
-    "website": "",
-    "category": "clinic",
-    "city": "private clinics Dubai",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Leman Locke Aldgate",
-    "website": "",
-    "category": "hotel",
-    "city": "hotels London",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "+44 20 3327 7140",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Gem Langham Court Hotel",
-    "website": "",
-    "category": "hotel",
-    "city": "hotels London",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "+44 20 7436 6622",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
     "name": "Premier Inn London Tolworth hotel",
-    "website": "",
+    "website": "https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-tolworth.html?cid=GLBC_LONTLW",
     "category": "hotel",
     "city": "hotels London",
     "source": "google_maps",
@@ -697,19 +637,43 @@
   },
   {
     "name": "Hilton London Kensington",
-    "website": "",
+    "website": "https://www.premierinn.com/gb/en/hotels/england/greater-london/london/london-tolworth.html?cid=GLBC_LONTLW",
     "category": "hotel",
     "city": "hotels London",
     "source": "google_maps",
     "snippet": "",
     "email": null,
-    "phone": "+44 20 7603 3355",
+    "phone": "+44 333 234 6605",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Travelodge London Central City Road",
+    "website": "https://www.travelodge.co.uk/hotels/340/London-Central-City-Road-hotel?utm_source=google&utm_medium=GHA_Organic&utm_campaign=GHA_London%20Central%20City%20Road",
+    "category": "hotel",
+    "city": "hotels London",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "hub by Premier Inn London Westminster Abbey hotel",
+    "website": "https://www.premierinn.com/gb/en/hotels/england/greater-london/london/hub-london-westminster-abbey.html?cid=GLBC_LONWAB",
+    "category": "hotel",
+    "city": "hotels London",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "+44 330 128 1341",
     "contact_name": null,
     "status": "found"
   },
   {
     "name": "Zedwell Piccadilly Circus",
-    "website": "",
+    "website": "https://zedwellhotels.com/locations/london/piccadilly-circus/piccadilly-circus-hotel",
     "category": "hotel",
     "city": "hotels London",
     "source": "google_maps",
@@ -720,32 +684,20 @@
     "status": "found"
   },
   {
-    "name": "hub by Premier Inn London Westminster Abbey hotel",
-    "website": "",
-    "category": "hotel",
-    "city": "hotels London",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "+44 330 128 1341",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
     "name": "The Rose & Crown, London Bridge (PUBLOVE)",
-    "website": "",
+    "website": "http://www.publove.co.uk/",
     "category": "hotel",
     "city": "hotels London",
     "source": "google_maps",
     "snippet": "",
     "email": null,
-    "phone": "+44 330 128 1341",
+    "phone": "+44 20 7407 7090",
     "contact_name": null,
     "status": "found"
   },
   {
     "name": "The Steam Engine, Waterloo (PUBLOVE)",
-    "website": "",
+    "website": "http://www.publove.co.uk/",
     "category": "hotel",
     "city": "hotels London",
     "source": "google_maps",
@@ -756,20 +708,20 @@
     "status": "found"
   },
   {
-    "name": "Rijksmuseum",
-    "website": "",
-    "category": "school",
-    "city": "schools Amsterdam",
+    "name": "Travelodge London City",
+    "website": "https://www.travelodge.co.uk/hotels/639/London-City?utm_source=google&utm_medium=GHA_Organic&utm_campaign=GHA_London%20City",
+    "category": "hotel",
+    "city": "hotels London",
     "source": "google_maps",
     "snippet": "",
     "email": null,
-    "phone": "Send to phone",
+    "phone": "",
     "contact_name": null,
     "status": "found"
   },
   {
     "name": "Amity International School, Amsterdam",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -781,7 +733,7 @@
   },
   {
     "name": "The British School of Amsterdam",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -793,7 +745,7 @@
   },
   {
     "name": "Amsterdam International Community School (AICS South campus)",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -805,7 +757,7 @@
   },
   {
     "name": "International French School d'Amsterdam",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -817,43 +769,7 @@
   },
   {
     "name": "Public Elementary School De Burght",
-    "website": "",
-    "category": "school",
-    "city": "schools Amsterdam",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Onze Amsterdamse School",
-    "website": "",
-    "category": "school",
-    "city": "schools Amsterdam",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "New International School Esprit (DENISE)",
-    "website": "",
-    "category": "school",
-    "city": "schools Amsterdam",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "Foundation The Japanese School of Amsterdam",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -865,7 +781,7 @@
   },
   {
     "name": "Private Education, Winford Amsterdam",
-    "website": "",
+    "website": "http://www.amityschool.nl/",
     "category": "school",
     "city": "schools Amsterdam",
     "source": "google_maps",
@@ -876,7 +792,67 @@
     "status": "found"
   },
   {
-    "name": "B1 Properties",
+    "name": "Montessori Lyceum Amsterdam",
+    "website": "http://www.amityschool.nl/",
+    "category": "school",
+    "city": "schools Amsterdam",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Onze Amsterdamse School",
+    "website": "http://www.amityschool.nl/",
+    "category": "school",
+    "city": "schools Amsterdam",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Foundation The Japanese School of Amsterdam",
+    "website": "http://www.amityschool.nl/",
+    "category": "school",
+    "city": "schools Amsterdam",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "New International School Esprit (DENISE)",
+    "website": "http://www.amityschool.nl/",
+    "category": "school",
+    "city": "schools Amsterdam",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Winford Bilingual Primary School",
+    "website": "http://www.amityschool.nl/",
+    "category": "school",
+    "city": "schools Amsterdam",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Baytify Real Estate Dubai | Global",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",
@@ -888,7 +864,7 @@
     "status": "found"
   },
   {
-    "name": "HYVN REALTY LLC",
+    "name": "Terra Nova",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",
@@ -924,7 +900,19 @@
     "status": "found"
   },
   {
-    "name": "Christie’s International Real Estate Dubai",
+    "name": "Harbor Real Estate Broker LLC",
+    "website": "",
+    "category": "business",
+    "city": "real estate agencies Dubai",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "White & Co Real Estate LLC",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",
@@ -948,7 +936,7 @@
     "status": "found"
   },
   {
-    "name": "Homes 4 Life Real Estate - Town Square Dubai Office",
+    "name": "Christie’s International Real Estate Dubai",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",
@@ -960,7 +948,19 @@
     "status": "found"
   },
   {
-    "name": "Harbor Real Estate Broker LLC",
+    "name": "Next Level Real Estate - Award Winning Real Estate Agency in Dubai",
+    "website": "",
+    "category": "business",
+    "city": "real estate agencies Dubai",
+    "source": "google_maps",
+    "snippet": "",
+    "email": null,
+    "phone": "Send to phone",
+    "contact_name": null,
+    "status": "found"
+  },
+  {
+    "name": "Xperience​ Realty Real Estate",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",
@@ -973,30 +973,6 @@
   },
   {
     "name": "Springfield Properties",
-    "website": "",
-    "category": "business",
-    "city": "real estate agencies Dubai",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "haus & haus Group",
-    "website": "",
-    "category": "business",
-    "city": "real estate agencies Dubai",
-    "source": "google_maps",
-    "snippet": "",
-    "email": null,
-    "phone": "Send to phone",
-    "contact_name": null,
-    "status": "found"
-  },
-  {
-    "name": "White & Co Real Estate LLC",
     "website": "",
     "category": "business",
     "city": "real estate agencies Dubai",

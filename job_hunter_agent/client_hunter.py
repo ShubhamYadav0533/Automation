@@ -91,6 +91,9 @@ def step1_get_businesses(no_scrape: bool = False) -> List[Dict]:
         logger.info("📂 Loading cached businesses (--no-scrape mode)")
         return json.loads(cache_file.read_text())
 
+    _print_step("🌐 STEP 1", "Scraping Google Search + Google Maps for businesses")
+    print("  Opening Chrome browser...")
+    print("  Searching: hospitals, clinics, hotels, schools, real estate in Amsterdam/Dubai/London/Berlin...")
     logger.info("🌐 STEP 1: Scraping Google + Maps for businesses...")
     businesses = scrape_businesses(
         max_google_searches=8,
@@ -105,55 +108,156 @@ def step1_get_businesses(no_scrape: bool = False) -> List[Dict]:
 
 
 # ─────────────────────────────────────────────────────────────
-#  STEP 2: Find contact email for each business
+#  STEP 2+3 PIPELINE: Find email → Send immediately → Next
 # ─────────────────────────────────────────────────────────────
-def step2_find_emails(businesses: List[Dict]) -> List[Dict]:
-    logger.info(f"📧 STEP 2: Finding contact emails for {len(businesses)} businesses...")
-    enriched = []
+def step2_find_and_send_pipeline(
+    businesses: List[Dict],
+    dry_run: bool = False,
+    limit: int = MAX_PER_RUN,
+) -> Dict:
+    """
+    For each business:
+      1. Visit website → find email
+      2. If found → Ollama writes email → Gmail sends it  ← IMMEDIATELY
+      3. Move to next business
+    No waiting for all emails first.
+    """
+    if not GMAIL_SENDER and not dry_run:
+        logger.error("❌ GMAIL_SENDER_EMAIL not set in .env")
+        return {"sent": 0, "failed": 0, "skipped": 0, "no_email": 0}
+
+    ollama_ok = _is_ollama_running()
+    ai_label = "✅ Ollama mistral" if ollama_ok else "📄 Template"
+    if not ollama_ok:
+        print("  ⚠️  Ollama not running — using built-in email templates")
+
+    sent = 0
+    failed = 0
+    skipped = 0
+    no_email = 0
+    processed = 0
+
+    total = len(businesses)
 
     for i, biz in enumerate(businesses):
-        name = biz.get("name", "?")
+        if processed >= limit:
+            break
+
+        name    = biz.get("name", "?")
         website = biz.get("website", "")
+        city    = biz.get("city", "")
+        category = biz.get("category", "business")
 
-        # Save to tracker first (even without email yet)
+        # ── Save & dedup ─────────────────────────────────────
         save_client_lead(biz)
-
         if is_already_contacted(name):
-            logger.info(f"  ⏭️  Skipping (already contacted): {name}")
+            print(f"  ⏭️  [{i+1}/{total}] Already contacted: {name[:50]}")
+            skipped += 1
             continue
 
+        print(f"\n{'═'*62}")
+        print(f"  🏢 [{i+1}/{total}] {name}")
+        print(f"  📍 {category.upper()} | {city}")
+
+        # ── FIND website if missing ───────────────────────────
         if not website:
-            logger.debug(f"  ⚠️  No website for: {name} — trying Google")
-            # Try to find website via Google search
-            website = _find_website_via_google(name, biz.get("city", ""))
+            print(f"  🔎 No website — searching Google for {name}...")
+            website = _find_website_via_google(name, city)
             biz["website"] = website
 
-        if website:
-            logger.info(f"  [{i+1}/{len(businesses)}] Checking: {name}")
-            contact = find_contact_info(website)
-            biz.update({
-                "email": contact["email"],
-                "phone": contact["phone"] or biz.get("phone", ""),
-                "contact_name": contact["contact_name"],
-            })
-            update_client_contact(
-                name,
-                email=contact["email"] or "",
-                phone=contact["phone"] or "",
-                contact_name=contact["contact_name"] or "",
-            )
-
-        if biz.get("email"):
-            enriched.append(biz)
-            logger.info(f"  ✅ {name} → {biz['email']}")
-        else:
+        if not website:
+            print(f"  ❌ No website found — skipping")
             update_client_status(name, "no_email")
-            logger.debug(f"  ❌ No email: {name}")
+            no_email += 1
+            continue
 
-        time.sleep(1.0)  # polite crawl delay
+        # ── FIND email ────────────────────────────────────────
+        print(f"  🌐 Visiting: {website[:62]}")
+        print(f"  🔍 Scanning /contact /about pages for email...")
+        contact = find_contact_info(website)
 
-    logger.info(f"📬 {len(enriched)} businesses have contact emails")
-    return enriched
+        email       = contact["email"]
+        phone       = contact["phone"] or biz.get("phone", "")
+        contact_name = contact["contact_name"] or ""
+
+        biz.update({"email": email, "phone": phone, "contact_name": contact_name})
+        update_client_contact(name, email=email or "", phone=phone, contact_name=contact_name)
+
+        if not email:
+            print(f"  ❌ No email found on website")
+            update_client_status(name, "no_email")
+            no_email += 1
+            time.sleep(0.8)
+            continue
+
+        print(f"  📧 Email found: {email}")
+        processed += 1
+
+        # ── WRITE email with AI ───────────────────────────────
+        print(f"  🤖 AI writing personalized email ({ai_label})...")
+        email_data = write_client_email(
+            business_name=name,
+            category=category,
+            contact_name=contact_name,
+            website=website,
+        )
+        subject  = email_data["subject"]
+        body     = email_data["body"]
+        used_ai  = email_data["used_ai"]
+
+        # ── PRINT full email ──────────────────────────────────
+        print(f"\n  ┌─ EMAIL {'(DRY RUN)' if dry_run else 'TO SEND'} {'─'*38}")
+        print(f"  │  TO      : {email}")
+        print(f"  │  SUBJECT : {subject}")
+        print(f"  │  AI      : {'✅ Ollama mistral' if used_ai else '📄 Template'}")
+        print(f"  ├{'─'*52}")
+        for line in body.strip().split("\n"):
+            print(f"  │  {line}")
+        print(f"  └{'─'*52}")
+
+        if dry_run:
+            print(f"\n  🟡 DRY RUN — not sent")
+            mark_email_sent(name, subject, used_ai)
+            sent += 1
+            continue
+
+        # ── SEND ──────────────────────────────────────────────
+        print(f"\n  📤 Sending via Gmail ({GMAIL_SENDER})...")
+        try:
+            success = send_outreach_email(
+                to_email=email,
+                subject=subject,
+                body=body,
+                lead_id=name,
+            )
+            if success:
+                mark_email_sent(name, subject, used_ai)
+                sent += 1
+                print(f"  ✅ SENT → {email}")
+                logger.info(f"Sent: {name} → {email} | {subject}")
+                if NOTIFIER_OK:
+                    try:
+                        send_telegram(
+                            f"📤 Cold email sent!\n👤 {name}\n📧 {email}\n📝 {subject}"
+                        )
+                    except Exception:
+                        pass
+                if processed < limit:
+                    print(f"\n  ⏳ Waiting {DELAY_BETWEEN}s (spam filter safety)...")
+                    for r in range(DELAY_BETWEEN, 0, -5):
+                        print(f"     {r}s ...", end="\r", flush=True)
+                        time.sleep(min(5, r))
+                    print(" " * 20, end="\r")
+            else:
+                failed += 1
+                print(f"  ❌ Gmail rejected — {email}")
+                update_client_status(name, "bounced")
+        except Exception as e:
+            failed += 1
+            print(f"  ❌ Error: {e}")
+            logger.error(f"Send error {name}: {e}")
+
+    return {"sent": sent, "failed": failed, "skipped": skipped, "no_email": no_email}
 
 
 def _find_website_via_google(name: str, city: str) -> str:
@@ -175,106 +279,10 @@ def _find_website_via_google(name: str, city: str) -> str:
     return ""
 
 
-# ─────────────────────────────────────────────────────────────
-#  STEP 3 + 4: Write email with Ollama → Send with Gmail
-# ─────────────────────────────────────────────────────────────
-def step3_write_and_send(
-    businesses: List[Dict],
-    dry_run: bool = False,
-    limit: int = MAX_PER_RUN,
-) -> Dict:
-    if not GMAIL_SENDER and not dry_run:
-        logger.error("❌ GMAIL_SENDER_EMAIL not set in .env — cannot send emails")
-        logger.error("   Add: GMAIL_SENDER_EMAIL=yourname@gmail.com")
-        logger.error("   Add: GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx")
-        return {"sent": 0, "failed": 0, "skipped": 0}
-
-    ollama_ok = _is_ollama_running()
-    if not ollama_ok:
-        logger.warning("⚠️  Ollama not running — emails will use built-in templates")
-        logger.warning("   To enable AI: run 'ollama serve' in another terminal")
-
-    sent = 0
-    failed = 0
-    skipped = 0
-
-    for biz in businesses[:limit]:
-        name = biz.get("name", "?")
-        to_email = biz.get("email", "")
-
-        if not to_email:
-            skipped += 1
-            continue
-
-        if is_already_contacted(name):
-            skipped += 1
-            continue
-
-        logger.info(f"\n📝 Writing email for: {name} ({biz.get('category')}) → {to_email}")
-
-        # ── Write email ──────────────────────────────────────
-        email_data = write_client_email(
-            business_name=name,
-            category=biz.get("category", "business"),
-            contact_name=biz.get("contact_name", ""),
-            website=biz.get("website", ""),
-        )
-
-        subject = email_data["subject"]
-        body = email_data["body"]
-        used_ai = email_data["used_ai"]
-
-        logger.info(f"  Subject: {subject}")
-        logger.info(f"  AI used: {'✅ Ollama' if used_ai else '📄 Template'}")
-
-        if dry_run:
-            logger.info(f"  [DRY RUN] Would send to: {to_email}")
-            logger.info(f"  Preview:\n{body[:200]}...")
-            mark_email_sent(name, subject, used_ai)
-            sent += 1
-            continue
-
-        # ── Send email ───────────────────────────────────────
-        try:
-            success = send_outreach_email(
-                to_email=to_email,
-                subject=subject,
-                body=body,
-                lead={"title": name, "company": name, "url": biz.get("website", "")},
-            )
-
-            if success:
-                mark_email_sent(name, subject, used_ai)
-                sent += 1
-                logger.info(f"  ✅ Email sent to {to_email}")
-
-                # Telegram ping
-                if NOTIFIER_OK and sent <= 5:
-                    try:
-                        send_telegram(
-                            f"📤 Email sent!\n"
-                            f"Company: {name}\n"
-                            f"Email: {to_email}\n"
-                            f"Subject: {subject}\n"
-                            f"AI: {'Ollama' if used_ai else 'Template'}"
-                        )
-                    except Exception:
-                        pass
-
-                # Polite delay between emails
-                if sent < len(businesses):
-                    logger.info(f"  ⏳ Waiting {DELAY_BETWEEN}s before next email...")
-                    time.sleep(DELAY_BETWEEN)
-            else:
-                failed += 1
-                logger.warning(f"  ❌ Failed to send to {to_email}")
-                update_client_status(name, "bounced")
-
-        except Exception as e:
-            failed += 1
-            logger.error(f"  ❌ Error sending to {name}: {e}")
-
-    return {"sent": sent, "failed": failed, "skipped": skipped}
+def _print_step(icon: str, message: str):
+    print(f"\n{'═'*60}")
+    print(f"  {icon}  {message}")
+    print(f"{'═'*60}")
 
 
 # ─────────────────────────────────────────────────────────────
@@ -283,8 +291,8 @@ def step3_write_and_send(
 def main():
     parser = argparse.ArgumentParser(description="Client Hunter Bot — find businesses and pitch your services")
     parser.add_argument("--dry-run",   action="store_true", help="Find leads but DON'T send emails")
-    parser.add_argument("--no-scrape", action="store_true", help="Skip browser scraping, use cached data")
-    parser.add_argument("--limit",     type=int, default=MAX_PER_RUN, help="Max emails to send per run")
+    parser.add_argument("--no-scrape", action="store_true", help="Skip browser, use cached data (first round only)")
+    parser.add_argument("--limit",     type=int, default=MAX_PER_RUN, help="TARGET: how many emails to send total (keeps scraping until reached)")
     parser.add_argument("--test-ai",   action="store_true", help="Test Ollama + template writer only")
     args = parser.parse_args()
 
@@ -296,66 +304,116 @@ def main():
         return
 
     start_time = datetime.now()
+    target = args.limit  # e.g. 100 — keep going until this many sent
+
     banner = f"""
 ╔══════════════════════════════════════════════════════╗
 ║          CLIENT HUNTER BOT — Shubham Yadav           ║
 ║  Find businesses → Extract emails → Send pitches     ║
-║  Mode: {'DRY RUN (no emails)' if args.dry_run else 'LIVE (sending emails)':^40}  ║
+║  Mode  : {'DRY RUN (no emails)' if args.dry_run else 'LIVE (sending emails)':^40}  ║
+║  Target: {f'Send {target} emails (scrapes new batches until done)':^40}  ║
 ╚══════════════════════════════════════════════════════╝
 """
     print(banner)
 
-    # ── Pre-warm Ollama model so first email isn't slow ───────
+    # ── Pre-warm Ollama once ──────────────────────────────────
     if _is_ollama_running():
-        logger.info("🔥 Pre-warming Ollama model (first load takes ~2 min)...")
+        print("🔥 Pre-warming Ollama mistral model (first load ~2 min)...")
         import requests as _req
         try:
             _req.post("http://localhost:11434/api/generate",
                 json={"model": "mistral", "prompt": "hi", "stream": False,
                       "keep_alive": 600, "options": {"num_predict": 1}},
                 timeout=210)
-            logger.info("✅ Ollama model is warm and ready")
+            print("✅ Ollama model warm and ready!\n")
         except Exception:
-            logger.warning("⚠️  Ollama pre-warm timed out — will retry on first email")
+            print("⚠️  Ollama pre-warm timed out — will retry per email\n")
 
-    # ── Step 1: Scrape businesses ─────────────────────────────
-    businesses = step1_get_businesses(no_scrape=args.no_scrape)
-    if not businesses:
-        if args.no_scrape:
-            logger.error("❌ No cached businesses found. Run without --no-scrape first to collect leads.")
-        else:
-            logger.error("❌ No businesses found. Check your Chrome installation and internet connection.")
-        sys.exit(1)
+    # ── MAIN LOOP — keep scraping until target emails sent ────
+    total_sent    = 0
+    total_no_email = 0
+    total_failed  = 0
+    total_scraped = 0
+    round_num     = 0
+    MAX_ROUNDS    = 20   # safety cap — never infinite
+    STALL_LIMIT   = 3    # stop if 3 consecutive rounds find 0 new emails
 
-    # ── Step 2: Find emails ───────────────────────────────────
-    with_emails = step2_find_emails(businesses)
-    if not with_emails:
-        logger.warning("⚠️  No businesses with email addresses found in this run.")
+    stall_count   = 0
+    cache_file    = DATA_DIR / "scraped_businesses.json"
 
-    # ── Step 3+4: Write + Send ────────────────────────────────
-    if with_emails or args.dry_run:
-        results = step3_write_and_send(
-            with_emails,
-            dry_run=args.dry_run,
-            limit=args.limit,
+    while total_sent < target and round_num < MAX_ROUNDS:
+        round_num += 1
+        remaining = target - total_sent
+
+        print(f"\n{'━'*62}")
+        print(f"  🔄 ROUND {round_num}  |  Sent so far: {total_sent}/{target}  |  Need {remaining} more")
+        print(f"{'━'*62}")
+
+        # Round 1 can use --no-scrape cache; after that always scrape fresh
+        use_cache = args.no_scrape and round_num == 1
+
+        businesses = step1_get_businesses(no_scrape=use_cache)
+        if not businesses:
+            print("  ❌ No businesses found — stopping.")
+            break
+
+        total_scraped += len(businesses)
+
+        _print_step(
+            "🚀 PIPELINE",
+            f"Round {round_num} | Find email → Send instantly | need {remaining} more"
         )
-    else:
-        results = {"sent": 0, "failed": 0, "skipped": 0}
 
-    # ── Summary ───────────────────────────────────────────────
+        results = step2_find_and_send_pipeline(
+            businesses,
+            dry_run=args.dry_run,
+            limit=remaining,  # only send what's still needed
+        )
+
+        total_sent     += results["sent"]
+        total_no_email += results["no_email"]
+        total_failed   += results["failed"]
+
+        print(f"\n  📊 Round {round_num} result: sent={results['sent']}  no_email={results['no_email']}  failed={results['failed']}")
+        print(f"  📈 Progress: {total_sent}/{target} emails sent")
+
+        # Stall detection — if a whole round found nothing to send, count it
+        if results["sent"] == 0 and results["no_email"] == len(businesses):
+            stall_count += 1
+            print(f"  ⚠️  No emails found in this round ({stall_count}/{STALL_LIMIT} stall rounds)")
+            if stall_count >= STALL_LIMIT:
+                print(f"  🛑 3 rounds with no results — stopping to avoid wasting resources.")
+                break
+        else:
+            stall_count = 0  # reset on any progress
+
+        # Remove cache after round 1 so next round scrapes fresh
+        if cache_file.exists() and not args.no_scrape:
+            cache_file.unlink()
+
+        if total_sent < target:
+            print(f"\n  ⏳ Cooling down 30s before next scrape round...")
+            time.sleep(30)
+
+    # ── Final Summary ─────────────────────────────────────────
     duration = (datetime.now() - start_time).seconds
+    mins, secs = divmod(duration, 60)
     stats = get_stats()
+
+    reached = total_sent >= target
+    status_icon = "✅ TARGET REACHED" if reached else f"⚠️  Stopped at {total_sent}/{target}"
 
     summary = f"""
 ╔══════════════════════════════════════════════════════╗
 ║                    RUN COMPLETE                      ║
 ╠══════════════════════════════════════════════════════╣
-║  Businesses scraped : {len(businesses):<31}║
-║  Emails found       : {len(with_emails):<31}║
-║  Emails sent        : {results['sent']:<31}║
-║  Failed             : {results['failed']:<31}║
-║  Skipped            : {results['skipped']:<31}║
-║  Duration           : {duration}s{'':<28}║
+║  Status             : {status_icon:<31}║
+║  Rounds run         : {round_num:<31}║
+║  Businesses scraped : {total_scraped:<31}║
+║  Emails sent        : {total_sent:<31}║
+║  No email found     : {total_no_email:<31}║
+║  Failed/Bounced     : {total_failed:<31}║
+║  Duration           : {f'{mins}m {secs}s':<31}║
 ╠══════════════════════════════════════════════════════╣
 ║  ALL-TIME STATS                                      ║
 ║  Total in DB        : {stats.get('total', 0):<31}║
@@ -370,13 +428,13 @@ def main():
 """
     print(summary)
 
-    if NOTIFIER_OK and results["sent"] > 0:
+    if NOTIFIER_OK and total_sent > 0:
         try:
             send_telegram(
-                f"🎯 Client Hunter Run Complete!\n"
-                f"Scraped: {len(businesses)}\n"
-                f"Emails sent: {results['sent']}\n"
-                f"Total in DB: {stats.get('total', 0)}"
+                f"🎯 Client Hunter Done!\n"
+                f"{'✅ TARGET HIT' if reached else '⚠️ Partial'}: {total_sent}/{target} emails sent\n"
+                f"Rounds: {round_num} | Scraped: {total_scraped}\n"
+                f"All-time sent: {stats.get('email_sent', 0)}"
             )
         except Exception:
             pass

@@ -1,5 +1,5 @@
 PLATFORM: LinkedIn
-URL: https://www.linkedin.com/jobs/view/senior-react-native-developer-remote-work-at-bairesdev-4370696195
+URL: https://www.linkedin.com/jobs/view/senior-react-native-developer-remote-work-at-bairesdev-4409948503
 SCORE: 61/100
 SUBJECT: Application: Senior React Native Developer - Remote Work — 2yr React/Node.js Developer
 
