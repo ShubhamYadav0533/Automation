@@ -1140,3 +1140,73 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 2026-05-07 21:57:12,186 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
 2026-05-07 21:57:12,187 [INFO] 🚀 Launching Chrome browser...
 2026-05-07 21:57:12,225 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 22:35:53,050 [INFO] 🌐 Scraping round 0...
+2026-05-07 22:35:53,052 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 22:35:53,110 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 22:36:13,767 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 22:36:38,684 [INFO] 🔍 Google p1 'private hospital Amsterdam' → 1 leads
+2026-05-07 22:36:48,419 [INFO] 🔍 Google p2 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:36:57,840 [INFO] 🔍 Google p3 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:37:07,767 [INFO] 🔍 Google p4 'private hospital Amsterdam' → 5 leads
+2026-05-07 22:37:20,734 [INFO] 🔍 Google p1 'private hospital Dubai' → 5 leads
+2026-05-07 22:37:30,621 [INFO] 🔍 Google p2 'private hospital Dubai' → 5 leads
+2026-05-07 22:37:40,798 [INFO] 🔍 Google p3 'private hospital Dubai' → 3 leads
+2026-05-07 22:37:51,093 [INFO] 🔍 Google p4 'private hospital Dubai' → 5 leads
+2026-05-07 22:38:05,277 [INFO] 🔍 Google p1 'private hospital London' → 5 leads
+2026-05-07 22:38:15,160 [INFO] 🔍 Google p2 'private hospital London' → 5 leads
+2026-05-07 22:38:24,831 [INFO] 🔍 Google p3 'private hospital London' → 5 leads
+2026-05-07 22:38:35,666 [INFO] 🔍 Google p4 'private hospital London' → 5 leads
+2026-05-07 22:38:49,602 [INFO] 🔍 Google p1 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:02,480 [INFO] 🔍 Google p2 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:11,526 [INFO] 🔍 Google p3 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:21,568 [INFO] 🔍 Google p4 'multispecialty hospital Noida' → 5 leads
+2026-05-07 22:39:45,895 [INFO] 🔍 Google p1 'multispecialty hospital Delhi' → 5 leads
+2026-05-07 22:40:00,425 [WARNING] ⚠️  Google CAPTCHA on page 2 — stopping early
+2026-05-07 22:40:09,490 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:20,025 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:28,549 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:37,576 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-07 22:40:50,100 [INFO] 🔍 Google p1 'private hospital Paris' → 1 leads
+2026-05-07 22:41:00,062 [INFO] 🔍 Google p2 'private hospital Paris' → 5 leads
+2026-05-07 22:41:10,269 [INFO] 🔍 Google p3 'private hospital Paris' → 5 leads
+2026-05-07 22:41:20,303 [INFO] 🔍 Google p4 'private hospital Paris' → 5 leads
+2026-05-07 22:42:22,677 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 10 leads
+2026-05-07 22:43:06,321 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 22:43:22,211 [INFO] 🗺️  Google Maps 'hotels London' → 0 leads
+2026-05-07 22:44:05,610 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-07 22:44:50,692 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 22:45:09,937 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 22:45:24,932 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 22:45:39,633 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 22:45:42,528 [INFO] ✅ Scraping done. Total businesses found: 138
+2026-05-07 22:45:42,530 [INFO] ✅ Found 138 businesses. Saved to scraped_businesses.json
+2026-05-07 22:45:45,307 [INFO] 📧 Found email at https://devahastanesi.com/en/new/private-deva-hospital-at-amsterdam-health-tourism-fair-4.html: deva@devahastanesi.com
+2026-05-07 22:47:29,974 [INFO] ✅ Ollama wrote email for Private Deva Hospital at Amsterdam Health Tourism Fair (hospital)
+2026-05-07 22:47:35,224 [INFO] ✉️  Email sent via SMTP to deva@devahastanesi.com
+2026-05-07 22:47:35,366 [INFO] Sent: Private Deva Hospital at Amsterdam Health Tourism Fair → deva@devahastanesi.com | Propose Custom Digital Solution for Streamlined Operations
+2026-05-07 22:47:37,481 [INFO] 📱 Telegram notification sent
+2026-05-07 22:48:25,844 [INFO] 📧 Found email at https://www.internationalmentalhealth.nl/contact: info@internationalmentalhealth.nl
+2026-05-07 22:50:01,762 [INFO] ✅ Ollama wrote email for Kühler & Partners International Mental Health (hospital)
+2026-05-07 22:50:06,266 [INFO] ✉️  Email sent via SMTP to info@internationalmentalhealth.nl
+2026-05-07 22:50:06,391 [INFO] Sent: Kühler & Partners International Mental Health → info@internationalmentalhealth.nl | Custom Digital Solution for Enhancing Hospital Operations
+2026-05-07 22:50:07,596 [INFO] 📱 Telegram notification sent
+2026-05-07 22:50:54,826 [INFO] 📧 Found email at https://curitt.health/: hello@curitt.health
+2026-05-07 22:52:43,336 [INFO] ✅ Ollama wrote email for Curitt: Preventive healthcare - Medical Clinic (hospital)
+2026-05-07 22:52:46,520 [INFO] ✉️  Email sent via SMTP to hello@curitt.health
+2026-05-07 22:52:46,646 [INFO] Sent: Curitt: Preventive healthcare - Medical Clinic → hello@curitt.health | Transform Operational Efficiency: Custom Digital Solution for Curitt's Preventive Healthcare
+2026-05-07 22:52:47,824 [INFO] 📱 Telegram notification sent
+2026-05-07 22:53:34,960 [INFO] 📧 Found email at https://www.gov.uk/government/publications/the-netherlands-list-of-medical-facilitiespractitioners/netherlands-list-of-medical-facilities: ukinnl@fcdo.gov.uk
+2026-05-07 22:55:41,663 [INFO] ✅ Ollama wrote email for Netherlands: list of medical facilities (hospital)
+2026-05-07 22:55:44,802 [INFO] ✉️  Email sent via SMTP to ukinnl@fcdo.gov.uk
+2026-05-07 22:55:44,947 [INFO] Sent: Netherlands: list of medical facilities → ukinnl@fcdo.gov.uk | Revolutionize Your Medical Facility Operations
+2026-05-07 22:55:46,032 [INFO] 📱 Telegram notification sent
+2026-05-07 22:57:27,077 [INFO] 📧 Found email at https://medcaremultiverse.com/provider/olvg-hospital/: info@olvg.nl
+2026-05-07 22:59:23,735 [INFO] ✅ Ollama wrote email for OLVG Hospital | Healthcare Provider | Amsterdam, Netherlands (hospital)
+2026-05-07 22:59:28,241 [INFO] ✉️  Email sent via SMTP to info@olvg.nl
+2026-05-07 22:59:28,399 [INFO] Sent: OLVG Hospital | Healthcare Provider | Amsterdam, Netherlands → info@olvg.nl | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 22:59:29,367 [INFO] 📱 Telegram notification sent
+2026-05-07 23:00:29,768 [INFO] 📧 Found email at https://amsterdamtouristdoctors.nl/: info@atdoctors.nl
+2026-05-07 23:02:30,491 [INFO] ✅ Ollama wrote email for Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... (hospital)
+2026-05-07 23:02:34,303 [INFO] ✉️  Email sent via SMTP to info@atdoctors.nl
+2026-05-07 23:02:34,437 [INFO] Sent: Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... → info@atdoctors.nl | Propose Custom Digital Solution for Streamlined Tourist Care
+2026-05-07 23:02:35,667 [INFO] 📱 Telegram notification sent
