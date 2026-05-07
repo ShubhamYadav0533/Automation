@@ -290,7 +290,6 @@ def main():
 
     # ── Quick AI test mode ────────────────────────────────────
     if args.test_ai:
-        from ollama_writer import write_client_email, _is_ollama_running
         print(f"\n🤖 Ollama running: {_is_ollama_running()}\n")
         result = write_client_email("City Hospital Amsterdam", "hospital", "Dr. Van Berg", "https://example.com")
         print(f"Subject: {result['subject']}\n\nBody:\n{result['body']}")

@@ -408,3 +408,151 @@ As I explored Al Zahra Hospital Dubai's website (https://azhd.ae/), I noticed th
 2026-05-07 13:36:44,150 [INFO] 
 📝 Writing email for: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital) → info@asterhospital.com
 2026-05-07 13:38:44,304 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:48:46,624 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 13:48:55,471 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 13:49:12,107 [INFO] ✅ Ollama model is warm and ready
+2026-05-07 13:49:12,109 [INFO] 🌐 STEP 1: Scraping Google + Maps for businesses...
+2026-05-07 13:49:12,110 [INFO] 🚀 Launching Chrome browser...
+2026-05-07 13:49:12,145 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-07 13:49:12,507 [INFO] 🌐 Chrome version detected: 143
+2026-05-07 13:49:13,104 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-07 13:49:22,846 [INFO] 🔍 Google Search 'private hospital Amsterdam' → 4 leads
+2026-05-07 13:49:32,973 [INFO] 🔍 Google Search 'private hospital Dubai' → 12 leads
+2026-05-07 13:49:42,923 [INFO] 🔍 Google Search 'private hospital London' → 10 leads
+2026-05-07 13:49:55,027 [INFO] 🔍 Google Search 'private clinic Berlin' → 4 leads
+2026-05-07 13:50:06,386 [INFO] 🔍 Google Search 'dental clinic Toronto' → 12 leads
+2026-05-07 13:50:18,953 [INFO] 🔍 Google Search 'boutique hotel Amsterdam' → 12 leads
+2026-05-07 13:50:28,734 [INFO] 🔍 Google Search 'business hotel Dubai' → 12 leads
+2026-05-07 13:50:38,046 [INFO] 🔍 Google Search 'restaurant chain London' → 6 leads
+2026-05-07 13:51:14,794 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 8 leads
+2026-05-07 13:52:01,629 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-07 13:52:38,627 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-07 13:53:21,043 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 10 leads
+2026-05-07 13:54:05,323 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-07 13:54:23,172 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-07 13:54:38,875 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-07 13:54:52,179 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-07 13:54:55,947 [INFO] ✅ Scraping done. Total businesses found: 84
+2026-05-07 13:54:55,965 [INFO] ✅ Found 84 businesses. Saved to scraped_businesses.json
+2026-05-07 13:54:55,968 [INFO] 📧 STEP 2: Finding contact emails for 84 businesses...
+2026-05-07 13:54:55,985 [INFO]   ⏭️  Skipping (already contacted): Home - ACIBADEM International Medical Center
+2026-05-07 13:54:55,986 [INFO]   [2/84] Checking: Jan van Goyen Medical Center | Personal care Amsterdam
+2026-05-07 13:55:08,250 [INFO]   [3/84] Checking: American Hospital Dubai - Best Private Hospital in Dubai
+2026-05-07 13:55:31,884 [INFO]   [4/84] Checking: PRIME Hospitals: Best Multispeciality Hospitals, Medical ...
+2026-05-07 13:55:47,249 [INFO]   ⏭️  Skipping (already contacted): Zulekha Hospital, Dubai
+2026-05-07 13:55:47,254 [INFO]   ⏭️  Skipping (already contacted): Dubai Health: Our Network - Hospitals, Health & Medical ...
+2026-05-07 13:55:47,260 [INFO]   ⏭️  Skipping (already contacted): Al Zahra Hospital Dubai: Home
+2026-05-07 13:55:47,266 [INFO]   [8/84] Checking: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ...
+2026-05-07 13:55:51,375 [INFO] 📧 Found email at https://www.asterhospitals.ae/: info@asterhospital.com
+2026-05-07 13:55:51,377 [INFO]   ✅ Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... → info@asterhospital.com
+2026-05-07 13:55:52,379 [INFO]   [9/84] Checking: HCA Healthcare UK | Private Hospitals in the UK
+2026-05-07 13:56:06,089 [INFO]   [10/84] Checking: Spire Healthcare | Private Hospitals UK | Quality Care
+2026-05-07 13:56:32,638 [INFO]   [11/84] Checking: Cromwell Hospital, London - Private Hospital in London
+2026-05-07 13:57:01,264 [INFO]   [12/84] Checking: Private hospitals | Ramsay Health Care UK
+2026-05-07 13:57:03,360 [INFO] 📧 Found email at https://www.ramsayhealth.co.uk/contact: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:57:03,361 [INFO]   ✅ Private hospitals | Ramsay Health Care UK → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 13:57:04,363 [INFO]   [13/84] Checking: Private Hospital treatment
+2026-05-07 13:57:21,139 [INFO]   [14/84] Checking: Your Private Practice in Berlin.
+2026-05-07 13:57:22,732 [INFO] 📧 Found email at https://www.meoclinic.de/en/: info@meoclinic.de
+2026-05-07 13:57:22,735 [INFO]   ✅ Your Private Practice in Berlin. → info@meoclinic.de
+2026-05-07 13:57:23,738 [INFO]   [15/84] Checking: PRIVATE CLINIC HOURS
+2026-05-07 13:57:26,350 [INFO] 📧 Found email at https://familycareberlin.de/contact: allgemeinmedizin@familycareberlin.de
+2026-05-07 13:57:26,353 [INFO]   ✅ PRIVATE CLINIC HOURS → allgemeinmedizin@familycareberlin.de
+2026-05-07 13:57:27,359 [INFO]   [16/84] Checking: Dental Clinics
+2026-05-07 13:57:42,516 [INFO] 📧 Found email at https://www.toronto.ca/support: supplychain@toronto.ca
+2026-05-07 13:57:42,517 [INFO]   ✅ Dental Clinics → supplychain@toronto.ca
+2026-05-07 13:57:43,519 [INFO]   [17/84] Checking: Dental Clinic: Trusted Dentist in Toronto ON
+2026-05-07 13:58:06,589 [INFO]   [18/84] Checking: University of Toronto's Faculty of Dentistry Clinics
+2026-05-07 13:58:19,505 [INFO]   [19/84] Checking: Downtown Dental Clinic: Downtown Dentist, Family Dentist In ...
+2026-05-07 13:58:33,766 [INFO]   [20/84] Checking: Downtown Toronto Dental - 700 University Ave
+2026-05-07 13:58:53,226 [INFO]   [21/84] Checking: Dental Clinic Toronto Rehab
+2026-05-07 13:59:09,114 [INFO]   [22/84] Checking: De Pijp Boutique Hotel Amsterdam | Official website
+2026-05-07 13:59:09,621 [INFO] 📧 Found email at https://www.depijpboutiquehotel.nl/: info@depijpboutiquehotel.nl
+2026-05-07 13:59:09,629 [INFO]   ✅ De Pijp Boutique Hotel Amsterdam | Official website → info@depijpboutiquehotel.nl
+2026-05-07 13:59:10,636 [INFO]   [23/84] Checking: The Hendrick's | Boutique Hotel Amsterdam | Official Website
+2026-05-07 13:59:12,023 [INFO] 📧 Found email at https://www.thehendrickshotel.com/: info@thehendrickshotel.com
+2026-05-07 13:59:12,027 [INFO]   ✅ The Hendrick's | Boutique Hotel Amsterdam | Official Website → info@thehendrickshotel.com
+2026-05-07 13:59:13,034 [INFO]   [24/84] Checking: Boutique Hotel View Amsterdam - Amsterdam, Netherlands
+2026-05-07 13:59:32,262 [INFO]   [25/84] Checking: Hotel Notting Hill Amsterdam | City Centre Hotel - Official ...
+2026-05-07 13:59:33,953 [INFO] 📧 Found email at https://www.hotelnottinghill.nl/: reservation@hotelnottinghill.nl
+2026-05-07 13:59:33,955 [INFO]   ✅ Hotel Notting Hill Amsterdam | City Centre Hotel - Official ... → reservation@hotelnottinghill.nl
+2026-05-07 13:59:34,960 [INFO]   [26/84] Checking: Boutique Hotel | Boutique Hotel View | Amsterdam
+2026-05-07 13:59:36,933 [INFO] 📧 Found email at https://www.boutiquehotelview.nl/: info@boutiquehotelview.nl
+2026-05-07 13:59:36,934 [INFO]   ✅ Boutique Hotel | Boutique Hotel View | Amsterdam → info@boutiquehotelview.nl
+2026-05-07 13:59:37,936 [INFO]   [27/84] Checking: The Albus Boutique Hotel Amsterdam Centre
+2026-05-07 13:59:39,321 [INFO] 📧 Found email at https://www.albushotel.com/: welcome@albushotel.com
+2026-05-07 13:59:39,323 [INFO]   ✅ The Albus Boutique Hotel Amsterdam Centre → welcome@albushotel.com
+2026-05-07 13:59:40,325 [INFO]   [28/84] Checking: Park Regis Business Bay (Dubai)
+2026-05-07 13:59:41,646 [INFO] 📧 Found email at https://www.parkregisbusinessbay.com/: info@parkregisbusinessbay.com
+2026-05-07 13:59:41,648 [INFO]   ✅ Park Regis Business Bay (Dubai) → info@parkregisbusinessbay.com
+2026-05-07 13:59:42,650 [INFO]   [29/84] Checking: Renaissance Business Bay Hotel, Dubai
+2026-05-07 14:00:02,525 [INFO]   [30/84] Checking: Renaissance Business Bay Hotel, Dubai | WEBSITE | Dubai
+2026-05-07 14:00:34,654 [INFO]   [31/84] Checking: Radisson Blu Dubai Waterfront
+2026-05-07 14:00:46,810 [INFO]   [32/84] Checking: Hotel in Dubai Business Bay
+2026-05-07 14:00:47,425 [INFO] 📧 Found email at https://www.thefirstcollection.ae/business-bay/: reservations.businessbay@thefirstcollection.ae
+2026-05-07 14:00:47,426 [INFO]   ✅ Hotel in Dubai Business Bay → reservations.businessbay@thefirstcollection.ae
+2026-05-07 14:00:48,428 [INFO]   [33/84] Checking: Citymax Hotel Business Bay | 4 star Hotel Dubai
+2026-05-07 14:00:48,864 [INFO] 📧 Found email at https://www.citymaxhotels.com/uae/dubai/citymax-hotels-business-bay/: reservations@citymaxhotels.com
+2026-05-07 14:00:48,867 [INFO]   ✅ Citymax Hotel Business Bay | 4 star Hotel Dubai → reservations@citymaxhotels.com
+2026-05-07 14:00:49,870 [INFO]   [34/84] Checking: Côte Brasserie: Modern French Restaurant
+2026-05-07 14:01:04,282 [INFO]   [35/84] Checking: St. JOHN Restaurant
+2026-05-07 14:01:05,211 [INFO] 📧 Found email at https://stjohnrestaurant.com/: reservations@stjohnrestaurant.com
+2026-05-07 14:01:05,213 [INFO]   ✅ St. JOHN Restaurant → reservations@stjohnrestaurant.com
+2026-05-07 14:01:06,214 [INFO]   [36/84] Checking: The Evolv Collection | Luxury Restaurants & Bars in London ...
+2026-05-07 14:01:09,429 [INFO] 📧 Found email at https://evolvcollection.com/contact: rewards@evolvcollection.com
+2026-05-07 14:01:09,431 [INFO]   ✅ The Evolv Collection | Luxury Restaurants & Bars in London ... → rewards@evolvcollection.com
+2026-05-07 14:01:10,433 [INFO]   [37/84] Checking: VU University Medical Center
+2026-05-07 14:01:25,106 [INFO]   [38/84] Checking: BovenIJ
+2026-05-07 14:01:40,670 [INFO]   [39/84] Checking: OLVG, location Spuistraat
+2026-05-07 14:01:54,554 [INFO]   [40/84] Checking: OLVG Location West
+2026-05-07 14:02:08,322 [INFO]   [41/84] Checking: OLVG, location East
+2026-05-07 14:02:23,705 [INFO]   [42/84] Checking: Acibadem International Medical Center
+2026-05-07 14:02:37,018 [INFO]   [43/84] Checking: Tourist Medical Center
+2026-05-07 14:02:52,161 [INFO]   [44/84] Checking: Medical Center Ganzenhoef
+2026-05-07 14:04:30,068 [INFO] 📬 15 businesses have contact emails
+2026-05-07 14:04:30,099 [INFO] 
+📝 Writing email for: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital) → info@asterhospital.com
+2026-05-07 14:06:36,280 [INFO] ✅ Ollama wrote email for Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital)
+2026-05-07 14:06:36,283 [INFO]   Subject: Proposal: Custom Hospital CRM/ERP for Aster Hospital
+2026-05-07 14:06:36,283 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:06:36,283 [INFO]   [DRY RUN] Would send to: info@asterhospital.com
+2026-05-07 14:06:36,284 [INFO]   Preview:
+Hi Dr. Azad Moopen,
+
+I noticed that managing patient records, appointments, and billing at Aster Hospital might still be a challenge due to the use of outdated spreadsheets or paper. I have previously...
+2026-05-07 14:06:36,504 [INFO] 
+📝 Writing email for: Private hospitals | Ramsay Health Care UK (hospital) → Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 14:08:47,348 [INFO] ✅ Ollama wrote email for Private hospitals | Ramsay Health Care UK (hospital)
+2026-05-07 14:08:47,348 [INFO]   Subject: Custom Hospital CRM/ERP Proposal for Ramsay Health Care UK
+2026-05-07 14:08:47,348 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:08:47,348 [INFO]   [DRY RUN] Would send to: Media.Enquiries@ramsayhealth.co.uk
+2026-05-07 14:08:47,349 [INFO]   Preview:
+Hi Mr Amir Sriemevan,
+
+I noticed that managing patient records, appointments, and billing at Ramsay Health Care UK might still be a challenge due to the use of outdated spreadsheets or paper. I specia...
+2026-05-07 14:08:47,496 [INFO] 
+📝 Writing email for: Your Private Practice in Berlin. (clinic) → info@meoclinic.de
+2026-05-07 14:10:55,945 [INFO] ✅ Ollama wrote email for Your Private Practice in Berlin. (clinic)
+2026-05-07 14:10:55,945 [INFO]   Subject: Custom Clinic Management Web App Proposal
+2026-05-07 14:10:55,945 [INFO]   AI used: ✅ Ollama
+2026-05-07 14:10:55,945 [INFO]   [DRY RUN] Would send to: info@meoclinic.de
+2026-05-07 14:10:55,945 [INFO]   Preview:
+Hi Your Private Practice in Berlin. Team,
+
+I came across your clinic's website and appreciated the services you offer. I noticed that managing patient appointments and records manually might consume v...
+2026-05-07 14:10:56,999 [INFO] 📱 Telegram notification sent
+2026-05-07 15:11:04,942 [INFO] 🔥 Pre-warming Ollama model (first load takes ~2 min)...
+2026-05-07 15:11:21,445 [INFO] ✅ Ollama model is warm and ready
+2026-05-07 15:11:21,448 [INFO] 📂 Loading cached businesses (--no-scrape mode)
+2026-05-07 15:11:21,450 [INFO] 📧 STEP 2: Finding contact emails for 84 businesses...
+2026-05-07 15:11:21,452 [INFO]   ⏭️  Skipping (already contacted): Home - ACIBADEM International Medical Center
+2026-05-07 15:11:21,454 [INFO]   [2/84] Checking: Jan van Goyen Medical Center | Personal care Amsterdam
+2026-05-07 15:11:35,061 [INFO]   [3/84] Checking: American Hospital Dubai - Best Private Hospital in Dubai
+2026-05-07 15:12:00,221 [INFO]   [4/84] Checking: PRIME Hospitals: Best Multispeciality Hospitals, Medical ...
+2026-05-07 15:12:16,755 [INFO]   ⏭️  Skipping (already contacted): Zulekha Hospital, Dubai
+2026-05-07 15:12:16,757 [INFO]   ⏭️  Skipping (already contacted): Dubai Health: Our Network - Hospitals, Health & Medical ...
+2026-05-07 15:12:16,759 [INFO]   ⏭️  Skipping (already contacted): Al Zahra Hospital Dubai: Home
+2026-05-07 15:12:16,766 [INFO]   ⏭️  Skipping (already contacted): Aster Hospital: Best Multispeciality Hospital - Top Hospital in ...
+2026-05-07 15:12:16,770 [INFO]   [9/84] Checking: HCA Healthcare UK | Private Hospitals in the UK
+2026-05-07 15:12:32,641 [INFO]   [10/84] Checking: Spire Healthcare | Private Hospitals UK | Quality Care
+2026-05-07 15:12:56,277 [INFO]   [11/84] Checking: Cromwell Hospital, London - Private Hospital in London
