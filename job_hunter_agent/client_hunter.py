@@ -474,6 +474,20 @@ def main():
             print("⚠️  Ollama pre-warm timed out\n")
 
     # ─────────────────────────────────────────────────────────
+    #  PRE-RUN: Check Gmail for replies, update DB + Supabase
+    # ─────────────────────────────────────────────────────────
+    _print_step("📬 PRE-CHECK", "Scanning Gmail for new replies from leads...")
+    try:
+        from supabase_sync import check_and_update_replies
+        new_replies = check_and_update_replies()
+        if new_replies:
+            print(f"  ✅ {new_replies} new replies detected — status updated to 'replied'")
+        else:
+            print("  — No new replies found")
+    except Exception as _e:
+        print(f"  ⚠️  Reply check skipped: {_e}")
+
+    # ─────────────────────────────────────────────────────────
     #  PRIORITY 1: Send follow-ups to old no-reply leads
     # ─────────────────────────────────────────────────────────
     _print_step("🔁 PRIORITY 1", "Follow-ups to leads with no reply after 3 days")

@@ -1211,3 +1211,27 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 2026-05-07 23:02:34,437 [INFO] Sent: Amsterdam Tourist Doctors - 24/7 Medical Care for Tourist ... → info@atdoctors.nl | Propose Custom Digital Solution for Streamlined Tourist Care
 2026-05-07 23:02:35,667 [INFO] 📱 Telegram notification sent
 2026-05-07 23:04:03,542 [INFO] 📧 Found email at https://www.dentons.com/en/about-dentons/news-events-and-awards/news/2026/april/dentons-advises-on-us-300-million-ppp-hospital-project-in-uzbekistan: amanda.lowe@dentons.com
+2026-05-07 23:06:10,669 [INFO] ✅ Ollama wrote email for Dentons advises on US$300 million PPP hospital project in ... (hospital)
+2026-05-07 23:06:16,922 [INFO] ✉️  Email sent via SMTP to amanda.lowe@dentons.com
+2026-05-07 23:06:17,080 [INFO] Sent: Dentons advises on US$300 million PPP hospital project in ... → amanda.lowe@dentons.com | Streamline PPP Hospital Operations: Custom Digital Solution Proposal
+2026-05-07 23:06:18,151 [INFO] 📱 Telegram notification sent
+2026-05-07 23:11:48,823 [INFO] 📧 Found email at https://burjeel.com/: %20dataprotectionofficer@burjeelholdings.com
+2026-05-07 23:13:31,836 [INFO] ✅ Ollama wrote email for Burjeel Hospital (hospital)
+2026-05-07 23:13:35,914 [INFO] ✉️  Email sent via SMTP to %20dataprotectionofficer@burjeelholdings.com
+2026-05-07 23:13:36,117 [INFO] Sent: Burjeel Hospital → %20dataprotectionofficer@burjeelholdings.com | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 23:13:37,135 [INFO] 📱 Telegram notification sent
+2026-05-07 23:14:45,144 [INFO] 📧 Found email at https://csh.ae/contact-us: info@csh.ae
+2026-05-07 23:16:26,730 [INFO] ✅ Ollama wrote email for Canadian Specialist Hospital | The Best Hospital in Dubai (hospital)
+2026-05-07 23:16:32,155 [INFO] ✉️  Email sent via SMTP to info@csh.ae
+2026-05-07 23:16:32,344 [INFO] Sent: Canadian Specialist Hospital | The Best Hospital in Dubai → info@csh.ae | Propose Custom Digital Solution for Optimizing Operations at Canadian Specialist Hospital
+2026-05-07 23:16:34,240 [INFO] 📱 Telegram notification sent
+2026-05-07 23:19:14,603 [INFO] 📧 Found email at https://www.hmsmirdifhospital.ae/en/: info_mph@hmsco.ae
+2026-05-07 23:20:43,721 [INFO] ✅ Ollama wrote email for Best Hospital in Dubai | Top Healthcare in UAE (hospital)
+2026-05-07 23:20:48,352 [INFO] ✉️  Email sent via SMTP to info_mph@hmsco.ae
+2026-05-07 23:20:48,483 [INFO] Sent: Best Hospital in Dubai | Top Healthcare in UAE → info_mph@hmsco.ae | Propose Custom Digital Solution for Optimized Operations
+2026-05-07 23:20:49,993 [INFO] 📱 Telegram notification sent
+2026-05-07 23:21:55,155 [INFO] 📧 Found email at https://thumbayuniversityhospital.com/: info@thumbayuniversityhospital.com
+2026-05-07 23:23:29,666 [INFO] ✅ Ollama wrote email for Thumbay University Hospital - Largest Private Academic ... (hospital)
+2026-05-07 23:23:34,036 [INFO] ✉️  Email sent via SMTP to info@thumbayuniversityhospital.com
+2026-05-07 23:23:34,203 [INFO] Sent: Thumbay University Hospital - Largest Private Academic ... → info@thumbayuniversityhospital.com | Solve Operations Challenges: Custom Digital Solution for Thumbay University Hospital
+2026-05-07 23:23:35,369 [INFO] 📱 Telegram notification sent
