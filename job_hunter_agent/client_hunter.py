@@ -306,6 +306,19 @@ def main():
 """
     print(banner)
 
+    # ── Pre-warm Ollama model so first email isn't slow ───────
+    if _is_ollama_running():
+        logger.info("🔥 Pre-warming Ollama model (first load takes ~2 min)...")
+        import requests as _req
+        try:
+            _req.post("http://localhost:11434/api/generate",
+                json={"model": "mistral", "prompt": "hi", "stream": False,
+                      "keep_alive": 600, "options": {"num_predict": 1}},
+                timeout=210)
+            logger.info("✅ Ollama model is warm and ready")
+        except Exception:
+            logger.warning("⚠️  Ollama pre-warm timed out — will retry on first email")
+
     # ── Step 1: Scrape businesses ─────────────────────────────
     businesses = step1_get_businesses(no_scrape=args.no_scrape)
     if not businesses:

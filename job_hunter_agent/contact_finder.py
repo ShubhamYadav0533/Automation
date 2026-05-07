@@ -92,10 +92,11 @@ def _extract_phone_from_text(text: str) -> Optional[str]:
     return None
 
 
-def _fetch_page(url: str, timeout: int = 10) -> Optional[str]:
+def _fetch_page(url: str, timeout: int = 10, session: requests.Session = None) -> Optional[str]:
     """Fetch page HTML, return None on failure."""
     try:
-        r = requests.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
+        requester = session or requests
+        r = requester.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
         if r.status_code == 200:
             return r.text
     except Exception as e:
@@ -160,10 +161,14 @@ def find_contact_info(website_url: str) -> dict:
 
     urls_to_check = _build_contact_urls(website_url)
 
+    # Fresh session per business — prevents response caching across different sites
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
     for url in urls_to_check:
-        html = _fetch_page(url)
+        html = _fetch_page(url, session=session)
         if not html:
-            time.sleep(0.3)
+            time.sleep(0.5)
             continue
 
         soup = BeautifulSoup(html, "html.parser")
@@ -180,7 +185,13 @@ def find_contact_info(website_url: str) -> dict:
                 if email and _is_valid_email(email):
                     emails.insert(0, email)  # mailto links are most reliable
 
-        for e in emails:
+        # Only keep emails that belong to THIS website's domain
+        parsed_base = urlparse(website_url)
+        base_domain = parsed_base.netloc.replace("www.", "").lower()
+        domain_emails = [e for e in emails if base_domain.split(".")[0] in e.lower() or "@" + base_domain in e.lower()]
+        # Fall back to all emails if no domain match found (small sites use generic providers)
+        filtered_emails = domain_emails if domain_emails else emails
+        for e in filtered_emails:
             if e not in all_emails:
                 all_emails.append(e)
 

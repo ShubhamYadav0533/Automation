@@ -355,3 +355,56 @@ Stacktrace:
 2026-05-07 13:25:51,162 [INFO]   [76/88] Checking: Winford Bilingual Primary School
 2026-05-07 13:25:52,403 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
 2026-05-07 13:25:52,404 [INFO]   ✅ Winford Bilingual Primary School → principal@britams.nl
+2026-05-07 13:25:53,549 [INFO]   [77/88] Checking: Public Elementary School De Witte Olifant
+2026-05-07 13:25:54,797 [INFO] 📧 Found email at https://www.britams.nl/: principal@britams.nl
+2026-05-07 13:25:54,798 [INFO]   ✅ Public Elementary School De Witte Olifant → principal@britams.nl
+2026-05-07 13:26:18,871 [INFO] 📬 32 businesses have contact emails
+2026-05-07 13:26:18,906 [INFO] 
+📝 Writing email for: Home - ACIBADEM International Medical Center (hospital) → zorgadministratie@acibademimc.com
+2026-05-07 13:28:19,157 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:29:31,459 [INFO] ✅ Ollama wrote email for Home - ACIBADEM International Medical Center (hospital)
+2026-05-07 13:29:31,461 [INFO]   Subject: Elevate Patient Care with Customized Hospital Solution
+2026-05-07 13:29:31,463 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:29:31,463 [INFO]   [DRY RUN] Would send to: zorgadministratie@acibademimc.com
+2026-05-07 13:29:31,463 [INFO]   Preview:
+Here is the cold email:
+
+Hi Dr. Bas Pijnenburg,
+
+As a developer with experience in building custom CRM/ERP systems for hospitals, I understand that managing patient records, appointments, and billing ...
+2026-05-07 13:29:32,286 [INFO] 
+📝 Writing email for: Zulekha Hospital, Dubai (hospital) → jciquality@jcrinc.com
+2026-05-07 13:31:33,225 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)
+2026-05-07 13:32:50,924 [INFO] ✅ Ollama wrote email for Zulekha Hospital, Dubai (hospital)
+2026-05-07 13:32:50,926 [INFO]   Subject: Transforming Patient Care with Customized Hospital Solutions
+2026-05-07 13:32:50,926 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:32:50,926 [INFO]   [DRY RUN] Would send to: jciquality@jcrinc.com
+2026-05-07 13:32:50,926 [INFO]   Preview:
+Hi Dr. Zulekha Daud,
+
+As a hospital management professional, I'm sure you understand the challenges of managing patient records, appointments, and billing with outdated spreadsheets or paper. It's tim...
+2026-05-07 13:32:51,318 [INFO] 
+📝 Writing email for: Dubai Health: Our Network - Hospitals, Health & Medical ... (hospital) → name@domain.com
+2026-05-07 13:34:51,065 [INFO] ✅ Ollama wrote email for Dubai Health: Our Network - Hospitals, Health & Medical ... (hospital)
+2026-05-07 13:34:51,065 [INFO]   Subject: Streamline Your Operations with Custom Healthcare Solutions
+2026-05-07 13:34:51,065 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:34:51,065 [INFO]   [DRY RUN] Would send to: name@domain.com
+2026-05-07 13:34:51,065 [INFO]   Preview:
+Hi Dr. Raja Easa,
+
+As a hospital administrator, I'm sure you're all too familiar with the challenges of managing patient records, appointments, and billing using outdated spreadsheets or paper. It's a...
+2026-05-07 13:34:51,175 [INFO] 
+📝 Writing email for: Al Zahra Hospital Dubai: Home (hospital) → healthjobs.dubai@azhd.ae
+2026-05-07 13:36:43,979 [INFO] ✅ Ollama wrote email for Al Zahra Hospital Dubai: Home (hospital)
+2026-05-07 13:36:43,979 [INFO]   Subject: Streamline Your Hospital Operations with Customized Solution
+2026-05-07 13:36:43,979 [INFO]   AI used: ✅ Ollama
+2026-05-07 13:36:43,979 [INFO]   [DRY RUN] Would send to: healthjobs.dubai@azhd.ae
+2026-05-07 13:36:43,979 [INFO]   Preview:
+Here is the cold email:
+
+Hi Prof. Dr,
+
+As I explored Al Zahra Hospital Dubai's website (https://azhd.ae/), I noticed that managing patient records, appointments, and billing with outdated spreadsheets...
+2026-05-07 13:36:44,150 [INFO] 
+📝 Writing email for: Aster Hospital: Best Multispeciality Hospital - Top Hospital in ... (hospital) → info@asterhospital.com
+2026-05-07 13:38:44,304 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)

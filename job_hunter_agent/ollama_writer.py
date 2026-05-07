@@ -20,7 +20,7 @@ import json
 logger = logging.getLogger(__name__)
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama3"  # change to "mistral" or "phi3" if you prefer
+OLLAMA_MODEL = "mistral"  # mistral is faster than llama3; change to "llama3" if preferred
 
 # ── Shubham's profile snapshot used in every prompt ──────────
 PROFILE = {
@@ -56,12 +56,14 @@ def _ask_ollama(prompt: str, max_retries: int = 2) -> str:
                     "model": OLLAMA_MODEL,
                     "prompt": prompt,
                     "stream": False,
+                    "keep_alive": 300,
                     "options": {
                         "temperature": 0.7,
-                        "num_predict": 400,
+                        "num_predict": 280,
+                        "num_ctx": 1024,
                     },
                 },
-                timeout=120,
+                timeout=200,
             )
             response.raise_for_status()
             return response.json().get("response", "").strip()
@@ -212,8 +214,7 @@ Write only the email body, no subject line."""
 
         if body and len(body) > 50:
             # Generate subject line
-            subject_prompt = f"""Write a short email subject line (max 8 words) for a cold email to {business_name} (a {category} business) about offering to build them a custom {pitch["solution"].split("—")[0].strip()}.
-Only output the subject line, nothing else."""
+            subject_prompt = f"""Write a short email subject line (max 8 words) for a cold email to {business_name} (a {category} business) about building them a custom {pitch["solution"].split("—")[0].split("with")[0].strip()}. Only output the subject line text, nothing else, no quotes."""
             subject = _ask_ollama(subject_prompt)
             if not subject or len(subject) > 100:
                 subject = _fallback_subject(business_name, industry)
