@@ -1235,3 +1235,685 @@ urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resol
 2026-05-07 23:23:34,036 [INFO] ✉️  Email sent via SMTP to info@thumbayuniversityhospital.com
 2026-05-07 23:23:34,203 [INFO] Sent: Thumbay University Hospital - Largest Private Academic ... → info@thumbayuniversityhospital.com | Solve Operations Challenges: Custom Digital Solution for Thumbay University Hospital
 2026-05-07 23:23:35,369 [INFO] 📱 Telegram notification sent
+2026-05-07 23:24:55,949 [INFO] 📧 Found email at https://thumbayhospital.com/contact-us: info@thumbay.com
+2026-05-07 23:26:34,182 [INFO] ✅ Ollama wrote email for Thumbay Hospital (hospital)
+2026-05-07 23:26:38,257 [INFO] ✉️  Email sent via SMTP to info@thumbay.com
+2026-05-07 23:26:38,455 [INFO] Sent: Thumbay Hospital → info@thumbay.com | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 23:26:39,712 [INFO] 📱 Telegram notification sent
+2026-05-07 23:30:24,725 [INFO] 📧 Found email at https://hje.org.uk/: info@hje.org.uk
+2026-05-07 23:31:56,695 [INFO] ✅ Ollama wrote email for St John & St Elizabeth Hospital - Private Hospital in London (hospital)
+2026-05-07 23:32:00,101 [INFO] ✉️  Email sent via SMTP to info@hje.org.uk
+2026-05-07 23:32:00,249 [INFO] Sent: St John & St Elizabeth Hospital - Private Hospital in London → info@hje.org.uk | Propose Custom Digital Solution for Streamlined Operations
+2026-05-07 23:32:01,445 [INFO] 📱 Telegram notification sent
+2026-05-07 23:32:52,574 [INFO] 📧 Found email at https://www.royalberkshire.nhs.uk/contact-us: PALS@royalberkshire.nhs.uk
+2026-05-07 23:34:23,073 [INFO] ✅ Ollama wrote email for Royal Berkshire Hospital (hospital)
+2026-05-07 23:34:28,070 [INFO] ✉️  Email sent via SMTP to PALS@royalberkshire.nhs.uk
+2026-05-07 23:34:28,215 [INFO] Sent: Royal Berkshire Hospital → PALS@royalberkshire.nhs.uk | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 23:34:29,301 [INFO] 📱 Telegram notification sent
+2026-05-07 23:35:19,578 [INFO] 📧 Found email at https://www.homerton.nhs.uk/contact-us: mark.purcell@nhs.net
+2026-05-07 23:36:56,837 [INFO] ✅ Ollama wrote email for Homerton Healthcare NHS Foundation Trust: Home (hospital)
+2026-05-07 23:37:00,646 [INFO] ✉️  Email sent via SMTP to mark.purcell@nhs.net
+2026-05-07 23:37:00,788 [INFO] Sent: Homerton Healthcare NHS Foundation Trust: Home → mark.purcell@nhs.net | Revolutionize Homerton Operations: Custom Digital Solution Proposal
+2026-05-07 23:37:01,905 [INFO] 📱 Telegram notification sent
+2026-05-07 23:39:56,954 [INFO] 📧 Found email at https://kims.org.uk/: enquiries@kims.org.uk
+2026-05-07 23:41:55,668 [INFO] ✅ Ollama wrote email for KIMS Hospital | Private Health Care & Medical Care in Kent (hospital)
+2026-05-07 23:42:21,403 [INFO] ✉️  Email sent via SMTP to enquiries@kims.org.uk
+2026-05-07 23:42:21,628 [INFO] Sent: KIMS Hospital | Private Health Care & Medical Care in Kent → enquiries@kims.org.uk | Custom Digital Solution for Streamlined Hospital Operations
+2026-05-07 23:42:24,028 [INFO] 📱 Telegram notification sent
+2026-05-07 23:43:13,050 [INFO] 📧 Found email at https://www.imperial.nhs.uk/: imperial.web@nhs.net
+2026-05-07 23:45:25,653 [INFO] ✅ Ollama wrote email for Imperial College Healthcare NHS Trust (hospital)
+2026-05-07 23:45:28,925 [INFO] ✉️  Email sent via SMTP to imperial.web@nhs.net
+2026-05-07 23:45:29,247 [INFO] Sent: Imperial College Healthcare NHS Trust → imperial.web@nhs.net | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 23:45:30,500 [INFO] 📱 Telegram notification sent
+2026-05-07 23:46:22,808 [INFO] 📧 Found email at https://www.evelinalondon.nhs.uk/contact-us: pals@gstt.nhs.uk
+2026-05-07 23:48:26,190 [INFO] ✅ Ollama wrote email for Private patients (hospital)
+2026-05-07 23:48:29,690 [INFO] ✉️  Email sent via SMTP to pals@gstt.nhs.uk
+2026-05-07 23:48:29,965 [INFO] Sent: Private patients → pals@gstt.nhs.uk | Streamline Operations: Custom Digital Solution Proposal
+2026-05-07 23:48:31,238 [INFO] 📱 Telegram notification sent
+2026-05-07 23:49:35,219 [INFO] 📧 Found email at https://fitzroviahospital.com/: reception@fitzroviahospital.com
+2026-05-07 23:51:42,125 [INFO] ✅ Ollama wrote email for Home - Fitzrovia Hospital - Private Hospital London (hospital)
+2026-05-07 23:51:45,697 [INFO] ✉️  Email sent via SMTP to reception@fitzroviahospital.com
+2026-05-07 23:51:45,980 [INFO] Sent: Home - Fitzrovia Hospital - Private Hospital London → reception@fitzroviahospital.com | Transform Operations: Custom Digital Solution Proposal
+2026-05-07 23:51:47,357 [INFO] 📱 Telegram notification sent
+2026-05-07 23:53:28,433 [INFO] 📧 Found email at https://bhardwajhospitalnoida.com/: info@bhardwajhospitalnoida.com
+2026-05-07 23:55:44,390 [INFO] ✅ Ollama wrote email for Bhardwaj Hospital: Best Hospital in Noida (hospital)
+2026-05-07 23:55:48,996 [INFO] ✉️  Email sent via SMTP to info@bhardwajhospitalnoida.com
+2026-05-07 23:55:49,426 [INFO] Sent: Bhardwaj Hospital: Best Hospital in Noida → info@bhardwajhospitalnoida.com | Streamline Operations: Custom Digital Solution Proposal for Bhardwaj Hospital
+2026-05-07 23:55:50,279 [INFO] 📱 Telegram notification sent
+2026-05-07 23:56:37,988 [INFO] 📧 Found email at https://www.shriramsinghhospital.com/: info@shriramsinghhospital.com
+2026-05-07 23:59:01,964 [INFO] ✅ Ollama wrote email for SRS Hospital: Best Multi Speciality Hospital in Delhi NCR (hospital)
+2026-05-07 23:59:05,906 [INFO] ✉️  Email sent via SMTP to info@shriramsinghhospital.com
+2026-05-07 23:59:06,146 [INFO] Sent: SRS Hospital: Best Multi Speciality Hospital in Delhi NCR → info@shriramsinghhospital.com | Propose Custom Digital Solution for Enhanced SRS Hospital Operations
+2026-05-07 23:59:07,339 [INFO] 📱 Telegram notification sent
+2026-05-08 00:00:31,704 [INFO] 📧 Found email at http://speshospitalnoida.com/: spessuperspecialityhospital@gmail.com
+2026-05-08 00:02:29,685 [INFO] ✅ Ollama wrote email for SPES Super Speciality Hospital: Home (hospital)
+2026-05-08 00:02:32,865 [INFO] ✉️  Email sent via SMTP to spessuperspecialityhospital@gmail.com
+2026-05-08 00:02:33,074 [INFO] Sent: SPES Super Speciality Hospital: Home → spessuperspecialityhospital@gmail.com | Custom Digital Solution for Optimizing SPES Operations
+2026-05-08 00:02:35,310 [INFO] 📱 Telegram notification sent
+2026-05-08 00:03:22,476 [INFO] 📧 Found email at https://www.airi.health/hospitals/noida-multispeciality-hospital-sector-66-in-noida: support@airi.health
+2026-05-08 00:05:42,807 [INFO] ✅ Ollama wrote email for Noida Multispeciality Hospital - Sector 66 (hospital)
+2026-05-08 00:05:47,956 [INFO] ✉️  Email sent via SMTP to support@airi.health
+2026-05-08 00:05:48,167 [INFO] Sent: Noida Multispeciality Hospital - Sector 66 → support@airi.health | Revolutionize Operations: Custom Digital Solution Proposal
+2026-05-08 00:05:49,407 [INFO] 📱 Telegram notification sent
+2026-05-08 00:06:36,128 [INFO] 📧 Found email at http://sumitrahospital.com/: info@sumitrahospital.com
+2026-05-08 00:08:36,386 [INFO] ✅ Ollama wrote email for Sumitra Hospital - Top Hospital in Noida for Medical Health ... (hospital)
+2026-05-08 00:08:42,142 [INFO] ✉️  Email sent via SMTP to info@sumitrahospital.com
+2026-05-08 00:08:42,530 [INFO] Sent: Sumitra Hospital - Top Hospital in Noida for Medical Health ... → info@sumitrahospital.com | Revolutionize Sumitra's Operations: Custom Digital Solution Proposal
+2026-05-08 00:08:44,060 [INFO] 📱 Telegram notification sent
+2026-05-08 00:09:31,366 [INFO] 📧 Found email at https://mahanandanhospital.com/: info@mahanandanhospital.com
+2026-05-08 00:11:31,224 [INFO] ✅ Ollama wrote email for Mahanandan Super Speciality Hospital – Best Hospital in ... (hospital)
+2026-05-08 00:11:36,058 [INFO] ✉️  Email sent via SMTP to info@mahanandanhospital.com
+2026-05-08 00:11:36,327 [INFO] Sent: Mahanandan Super Speciality Hospital – Best Hospital in ... → info@mahanandanhospital.com | Custom Digital Solution for Streamlining Mahanandan Operations
+2026-05-08 00:11:37,780 [INFO] 📱 Telegram notification sent
+2026-05-08 00:12:51,613 [INFO] 📧 Found email at https://www.hcghospitals.in/contact: info.ao@hcgel.com
+2026-05-08 00:14:50,884 [INFO] ✅ Ollama wrote email for Best Multispeciality Hospital in India (hospital)
+2026-05-08 00:14:56,433 [INFO] ✉️  Email sent via SMTP to info.ao@hcgel.com
+2026-05-08 00:14:56,635 [INFO] Sent: Best Multispeciality Hospital in India → info.ao@hcgel.com | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 00:14:58,137 [INFO] 📱 Telegram notification sent
+2026-05-08 00:15:44,677 [INFO] 📧 Found email at https://kdsghospitals.com/: undefined
+2026-05-08 00:18:00,846 [INFO] ✅ Ollama wrote email for Best Super Speciality Hospital in Noida | KDSG (hospital)
+2026-05-08 00:18:06,059 [ERROR] SMTP send error: {'undefined': (553, b'5.1.3 The recipient address <undefined> is not a valid RFC 5321 address. For\n5.1.3 more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. d9443c01a7336-2bae752d1a4sm4920795ad.15 - gsmtp')}
+2026-05-08 00:18:08,290 [INFO] 📧 Found email at https://psrihospital.com/: info@psri.net
+2026-05-08 00:20:48,986 [INFO] ✅ Ollama wrote email for PSRI | Best Hospital in Delhi, Ncr, India | 24 Hours Emergency ... (hospital)
+2026-05-08 00:20:54,075 [INFO] ✉️  Email sent via SMTP to info@psri.net
+2026-05-08 00:20:54,450 [INFO] Sent: PSRI | Best Hospital in Delhi, Ncr, India | 24 Hours Emergency ... → info@psri.net | Propose Custom Digital Solution for PSRI Operations Optimization
+2026-05-08 00:20:55,844 [INFO] 📱 Telegram notification sent
+2026-05-08 00:22:00,196 [INFO] 📧 Found email at https://www.yatharthhospitals.com/contact: info@yatharthhospitals.com
+2026-05-08 00:24:42,102 [INFO] ✅ Ollama wrote email for Yatharth Super Speciality Hospital, Noida (hospital)
+2026-05-08 00:24:48,628 [INFO] ✉️  Email sent via SMTP to info@yatharthhospitals.com
+2026-05-08 00:24:51,188 [INFO] Sent: Yatharth Super Speciality Hospital, Noida → info@yatharthhospitals.com | Revolutionize Operations: Custom Digital Solution Proposal
+2026-05-08 00:24:52,297 [INFO] 📱 Telegram notification sent
+2026-05-08 00:26:46,880 [INFO] 📧 Found email at https://www.parkhospital.in/contact-us: info@parkhospitals.com
+2026-05-08 00:29:10,844 [INFO] ✅ Ollama wrote email for Park Hospital: Multispeciality Hospital in Haryana , Patiala ... (hospital)
+2026-05-08 00:29:16,116 [INFO] ✉️  Email sent via SMTP to info@parkhospitals.com
+2026-05-08 00:29:17,580 [INFO] Sent: Park Hospital: Multispeciality Hospital in Haryana , Patiala ... → info@parkhospitals.com | Propose Custom Digital Solution for Optimized Park Hospital Operations
+2026-05-08 00:29:19,158 [INFO] 📱 Telegram notification sent
+2026-05-08 00:30:58,647 [INFO] 📧 Found email at https://www.delhimshospital.com/index.php: delhimshospital@gmail.com
+2026-05-08 00:33:48,471 [INFO] ✅ Ollama wrote email for delhi hospital, multi speciality hospital, orthopaedics, fracture ... (hospital)
+2026-05-08 00:34:00,862 [INFO] ✉️  Email sent via SMTP to delhimshospital@gmail.com
+2026-05-08 00:34:01,105 [INFO] Sent: delhi hospital, multi speciality hospital, orthopaedics, fracture ... → delhimshospital@gmail.com | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 00:34:08,227 [INFO] 📱 Telegram notification sent
+2026-05-08 00:35:48,963 [INFO] 📧 Found email at https://sgrh.com/: gangaram@sgrh.com
+2026-05-08 00:37:56,609 [INFO] ✅ Ollama wrote email for Sir Ganga Ram Hospital, Delhi NCR India, Best Multi ... (hospital)
+2026-05-08 00:38:01,814 [INFO] ✉️  Email sent via SMTP to gangaram@sgrh.com
+2026-05-08 00:38:02,445 [INFO] Sent: Sir Ganga Ram Hospital, Delhi NCR India, Best Multi ... → gangaram@sgrh.com | Propose Custom Digital Solution for Streamlined Hospital Operations
+2026-05-08 00:38:04,525 [INFO] 📱 Telegram notification sent
+2026-05-08 00:38:51,323 [INFO] 📧 Found email at https://www.sphdelhi.org/: contact@sphdelhi.org
+2026-05-08 00:41:16,677 [INFO] ✅ Ollama wrote email for Sant Parmanand Hospital: Multi Super Speciality Hospital in ... (hospital)
+2026-05-08 00:41:21,400 [INFO] ✉️  Email sent via SMTP to contact@sphdelhi.org
+2026-05-08 00:41:21,785 [INFO] Sent: Sant Parmanand Hospital: Multi Super Speciality Hospital in ... → contact@sphdelhi.org | Transform Sant Parmanand Operations with Custom Digital Solution
+2026-05-08 00:41:24,122 [INFO] 📱 Telegram notification sent
+2026-05-08 00:42:46,020 [INFO] 📧 Found email at https://www.american-hospital.org/contact: dpo@ahparis.org
+2026-05-08 00:45:33,265 [INFO] 📬 No new unread replies today (IMAP)
+2026-05-08 00:45:44,396 [INFO] 🌐 Scraping round 0...
+2026-05-08 00:45:44,396 [INFO] 🚀 Launching Chrome browser...
+2026-05-08 00:45:44,399 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-08 00:45:44,616 [INFO] 🌐 Chrome version detected: 143
+2026-05-08 00:45:56,254 [INFO] ✅ Ollama wrote email for American Hospital of Paris: Accueil (hospital)
+2026-05-08 00:46:00,736 [INFO] ✉️  Email sent via SMTP to dpo@ahparis.org
+2026-05-08 00:46:01,094 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-08 00:46:01,179 [INFO] Sent: American Hospital of Paris: Accueil → dpo@ahparis.org | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 00:46:02,209 [INFO] 📱 Telegram notification sent
+2026-05-08 00:46:10,712 [INFO] 🔍 Google p1 'private hospital Amsterdam' → 1 leads
+2026-05-08 00:46:23,596 [INFO] 🔍 Google p2 'private hospital Amsterdam' → 5 leads
+2026-05-08 00:46:33,730 [INFO] 🔍 Google p3 'private hospital Amsterdam' → 5 leads
+2026-05-08 00:46:44,737 [INFO] 🔍 Google p4 'private hospital Amsterdam' → 3 leads
+2026-05-08 00:46:49,920 [INFO] 📧 Found email at https://www.international-patient-paris.com/en/home/: internationalpatient@ghpsj.fr
+2026-05-08 00:46:58,932 [INFO] 🔍 Google p1 'private hospital Dubai' → 5 leads
+2026-05-08 00:47:07,711 [INFO] 🔍 Google p2 'private hospital Dubai' → 5 leads
+2026-05-08 00:47:17,100 [INFO] 🔍 Google p3 'private hospital Dubai' → 5 leads
+2026-05-08 00:47:27,259 [INFO] 🔍 Google p4 'private hospital Dubai' → 5 leads
+2026-05-08 00:47:39,861 [INFO] 🔍 Google p1 'private hospital London' → 3 leads
+2026-05-08 00:47:56,406 [INFO] 🔍 Google p2 'private hospital London' → 5 leads
+2026-05-08 00:48:06,432 [INFO] 🔍 Google p3 'private hospital London' → 5 leads
+2026-05-08 00:48:15,756 [INFO] 🔍 Google p4 'private hospital London' → 5 leads
+2026-05-08 00:48:35,117 [INFO] 🔍 Google p1 'multispecialty hospital Noida' → 5 leads
+2026-05-08 00:48:45,772 [INFO] 🔍 Google p2 'multispecialty hospital Noida' → 5 leads
+2026-05-08 00:48:54,800 [INFO] 🔍 Google p3 'multispecialty hospital Noida' → 5 leads
+2026-05-08 00:49:04,738 [INFO] 🔍 Google p4 'multispecialty hospital Noida' → 5 leads
+2026-05-08 00:49:16,657 [INFO] 🔍 Google p1 'multispecialty hospital Delhi' → 5 leads
+2026-05-08 00:49:29,489 [INFO] 🔍 Google p2 'multispecialty hospital Delhi' → 5 leads
+2026-05-08 00:49:41,375 [WARNING] ⚠️  Google CAPTCHA on page 3 — stopping early
+2026-05-08 00:49:51,006 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 00:49:54,985 [INFO] ✅ Ollama wrote email for Paris Saint-Joseph & Marie-Lannelongue Hospitals (hospital)
+2026-05-08 00:49:58,194 [INFO] ✉️  Email sent via SMTP to internationalpatient@ghpsj.fr
+2026-05-08 00:49:58,619 [INFO] Sent: Paris Saint-Joseph & Marie-Lannelongue Hospitals → internationalpatient@ghpsj.fr | Streamline Hospital Operations: Custom Digital Solution Proposal
+2026-05-08 00:49:59,611 [INFO] 📱 Telegram notification sent
+2026-05-08 00:50:00,346 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 00:50:12,624 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 00:50:20,746 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 00:50:30,414 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 00:51:14,626 [INFO] 🗺️  Google Maps 'hospitals near Amsterdam' → 9 leads
+2026-05-08 00:51:44,966 [INFO] 📧 Found email at https://www.uehp.eu/contact: secretarygeneral@uehp.eu
+2026-05-08 00:52:00,568 [INFO] 🗺️  Google Maps 'private clinics Dubai' → 11 leads
+2026-05-08 00:52:43,384 [INFO] 🗺️  Google Maps 'hotels London' → 8 leads
+2026-05-08 00:53:27,134 [INFO] 🗺️  Google Maps 'schools Amsterdam' → 11 leads
+2026-05-08 00:54:16,065 [INFO] 🗺️  Google Maps 'real estate agencies Dubai' → 11 leads
+2026-05-08 00:54:50,117 [WARNING] JustDial scrape skipped: Message: timeout: Timed out receiving message from renderer: 28.549
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x55d8d0ab540a <unknown>
+#1 0x55d8d04e976b <unknown>
+#2 0x55d8d04d180a <unknown>
+#3 0x55d8d04d14ed <unknown>
+#4 0x55d8d04cf3a7 <unknown>
+#5 0x55d8d04cfcbf <unknown>
+#6 0x55d8d04de480 <unknown>
+#7 0x55d8d04f7b47 <unknown>
+#8 0x55d8d04fe1fb <unknown>
+#9 0x55d8d04d03e8 <unknown>
+#10 0x55d8d04f78f8 <unknown>
+#11 0x55d8d0586ad8 <unknown>
+#12 0x55d8d052d7b2 <unknown>
+#13 0x55d8d052e461 <unknown>
+#14 0x55d8d0a7ddf9 <unknown>
+#15 0x55d8d0a80d5d <unknown>
+#16 0x55d8d0a66b41 <unknown>
+#17 0x55d8d0a8193b <unknown>
+#18 0x55d8d0a4d870 <unknown>
+#19 0x55d8d0aa2828 <unknown>
+#20 0x55d8d0aa29fc <unknown>
+#21 0x55d8d0ab4763 <unknown>
+#22 0x7f79658937db <unknown>
+
+2026-05-08 00:55:05,103 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 00:55:23,004 [WARNING] JustDial scrape skipped: Message: timeout: Timed out receiving message from renderer: 28.604
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x55d8d0ab540a <unknown>
+#1 0x55d8d04e976b <unknown>
+#2 0x55d8d04d180a <unknown>
+#3 0x55d8d04d14ed <unknown>
+#4 0x55d8d04cf3a7 <unknown>
+#5 0x55d8d04cfcbf <unknown>
+#6 0x55d8d04de480 <unknown>
+#7 0x55d8d04f7b47 <unknown>
+#8 0x55d8d04fe1fb <unknown>
+#9 0x55d8d04d03e8 <unknown>
+#10 0x55d8d04f78f8 <unknown>
+#11 0x55d8d0586ad8 <unknown>
+#12 0x55d8d052d7b2 <unknown>
+#13 0x55d8d052e461 <unknown>
+#14 0x55d8d0a7ddf9 <unknown>
+#15 0x55d8d0a80d5d <unknown>
+#16 0x55d8d0a66b41 <unknown>
+#17 0x55d8d0a8193b <unknown>
+#18 0x55d8d0a4d870 <unknown>
+#19 0x55d8d0aa2828 <unknown>
+#20 0x55d8d0aa29fc <unknown>
+#21 0x55d8d0ab4763 <unknown>
+#22 0x7f79658937db <unknown>
+
+2026-05-08 00:55:55,719 [WARNING] JustDial scrape skipped: Message: timeout: Timed out receiving message from renderer: 28.437
+  (Session info: chrome=143.0.7499.192)
+Stacktrace:
+#0 0x55d8d0ab540a <unknown>
+#1 0x55d8d04e976b <unknown>
+#2 0x55d8d04d180a <unknown>
+#3 0x55d8d04d14ed <unknown>
+#4 0x55d8d04cf3a7 <unknown>
+#5 0x55d8d04cfcbf <unknown>
+#6 0x55d8d04de480 <unknown>
+#7 0x55d8d04f7b47 <unknown>
+#8 0x55d8d04fe1fb <unknown>
+#9 0x55d8d04d03e8 <unknown>
+#10 0x55d8d04f78f8 <unknown>
+#11 0x55d8d0586ad8 <unknown>
+#12 0x55d8d052d7b2 <unknown>
+#13 0x55d8d052e461 <unknown>
+#14 0x55d8d0a7ddf9 <unknown>
+#15 0x55d8d0a80d5d <unknown>
+#16 0x55d8d0a66b41 <unknown>
+#17 0x55d8d0a8193b <unknown>
+#18 0x55d8d0a4d870 <unknown>
+#19 0x55d8d0aa2828 <unknown>
+#20 0x55d8d0aa29fc <unknown>
+#21 0x55d8d0ab4763 <unknown>
+#22 0x7f79658937db <unknown>
+
+2026-05-08 00:55:58,762 [INFO] ✅ Scraping done. Total businesses found: 132
+2026-05-08 00:55:58,824 [INFO] ✅ Found 132 businesses. Saved to scraped_businesses.json
+2026-05-08 00:56:36,347 [INFO] ✅ Ollama wrote email for Archives des FRANCE - UEHP (hospital)
+2026-05-08 00:56:39,742 [INFO] ✉️  Email sent via SMTP to secretarygeneral@uehp.eu
+2026-05-08 00:56:40,090 [INFO] Sent: Archives des FRANCE - UEHP → secretarygeneral@uehp.eu | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 00:56:41,100 [INFO] 📱 Telegram notification sent
+2026-05-08 00:57:42,366 [INFO] 📧 Found email at https://h4i.nl/support: h4i@h4i.nl
+2026-05-08 00:58:35,962 [INFO] 📧 Found email at https://www.medicaim.com/en/hospitals/hopital-americain-de-paris: contact@medicaim.com
+2026-05-08 01:01:56,078 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:02:10,608 [INFO] ✅ Ollama wrote email for Healthcare for internationals - Amsterdam - H4i.nl (hospital)
+2026-05-08 01:02:14,660 [INFO] ✉️  Email sent via SMTP to h4i@h4i.nl
+2026-05-08 01:02:16,809 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:02:16,834 [INFO] Sent: Healthcare for internationals - Amsterdam - H4i.nl → h4i@h4i.nl | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 01:02:17,826 [INFO] 📱 Telegram notification sent
+2026-05-08 01:03:06,332 [INFO] 📧 Found email at https://acibademimc.com/en/contact/: fg@acibademimc.com
+2026-05-08 01:05:16,183 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:05:16,191 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:05:19,978 [INFO] ✉️  Email sent via SMTP to contact@medicaim.com
+2026-05-08 01:05:20,387 [INFO] Sent: Hôpital Américain de Paris - Hospital → contact@medicaim.com | A digital system that could save Hôpital Américain de Paris - Hospital hours every week
+2026-05-08 01:05:21,229 [INFO] 📱 Telegram notification sent
+2026-05-08 01:06:26,046 [INFO] 📧 Found email at https://www.hopitalpriveevry.fr/contact: sec.hdj.evry@almaviva-sante.com
+2026-05-08 01:06:26,563 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:09:46,463 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:09:46,881 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:09:46,886 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:09:51,546 [INFO] ✉️  Email sent via SMTP to fg@acibademimc.com
+2026-05-08 01:09:54,151 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:09:54,205 [INFO] Sent: Contact → fg@acibademimc.com | A digital system that could save Contact hours every week
+2026-05-08 01:09:55,381 [INFO] 📱 Telegram notification sent
+2026-05-08 01:12:21,761 [INFO] 📧 Found email at https://www.internationalinsurance.com/countries/netherlands/hospitals/?srsltid=AfmBOoqK5snLJcf6_CSqvx62Uk42VDxQi-cScIG-FqyLe9xFyx-Xq1IQ: info@internationalinsurance.com
+2026-05-08 01:13:06,639 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:13:06,653 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:13:33,056 [INFO] ✉️  Email sent via SMTP to sec.hdj.evry@almaviva-sante.com
+2026-05-08 01:13:38,820 [INFO] Sent: ARS IDF → sec.hdj.evry@almaviva-sante.com | A digital system that could save ARS IDF hours every week
+2026-05-08 01:13:40,068 [INFO] 📱 Telegram notification sent
+2026-05-08 01:14:29,445 [INFO] 📧 Found email at https://www.american-hospital.org/contact: dpo@ahparis.org
+2026-05-08 01:15:41,899 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:17:49,613 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:19:02,001 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:19:02,006 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:19:05,646 [INFO] ✉️  Email sent via SMTP to info@internationalinsurance.com
+2026-05-08 01:19:09,369 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:19:09,383 [INFO] Sent: Hospitals in the Netherlands for Expats and Visitors → info@internationalinsurance.com | A digital system that could save Hospitals in the Netherlands for Expats and Visitors hours every week
+2026-05-08 01:19:10,385 [INFO] 📱 Telegram notification sent
+2026-05-08 01:20:53,236 [INFO] 📧 Found email at https://www.smha.org/contact: contactus@nysmha.org
+2026-05-08 01:21:09,728 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:21:09,731 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:21:13,301 [INFO] ✉️  Email sent via SMTP to dpo@ahparis.org
+2026-05-08 01:21:13,929 [INFO] Sent: About us → dpo@ahparis.org | A digital system that could save About us hours every week
+2026-05-08 01:21:14,815 [INFO] 📱 Telegram notification sent
+2026-05-08 01:23:02,623 [INFO] 📧 Found email at https://www.international-patient-paris.com/en/about-us/overview/: internationalpatient@ghpsj.fr
+2026-05-08 01:25:33,617 [INFO] ✅ Ollama wrote email for St. Mary's Hospital and Healthcare Network, Amsterdam, NY (hospital)
+2026-05-08 01:25:37,761 [INFO] ✉️  Email sent via SMTP to contactus@nysmha.org
+2026-05-08 01:25:39,728 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:25:39,767 [INFO] Sent: St. Mary's Hospital and Healthcare Network, Amsterdam, NY → contactus@nysmha.org | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 01:25:40,932 [INFO] 📱 Telegram notification sent
+2026-05-08 01:25:43,139 [INFO] ✅ Ollama wrote email for Overview of Paris Saint-Joseph Marie-Lannelongue Hospitals (hospital)
+2026-05-08 01:25:46,679 [INFO] ✉️  Email sent via SMTP to internationalpatient@ghpsj.fr
+2026-05-08 01:25:47,783 [INFO] Sent: Overview of Paris Saint-Joseph Marie-Lannelongue Hospitals → internationalpatient@ghpsj.fr | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 01:25:48,760 [INFO] 📱 Telegram notification sent
+2026-05-08 01:26:36,879 [INFO] 📧 Found email at https://hopitalsuissedeparis.com/contact: info@hopitalsuissedeparis.com
+2026-05-08 01:27:29,121 [INFO] 📧 Found email at https://acibademimc.com/contact: fg@acibademimc.com
+2026-05-08 01:30:49,279 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:31:06,871 [INFO] ✅ Ollama wrote email for Contact the Swiss Hospital of Paris (hospital)
+2026-05-08 01:31:12,006 [INFO] ✉️  Email sent via SMTP to info@hopitalsuissedeparis.com
+2026-05-08 01:31:16,650 [INFO] Sent: Contact the Swiss Hospital of Paris → info@hopitalsuissedeparis.com | Propose Custom Digital Solution for Streamlined Operations
+2026-05-08 01:31:17,734 [INFO] 📱 Telegram notification sent
+2026-05-08 01:32:05,555 [INFO] 📧 Found email at https://www.hpsj.fr/: presse@ghpsj.fr
+2026-05-08 01:34:09,449 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:34:09,451 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:34:12,843 [INFO] ✉️  Email sent via SMTP to fg@acibademimc.com
+2026-05-08 01:34:14,532 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:34:14,540 [INFO] Sent: Services → fg@acibademimc.com | A digital system that could save Services hours every week
+2026-05-08 01:34:15,506 [INFO] 📱 Telegram notification sent
+2026-05-08 01:35:25,682 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:36:32,316 [INFO] 📧 Found email at https://medeor.ae/dubai/: %20dataprotectionofficer@burjeelholdings.com
+2026-05-08 01:39:52,433 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:40:19,937 [INFO] ✅ Ollama wrote email for Hôpital Paris Saint Joseph - offre de soins médecine, chirurgie ... (hospital)
+2026-05-08 01:40:23,133 [INFO] ✉️  Email sent via SMTP to presse@ghpsj.fr
+2026-05-08 01:40:24,360 [INFO] Sent: Hôpital Paris Saint Joseph - offre de soins médecine, chirurgie ... → presse@ghpsj.fr | Optimize Hospital Operations: Custom Digital Solution Proposal
+2026-05-08 01:40:25,313 [INFO] 📱 Telegram notification sent
+2026-05-08 01:43:12,541 [WARNING] Ollama attempt 2 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 01:43:12,542 [WARNING] ⚠️  Ollama returned empty/short response — using template
+2026-05-08 01:43:16,272 [INFO] ✉️  Email sent via SMTP to %20dataprotectionofficer@burjeelholdings.com
+2026-05-08 01:43:18,981 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:43:18,983 [INFO] Sent: Best Multispecialty Hospital in Dubai → %20dataprotectionofficer@burjeelholdings.com | A digital system that could save Best Multispecialty Hospital in Dubai hours every week
+2026-05-08 01:43:19,982 [INFO] 📱 Telegram notification sent
+2026-05-08 01:44:54,365 [INFO] 📧 Found email at https://www.adamvitalhospital.com/: info@adamvitalhospital.ae
+2026-05-08 01:46:09,917 [INFO] ✅ Ollama wrote email for Adam Vital Hospital: Private Hospital in Dubai (hospital)
+2026-05-08 01:46:13,937 [INFO] ✉️  Email sent via SMTP to info@adamvitalhospital.ae
+2026-05-08 01:46:14,737 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:46:14,737 [INFO] Sent: Adam Vital Hospital: Private Hospital in Dubai → info@adamvitalhospital.ae | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 01:46:15,664 [INFO] 📱 Telegram notification sent
+2026-05-08 01:48:37,404 [INFO] 🌐 Scraping round 1...
+2026-05-08 01:48:37,405 [INFO] 🚀 Launching Chrome browser...
+2026-05-08 01:48:37,411 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-08 01:48:37,456 [INFO] 🌐 Chrome version detected: 143
+2026-05-08 01:48:43,453 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-08 01:48:51,432 [INFO] 🔍 Google p1 'private hospital New York' → 4 leads
+2026-05-08 01:49:02,933 [INFO] 🔍 Google p2 'private hospital New York' → 5 leads
+2026-05-08 01:49:13,544 [INFO] 🔍 Google p3 'private hospital New York' → 5 leads
+2026-05-08 01:49:22,501 [INFO] 🔍 Google p4 'private hospital New York' → 5 leads
+2026-05-08 01:49:35,875 [INFO] 🔍 Google p1 'private hospital Chicago' → 4 leads
+2026-05-08 01:49:45,956 [INFO] 🔍 Google p2 'private hospital Chicago' → 5 leads
+2026-05-08 01:49:56,367 [INFO] 🔍 Google p3 'private hospital Chicago' → 4 leads
+2026-05-08 01:50:06,073 [INFO] 🔍 Google p4 'private hospital Chicago' → 5 leads
+2026-05-08 01:50:18,284 [INFO] 🔍 Google p1 'private hospital Mumbai' → 5 leads
+2026-05-08 01:50:27,360 [INFO] 🔍 Google p2 'private hospital Mumbai' → 5 leads
+2026-05-08 01:50:36,819 [INFO] 🔍 Google p3 'private hospital Mumbai' → 5 leads
+2026-05-08 01:50:47,342 [INFO] 🔍 Google p4 'private hospital Mumbai' → 5 leads
+2026-05-08 01:51:01,318 [INFO] 🔍 Google p1 'private hospital Bangalore' → 3 leads
+2026-05-08 01:51:02,317 [INFO] 📧 Found email at https://www.royalfree.nhs.uk/contact: rf-tr.ppuinternationalreferrals@nhs.net
+2026-05-08 01:51:12,691 [INFO] 🔍 Google p2 'private hospital Bangalore' → 5 leads
+2026-05-08 01:51:22,334 [INFO] 🔍 Google p3 'private hospital Bangalore' → 5 leads
+2026-05-08 01:51:33,226 [INFO] 🔍 Google p4 'private hospital Bangalore' → 5 leads
+2026-05-08 01:51:45,175 [INFO] 🔍 Google p1 'private hospital Hyderabad' → 3 leads
+2026-05-08 01:51:54,296 [INFO] 🔍 Google p2 'private hospital Hyderabad' → 5 leads
+2026-05-08 01:52:05,068 [WARNING] ⚠️  Google CAPTCHA on page 3 — stopping early
+2026-05-08 01:52:13,947 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 01:52:24,371 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 01:52:31,667 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 01:52:35,080 [INFO] ✅ Ollama wrote email for Home - Royal Free London (hospital)
+2026-05-08 01:52:39,165 [INFO] ✉️  Email sent via SMTP to rf-tr.ppuinternationalreferrals@nhs.net
+2026-05-08 01:52:40,498 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:52:40,573 [INFO] Sent: Home - Royal Free London → rf-tr.ppuinternationalreferrals@nhs.net | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 01:52:40,745 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 01:52:41,657 [INFO] 📱 Telegram notification sent
+2026-05-08 01:52:50,663 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 01:53:42,323 [INFO] 🗺️  Google Maps 'gyms Amsterdam' → 11 leads
+2026-05-08 01:54:12,784 [INFO] 📧 Found email at https://www.gosh.ae/: gulfoffice@gosh.nhs.uk
+2026-05-08 01:54:18,665 [INFO] 🗺️  Google Maps 'restaurants Berlin' → 8 leads
+2026-05-08 01:54:53,932 [INFO] 🗺️  Google Maps 'colleges Noida India' → 8 leads
+2026-05-08 01:55:39,356 [INFO] 🗺️  Google Maps 'hospitals Noida India' → 10 leads
+2026-05-08 01:56:23,209 [INFO] 🗺️  Google Maps 'private clinics London' → 10 leads
+2026-05-08 01:56:30,556 [INFO] ✅ Ollama wrote email for GOSH: International and Private Care (hospital)
+2026-05-08 01:56:34,579 [INFO] ✉️  Email sent via SMTP to gulfoffice@gosh.nhs.uk
+2026-05-08 01:56:35,966 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 01:56:35,968 [INFO] Sent: GOSH: International and Private Care → gulfoffice@gosh.nhs.uk | Propose Custom Digital Solution for Streamlined Operations @ GOSH
+2026-05-08 01:56:36,945 [INFO] 📱 Telegram notification sent
+2026-05-08 01:56:41,517 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-08 01:56:58,015 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-08 01:57:15,800 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-08 01:57:19,888 [INFO] ✅ Scraping done. Total businesses found: 129
+2026-05-08 01:57:19,904 [INFO] ✅ Found 129 businesses. Saved to scraped_businesses.json
+2026-05-08 01:58:07,681 [INFO] 📧 Found email at https://www.whittington.nhs.uk/contactus: communications.whitthealth@nhs.net
+2026-05-08 01:58:20,672 [INFO] 📧 Found email at https://nyulangone.org/contact-us: askRED+F@NYULangone.org
+2026-05-08 02:00:53,738 [INFO] ✅ Ollama wrote email for Whittington Hospital (hospital)
+2026-05-08 02:00:58,160 [INFO] ✉️  Email sent via SMTP to communications.whitthealth@nhs.net
+2026-05-08 02:00:59,288 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:00:59,292 [INFO] Sent: Whittington Hospital → communications.whitthealth@nhs.net | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 02:01:00,227 [INFO] 📱 Telegram notification sent
+2026-05-08 02:01:00,674 [INFO] ✅ Ollama wrote email for Patient Care at NYU Langone Health (hospital)
+2026-05-08 02:01:05,231 [INFO] ✉️  Email sent via SMTP to askRED+F@NYULangone.org
+2026-05-08 02:01:05,445 [INFO] Sent: Patient Care at NYU Langone Health → askRED+F@NYULangone.org | Propose Custom Digital Solution for Streamlined Operations
+2026-05-08 02:01:06,251 [INFO] 📱 Telegram notification sent
+2026-05-08 02:02:08,561 [ERROR] Failed to load clients.json: Expecting value: line 1 column 1 (char 0)
+2026-05-08 02:02:08,561 [ERROR] Failed to load clients.json: Expecting value: line 1 column 1 (char 0)
+2026-05-08 02:02:12,279 [INFO] 📧 Found email at https://www.uclhprivatehealthcare.co.uk/: uclh.private.enquiries@nhs.net
+2026-05-08 02:03:51,891 [INFO] ✅ Ollama wrote email for UCLH Private Healthcare - specialist care in London (hospital)
+2026-05-08 02:03:55,583 [INFO] ✉️  Email sent via SMTP to uclh.private.enquiries@nhs.net
+2026-05-08 02:03:56,560 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:03:56,566 [INFO] Sent: UCLH Private Healthcare - specialist care in London → uclh.private.enquiries@nhs.net | Propose Custom Digital Solution for Streamlined Specialist Care Operations
+2026-05-08 02:03:57,668 [INFO] 📱 Telegram notification sent
+2026-05-08 02:05:57,614 [INFO] 📧 Found email at https://www.shardahospital.org/: info@shardahospital.org
+2026-05-08 02:07:30,934 [INFO] ✅ Ollama wrote email for Sharda Hospital: Best Hospital in Noida, Delhi NCR (hospital)
+2026-05-08 02:07:34,245 [INFO] ✉️  Email sent via SMTP to info@shardahospital.org
+2026-05-08 02:07:35,167 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:07:35,171 [INFO] Sent: Sharda Hospital: Best Hospital in Noida, Delhi NCR → info@shardahospital.org | Propose Custom Digital Solution for Streamlined Sharda Hospital Operations
+2026-05-08 02:07:36,422 [INFO] 📱 Telegram notification sent
+2026-05-08 02:08:40,093 [INFO] 📧 Found email at https://kdsghospitals.com/: undefined
+2026-05-08 02:10:19,529 [INFO] ✅ Ollama wrote email for Best Super Speciality Hospital in Noida | KDSG (hospital)
+2026-05-08 02:10:22,898 [ERROR] SMTP send error: {'undefined': (553, b'5.1.3 The recipient address <undefined> is not a valid RFC 5321 address. For\n5.1.3 more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. 41be03b00d2f7-c82640ab7a6sm479467a12.16 - gsmtp')}
+2026-05-08 02:10:27,564 [INFO] 📧 Found email at https://metrohospitals.com/contact: info@metrohospitals.com
+2026-05-08 02:10:44,547 [INFO] 📧 Found email at https://www.definitivehc.com/contact: careers@definitivehc.com
+2026-05-08 02:13:35,024 [INFO] ✅ Ollama wrote email for Metro Hospital and Heart Institute, Sector 11, Noida (hospital)
+2026-05-08 02:13:40,840 [INFO] ✉️  Email sent via SMTP to info@metrohospitals.com
+2026-05-08 02:13:41,860 [INFO] ✅ Ollama wrote email for Top Hospitals in New York by Net Patient Revenue (hospital)
+2026-05-08 02:13:42,230 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:13:42,232 [INFO] Sent: Metro Hospital and Heart Institute, Sector 11, Noida → info@metrohospitals.com | Propose Custom Digital Solution for Streamlined Hospital Operations
+2026-05-08 02:13:43,396 [INFO] 📱 Telegram notification sent
+2026-05-08 02:13:45,732 [INFO] ✉️  Email sent via SMTP to careers@definitivehc.com
+2026-05-08 02:13:45,990 [INFO] Sent: Top Hospitals in New York by Net Patient Revenue → careers@definitivehc.com | Transform Operations: Custom Digital Solution Proposal
+2026-05-08 02:13:47,087 [INFO] 📱 Telegram notification sent
+2026-05-08 02:14:31,347 [INFO] 📧 Found email at https://baksonhospital.com/contact: info@baksonshospital.com
+2026-05-08 02:14:38,573 [INFO] 📧 Found email at https://weillcornell.org/contact: WCMBilling@med.cornell.edu
+2026-05-08 02:17:26,968 [INFO] ✅ Ollama wrote email for Bakson's Multispeciality Hospital, Compassion | Trust | Care (hospital)
+2026-05-08 02:17:30,934 [INFO] ✉️  Email sent via SMTP to info@baksonshospital.com
+2026-05-08 02:17:32,369 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:17:32,379 [INFO] Sent: Bakson's Multispeciality Hospital, Compassion | Trust | Care → info@baksonshospital.com | Revolutionize Operations: Tailored Digital Solution for Bakson's
+2026-05-08 02:17:33,369 [INFO] 📱 Telegram notification sent
+2026-05-08 02:17:37,788 [INFO] ✅ Ollama wrote email for Weill Cornell Medicine | Patient Care (hospital)
+2026-05-08 02:17:41,687 [INFO] ✉️  Email sent via SMTP to WCMBilling@med.cornell.edu
+2026-05-08 02:17:41,910 [INFO] Sent: Weill Cornell Medicine | Patient Care → WCMBilling@med.cornell.edu | Propose Custom Digital Solution for Enhanced Patient Care Operations
+2026-05-08 02:17:42,916 [INFO] 📱 Telegram notification sent
+2026-05-08 02:18:51,019 [INFO] 📧 Found email at https://nulifehospital.in/: info@nulifehospital.in
+2026-05-08 02:19:02,641 [INFO] 📧 Found email at https://www.nm.org/about-us: ceo@nm.org
+2026-05-08 02:21:46,560 [INFO] ✅ Ollama wrote email for Nulife Multispeciality Hospital in Delhi (hospital)
+2026-05-08 02:21:51,826 [INFO] ✉️  Email sent via SMTP to info@nulifehospital.in
+2026-05-08 02:21:52,876 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:21:52,879 [INFO] Sent: Nulife Multispeciality Hospital in Delhi → info@nulifehospital.in | Propose Custom Digital Solution for Streamlined Hospital Operations
+2026-05-08 02:21:54,075 [INFO] 📱 Telegram notification sent
+2026-05-08 02:21:54,430 [INFO] ✅ Ollama wrote email for Northwestern Memorial Hospital | Chicago, IL (hospital)
+2026-05-08 02:21:58,609 [INFO] ✉️  Email sent via SMTP to ceo@nm.org
+2026-05-08 02:21:58,820 [INFO] Sent: Northwestern Memorial Hospital | Chicago, IL → ceo@nm.org | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 02:21:59,941 [INFO] 📱 Telegram notification sent
+2026-05-08 02:23:18,611 [INFO] 📧 Found email at https://resurrectionmedicalcenter.com/contact-us: mdeering@primehealthcare.com
+2026-05-08 02:23:55,790 [INFO] 📧 Found email at https://alshifahospital.net/: info@alshifahospital.net
+2026-05-08 02:26:10,267 [INFO] ✅ Ollama wrote email for Resurrection Medical Center | Top Hospital in Chicago, IL (hospital)
+2026-05-08 02:26:15,532 [INFO] ✉️  Email sent via SMTP to mdeering@primehealthcare.com
+2026-05-08 02:26:16,349 [INFO] Sent: Resurrection Medical Center | Top Hospital in Chicago, IL → mdeering@primehealthcare.com | Streamline Operations: Custom Digital Solution Proposal for Resurrection Medical Center
+2026-05-08 02:26:17,376 [INFO] 📱 Telegram notification sent
+2026-05-08 02:26:23,345 [INFO] ✅ Ollama wrote email for Alshifa Hospital - Multi Specialty Hospital in Okhla, Hospital in ... (hospital)
+2026-05-08 02:26:27,718 [INFO] ✉️  Email sent via SMTP to info@alshifahospital.net
+2026-05-08 02:26:28,714 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:26:28,716 [INFO] Sent: Alshifa Hospital - Multi Specialty Hospital in Okhla, Hospital in ... → info@alshifahospital.net | Streamline Operations: Custom Digital Solution Proposal for Alshifa Hospital
+2026-05-08 02:26:29,562 [INFO] 📱 Telegram notification sent
+2026-05-08 02:27:11,887 [INFO] 📧 Found email at https://saintmaryofnazarethhospital.com/contact-us: mdeering@primehealthcare.com
+2026-05-08 02:27:16,803 [INFO] 📧 Found email at https://www.santoshhospitals.com/: care@santoshhospitals.com
+2026-05-08 02:30:12,313 [INFO] ✅ Ollama wrote email for Best Hospital in Chicago, IL | Saint Mary of Nazareth (hospital)
+2026-05-08 02:30:16,480 [INFO] ✉️  Email sent via SMTP to mdeering@primehealthcare.com
+2026-05-08 02:30:17,061 [INFO] Sent: Best Hospital in Chicago, IL | Saint Mary of Nazareth → mdeering@primehealthcare.com | Propose Custom Digital Solution for Enhanced Hospital Operations
+2026-05-08 02:30:18,530 [INFO] 📱 Telegram notification sent
+2026-05-08 02:30:21,159 [INFO] ✅ Ollama wrote email for Best Multispecialty Hospital in Delhi/NCR | Ghaziabad (hospital)
+2026-05-08 02:30:24,980 [INFO] ✉️  Email sent via SMTP to care@santoshhospitals.com
+2026-05-08 02:30:25,902 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:30:25,903 [INFO] Sent: Best Multispecialty Hospital in Delhi/NCR | Ghaziabad → care@santoshhospitals.com | Streamline Operations: Proposal for Custom Digital System
+2026-05-08 02:30:27,029 [INFO] 📱 Telegram notification sent
+2026-05-08 02:31:32,452 [INFO] 📧 Found email at https://mgshospital.com/: mgs_hospital@yahoo.co.in
+2026-05-08 02:31:32,816 [INFO] 📧 Found email at https://howardbrown.org/contact: mediainquiries@howardbrown.org
+2026-05-08 02:34:29,812 [INFO] ✅ Ollama wrote email for Front Page | MGS-MASSH SUPER SPECIALITY HOSPITAL (hospital)
+2026-05-08 02:34:34,837 [INFO] ✉️  Email sent via SMTP to mgs_hospital@yahoo.co.in
+2026-05-08 02:34:35,861 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:34:35,862 [INFO] Sent: Front Page | MGS-MASSH SUPER SPECIALITY HOSPITAL → mgs_hospital@yahoo.co.in | Revolutionize Operations: Custom Digital Solution Proposal
+2026-05-08 02:34:36,857 [INFO] 📱 Telegram notification sent
+2026-05-08 02:34:36,912 [INFO] ✅ Ollama wrote email for Howard Brown Health (hospital)
+2026-05-08 02:34:40,892 [INFO] ✉️  Email sent via SMTP to mediainquiries@howardbrown.org
+2026-05-08 02:34:41,127 [INFO] Sent: Howard Brown Health → mediainquiries@howardbrown.org | Propose Custom Digital Solution for Streamlined Operations @ Howard Brown Health
+2026-05-08 02:34:42,198 [INFO] 📱 Telegram notification sent
+2026-05-08 02:36:17,875 [INFO] 📧 Found email at https://www.advocatehealth.com/contact-us: security@aah.org
+2026-05-08 02:37:55,327 [INFO] ✅ Ollama wrote email for Home | Advocate Illinois Masonic Medical Center (hospital)
+2026-05-08 02:37:58,828 [INFO] ✉️  Email sent via SMTP to security@aah.org
+2026-05-08 02:37:59,068 [INFO] Sent: Home | Advocate Illinois Masonic Medical Center → security@aah.org | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 02:38:00,053 [INFO] 📱 Telegram notification sent
+2026-05-08 02:38:49,632 [INFO] 📧 Found email at https://www.advocatehealth.com/contact-us: security@aah.org
+2026-05-08 02:39:31,090 [INFO] 📧 Found email at http://www.publove.co.uk/: reservations@publove.co.uk
+2026-05-08 02:41:45,132 [INFO] ✅ Ollama wrote email for Home | Advocate Trinity Hospital | Chicago, Illinois (IL) (hospital)
+2026-05-08 02:41:49,424 [INFO] ✉️  Email sent via SMTP to security@aah.org
+2026-05-08 02:41:50,071 [INFO] Sent: Home | Advocate Trinity Hospital | Chicago, Illinois (IL) → security@aah.org | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 02:41:51,252 [INFO] 📱 Telegram notification sent
+2026-05-08 02:41:53,241 [INFO] ✅ Ollama wrote email for Travelodge London City (hotel)
+2026-05-08 02:41:57,412 [INFO] ✉️  Email sent via SMTP to reservations@publove.co.uk
+2026-05-08 02:41:58,641 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 200 OK"
+2026-05-08 02:41:58,643 [INFO] Sent: Travelodge London City → reservations@publove.co.uk | Propose Custom Digital Solution for Operational Efficiency
+2026-05-08 02:41:59,460 [INFO] 📱 Telegram notification sent
+2026-05-08 02:42:59,967 [INFO] 📧 Found email at https://www.chicago.gov/city/en/depts/cdph/provdrs/cdph_administration/svcs/healthcare-access-in-chicago.html: media.cdph@cityofchicago.org
+2026-05-08 02:45:02,948 [INFO] ✅ Ollama wrote email for Healthcare Access in Chicago (hospital)
+2026-05-08 02:45:06,444 [INFO] ✉️  Email sent via SMTP to media.cdph@cityofchicago.org
+2026-05-08 02:45:06,707 [INFO] Sent: Healthcare Access in Chicago → media.cdph@cityofchicago.org | Solve Operational Challenges: Custom Digital System Proposal
+2026-05-08 02:45:07,674 [INFO] 📱 Telegram notification sent
+2026-05-08 02:45:55,018 [INFO] 📧 Found email at https://www.cfmedicalcenter.com/: info@cfmedicalcenter.com
+2026-05-08 02:46:04,458 [INFO] 🌐 Scraping round 1...
+2026-05-08 02:46:04,458 [INFO] 🚀 Launching Chrome browser...
+2026-05-08 02:46:04,522 [INFO] 🗑️  Removed old chromedriver → will re-download correct version
+2026-05-08 02:46:04,578 [INFO] 🌐 Chrome version detected: 143
+2026-05-08 02:46:10,068 [INFO] patching driver executable /home/shubham/.local/share/undetected_chromedriver/undetected_chromedriver
+2026-05-08 02:46:18,639 [INFO] 🔍 Google p1 'private hospital New York' → 5 leads
+2026-05-08 02:46:28,858 [INFO] 🔍 Google p2 'private hospital New York' → 5 leads
+2026-05-08 02:46:38,689 [INFO] 🔍 Google p3 'private hospital New York' → 5 leads
+2026-05-08 02:46:49,018 [INFO] 🔍 Google p4 'private hospital New York' → 5 leads
+2026-05-08 02:47:04,506 [INFO] 🔍 Google p1 'private hospital Chicago' → 3 leads
+2026-05-08 02:47:15,601 [INFO] 🔍 Google p2 'private hospital Chicago' → 5 leads
+2026-05-08 02:47:24,604 [INFO] 🔍 Google p3 'private hospital Chicago' → 5 leads
+2026-05-08 02:47:35,746 [INFO] 🔍 Google p4 'private hospital Chicago' → 5 leads
+2026-05-08 02:47:51,011 [INFO] 🔍 Google p1 'private hospital Mumbai' → 5 leads
+2026-05-08 02:47:59,326 [INFO] ✅ Ollama wrote email for Community First Medical Center – Chicago Hospital (hospital)
+2026-05-08 02:48:01,316 [INFO] 🔍 Google p2 'private hospital Mumbai' → 5 leads
+2026-05-08 02:48:02,575 [INFO] ✉️  Email sent via SMTP to info@cfmedicalcenter.com
+2026-05-08 02:48:02,837 [INFO] Sent: Community First Medical Center – Chicago Hospital → info@cfmedicalcenter.com | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 02:48:03,906 [INFO] 📱 Telegram notification sent
+2026-05-08 02:48:10,979 [INFO] 🔍 Google p3 'private hospital Mumbai' → 5 leads
+2026-05-08 02:48:20,584 [INFO] 🔍 Google p4 'private hospital Mumbai' → 5 leads
+2026-05-08 02:48:32,926 [INFO] 🔍 Google p1 'private hospital Bangalore' → 5 leads
+2026-05-08 02:48:42,141 [INFO] 🔍 Google p2 'private hospital Bangalore' → 5 leads
+2026-05-08 02:48:50,129 [INFO] 🔍 Google p3 'private hospital Bangalore' → 5 leads
+2026-05-08 02:48:54,945 [INFO] 📧 Found email at http://www.thorek.org/contact-us: Information@thorek.org
+2026-05-08 02:48:58,271 [INFO] 🔍 Google p4 'private hospital Bangalore' → 5 leads
+2026-05-08 02:49:09,866 [INFO] 🔍 Google p1 'private hospital Hyderabad' → 5 leads
+2026-05-08 02:49:19,720 [INFO] 🔍 Google p2 'private hospital Hyderabad' → 5 leads
+2026-05-08 02:49:31,160 [WARNING] ⚠️  Google CAPTCHA on page 3 — stopping early
+2026-05-08 02:49:41,787 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 02:49:51,087 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 02:49:59,712 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 02:50:10,069 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 02:50:19,705 [WARNING] ⚠️  Google CAPTCHA on page 1 — stopping early
+2026-05-08 02:51:01,798 [INFO] 🗺️  Google Maps 'gyms Amsterdam' → 8 leads
+2026-05-08 02:51:07,131 [INFO] ✅ Ollama wrote email for Thorek Memorial Hospital (hospital)
+2026-05-08 02:51:10,584 [INFO] ✉️  Email sent via SMTP to Information@thorek.org
+2026-05-08 02:51:10,935 [INFO] Sent: Thorek Memorial Hospital → Information@thorek.org | Propose Custom Digital Solution for Streamlined Hospital Operations
+2026-05-08 02:51:12,017 [INFO] 📱 Telegram notification sent
+2026-05-08 02:51:34,781 [INFO] 🗺️  Google Maps 'restaurants Berlin' → 8 leads
+2026-05-08 02:52:09,415 [INFO] 🗺️  Google Maps 'colleges Noida India' → 8 leads
+2026-05-08 02:52:53,243 [INFO] 🗺️  Google Maps 'hospitals Noida India' → 11 leads
+2026-05-08 02:52:56,308 [INFO] 📧 Found email at https://www.rush.edu/contact: patient_relations@rush.edu
+2026-05-08 02:53:33,595 [INFO] 🗺️  Google Maps 'private clinics London' → 11 leads
+2026-05-08 02:53:54,666 [INFO] 📋 JustDial 'multispecialty hospital Noida' → 0 leads
+2026-05-08 02:54:12,283 [INFO] 📋 JustDial 'engineering college Noida' → 0 leads
+2026-05-08 02:54:26,755 [INFO] 📋 JustDial 'private hospital Delhi' → 0 leads
+2026-05-08 02:54:30,179 [INFO] ✅ Scraping done. Total businesses found: 133
+2026-05-08 02:54:30,193 [INFO] ✅ Found 133 businesses. Saved to scraped_businesses.json
+2026-05-08 02:55:24,852 [INFO] ✅ Ollama wrote email for Rush Oak Park Hospital - Medical Center in Oak Park, IL (hospital)
+2026-05-08 02:55:28,944 [INFO] ✉️  Email sent via SMTP to patient_relations@rush.edu
+2026-05-08 02:55:29,243 [INFO] Sent: Rush Oak Park Hospital - Medical Center in Oak Park, IL → patient_relations@rush.edu | Transform Operations: Custom Digital Solution Proposal
+2026-05-08 02:55:30,165 [INFO] 📱 Telegram notification sent
+2026-05-08 02:55:30,967 [INFO] 📱 Telegram notification sent
+2026-05-08 02:55:36,542 [INFO] 📧 Found email at https://www.sbhny.org/support: chughes@sbhny.org
+2026-05-08 02:57:40,086 [INFO] ✅ Ollama wrote email for SBH Health System: Homepage (hospital)
+2026-05-08 02:57:45,443 [INFO] ✉️  Email sent via SMTP to chughes@sbhny.org
+2026-05-08 02:57:46,877 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 02:57:46,882 [INFO] Sent: SBH Health System: Homepage → chughes@sbhny.org | Streamline Operations with Custom Hospital Solution
+2026-05-08 02:57:47,883 [INFO] 📱 Telegram notification sent
+2026-05-08 10:12:39,505 [INFO] 📧 Found email at https://www.va.gov/chicago-health-care/locations/jesse-brown-department-of-veterans-affairs-medical-center/: ellen.koucky2@va.gov
+2026-05-08 10:15:08,496 [INFO] ✅ Ollama wrote email for Jesse Brown Department Of Veterans Affairs Medical Center (hospital)
+2026-05-08 10:15:12,734 [INFO] ✉️  Email sent via SMTP to ellen.koucky2@va.gov
+2026-05-08 10:15:14,458 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:15:14,486 [INFO] Sent: Jesse Brown Department Of Veterans Affairs Medical Center → ellen.koucky2@va.gov | Streamline VA Operations: Custom Digital Solution Proposal
+2026-05-08 10:15:15,416 [INFO] 📱 Telegram notification sent
+2026-05-08 10:17:03,217 [INFO] 📧 Found email at https://tmc.gov.in/contactus: hrd@tmc.gov.in
+2026-05-08 10:18:48,012 [INFO] ✅ Ollama wrote email for Tata Memorial Hospital (hospital)
+2026-05-08 10:18:51,032 [INFO] ✉️  Email sent via SMTP to hrd@tmc.gov.in
+2026-05-08 10:18:52,092 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:18:52,095 [INFO] Sent: Tata Memorial Hospital → hrd@tmc.gov.in | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 10:18:52,877 [INFO] 📱 Telegram notification sent
+2026-05-08 10:19:45,209 [INFO] 📧 Found email at https://www.kokilabenhospital.com/contact_us: Vijaykumar.Gawali@relianceada.com
+2026-05-08 10:21:28,283 [INFO] ✅ Ollama wrote email for Kokilaben Hospital: Best Multispeciality Hospital in Mumbai ... (hospital)
+2026-05-08 10:21:31,311 [INFO] ✉️  Email sent via SMTP to Vijaykumar.Gawali@relianceada.com
+2026-05-08 10:21:32,236 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:21:32,241 [INFO] Sent: Kokilaben Hospital: Best Multispeciality Hospital in Mumbai ... → Vijaykumar.Gawali@relianceada.com | Propose Custom Digital Solution for Streamlined Operations - Kokilaben Hospital
+2026-05-08 10:21:43,181 [INFO] 📱 Telegram notification sent
+2026-05-08 10:22:44,134 [INFO] 📧 Found email at https://www.lilavatihospital.com/: complaints@lilavatihospital.com
+2026-05-08 10:25:03,862 [INFO] ✅ Ollama wrote email for Lilavati Hospital & Research Centre | Top Multi Speciality ... (hospital)
+2026-05-08 10:25:06,870 [INFO] ✉️  Email sent via SMTP to complaints@lilavatihospital.com
+2026-05-08 10:25:07,997 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:25:07,999 [INFO] Sent: Lilavati Hospital & Research Centre | Top Multi Speciality ... → complaints@lilavatihospital.com | Propose Custom Digital Solution for Streamlined Operations @ Lilavati Hospital
+2026-05-08 10:25:08,851 [INFO] 📱 Telegram notification sent
+2026-05-08 10:25:56,694 [INFO] 📧 Found email at https://www.bombayhospital.com/: helpdesk@bombayhospital.com
+2026-05-08 10:28:19,205 [INFO] ✅ Ollama wrote email for Leading Healthcare Services at Bombay Hospital Mumbai (hospital)
+2026-05-08 10:28:22,464 [INFO] ✉️  Email sent via SMTP to helpdesk@bombayhospital.com
+2026-05-08 10:28:23,283 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:28:23,298 [INFO] Sent: Leading Healthcare Services at Bombay Hospital Mumbai → helpdesk@bombayhospital.com | Custom Digital Solution for Streamlining Bombay Hospital Operations
+2026-05-08 10:28:24,024 [INFO] 📱 Telegram notification sent
+2026-05-08 10:29:10,615 [INFO] 📧 Found email at https://lifelinehospitalmumbai.in/: kamlesh@lifelinehospitalmumbai.in
+2026-05-08 10:31:20,621 [INFO] ✅ Ollama wrote email for Lifeline Hospital (hospital)
+2026-05-08 10:31:23,597 [INFO] ✉️  Email sent via SMTP to kamlesh@lifelinehospitalmumbai.in
+2026-05-08 10:31:24,725 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:31:24,728 [INFO] Sent: Lifeline Hospital → kamlesh@lifelinehospitalmumbai.in | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 10:31:25,551 [INFO] 📱 Telegram notification sent
+2026-05-08 10:32:22,970 [INFO] 📧 Found email at https://holyspirithospital.org/: pro@holyspirithospital.org
+2026-05-08 10:34:53,839 [INFO] ✅ Ollama wrote email for Holy Spirit Hospital: Best Multispeciality Hospital in Mumbai ... (hospital)
+2026-05-08 10:34:57,113 [INFO] ✉️  Email sent via SMTP to pro@holyspirithospital.org
+2026-05-08 10:34:58,240 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:34:58,242 [INFO] Sent: Holy Spirit Hospital: Best Multispeciality Hospital in Mumbai ... → pro@holyspirithospital.org | Propose Custom Digital Solution for Streamlined Operations @ Holy Spirit Hospital
+2026-05-08 10:34:58,974 [INFO] 📱 Telegram notification sent
+2026-05-08 10:35:46,720 [INFO] 📧 Found email at https://www.saifeehospital.com/: write@saifeehospital.com
+2026-05-08 10:38:16,783 [INFO] ✅ Ollama wrote email for Saifee Hospital Mumbai: multi-speciality, professional ... (hospital)
+2026-05-08 10:38:19,666 [INFO] ✉️  Email sent via SMTP to write@saifeehospital.com
+2026-05-08 10:38:20,999 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:38:21,010 [INFO] Sent: Saifee Hospital Mumbai: multi-speciality, professional ... → write@saifeehospital.com | Propose Custom Digital Solution for Saifee Hospital Operations
+2026-05-08 10:38:21,735 [INFO] 📱 Telegram notification sent
+2026-05-08 10:39:07,979 [INFO] 📧 Found email at https://www.breachcandyhospital.org/: booking@breachcandyhospital.org
+2026-05-08 10:42:15,668 [INFO] ✅ Ollama wrote email for Breach Candy Hospital Trust: Best Hospital in Mumbai (hospital)
+2026-05-08 10:42:18,976 [INFO] ✉️  Email sent via SMTP to booking@breachcandyhospital.org
+2026-05-08 10:42:20,255 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:42:20,258 [INFO] Sent: Breach Candy Hospital Trust: Best Hospital in Mumbai → booking@breachcandyhospital.org | Propose Custom Digital Solution for Streamlined Breach Candy Operations
+2026-05-08 10:42:21,117 [INFO] 📱 Telegram notification sent
+2026-05-08 10:43:06,975 [INFO] 📧 Found email at https://holyfamilyhospital.in/: admin@/holyfamilyhospital.in
+2026-05-08 10:46:27,096 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 10:48:18,967 [INFO] ✅ Ollama wrote email for Medical Multi-speciality Holy Family Hospital Bandra Mumbai (hospital)
+2026-05-08 10:48:21,390 [ERROR] SMTP send error: {'admin@/holyfamilyhospital.in': (553, b'5.1.3 The recipient address <admin@/holyfamilyhospital.in> is not a valid\n5.1.3 RFC 5321 address. For more information, go to\n5.1.3  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.1.3 specifications. d9443c01a7336-2baf1ec13f0sm6487805ad.80 - gsmtp')}
+2026-05-08 10:48:38,385 [INFO] 📧 Found email at https://www.apollohospitals.com/hospitals/apollo-hospitals-mumbai: info@apollohospitals.com
+2026-05-08 10:51:58,498 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 10:53:56,021 [INFO] ✅ Ollama wrote email for Apollo Hospitals, Mumbai (hospital)
+2026-05-08 10:53:59,831 [INFO] ✉️  Email sent via SMTP to info@apollohospitals.com
+2026-05-08 10:54:01,063 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 10:54:01,073 [INFO] Sent: Apollo Hospitals, Mumbai → info@apollohospitals.com | Propose Custom Digital Solution for Streamlined Hospital Operations
+2026-05-08 10:54:01,871 [INFO] 📱 Telegram notification sent
+2026-05-08 10:55:04,768 [INFO] 📧 Found email at https://www.masinahospital.com/contact-us: info@masinahospital.in
+2026-05-08 10:58:24,873 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:00:33,962 [INFO] ✅ Ollama wrote email for Masina Hospital | Mumbai's Oldest Charitable trust ... (hospital)
+2026-05-08 11:00:37,151 [INFO] ✉️  Email sent via SMTP to info@masinahospital.in
+2026-05-08 11:00:38,278 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:00:38,280 [INFO] Sent: Masina Hospital | Mumbai's Oldest Charitable trust ... → info@masinahospital.in | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 11:00:39,034 [INFO] 📱 Telegram notification sent
+2026-05-08 11:01:27,168 [INFO] 📧 Found email at https://tmc.gov.in/contactus: hrd@tmc.gov.in
+2026-05-08 11:04:47,276 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:06:50,342 [INFO] ✅ Ollama wrote email for Patient Registration (hospital)
+2026-05-08 11:06:57,379 [INFO] ✉️  Email sent via SMTP to hrd@tmc.gov.in
+2026-05-08 11:06:58,085 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:06:58,089 [INFO] Sent: Patient Registration → hrd@tmc.gov.in | Streamline Operations: Custom Digital Solution Proposal
+2026-05-08 11:06:59,015 [INFO] 📱 Telegram notification sent
+2026-05-08 11:07:44,989 [INFO] 📧 Found email at https://bellevuemumbai.com/: bvmsph@gmail.com
+2026-05-08 11:11:05,113 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:12:41,681 [INFO] ✅ Ollama wrote email for Belle Vue: Home (hospital)
+2026-05-08 11:12:44,841 [INFO] ✉️  Email sent via SMTP to bvmsph@gmail.com
+2026-05-08 11:12:51,090 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:12:51,097 [INFO] Sent: Belle Vue: Home → bvmsph@gmail.com | Solve Operations Challenges with Custom Digital System
+2026-05-08 11:12:51,892 [INFO] 📱 Telegram notification sent
+2026-05-08 11:13:39,837 [INFO] 📧 Found email at https://srvhospitals.com/contact: info.nashik@srvhospital.com
+2026-05-08 11:16:59,950 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:19:13,722 [INFO] ✅ Ollama wrote email for SRV Hospital: Home Page (hospital)
+2026-05-08 11:19:16,885 [INFO] ✉️  Email sent via SMTP to info.nashik@srvhospital.com
+2026-05-08 11:19:19,534 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:19:19,537 [INFO] Sent: SRV Hospital: Home Page → info.nashik@srvhospital.com | Streamline Operations with Custom Digital Solution for SRV Hospital
+2026-05-08 11:19:20,277 [INFO] 📱 Telegram notification sent
+2026-05-08 11:20:21,629 [INFO] 📧 Found email at https://karmayog.org/contact-us: info@karmayog.org
+2026-05-08 11:23:41,740 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:25:40,172 [INFO] ✅ Ollama wrote email for List of Private Charitable hospitals in Mumbai (hospital)
+2026-05-08 11:25:43,300 [INFO] ✉️  Email sent via SMTP to info@karmayog.org
+2026-05-08 11:25:44,484 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:25:44,487 [INFO] Sent: List of Private Charitable hospitals in Mumbai → info@karmayog.org | Solve Operations Challenges: Custom Digital System Proposal
+2026-05-08 11:25:45,305 [INFO] 📱 Telegram notification sent
+2026-05-08 11:26:33,003 [INFO] 📧 Found email at https://dypatilhospitals.com/: admin@dypatilhospitals.com
+2026-05-08 11:29:53,110 [WARNING] Ollama attempt 1 failed: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=200)
+2026-05-08 11:31:57,390 [INFO] ✅ Ollama wrote email for DY Patil Hospital: Home 1 (hospital)
+2026-05-08 11:32:00,999 [INFO] ✉️  Email sent via SMTP to admin@dypatilhospitals.com
+2026-05-08 11:32:02,391 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:32:02,394 [INFO] Sent: DY Patil Hospital: Home 1 → admin@dypatilhospitals.com | Propose Custom Digital Solution for Streamlined Operations @ DY Patil Hospital
+2026-05-08 11:32:03,248 [INFO] 📱 Telegram notification sent
+2026-05-08 11:32:52,051 [INFO] 📧 Found email at https://www.narayanahealth.org/contact-us: info.msmc@narayanahealth.org
+2026-05-08 11:36:25,910 [INFO] ✅ Ollama wrote email for Narayana Health: Best Multispeciality Private Hospital in India (hospital)
+2026-05-08 11:36:28,872 [INFO] ✉️  Email sent via SMTP to info.msmc@narayanahealth.org
+2026-05-08 11:36:35,323 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:36:35,335 [INFO] Sent: Narayana Health: Best Multispeciality Private Hospital in India → info.msmc@narayanahealth.org | Propose Custom Digital Solution for Streamlined Operations at Narayana Health
+2026-05-08 11:36:36,619 [INFO] 📱 Telegram notification sent
+2026-05-08 11:37:24,326 [INFO] 📧 Found email at https://www.sakraworldhospital.com/contact-us: intl.connect@sakraworldhospital.com
+2026-05-08 11:40:11,981 [INFO] ✅ Ollama wrote email for Sakra World Hospital: Best Multispeciality Hospital in ... (hospital)
+2026-05-08 11:40:15,379 [INFO] ✉️  Email sent via SMTP to intl.connect@sakraworldhospital.com
+2026-05-08 11:40:16,199 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:40:16,208 [INFO] Sent: Sakra World Hospital: Best Multispeciality Hospital in ... → intl.connect@sakraworldhospital.com | Solve Operations Issues: Custom Digital System Proposal for Sakra World Hospital
+2026-05-08 11:40:17,325 [INFO] 📱 Telegram notification sent
+2026-05-08 11:41:08,851 [INFO] 📧 Found email at https://www.manipalhospitals.com/contact-us: info@manipalhospitals.com
+2026-05-08 11:43:41,120 [INFO] ✅ Ollama wrote email for Manipal Hospitals: Best Multispeciality Hospital In India | Top ... (hospital)
+2026-05-08 11:43:44,276 [INFO] ✉️  Email sent via SMTP to info@manipalhospitals.com
+2026-05-08 11:43:45,145 [INFO] HTTP Request: POST https://zlwbnqgjovuhssccsixd.supabase.co/rest/v1/clients?on_conflict=name "HTTP/2 201 Created"
+2026-05-08 11:43:45,148 [INFO] Sent: Manipal Hospitals: Best Multispeciality Hospital In India | Top ... → info@manipalhospitals.com | Propose Custom Digital Solution for Streamlined Operations @ Manipal Hospitals
+2026-05-08 11:43:46,120 [INFO] 📱 Telegram notification sent
+2026-05-08 11:44:36,060 [INFO] 📧 Found email at https://www.apollohospitals.com/contact: dranjali_a@apollohospitals.com
