@@ -14,10 +14,9 @@ nohup: ignoring input
 2026-05-08 10:06:49,694 [INFO] 📡 Waiting for internet connection...
 2026-05-08 10:07:04,712 [INFO] 📡 Internet connected!
 2026-05-08 10:07:04,725 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 22h 52m)
-�═══════════
-  🏢 [3/138] Kühler & Partners International Mental Health
-  📍 HOSPITAL | Amsterdam
-  🌐 Visiting: https://www.internationalmentalhealth.nl/
+2026-05-08 12:03:11,174 [INFO] 📡 Internet dropped — will wait for reconnect before running
+2026-05-08 12:03:11,230 [INFO] ⏭️  Already ran today — waiting for tomorrow
+h.nl/
   🔍 Scanning /contact /about pages for email...
   📧 Email found: info@internationalmentalhealth.nl
   🤖 AI writing personalized email (✅ Ollama mistral)...
@@ -2549,3 +2548,19 @@ nohup: ignoring input
 2026-05-08 10:07:04,563 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 22h 52m)
 2026-05-08 10:07:04,712 [INFO] 📡 Internet connected!
 2026-05-08 10:07:04,725 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 22h 52m)
+2026-05-08 12:03:11,174 [INFO] 📡 Internet dropped — will wait for reconnect before running
+2026-05-08 12:03:11,230 [INFO] ⏭️  Already ran today — waiting for tomorrow
+2026-05-08 12:04:15,313 [INFO] 📡 Internet dropped — will wait for reconnect before running
+2026-05-08 12:04:15,313 [INFO] 📡 Internet dropped — will wait for reconnect before running
+2026-05-08 12:04:25,374 [INFO] 📡 Waiting for internet connection...
+2026-05-08 12:04:25,374 [INFO] 📡 Waiting for internet connection...
+2026-05-08 12:05:40,462 [INFO] 📡 Internet connected!
+2026-05-08 12:05:40,462 [INFO] 📡 Internet connected!
+2026-05-08 12:05:40,469 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 20h 54m)
+2026-05-08 12:05:40,469 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 20h 54m)
+2026-05-08 12:48:01,725 [INFO] 🕐 Auto Runner started — will run client_hunter.py daily at 09:00 AM
+2026-05-08 12:48:01,725 [INFO] 🕐 Auto Runner started — will run client_hunter.py daily at 09:00 AM
+2026-05-08 12:48:01,726 [INFO]    Bot directory: /home/shubham/automation/job_hunter_agent
+2026-05-08 12:48:01,726 [INFO]    Bot directory: /home/shubham/automation/job_hunter_agent
+2026-05-08 12:48:01,732 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 20h 11m)
+2026-05-08 12:48:01,732 [INFO] ⏰ Next run scheduled: 2026-05-09 09:00 (in 20h 11m)

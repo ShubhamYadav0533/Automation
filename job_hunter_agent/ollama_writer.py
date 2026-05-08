@@ -2,15 +2,10 @@
 job_hunter_agent/ollama_writer.py
 ===================================
 FREE local AI using Ollama — NO API KEY NEEDED.
-Runs llama3 on your own computer to write personalized
-cold-outreach emails for each business you find.
+Writes bilingual cold emails: local language on top, English below.
 
-Setup (one-time):
-  1. Download Ollama: https://ollama.ai
-  2. Run: ollama pull llama3
-  3. Keep Ollama running in background (it auto-starts)
-
-This module is called by client_hunter.py automatically.
+Supported languages: Japanese, Russian, Korean, Chinese, French,
+German, Spanish, Portuguese, Dutch, Turkish, Thai, Arabic, Indonesian.
 """
 
 import requests
@@ -20,9 +15,9 @@ import json
 logger = logging.getLogger(__name__)
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "mistral"  # mistral is faster than llama3; change to "llama3" if preferred
+OLLAMA_MODEL = "mistral"
 
-# ── Shubham's profile snapshot used in every prompt ──────────
+# ── Shubham's profile ─────────────────────────────────────────
 PROFILE = {
     "name": "Shubham Yadav",
     "title": "Software Engineer & App Developer",
@@ -34,6 +29,213 @@ PROFILE = {
         "Hospital CRM — crm.anquestplus.com (live, used by real hospital staff)",
         "Real Estate CRM — crm.anquest.in (live, manages properties and client leads)",
     ],
+}
+
+# ─────────────────────────────────────────────────────────────
+#  CITY → LANGUAGE MAPPING
+# ─────────────────────────────────────────────────────────────
+CITY_LANGUAGE = {
+    # Japanese
+    "tokyo": "japanese", "osaka": "japanese", "kyoto": "japanese",
+    "japan": "japanese",
+    # Russian
+    "moscow": "russian", "russia": "russian", "saint petersburg": "russian",
+    # Korean
+    "seoul": "korean", "south korea": "korean", "busan": "korean",
+    # Chinese
+    "beijing": "chinese", "shanghai": "chinese", "china": "chinese",
+    "shenzhen": "chinese", "hong kong": "chinese",
+    # French
+    "paris": "french", "france": "french", "lyon": "french",
+    # German
+    "berlin": "german", "frankfurt": "german", "germany": "german",
+    "munich": "german", "hamburg": "german",
+    # Spanish
+    "barcelona": "spanish", "madrid": "spanish", "spain": "spanish",
+    # Portuguese
+    "são paulo": "portuguese", "sao paulo": "portuguese",
+    "brazil": "portuguese", "lisbon": "portuguese",
+    # Dutch
+    "amsterdam": "dutch", "rotterdam": "dutch", "netherlands": "dutch",
+    # Turkish
+    "istanbul": "turkish", "turkey": "turkish", "ankara": "turkish",
+    # Thai
+    "bangkok": "thai", "thailand": "thai",
+    # Arabic
+    "dubai": "arabic", "uae": "arabic", "abu dhabi": "arabic",
+    "riyadh": "arabic", "doha": "arabic",
+    # Indonesian
+    "bali": "indonesian", "jakarta": "indonesian", "indonesia": "indonesian",
+    # Czech
+    "prague": "czech", "czech republic": "czech",
+    # Italian
+    "rome": "italian", "milan": "italian", "italy": "italian",
+    # Polish
+    "warsaw": "polish", "poland": "polish",
+    # Swedish
+    "stockholm": "swedish", "sweden": "swedish",
+    # Norwegian
+    "oslo": "norwegian", "norway": "norwegian",
+    # Finnish
+    "helsinki": "finnish", "finland": "finnish",
+    # Default English-speaking countries — no translation needed
+    "london": "english", "sydney": "english", "melbourne": "english",
+    "toronto": "english", "new york": "english", "los angeles": "english",
+    "chicago": "english", "singapore": "english", "johannesburg": "english",
+    "australia": "english", "canada": "english", "uk": "english",
+    "vienna": "english",  # Austrian businesses often prefer English
+}
+
+
+def get_language_for_city(city: str) -> str:
+    """Return the local language for a city/country. Default: english."""
+    return CITY_LANGUAGE.get(city.lower().strip(), "english")
+
+
+# ─────────────────────────────────────────────────────────────
+#  TRANSLATED GREETING / SIGN-OFF / CTA PER LANGUAGE
+# ─────────────────────────────────────────────────────────────
+LANG_PHRASES = {
+    "japanese": {
+        "greeting_team":  "ご担当者様へ",
+        "intro":          "はじめまして。私はShubham Yadavと申します。ソフトウェアエンジニア・アプリ開発者として、貴社のビジネス課題をデジタルシステムで解決するお手伝いをしております。",
+        "problem_prefix": "貴社では現在、",
+        "solution_prefix":"このような課題に対して、",
+        "proof_prefix":   "私はすでに同様のシステムを構築しており、",
+        "cta":            "ご興味がございましたら、15分ほどのオンラインミーティングでご説明させていただけますでしょうか？",
+        "closing":        "何卒よろしくお願いいたします。\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "russian": {
+        "greeting_team":  "Здравствуйте,",
+        "intro":          "Меня зовут Шубхам Ядав, я разработчик программного обеспечения и мобильных приложений. Я специализируюсь на создании цифровых систем, которые помогают бизнесу работать эффективнее.",
+        "problem_prefix": "Многие компании в вашей сфере сталкиваются с тем, что",
+        "solution_prefix":"Я могу разработать для вас систему, которая",
+        "proof_prefix":   "Среди моих реализованных проектов —",
+        "cta":            "Буду рад провести 15-минутную встречу онлайн и показать, как это работает. Удобно ли вам?",
+        "closing":        "С уважением,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "korean": {
+        "greeting_team":  "안녕하세요,",
+        "intro":          "저는 소프트웨어 엔지니어 겸 앱 개발자 Shubham Yadav입니다. 기업의 운영 문제를 맞춤형 디지털 시스템으로 해결해 드리고 있습니다.",
+        "problem_prefix": "현재 많은 기업들이 겪고 있는 문제는",
+        "solution_prefix":"이 문제를 해결하기 위해",
+        "proof_prefix":   "저는 이미 유사한 시스템을 구축한 경험이 있으며,",
+        "cta":            "15분 온라인 미팅을 통해 자세히 설명드릴 수 있을까요?",
+        "closing":        "감사합니다.\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "chinese": {
+        "greeting_team":  "您好，",
+        "intro":          "我是软件工程师兼应用开发者 Shubham Yadav。我专注于为企业构建定制化数字系统，帮助解决运营效率问题。",
+        "problem_prefix": "许多企业面临的问题是",
+        "solution_prefix":"为解决这一问题，我可以为您构建",
+        "proof_prefix":   "我已有类似项目的成功案例，",
+        "cta":            "如果您有兴趣，我们可以安排一个15分钟的在线会议，我来为您详细演示。",
+        "closing":        "此致敬礼，\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "french": {
+        "greeting_team":  "Bonjour,",
+        "intro":          "Je m'appelle Shubham Yadav, développeur de logiciels et d'applications. Je conçois des systèmes digitaux sur mesure pour aider les entreprises à gagner en efficacité.",
+        "problem_prefix": "De nombreuses entreprises dans votre secteur perdent du temps et de l'argent parce que",
+        "solution_prefix":"Je peux concevoir un système qui",
+        "proof_prefix":   "J'ai déjà réalisé des projets similaires, notamment",
+        "cta":            "Seriez-vous disponible pour un appel de 15 minutes cette semaine ?",
+        "closing":        "Cordialement,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "german": {
+        "greeting_team":  "Sehr geehrte Damen und Herren,",
+        "intro":          "Mein Name ist Shubham Yadav, ich bin Softwareentwickler und App-Entwickler. Ich entwickle maßgeschneiderte digitale Systeme, die Unternehmen effizienter machen.",
+        "problem_prefix": "Viele Unternehmen in Ihrer Branche verlieren täglich Zeit und Geld, weil",
+        "solution_prefix":"Ich kann ein System entwickeln, das",
+        "proof_prefix":   "Ich habe bereits ähnliche Projekte erfolgreich umgesetzt, darunter",
+        "cta":            "Wäre ein kurzes 15-minütiges Online-Gespräch diese Woche möglich?",
+        "closing":        "Mit freundlichen Grüßen,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "spanish": {
+        "greeting_team":  "Estimado equipo,",
+        "intro":          "Me llamo Shubham Yadav, soy desarrollador de software y aplicaciones. Me especializo en crear sistemas digitales personalizados que ayudan a las empresas a ser más eficientes.",
+        "problem_prefix": "Muchas empresas en su sector pierden tiempo y dinero porque",
+        "solution_prefix":"Puedo desarrollar un sistema que",
+        "proof_prefix":   "Ya he realizado proyectos similares con éxito, como",
+        "cta":            "¿Estaría disponible para una llamada rápida de 15 minutos esta semana?",
+        "closing":        "Atentamente,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "portuguese": {
+        "greeting_team":  "Prezado(a),",
+        "intro":          "Meu nome é Shubham Yadav, sou engenheiro de software e desenvolvedor de aplicativos. Especializo-me em criar sistemas digitais personalizados para empresas.",
+        "problem_prefix": "Muitas empresas do seu setor perdem tempo e dinheiro porque",
+        "solution_prefix":"Posso desenvolver um sistema que",
+        "proof_prefix":   "Já realizei projetos semelhantes com sucesso, como",
+        "cta":            "Poderia agendar uma chamada de 15 minutos esta semana?",
+        "closing":        "Atenciosamente,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "dutch": {
+        "greeting_team":  "Geachte heer/mevrouw,",
+        "intro":          "Mijn naam is Shubham Yadav, software-engineer en app-ontwikkelaar. Ik specialiseer mij in op maat gemaakte digitale systemen die bedrijven efficiënter maken.",
+        "problem_prefix": "Veel bedrijven in uw sector verliezen tijd en geld doordat",
+        "solution_prefix":"Ik kan een systeem bouwen dat",
+        "proof_prefix":   "Ik heb soortgelijke projecten al succesvol afgerond, waaronder",
+        "cta":            "Zou een kort gesprek van 15 minuten deze week mogelijk zijn?",
+        "closing":        "Met vriendelijke groet,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "turkish": {
+        "greeting_team":  "Sayın yetkili,",
+        "intro":          "Adım Shubham Yadav, yazılım mühendisi ve uygulama geliştiricisiyim. İşletmelerin operasyonel sorunlarını özel dijital sistemlerle çözmeye odaklanıyorum.",
+        "problem_prefix": "Sektörünüzdeki birçok işletme şu sorunla karşılaşıyor:",
+        "solution_prefix":"Bu sorunu çözmek için",
+        "proof_prefix":   "Daha önce benzer projeler geliştirdim,",
+        "cta":            "Bu konuyu 15 dakikalık bir çevrimiçi görüşmede anlatabilir miyim?",
+        "closing":        "Saygılarımla,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "thai": {
+        "greeting_team":  "เรียนท่านผู้เกี่ยวข้อง",
+        "intro":          "ผมชื่อ Shubham Yadav เป็นวิศวกรซอฟต์แวร์และนักพัฒนาแอปพลิเคชัน ผมเชี่ยวชาญในการสร้างระบบดิจิทัลแบบกำหนดเองสำหรับธุรกิจ",
+        "problem_prefix": "ธุรกิจหลายแห่งในอุตสาหกรรมของคุณสูญเสียเวลาและรายได้เพราะ",
+        "solution_prefix":"ผมสามารถพัฒนาระบบที่",
+        "proof_prefix":   "ผมเคยสร้างโปรเจกต์ที่คล้ายกันสำเร็จแล้ว เช่น",
+        "cta":            "คุณสะดวกนัดประชุมออนไลน์ 15 นาทีสัปดาห์นี้ไหมครับ?",
+        "closing":        "ด้วยความนับถือ\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "arabic": {
+        "greeting_team":  "السيد/السيدة المحترم/ة،",
+        "intro":          "اسمي Shubham Yadav، مهندس برمجيات ومطور تطبيقات. أتخصص في بناء أنظمة رقمية مخصصة تساعد الشركات على تحقيق كفاءة أعلى.",
+        "problem_prefix": "تعاني كثير من الشركات في قطاعكم من مشكلة أن",
+        "solution_prefix":"أستطيع بناء نظام يساعدكم على",
+        "proof_prefix":   "لدي مشاريع مشابهة ناجحة، منها",
+        "cta":            "هل يمكننا تحديد موعد لمكالمة قصيرة مدتها 15 دقيقة هذا الأسبوع؟",
+        "closing":        "مع التقدير،\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "indonesian": {
+        "greeting_team":  "Kepada Yth.,",
+        "intro":          "Nama saya Shubham Yadav, seorang software engineer dan pengembang aplikasi. Saya mengkhususkan diri dalam membangun sistem digital khusus untuk membantu bisnis beroperasi lebih efisien.",
+        "problem_prefix": "Banyak bisnis di industri Anda kehilangan waktu dan pendapatan karena",
+        "solution_prefix":"Saya dapat membangun sistem yang",
+        "proof_prefix":   "Saya telah berhasil menyelesaikan proyek serupa, termasuk",
+        "cta":            "Apakah Anda bersedia untuk panggilan online 15 menit minggu ini?",
+        "closing":        "Hormat saya,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
+    "czech": {
+        "greeting_team":  "Vážená paní / Vážený pane,",
+        "intro":          "Jmenuji se Shubham Yadav, jsem softwarový inženýr a vývojář aplikací. Specializuji se na tvorbu digitálních systémů na míru pro firmy.",
+        "problem_prefix": "Mnoho firem ve vašem odvětví přichází o čas a peníze, protože",
+        "solution_prefix":"Mohu vytvořit systém, který",
+        "proof_prefix":   "Úspěšně jsem dokončil podobné projekty, například",
+        "cta":            "Bylo by možné domluvit si 15minutový online hovor tento týden?",
+        "closing":        "S pozdravem,\nShubham Yadav\n{email} | {portfolio}",
+        "divider":        "─── English version below ───",
+    },
 }
 
 
@@ -176,83 +378,131 @@ def write_client_email(
     category: str,
     contact_name: str = "",
     website: str = "",
+    city: str = "",
 ) -> dict:
     """
-    Generate a personalized cold-outreach email for a business.
-
-    Returns:
-        {
-          "subject": str,
-          "body": str,
-          "industry": str,
-          "used_ai": bool
-        }
+    Generate a bilingual cold-outreach email:
+      - Local language section on top
+      - English section below
+    Returns: { "subject": str, "body": str, "industry": str, "used_ai": bool }
     """
     industry = _detect_industry(business_name, category)
-    pitch = INDUSTRY_PITCH[industry]
+    pitch    = INDUSTRY_PITCH[industry]
+    language = get_language_for_city(city)
 
-    greeting = f"Hi {contact_name}," if contact_name else f"Hi {business_name} Team,"
+    greeting_en = f"Hi {contact_name}," if contact_name else f"Hi {business_name} Team,"
 
     # ── Try Ollama first ──────────────────────────────────────
     if _is_ollama_running():
-        prompt = f"""You are Shubham Yadav, a Software Engineer and App Developer with 2 years of experience building custom digital systems for businesses.
-Write a SHORT, professional cold email to a potential client.
+        english_body = _ollama_english_body(business_name, category, greeting_en, pitch, website)
+        if english_body:
+            subject = _ollama_subject(business_name, industry)
+            if language != "english":
+                local_body = _ollama_local_body(business_name, category, language, pitch, city)
+                if local_body:
+                    full_body = _combine_bilingual(local_body, english_body, language)
+                else:
+                    full_body = _template_local_section(business_name, language, pitch, contact_name) + "\n\n" + english_body
+            else:
+                full_body = english_body
 
-IMPORTANT RULES — READ CAREFULLY:
-- DO NOT mention any technology names (no React, Node.js, MongoDB, JavaScript, Python, etc.)
-- DO NOT say "Full Stack Developer" — say "Software Engineer" or "App Developer"
-- Focus on the CLIENT'S business problem and profit, not on your skills
-- Maximum 130 words
-- Sound like a genuine human, not a developer CV
+            logger.info(f"✅ Ollama wrote {'bilingual ' + language if language != 'english' else 'English'} email for {business_name}")
+            return {"subject": subject, "body": full_body, "industry": industry, "used_ai": True}
 
-YOUR DETAILS:
-- Name: {PROFILE["name"]}
-- Role: Software Engineer & App Developer
-- Portfolio: {PROFILE["portfolio"]}
-- Past work: {PROFILE["projects"][0]}, {PROFILE["projects"][1]}
-
-BUSINESS INFO:
-- Business name: {business_name}
-- Industry: {category}
-- Website: {website or "not known"}
-
-EMAIL STRUCTURE (follow exactly):
-1. Greeting: {greeting}
-2. ONE sentence about a specific business problem they likely have: {pitch["pain"]}
-3. ONE sentence about how much this costs them / where they lose profit: {pitch["profit"]}
-4. ONE sentence about what you can build to fix it (NO tech names): {pitch["proof"]}
-5. Call to action: {pitch["cta"]}
-6. Sign off exactly: Best regards, / Shubham Yadav | {PROFILE["email"]} | {PROFILE["portfolio"]}
-
-Write ONLY the email body. No subject line. No extra commentary."""
-
-        body = _ask_ollama(prompt)
-
-        if body and len(body) > 50:
-            # Generate subject line
-            subject_prompt = f"""Write a short email subject line (max 8 words) for a cold outreach email to {business_name}, a {category} business. The email is about building them a custom digital system that solves their operations problem. Do NOT mention any technology names. Only output the subject line text, nothing else, no quotes."""
-            subject = _ask_ollama(subject_prompt)
-            if not subject or len(subject) > 100:
-                subject = _fallback_subject(business_name, industry)
-
-            # Clean up subject (remove quotes if AI added them)
-            subject = subject.strip().strip('"').strip("'")
-
-            logger.info(f"✅ Ollama wrote email for {business_name} ({industry})")
-            return {
-                "subject": subject,
-                "body": body,
-                "industry": industry,
-                "used_ai": True,
-            }
-        else:
-            logger.warning(f"⚠️  Ollama returned empty/short response — using template")
+        logger.warning("⚠️  Ollama returned empty — using template")
 
     else:
-        logger.warning("⚠️  Ollama not running — using built-in email template (install Ollama for smarter emails)")
+        logger.warning("⚠️  Ollama not running — using built-in template")
 
-    # ── Fallback: hand-crafted template (always works) ────────
-    return _template_email(business_name, category, greeting, industry, pitch, website)
+    # ── Fallback: template ────────────────────────────────────
+    return _template_email(business_name, category, greeting_en, industry, pitch, website, language, contact_name)
+
+
+def _ollama_english_body(business_name, category, greeting, pitch, website) -> str:
+    prompt = f"""You are Shubham Yadav, a Software Engineer and App Developer.
+Write a SHORT professional cold email in English only.
+
+RULES:
+- DO NOT mention any technology names (no React, Node.js, Python, etc.)
+- DO NOT say "Full Stack Developer"
+- Max 120 words
+- Sound human, not like a CV
+
+EMAIL STRUCTURE:
+1. Greeting: {greeting}
+2. One sentence about their likely business problem: {pitch["pain"]}
+3. One sentence about what you can build to fix it (no tech names)
+4. One sentence proof: {pitch["proof"]}
+5. Call to action: {pitch["cta"]}
+6. Sign off: Best regards, / Shubham Yadav | {PROFILE["email"]} | {PROFILE["portfolio"]}
+
+Business: {business_name} ({category})
+Website: {website or "unknown"}
+
+Write ONLY the email body. No subject line."""
+    return _ask_ollama(prompt)
+
+
+def _ollama_local_body(business_name, category, language, pitch, city) -> str:
+    lang_names = {
+        "japanese": "Japanese", "russian": "Russian", "korean": "Korean",
+        "chinese": "Simplified Chinese", "french": "French", "german": "German",
+        "spanish": "Spanish", "portuguese": "Portuguese", "dutch": "Dutch",
+        "turkish": "Turkish", "thai": "Thai", "arabic": "Arabic",
+        "indonesian": "Indonesian", "czech": "Czech",
+    }
+    lang_display = lang_names.get(language, language.title())
+    prompt = f"""Write a very short, professional cold email introduction in {lang_display} for a business in {city}.
+
+The email is from Shubham Yadav, a Software Engineer and App Developer.
+The business is: {business_name} ({category})
+Business problem to mention: {pitch["pain"]}
+What Shubham can build: custom digital management system (no tech names)
+Proof: {pitch["proof"]}
+Call to action: offer a 15-minute online meeting
+
+Keep it under 100 words. Write ONLY the email body in {lang_display}. No English. No subject line."""
+    return _ask_ollama(prompt)
+
+
+def _ollama_subject(business_name: str, industry: str) -> str:
+    prompt = f"""Write a short email subject line (max 8 words) for a cold outreach email to {business_name}, a {industry} business. About building a custom digital system that solves their operations problem. DO NOT mention any technology names. Output ONLY the subject line text."""
+    subject = _ask_ollama(prompt)
+    if not subject or len(subject) > 100:
+        return _fallback_subject(business_name, industry)
+    return subject.strip().strip('"').strip("'")
+
+
+def _combine_bilingual(local_body: str, english_body: str, language: str) -> str:
+    phrases = LANG_PHRASES.get(language, {})
+    divider = phrases.get("divider", "─── English version below ───")
+    return f"{local_body.strip()}\n\n{divider}\n\n{english_body.strip()}"
+
+
+def _template_local_section(business_name: str, language: str, pitch: dict, contact_name: str = "") -> str:
+    """Build the local-language section from pre-written phrases."""
+    p = LANG_PHRASES.get(language)
+    if not p:
+        return ""
+    greeting = p["greeting_team"]
+    if contact_name:
+        greeting = greeting.rstrip(",") + f" {contact_name},"
+    closing = p["closing"].format(email=PROFILE["email"], portfolio=PROFILE["portfolio"])
+
+    # Shorten pitch to 1–2 sentence fragments
+    pain_short    = pitch["pain"][:120].rstrip(",.")
+    profit_short  = pitch["profit"][:120].rstrip(",.")
+    proof_short   = pitch["proof"][:100].rstrip(",.")
+
+    return (
+        f"{greeting}\n\n"
+        f"{p['intro']}\n\n"
+        f"{p['problem_prefix']} {pain_short}.\n"
+        f"{p['solution_prefix']} {profit_short}.\n"
+        f"{p['proof_prefix']} {proof_short}.\n\n"
+        f"{p['cta']}\n\n"
+        f"{closing}"
+    )
 
 
 def _fallback_subject(business_name: str, industry: str) -> str:
@@ -279,9 +529,11 @@ def _template_email(
     industry: str,
     pitch: dict,
     website: str,
+    language: str = "english",
+    contact_name: str = "",
 ) -> dict:
-    """Always-works template email — no AI needed, no tech names."""
-    body = f"""{greeting}
+    """Always-works template email — bilingual if language != english."""
+    english_body = f"""{greeting}
 
 I came across {business_name} and wanted to share something directly relevant to your business.
 
@@ -298,9 +550,17 @@ Shubham Yadav
 Software Engineer & App Developer
 {PROFILE["email"]} | {PROFILE["portfolio"]}"""
 
+    if language != "english" and language in LANG_PHRASES:
+        local_section = _template_local_section(business_name, language, pitch, contact_name)
+        phrases = LANG_PHRASES[language]
+        divider = phrases.get("divider", "─── English version below ───")
+        full_body = f"{local_section}\n\n{divider}\n\n{english_body}"
+    else:
+        full_body = english_body
+
     return {
         "subject": _fallback_subject(business_name, industry),
-        "body": body,
+        "body": full_body,
         "industry": industry,
         "used_ai": False,
     }
@@ -311,20 +571,29 @@ Software Engineer & App Developer
 # ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-    print("Testing Ollama writer...\n")
+    print("Testing bilingual Ollama writer...\n")
 
     if _is_ollama_running():
         print("✅ Ollama is running!\n")
     else:
         print("⚠️  Ollama not running — will use templates\n")
-        print("   To enable AI: ollama serve  (in another terminal)\n")
 
-    result = write_client_email(
-        business_name="City General Hospital",
-        category="hospital",
-        contact_name="Dr. Sharma",
-        website="https://cityhospital.com",
-    )
-    print(f"SUBJECT: {result['subject']}\n")
-    print(f"BODY:\n{result['body']}\n")
-    print(f"Industry: {result['industry']} | Used AI: {result['used_ai']}")
+    test_cases = [
+        ("Tokyo General Hospital",  "hospital",    "Tokyo"),
+        ("Berliner Klinik GmbH",    "clinic",      "Berlin"),
+        ("Paris Boutique Hotel",    "hotel",       "Paris"),
+        ("Moscow Real Estate",      "real_estate", "Moscow"),
+        ("Seoul Fitness Club",      "gym",         "Seoul"),
+        ("Amsterdam Dental Care",   "clinic",      "Amsterdam"),
+        ("Dubai Grand Hotel",       "hotel",       "Dubai"),
+        ("City Hospital London",    "hospital",    "London"),
+    ]
+
+    for name, cat, city in test_cases:
+        lang = get_language_for_city(city)
+        result = write_client_email(name, cat, city=city)
+        print(f"{'='*60}")
+        print(f"Business : {name}  [{city} → {lang}]")
+        print(f"SUBJECT  : {result['subject']}")
+        print(f"BODY:\n{result['body']}")
+        print()

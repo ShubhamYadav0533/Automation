@@ -195,6 +195,7 @@ def step2_find_and_send_pipeline(
             category=category,
             contact_name=contact_name,
             website=website,
+            city=lead.get("city", ""),
         )
         subject  = email_data["subject"]
         body     = email_data["body"]
